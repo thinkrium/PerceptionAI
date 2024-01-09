@@ -55,4 +55,8 @@ DETAILS
     // This is where alot of the work is done
     // should it be a big file or broken up
     Perception_Helper
-        Relu_Activation()
+        Propagate_Forward()
+        Propagate_Backward()
+        Activate_Node_With_ReLU()
+        Activate_Node_With_Softmax()
+        Calculate_Loss_With_Categorical_Cross_Entropy()
