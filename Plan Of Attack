@@ -45,6 +45,7 @@ DETAILS
         Inputs : List(Node)
         Outputs : List(Node)
         Weights : List(Weight)
+        Momentum : float
         Perception_Helper : Perception_Helper ( if not static - likely static )
         Bias : List(Bias)
         Default Constructor
@@ -55,8 +56,14 @@ DETAILS
     // This is where alot of the work is done
     // should it be a big file or broken up
     Perception_Helper
+
+
         Propagate_Forward()
         Propagate_Backward()
         Activate_Node_With_ReLU()
         Activate_Node_With_Softmax()
         Calculate_Loss_With_Categorical_Cross_Entropy()
+        Calculate_Derivative_Of_ReLu()
+        Calculate_Derivative_Of_Softmax()
+        Calculate_Categorical_Cross_Entropy_Derivative()
+        Calculate_Cross_Entropy_With_Softmax_Derivative()
