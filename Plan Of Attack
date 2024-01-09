@@ -1,0 +1,56 @@
+Perception AI
+
+NEEDED ELEMENTS
+    Node
+    Layer
+    Perception_Helper
+
+STRUCTURE
+    Perception_Elements
+       Perception_Element (Base Class)
+
+    Nodes
+        Node : Perception_Element
+
+    Weights
+        Weight : Perception_Element
+
+    Biases
+        Bias : Perception_Element
+
+    Layers
+        Layer
+
+    Utilities
+        Perception_Helper
+        Enumerations
+
+DETAILS
+    Perception_Element
+        Value (float)
+        Default Constructor
+        Constructor(Value)
+        Getters
+        Setters
+
+    Node : Perception_Element
+
+    Weight : Perception_Element
+
+    Bias : Perception_Element
+
+    Layer
+        Inputs : List(Node)
+        Outputs : List(Node)
+        Weights : List(Weight)
+        Perception_Helper : Perception_Helper ( if not static - likely static )
+        Bias : List(Bias)
+        Default Constructor
+        Constructor(List(Input), List(Weight), List(Bias))
+        Getters
+        Setters
+
+    // This is where alot of the work is done
+    // should it be a big file or broken up
+    Perception_Helper
+        Relu_Activation()
