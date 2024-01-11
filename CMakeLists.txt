@@ -11,4 +11,19 @@ add_library(PerceptionAI SHARED Perception.cpp
         Biases/Bias.cpp
         Biases/Bias.h
         Weights/Weight.cpp
-        Weights/Weight.h)
+        Weights/Weight.h
+        Layers/Layer.cpp
+        Layers/Layer.h)
+
+add_executable(Perception_AI  Perception.cpp
+        Perception_Elements/Perception_Element.cpp
+        Perception_Elements/Perception_Element.h
+        Nodes/Node.cpp
+        Nodes/Node.h
+        Biases/Bias.cpp
+        Biases/Bias.h
+        Weights/Weight.cpp
+        Weights/Weight.h
+        main.cpp
+        Layers/Layer.cpp
+        Layers/Layer.h)

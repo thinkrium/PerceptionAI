@@ -7,6 +7,10 @@
 namespace Perception {
     namespace Elements {
         namespace Weights {
+            Weight::Weight() {}
+
+            Weight::Weight(float value) : Perception_Element(value) {}
+
         } // Perception
     } // Elements
 } // Weights

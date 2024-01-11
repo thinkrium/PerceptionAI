@@ -14,7 +14,10 @@ namespace Perception {
         namespace Nodes {
 
             class Node : public Perception_Element {
+            public:
+                Node();
 
+                explicit Node(float value);
             };
 
         } // Perception

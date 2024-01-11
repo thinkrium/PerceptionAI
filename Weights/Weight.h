@@ -7,13 +7,17 @@
 
 #include "../Perception_Elements/Perception_Element.h"
 
-
+using namespace Perception::Elements;
 
 namespace Perception {
     namespace Elements {
         namespace Weights {
 
             class Weight : public Perception_Element {
+            public:
+                Weight();
+
+                explicit Weight(float value);
 
             };
 

@@ -7,6 +7,9 @@
 namespace Perception {
     namespace Elements {
         namespace Biases {
+            Bias::Bias() {}
+
+            Bias::Bias(float value) : Perception_Element(value) {}
         } // Perception
     } // Elements
 } // Biases

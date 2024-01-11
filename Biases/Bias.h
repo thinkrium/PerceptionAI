@@ -14,7 +14,10 @@ namespace Perception {
         namespace Biases {
 
             class Bias : Perception_Element {
+            public:
+                Bias();
 
+                explicit Bias(float value);
             };
 
         } // Perception

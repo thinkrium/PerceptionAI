@@ -7,6 +7,9 @@
 namespace Perception {
     namespace Elements {
         namespace Nodes {
+            Node::Node() {}
+
+            Node::Node(float value) : Perception_Element(value) {}
         } // Perception
     } // Elements
 } // Nodes
