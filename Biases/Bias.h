@@ -18,6 +18,8 @@ namespace Perception {
                 Bias();
 
                 explicit Bias(float value);
+
+                virtual ~Bias();
             };
 
         } // Perception

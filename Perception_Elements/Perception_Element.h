@@ -20,6 +20,8 @@ namespace Perception {
 
             void setValue(float value);
 
+            virtual ~Perception_Element();
+
         private:
             float value;
         };

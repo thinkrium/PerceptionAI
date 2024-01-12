@@ -18,6 +18,8 @@ namespace Perception {
                 Node();
 
                 explicit Node(float value);
+
+                virtual ~Node();
             };
 
         } // Perception

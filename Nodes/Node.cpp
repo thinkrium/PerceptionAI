@@ -9,6 +9,10 @@ namespace Perception {
         namespace Nodes {
             Node::Node() {}
 
+            Node::~Node() {
+
+            }
+
             Node::Node(float value) : Perception_Element(value) {}
         } // Perception
     } // Elements

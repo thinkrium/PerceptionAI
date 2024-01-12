@@ -6,5 +6,10 @@
 
 namespace Perception {
     namespace Layers {
+        Layer::Layer() {}
+
+        Layer::~Layer() {
+
+        }
     } // Perception
 } // Layers

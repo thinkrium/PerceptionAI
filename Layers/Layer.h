@@ -27,6 +27,12 @@ namespace Perception {
             vector<Node> outputNodes;
             vector<Weight> weights;
             vector<Bias> biases;
+
+            float momentum;
+        public:
+            Layer();
+
+            virtual ~Layer();
         };
 
     } // Perception

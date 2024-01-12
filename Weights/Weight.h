@@ -19,8 +19,13 @@ namespace Perception {
 
                 explicit Weight(float value);
 
+                ~Weight() override;
+
             };
 
+            Weight::~Weight() {
+
+            }
         } // Perception
     } // Elements
 } // Weights
