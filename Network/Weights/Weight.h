@@ -23,9 +23,7 @@ namespace Perception {
 
             };
 
-            Weight::~Weight() {
 
-            }
         } // Perception
     } // Elements
 } // Weights

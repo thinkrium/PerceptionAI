@@ -10,7 +10,9 @@ namespace Perception {
             Weight::Weight() {}
 
             Weight::Weight(float value) : Perception_Element(value) {}
+            Weight::~Weight() {
 
+            }
         } // Perception
     } // Elements
 } // Weights
