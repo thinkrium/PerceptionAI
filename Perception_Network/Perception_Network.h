@@ -17,6 +17,8 @@ namespace Perception {
         public:
             Perception_Network();
 
+            Perception_Network(int layerCount, int nodesPerLayer);
+
             virtual ~Perception_Network();
 
             const Layer &getInputLayer() const;
@@ -31,11 +33,26 @@ namespace Perception {
 
             void setOutputLayer(const Layer &outputLayer);
 
+
+            void instantiateNetwork();
+
+            void startNetwork();
+
+            int getLayerCount() const;
+
+            void setLayerCount(int layerCount);
+
+            int getNodesPerLayer() const;
+
+            void setNodesPerLayer(int nodesPerLayer);
+
         private:
             Layer inputLayer;
             vector <Layer> innerLayers;
             Layer outputLayer;
 
+            int layer_count;
+            int nodes_per_layer;
         };
 
     } // Perception

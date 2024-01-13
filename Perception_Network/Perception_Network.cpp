@@ -9,6 +9,14 @@ namespace Perception {
 
         Perception_Network::Perception_Network() {}
 
+        Perception_Network::Perception_Network(int layerCount, int nodesPerLayer) : layer_count(layerCount),
+                                                                                    nodes_per_layer(nodesPerLayer) {
+            this->setLayerCount(layerCount);
+            this->setNodesPerLayer(nodesPerLayer);
+
+
+        }
+
         const Layer &Perception_Network::getInputLayer() const {
             return inputLayer;
         }
@@ -33,7 +41,32 @@ namespace Perception {
             Perception_Network::outputLayer = outputLayer;
         }
 
+        int Perception_Network::getLayerCount() const {
+            return layer_count;
+        }
+
+        void Perception_Network::setLayerCount(int layerCount) {
+            layer_count = layerCount;
+        }
+
+        int Perception_Network::getNodesPerLayer() const {
+            return nodes_per_layer;
+        }
+
+        void Perception_Network::setNodesPerLayer(int nodesPerLayer) {
+            nodes_per_layer = nodesPerLayer;
+        }
+
+        void Perception_Network::startNetwork() {
+
+        }
+
         Perception_Network::~Perception_Network() {
+
+        }
+
+        void Perception_Network::instantiateNetwork() {
+
 
         }
     } // Perception

@@ -26,7 +26,12 @@ namespace Perception {
             vector<Node> inputNodes;
             vector<Node> localNodes;
             vector<Node> outputNodes;
+
+            int nodesPerLayer;
+
         public:
+            explicit Layer(int nodesPerLayer);
+
             const vector <Node> &getInputNodes() const;
 
             void setInputNodes(const vector <Node> &inputNodes);
@@ -47,19 +52,20 @@ namespace Perception {
 
             void setBiases(const vector <Bias> &biases);
 
-            float getMomentum() const;
 
-            void setMomentum(float momentum);
 
         private:
             vector<vector<Weight>> weights;
             vector<Bias> biases;
 
-            float momentum;
         public:
             Layer();
 
             virtual ~Layer();
+
+            int getNodesPerLayer() const;
+
+            void setNodesPerLayer(int nodesPerLayer);
         };
 
     } // Perception

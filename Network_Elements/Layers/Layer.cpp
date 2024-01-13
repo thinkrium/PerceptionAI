@@ -52,12 +52,17 @@ namespace Perception {
             Layer::biases = biases;
         }
 
-        float Layer::getMomentum() const {
-            return momentum;
+        Layer::Layer(int nodesPerLayer) : nodesPerLayer(nodesPerLayer) {
+            this->setNodesPerLayer(nodesPerLayer);
+
         }
 
-        void Layer::setMomentum(float momentum) {
-            Layer::momentum = momentum;
+        int Layer::getNodesPerLayer() const {
+            return nodesPerLayer;
+        }
+
+        void Layer::setNodesPerLayer(int nodesPerLayer) {
+            Layer::nodesPerLayer = nodesPerLayer;
         }
     } // Perception
 } // Layers
