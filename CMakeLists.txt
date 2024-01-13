@@ -4,26 +4,34 @@ project(PerceptionAI)
 set(CMAKE_CXX_STANDARD 17)
 
 add_library(PerceptionAI SHARED Perception.cpp
-        Network/Perception_Elements/Perception_Element.cpp
-        Network/Perception_Elements/Perception_Element.h
-        Network/Nodes/Node.cpp
-        Network/Nodes/Node.h
-        Network/Biases/Bias.cpp
-        Network/Biases/Bias.h
-        Network/Weights/Weight.cpp
-        Network/Weights/Weight.h
-        Network/Layers/Layer.cpp
-        Network/Layers/Layer.h)
+        Network_Elements/Perception_Elements/Perception_Element.cpp
+        Network_Elements/Perception_Elements/Perception_Element.h
+        Network_Elements/Nodes/Node.cpp
+        Network_Elements/Nodes/Node.h
+        Network_Elements/Biases/Bias.cpp
+        Network_Elements/Biases/Bias.h
+        Network_Elements/Weights/Weight.cpp
+        Network_Elements/Weights/Weight.h
+        Network_Elements/Layers/Layer.cpp
+        Network_Elements/Layers/Layer.h
+        Perception_Network/Perception_Network.cpp
+        Perception_Network/Perception_Network.h
+        Utilities/Layer_Helper/Layer_Helper.cpp
+        Utilities/Layer_Helper/Layer_Helper.h)
 
 add_executable(Perception_AI  Perception.cpp
-        Network/Perception_Elements/Perception_Element.cpp
-        Network/Perception_Elements/Perception_Element.h
-        Network/Nodes/Node.cpp
-        Network/Nodes/Node.h
-        Network/Biases/Bias.cpp
-        Network/Biases/Bias.h
-        Network/Weights/Weight.cpp
-        Network/Weights/Weight.h
+        Network_Elements/Perception_Elements/Perception_Element.cpp
+        Network_Elements/Perception_Elements/Perception_Element.h
+        Network_Elements/Nodes/Node.cpp
+        Network_Elements/Nodes/Node.h
+        Network_Elements/Biases/Bias.cpp
+        Network_Elements/Biases/Bias.h
+        Network_Elements/Weights/Weight.cpp
+        Network_Elements/Weights/Weight.h
         main.cpp
-        Network/Layers/Layer.cpp
-        Network/Layers/Layer.h)
+        Network_Elements/Layers/Layer.cpp
+        Network_Elements/Layers/Layer.h
+        Perception_Network/Perception_Network.cpp
+        Perception_Network/Perception_Network.h
+        Utilities/Layer_Helper/Layer_Helper.cpp
+        Utilities/Layer_Helper/Layer_Helper.h)
