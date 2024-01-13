@@ -13,15 +13,15 @@ namespace Perception {
 
             class Layer_Helper {
 
-                static vector<Node> Propagate_Forward()
-                Propagate_Backward()
-                Activate_Node_With_ReLU()
-                Activate_Node_With_Softmax()
-                Calculate_Loss_With_Categorical_Cross_Entropy()
-                Calculate_Derivative_Of_ReLu()
-                Calculate_Derivative_Of_Softmax()
-                Calculate_Categorical_Cross_Entropy_Derivative()
-                Calculate_Cross_Entropy_With_Softmax_Derivative()
+                static vector<Node> Propagate_Forward();
+                static vector<Node> Propagate_Backward();
+                static void Activate_Node_With_ReLU();
+                static void Activate_Node_With_Softmax();
+                static void Calculate_Loss_With_Categorical_Cross_Entropy();
+                static void Calculate_Derivative_Of_ReLu();
+                static void  Calculate_Derivative_Of_Softmax();
+                static void Calculate_Categorical_Cross_Entropy_Derivative();
+                static void  Calculate_Cross_Entropy_With_Softmax_Derivative();
 
             };
 
