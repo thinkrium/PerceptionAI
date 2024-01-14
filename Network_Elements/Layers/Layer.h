@@ -27,9 +27,12 @@ namespace Perception {
             vector<Node> localNodes;
             vector<Node> outputNodes;
 
-            int nodesPerLayer;
+            int nodeCountPerLayer;
 
         public:
+
+            void initiateEmptyLocalNodes();
+
             explicit Layer(int nodesPerLayer);
 
             const vector <Node> &getInputNodes() const;
@@ -63,9 +66,9 @@ namespace Perception {
 
             virtual ~Layer();
 
-            int getNodesPerLayer() const;
+            int getNodeCountPerLayer() const;
 
-            void setNodesPerLayer(int nodesPerLayer);
+            void setNodeCountPerLayer(int nodesPerLayer);
         };
 
     } // Perception

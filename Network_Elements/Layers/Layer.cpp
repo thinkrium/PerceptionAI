@@ -6,7 +6,10 @@
 
 namespace Perception {
     namespace Layers {
-        Layer::Layer() {}
+        Layer::Layer() {
+
+            this->setNodeCountPerLayer(0);
+        }
 
         Layer::~Layer() {
 
@@ -52,17 +55,33 @@ namespace Perception {
             Layer::biases = biases;
         }
 
-        Layer::Layer(int nodesPerLayer) : nodesPerLayer(nodesPerLayer) {
-            this->setNodesPerLayer(nodesPerLayer);
+        Layer::Layer(int nodesPerLayer) : nodeCountPerLayer(nodesPerLayer) {
+            this->setNodeCountPerLayer(nodesPerLayer);
+
+             this->initiateEmptyLocalNodes();
 
         }
 
-        int Layer::getNodesPerLayer() const {
-            return nodesPerLayer;
+        int Layer::getNodeCountPerLayer() const {
+            return nodeCountPerLayer;
         }
 
-        void Layer::setNodesPerLayer(int nodesPerLayer) {
-            Layer::nodesPerLayer = nodesPerLayer;
+        void Layer::setNodeCountPerLayer(int nodesPerLayer) {
+            Layer::nodeCountPerLayer = nodesPerLayer;
+        }
+
+        /*
+         * Checks if the node count per layer variable is equal to zero
+         * and if it is it returns first
+         *
+         * if not then it instantiates empty nodes by the count of nodes per layer
+         */
+        void Layer::initiateEmptyLocalNodes() {
+            if (this->getNodeCountPerLayer() == 0) return;
+
+            this->setLocalNodes(
+                 vector<Node>(this->getNodeCountPerLayer(), Node(0))
+            );
         }
     } // Perception
 } // Layers

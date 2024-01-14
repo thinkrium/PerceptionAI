@@ -5,6 +5,8 @@
 #ifndef PERCEPTIONAI_PERCEPTION_ELEMENT_H
 #define PERCEPTIONAI_PERCEPTION_ELEMENT_H
 
+#include "random"
+
 namespace Perception {
     namespace Elements {
 
@@ -19,6 +21,8 @@ namespace Perception {
             float getValue() const;
 
             void setValue(float value);
+
+            void instantiateRandomValue();
 
             virtual ~Perception_Element();
 
