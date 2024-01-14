@@ -22,15 +22,5 @@ namespace Perception {
 
         }
 
-        /**
-         * Sets a random value between -1 and 1
-         */
-        void Perception_Element::instantiateRandomValue() {
-            std::default_random_engine generator;
-            std::uniform_real_distribution<float> distribution(-1,1);
-
-            this->setValue(distribution(generator));
-
-        }
     } // Perception
 } // Elements

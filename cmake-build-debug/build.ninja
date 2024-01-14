@@ -105,6 +105,13 @@ build CMakeFiles/PerceptionAI.dir/Utilities/Layer_Helper/Layer_Helper.cpp.obj: C
   OBJECT_DIR = CMakeFiles\PerceptionAI.dir
   OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\Utilities\Layer_Helper
 
+build CMakeFiles/PerceptionAI.dir/Utilities/Maths/Perception_Maths.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/Utilities/Maths/Perception_Maths.cpp || cmake_object_order_depends_target_PerceptionAI
+  DEFINES = -DPerceptionAI_EXPORTS
+  DEP_FILE = CMakeFiles\PerceptionAI.dir\Utilities\Maths\Perception_Maths.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\PerceptionAI.dir
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\Utilities\Maths
+
 
 # =============================================================================
 # Link build statements for SHARED_LIBRARY target PerceptionAI
@@ -113,7 +120,7 @@ build CMakeFiles/PerceptionAI.dir/Utilities/Layer_Helper/Layer_Helper.cpp.obj: C
 #############################################
 # Link the shared library libPerceptionAI.dll
 
-build libPerceptionAI.dll libPerceptionAI.dll.a: CXX_SHARED_LIBRARY_LINKER__PerceptionAI_Debug CMakeFiles/PerceptionAI.dir/Perception.cpp.obj CMakeFiles/PerceptionAI.dir/Network_Elements/Perception_Elements/Perception_Element.cpp.obj CMakeFiles/PerceptionAI.dir/Network_Elements/Nodes/Node.cpp.obj CMakeFiles/PerceptionAI.dir/Network_Elements/Biases/Bias.cpp.obj CMakeFiles/PerceptionAI.dir/Network_Elements/Weights/Weight.cpp.obj CMakeFiles/PerceptionAI.dir/Network_Elements/Layers/Layer.cpp.obj CMakeFiles/PerceptionAI.dir/Perception_Network/Perception_Network.cpp.obj CMakeFiles/PerceptionAI.dir/Utilities/Layer_Helper/Layer_Helper.cpp.obj
+build libPerceptionAI.dll libPerceptionAI.dll.a: CXX_SHARED_LIBRARY_LINKER__PerceptionAI_Debug CMakeFiles/PerceptionAI.dir/Perception.cpp.obj CMakeFiles/PerceptionAI.dir/Network_Elements/Perception_Elements/Perception_Element.cpp.obj CMakeFiles/PerceptionAI.dir/Network_Elements/Nodes/Node.cpp.obj CMakeFiles/PerceptionAI.dir/Network_Elements/Biases/Bias.cpp.obj CMakeFiles/PerceptionAI.dir/Network_Elements/Weights/Weight.cpp.obj CMakeFiles/PerceptionAI.dir/Network_Elements/Layers/Layer.cpp.obj CMakeFiles/PerceptionAI.dir/Perception_Network/Perception_Network.cpp.obj CMakeFiles/PerceptionAI.dir/Utilities/Layer_Helper/Layer_Helper.cpp.obj CMakeFiles/PerceptionAI.dir/Utilities/Maths/Perception_Maths.cpp.obj
   LANGUAGE_COMPILE_FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\PerceptionAI.dir
@@ -187,6 +194,12 @@ build CMakeFiles/Perception_AI.dir/Utilities/Layer_Helper/Layer_Helper.cpp.obj: 
   OBJECT_DIR = CMakeFiles\Perception_AI.dir
   OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\Utilities\Layer_Helper
 
+build CMakeFiles/Perception_AI.dir/Utilities/Maths/Perception_Maths.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/Utilities/Maths/Perception_Maths.cpp || cmake_object_order_depends_target_Perception_AI
+  DEP_FILE = CMakeFiles\Perception_AI.dir\Utilities\Maths\Perception_Maths.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Perception_AI.dir
+  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\Utilities\Maths
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Perception_AI
@@ -195,7 +208,7 @@ build CMakeFiles/Perception_AI.dir/Utilities/Layer_Helper/Layer_Helper.cpp.obj: 
 #############################################
 # Link the executable Perception_AI.exe
 
-build Perception_AI.exe: CXX_EXECUTABLE_LINKER__Perception_AI_Debug CMakeFiles/Perception_AI.dir/Perception.cpp.obj CMakeFiles/Perception_AI.dir/Network_Elements/Perception_Elements/Perception_Element.cpp.obj CMakeFiles/Perception_AI.dir/Network_Elements/Nodes/Node.cpp.obj CMakeFiles/Perception_AI.dir/Network_Elements/Biases/Bias.cpp.obj CMakeFiles/Perception_AI.dir/Network_Elements/Weights/Weight.cpp.obj CMakeFiles/Perception_AI.dir/main.cpp.obj CMakeFiles/Perception_AI.dir/Network_Elements/Layers/Layer.cpp.obj CMakeFiles/Perception_AI.dir/Perception_Network/Perception_Network.cpp.obj CMakeFiles/Perception_AI.dir/Utilities/Layer_Helper/Layer_Helper.cpp.obj
+build Perception_AI.exe: CXX_EXECUTABLE_LINKER__Perception_AI_Debug CMakeFiles/Perception_AI.dir/Perception.cpp.obj CMakeFiles/Perception_AI.dir/Network_Elements/Perception_Elements/Perception_Element.cpp.obj CMakeFiles/Perception_AI.dir/Network_Elements/Nodes/Node.cpp.obj CMakeFiles/Perception_AI.dir/Network_Elements/Biases/Bias.cpp.obj CMakeFiles/Perception_AI.dir/Network_Elements/Weights/Weight.cpp.obj CMakeFiles/Perception_AI.dir/main.cpp.obj CMakeFiles/Perception_AI.dir/Network_Elements/Layers/Layer.cpp.obj CMakeFiles/Perception_AI.dir/Perception_Network/Perception_Network.cpp.obj CMakeFiles/Perception_AI.dir/Utilities/Layer_Helper/Layer_Helper.cpp.obj CMakeFiles/Perception_AI.dir/Utilities/Maths/Perception_Maths.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Perception_AI.dir

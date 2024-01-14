@@ -11,11 +11,15 @@
 #include "../Weights/Weight.h"
 #include "../Biases/Bias.h"
 
+#include "../../Utilities/Maths/Perception_Maths.h"
+
 using namespace std;
 
 using namespace Perception::Elements::Nodes;
 using namespace Perception::Elements::Weights;
 using namespace Perception::Elements::Biases;
+
+using namespace Perception::Utilities::Maths;
 
 namespace Perception {
     namespace Layers {
@@ -31,7 +35,11 @@ namespace Perception {
 
         public:
 
-            void initiateEmptyLocalNodes();
+            void populatePerceptionElementVectorWithRandomValues(vector<Perception_Element> &element_vector);
+
+            void populatePerceptionElement2dVectorWithRandomValues(vector<vector <Perception_Element>> &element_vector);
+
+            void initiateAllLocalNodesWithRandomValues();
 
             explicit Layer(int nodesPerLayer);
 
@@ -55,8 +63,9 @@ namespace Perception {
 
             void setBiases(const vector <Bias> &biases);
 
+            void initiateAllBiasesWithRandomValues();
 
-
+            void initiateAllWeightsWithRandomValues();
         private:
             vector<vector<Weight>> weights;
             vector<Bias> biases;

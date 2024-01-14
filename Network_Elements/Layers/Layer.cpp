@@ -4,6 +4,7 @@
 
 #include "Layer.h"
 
+
 namespace Perception {
     namespace Layers {
         Layer::Layer() {
@@ -58,8 +59,6 @@ namespace Perception {
         Layer::Layer(int nodesPerLayer) : nodeCountPerLayer(nodesPerLayer) {
             this->setNodeCountPerLayer(nodesPerLayer);
 
-             this->initiateEmptyLocalNodes();
-
         }
 
         int Layer::getNodeCountPerLayer() const {
@@ -76,12 +75,91 @@ namespace Perception {
          *
          * if not then it instantiates empty nodes by the count of nodes per layer
          */
-        void Layer::initiateEmptyLocalNodes() {
+        void Layer::initiateAllLocalNodesWithRandomValues() {
             if (this->getNodeCountPerLayer() == 0) return;
 
             this->setLocalNodes(
-                 vector<Node>(this->getNodeCountPerLayer(), Node(0))
+                    vector<Node>(
+                            this->getNodeCountPerLayer(),
+                            Node(
+                                    0
+                            )
+                    )
             );
+
+            this->populatePerceptionElementVectorWithRandomValues(
+                    (vector<Perception_Element> &)
+                            this->getLocalNodes());
+
+         }
+
+        void Layer::initiateAllBiasesWithRandomValues() {
+
+            int numberOfBiases = this->getBiases().size();
+            if (
+                    numberOfBiases == 0
+                    ||
+                    numberOfBiases != this->getNodeCountPerLayer()
+                ) {
+                return;
+            }
+
+            this->setBiases(
+                    vector<Bias>(
+                            numberOfBiases,
+                            Bias(
+                                    0
+                            )
+                    )
+            );
+
+            this->populatePerceptionElementVectorWithRandomValues(
+                    (vector<Perception_Element> &)
+                            this->getBiases());
+        }
+
+        void Layer::initiateAllWeightsWithRandomValues() {
+            int numberOfInputs = this->getInputNodes().size();
+            if (
+                    numberOfInputs == 0
+                    ||
+                    this->getNodeCountPerLayer() == 0
+                    ) {
+                return;
+            }
+
+            vector< vector<Weight>> weights (
+                    numberOfInputs,
+                    vector<Weight>(
+                            getNodeCountPerLayer(),
+                            Weight()));
+
+            this->setWeights(weights);
+
+            this->populatePerceptionElement2dVectorWithRandomValues(
+                    (vector<vector<Perception_Element>> &)
+                            this->getWeights());
+        }
+
+        void Layer::populatePerceptionElementVectorWithRandomValues(vector<Perception_Element> &element_vector) {
+           int vectorSize = element_vector.size();
+
+           for (int vectorIndex = 0; vectorIndex < vectorSize; vectorIndex++) {
+               element_vector[vectorIndex].setValue(Perception_Maths().generateRandomValue());
+           }
+        }
+
+        void Layer::populatePerceptionElement2dVectorWithRandomValues(vector<vector <Perception_Element>> &element_vector) {
+            int vectorRowSize = element_vector.size();
+            int vectorColumnSize = element_vector[0].size();
+
+            for (int vectorRowIndex = 0; vectorRowIndex < vectorRowSize; vectorRowIndex++) {
+                for (int vectorColumnIndex = 0; vectorColumnIndex < vectorColumnSize; vectorColumnIndex++) {
+                    element_vector[vectorRowIndex][vectorColumnIndex]
+                        .setValue(Perception_Maths().generateRandomValue());
+                }
+            }
+
         }
     } // Perception
 } // Layers
