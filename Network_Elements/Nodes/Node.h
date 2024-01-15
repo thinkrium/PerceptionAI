@@ -14,10 +14,23 @@ namespace Perception {
         namespace Nodes {
 
             class Node : public Perception_Element {
+
+            private:
+                float derivedValue;
+                float activatedValue;
+
             public:
                 Node();
 
                 explicit Node(float value);
+
+                void setDerivedValue(float derivedValue);
+
+                float getDerivedValue();
+
+                void setActivatedValue(float activatedValue);
+
+                float getActivatedValue();
 
                 virtual ~Node();
             };

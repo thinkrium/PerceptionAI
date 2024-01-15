@@ -31,18 +31,19 @@ namespace Perception {
             /// <param name="layer"></param>
             double Layer_Helper::Sum_The_Layers_Nodes_Exponential_Values(Layer layer) {
                 
-                double layersExponentialSum = 0;
+             /*   double layersExponentialSum = 0;
 
                 for each (Node node in layer.getLocalNodes()) 
                 {
                     layersExponentialSum += exp( node.getValue());
                 }
 
-                return layersExponentialSum;
+                return layersExponentialSum;*/
+                return 0.0;
 
             }
 
-            void Layer_Helper::Activate_Node_With_Softmax(Node& node) {
+            void Layer_Helper::Activate_Node_With_Softmax(Node& node, double layersExponentialSum) {
 
             }
 
