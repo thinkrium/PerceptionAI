@@ -14,7 +14,16 @@ namespace Perception {
         namespace Nodes {
 
             class Node : public Perception_Element {
+            public:
+                float getDerivedValue() const;
 
+                void setDerivedValue(float derivedValue);
+
+                float getActivatedValue() const;
+
+                void setActivatedValue(float activatedValue);
+
+            private:
 
                 float derivedValue;
                 float activatedValue;

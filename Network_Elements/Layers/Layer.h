@@ -32,6 +32,12 @@ namespace Perception {
             vector<Node> outputNodes;
 
             int nodeCountPerLayer;
+            int nodeCountPerPreviousLayerGoingPropagatingForwards;
+        public:
+            int getNodeCountPerPreviousLayerGoingPropagatingForwards() const;
+
+            void
+            setNodeCountPerPreviousLayerGoingPropagatingForwards(int nodeCountPerPreviousLayerGoingPropagatingForwards);
 
         public:
 

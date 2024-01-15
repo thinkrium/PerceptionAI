@@ -15,6 +15,22 @@ namespace Perception {
 
             Node::Node(float value) : Perception_Element(value) {}
 
+            float Node::getDerivedValue() const {
+                return derivedValue;
+            }
+
+            void Node::setDerivedValue(float derivedValue) {
+                Node::derivedValue = derivedValue;
+            }
+
+            float Node::getActivatedValue() const {
+                return activatedValue;
+            }
+
+            void Node::setActivatedValue(float activatedValue) {
+                Node::activatedValue = activatedValue;
+            }
+
         } // Perception
     } // Elements
 } // Nodes

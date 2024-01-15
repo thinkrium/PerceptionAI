@@ -70,8 +70,10 @@ namespace Perception {
             this->setInnerLayerCount(innerLayerCount);
             this->setNodeCountPerLayer(nodeCountPerLayer);
 
-
+            this->setInputLayer();
             this->setInnerLayers();
+            this->setOutputLayer();
+
         }
 
         void Perception_Network::setInnerLayers() {
@@ -89,21 +91,52 @@ namespace Perception {
 
             for (int index = 0; index < this->getInnerLayerCount(); index++) {
 
-                this->innerLayers[index] = Layer(this->getNodeCountPerLayer());;
+                this->innerLayers[index] = Layer(this->getNodeCountPerLayer());
+
+                if(index == 0) {
+                    // this is the input layer
+                    this->innerLayers[index].setNodeCountPerPreviousLayerGoingPropagatingForwards( 3 );
+                }
+                else {
+                    this->innerLayers[index].setNodeCountPerPreviousLayerGoingPropagatingForwards(
+                        this->innerLayers[index - 1].getNodeCountPerLayer()
+                    );
+                }
+
                 this->innerLayers[index].initiateAllLocalNodesWithRandomValues();
                 this->innerLayers[index].initiateAllWeightsWithRandomValues();
                 this->innerLayers[index].initiateAllBiasesWithRandomValues();
+
+
 
             }
 
         }
 
         void Perception_Network::setInputLayer() {
+            Layer inputLayer(3);
 
+            vector<Node> inputs(3);
+
+            for(int ind; ind < 3; ind++) {
+                inputs[ind].setValue(ind + 1);
+            }
+
+            inputLayer.setLocalNodes(inputs);
+
+            this->setInputLayer(inputLayer);
         }
 
         void Perception_Network::setOutputLayer() {
+            Layer outputLayer(3);
 
+            outputLayer.setNodeCountPerPreviousLayerGoingPropagatingForwards(3);
+            outputLayer.initiateAllLocalNodesWithRandomValues();
+            outputLayer.initiateAllBiasesWithRandomValues();
+            outputLayer.initiateAllWeightsWithRandomValues();
+
+
+            this->setOutputLayer(outputLayer);
         }
     } // Perception
 } // Network

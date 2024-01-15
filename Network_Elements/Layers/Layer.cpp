@@ -117,7 +117,7 @@ namespace Perception {
         }
 
         void Layer::initiateAllWeightsWithRandomValues() {
-            int numberOfInputs = this->getInputNodes().size();
+            int numberOfInputs = this->getNodeCountPerPreviousLayerGoingPropagatingForwards();
             if (
                     numberOfInputs == 0
                     ||
@@ -155,6 +155,15 @@ namespace Perception {
            for (int vectorIndex = 0; vectorIndex < vectorSize; vectorIndex++) {
                element_vector[vectorIndex].setValue(Perception_Maths().generateRandomValue());
            }
+        }
+
+        int Layer::getNodeCountPerPreviousLayerGoingPropagatingForwards() const {
+            return nodeCountPerPreviousLayerGoingPropagatingForwards;
+        }
+
+        void Layer::setNodeCountPerPreviousLayerGoingPropagatingForwards(
+                int nodeCountPerPreviousLayerGoingPropagatingForwards) {
+            Layer::nodeCountPerPreviousLayerGoingPropagatingForwards = nodeCountPerPreviousLayerGoingPropagatingForwards;
         }
 
         void Layer::populatePerceptionElement2dVectorWithRandomValues(vector<vector <Perception_Element>> &element_vector) {

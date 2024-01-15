@@ -19,7 +19,8 @@ namespace Perception {
 
                 explicit Bias(float value);
 
-                ~Bias() override;
+                ~Bias() override
+                ;
             };
 
         } // Perception
