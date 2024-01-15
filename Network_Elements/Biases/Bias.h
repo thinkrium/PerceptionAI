@@ -13,13 +13,13 @@ namespace Perception {
     namespace Elements {
         namespace Biases {
 
-            class Bias : Perception_Element {
+            class Bias : public Perception_Element {
             public:
                 Bias();
 
                 explicit Bias(float value);
 
-                virtual ~Bias();
+                ~Bias() override;
             };
 
         } // Perception

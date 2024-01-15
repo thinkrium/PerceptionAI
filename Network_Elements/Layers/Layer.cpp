@@ -12,9 +12,7 @@ namespace Perception {
             this->setNodeCountPerLayer(0);
         }
 
-        Layer::~Layer() {
-
-        }
+        Layer::~Layer() = default;
 
         const vector<Node> &Layer::getInputNodes() const {
             return inputNodes;
@@ -87,9 +85,9 @@ namespace Perception {
                     )
             );
 
-            this->populatePerceptionElementVectorWithRandomValues(
-                    (vector<Perception_Element> &)
-                            this->getLocalNodes());
+            for(int ind = 0; ind < this->getNodeCountPerLayer(); ind++) {
+                this->localNodes[ind].setValue(Perception_Maths().generateRandomValue());
+            }
 
          }
 
@@ -113,9 +111,9 @@ namespace Perception {
                     )
             );
 
-            this->populatePerceptionElementVectorWithRandomValues(
-                    (vector<Perception_Element> &)
-                            this->getBiases());
+            for(int ind = 0; ind < numberOfBiases; ind++) {
+                this->biases[ind].setValue(Perception_Maths().generateRandomValue());
+            }
         }
 
         void Layer::initiateAllWeightsWithRandomValues() {
@@ -134,11 +132,21 @@ namespace Perception {
                             getNodeCountPerLayer(),
                             Weight()));
 
-            this->setWeights(weights);
+            int vectorRowSize = weights.size();
+            int vectorColumnSize = weights[0].size();
 
-            this->populatePerceptionElement2dVectorWithRandomValues(
-                    (vector<vector<Perception_Element>> &)
-                            this->getWeights());
+            for (int vectorRowIndex = 0; vectorRowIndex < vectorRowSize; vectorRowIndex++) {
+                for (int vectorColumnIndex = 0; vectorColumnIndex < vectorColumnSize; vectorColumnIndex++) {
+                    weights[vectorRowIndex][vectorColumnIndex]
+                            .setValue(Perception_Maths().generateRandomValue());
+                }
+            }
+
+            this->setWeights(weights);
+//
+//            this->populatePerceptionElement2dVectorWithRandomValues(
+//                    (vector<vector<Perception_Element>> &)
+//                            this->getWeights());
         }
 
         void Layer::populatePerceptionElementVectorWithRandomValues(vector<Perception_Element> &element_vector) {

@@ -7,6 +7,8 @@
 
 #include "../../Network_Elements/Layers/Layer.h"
 
+using namespace Perception::Layers;
+
 namespace Perception {
     namespace Network {
         namespace Utilities {

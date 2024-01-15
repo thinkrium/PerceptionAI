@@ -73,7 +73,7 @@ namespace Perception {
         public:
             Layer();
 
-            virtual ~Layer();
+              ~Layer();
 
             int getNodeCountPerLayer() const;
 

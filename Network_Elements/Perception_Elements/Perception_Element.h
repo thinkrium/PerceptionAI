@@ -22,7 +22,6 @@ namespace Perception {
 
             void setValue(float value);
 
-            void instantiateRandomValue();
 
             virtual ~Perception_Element();
 
