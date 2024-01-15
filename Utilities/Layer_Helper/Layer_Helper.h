@@ -6,19 +6,6 @@
 #define PERCEPTIONAI_LAYER_HELPER_H
 
 #include "../../Network_Elements/Layers/Layer.h"
-#include "../../Network_Elements/Nodes/Node.h"
-#include "../../Network_Elements/Weights/Weight.h"
-#include "../../Network_Elements/Biases/Bias.h"
-
-#include "cmath"
-
-using namespace Perception::Elements::Nodes;
-using namespace Perception::Elements::Weights;
-using namespace Perception::Elements::Biases;
-
-using namespace Perception::Layers;
-
-using namespace std;
 
 namespace Perception {
     namespace Network {
