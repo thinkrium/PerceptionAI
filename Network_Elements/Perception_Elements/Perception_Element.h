@@ -5,7 +5,9 @@
 #ifndef PERCEPTIONAI_PERCEPTION_ELEMENT_H
 #define PERCEPTIONAI_PERCEPTION_ELEMENT_H
 
-#include "random"
+#include "cmath"
+
+using namespace std;
 
 namespace Perception {
     namespace Elements {

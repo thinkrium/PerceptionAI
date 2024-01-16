@@ -45,7 +45,6 @@ namespace Perception {
 
             void populatePerceptionElement2dVectorWithRandomValues(vector<vector <Perception_Element>> &element_vector);
 
-            void initiateAllLocalNodesWithRandomValues();
 
             explicit Layer(int nodesPerLayer);
 
@@ -69,10 +68,8 @@ namespace Perception {
 
             void setBiases(const vector <Bias> &biases);
 
-            void initiateAllBiasesWithRandomValues();
 
-            void initiateAllWeightsWithRandomValues();
-        private:
+         private:
             vector<vector<Weight>> weights;
             vector<Bias> biases;
 

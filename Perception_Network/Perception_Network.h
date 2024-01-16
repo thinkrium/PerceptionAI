@@ -48,17 +48,31 @@ namespace Perception {
 
             void setInnerLayerCount(int innerLayerCount);
 
-            int getNodeCountPerLayer() const;
+            int getNodeCountPerInnerLayer() const;
 
-            void setNodeCountPerLayer(int nodeCountPerLayer);
+            void setNodeCountPerInnerLayer(int nodeCountPerLayer);
+
+        private:
+        public:
+            int getInputLayerNodeCount() const;
+
+            void setInputLayerNodeCount(int inputLayerNodeCount);
+
+            int getOutputLayerNodeCount() const;
+
+            void setOutputLayerNodeCount(int outputLayerNodeCount);
 
         private:
             Layer inputLayer;
             vector <Layer> innerLayers;
             Layer outputLayer;
 
-            int inner_layer_count;
-            int node_count_per_layer;
+            int inputLayerNodeCount;
+
+            int innerLayerCount;
+            int nodeCountPerInnerLayer;
+
+            int outputLayerNodeCount;
         };
 
     } // Perception

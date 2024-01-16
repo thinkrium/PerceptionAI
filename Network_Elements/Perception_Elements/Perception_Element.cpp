@@ -6,7 +6,21 @@
 
 namespace Perception {
     namespace Elements {
-        Perception_Element::Perception_Element() {}
+
+        /***
+         * This constructor instantiates a random value to be set at runtime for updates
+         * doing it in the constructor eliminates a significant amount of code necessary to accomplish
+         * the same functionality
+         *
+         * BE AWARE -- the input values that are sent to the first layer should not use this constructor
+         * as their values would not (that i can think of) be random. They would be real world values
+         */
+        Perception_Element::Perception_Element() {
+
+            float randomValue = (float)rand() / ((float)RAND_MAX + 1) * 2 - 1;
+            this->setValue(randomValue);
+
+        }
 
         Perception_Element::Perception_Element(float value) : value(value) {}
 
