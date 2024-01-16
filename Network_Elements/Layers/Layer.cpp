@@ -15,43 +15,43 @@ namespace Perception {
         Layer::~Layer() = default;
 
         const vector<Node> &Layer::getInputNodes() const {
-            return inputNodes;
+            return this->inputNodes;
         }
 
         void Layer::setInputNodes(const vector<Node> &inputNodes) {
-            Layer::inputNodes = inputNodes;
+            this->inputNodes = inputNodes;
         }
 
         const vector<Node> &Layer::getLocalNodes() const {
-            return localNodes;
+            return this->localNodes;
         }
 
         void Layer::setLocalNodes(const vector<Node> &localNodes) {
-            Layer::localNodes = localNodes;
+            this->localNodes = localNodes;
         }
 
         const vector<Node> &Layer::getOutputNodes() const {
-            return outputNodes;
+            return this->outputNodes;
         }
 
         void Layer::setOutputNodes(const vector<Node> &outputNodes) {
-            Layer::outputNodes = outputNodes;
+            this->outputNodes = outputNodes;
         }
 
         const vector<vector<Weight>> &Layer::getWeights() const {
-            return weights;
+            return this->weights;
         }
 
         void Layer::setWeights(const vector<vector<Weight>> &weights) {
-            Layer::weights = weights;
+            this->weights = weights;
         }
 
         const vector<Bias> &Layer::getBiases() const {
-            return biases;
+            return this->biases;
         }
 
         void Layer::setBiases(const vector<Bias> &biases) {
-            Layer::biases = biases;
+            this->biases = biases;
         }
 
         /***
@@ -65,21 +65,21 @@ namespace Perception {
         }
 
         int Layer::getNodeCountPerLayer() const {
-            return nodeCountPerLayer;
+            return this->nodeCountPerLayer;
         }
 
         void Layer::setNodeCountPerLayer(int nodesPerLayer) {
-            Layer::nodeCountPerLayer = nodesPerLayer;
+            this->nodeCountPerLayer = nodesPerLayer;
         }
 
 
         int Layer::getNodeCountPerPreviousLayerGoingPropagatingForwards() const {
-            return nodeCountPerPreviousLayerGoingPropagatingForwards;
+            return this->nodeCountPerPreviousLayerGoingPropagatingForwards;
         }
 
         void Layer::setNodeCountPerPreviousLayerGoingPropagatingForwards(
                 int nodeCountPerPreviousLayerGoingPropagatingForwards) {
-            Layer::nodeCountPerPreviousLayerGoingPropagatingForwards = nodeCountPerPreviousLayerGoingPropagatingForwards;
+            this->nodeCountPerPreviousLayerGoingPropagatingForwards = nodeCountPerPreviousLayerGoingPropagatingForwards;
         }
 
 

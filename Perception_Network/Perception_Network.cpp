@@ -18,43 +18,43 @@ namespace Perception {
         }
 
         const Layer &Perception_Network::getInputLayer() const {
-            return inputLayer;
+            return this->inputLayer;
         }
 
         void Perception_Network::setInputLayer(const Layer &inputLayer) {
-            Perception_Network::inputLayer = inputLayer;
+            this->inputLayer = inputLayer;
         }
 
         const vector<Layer> &Perception_Network::getInnerLayers() const {
-            return innerLayers;
+            return this->innerLayers;
         }
 
         void Perception_Network::setInnerLayers(const vector<Layer> &innerLayers) {
-            Perception_Network::innerLayers = innerLayers;
+            this->innerLayers = innerLayers;
         }
 
         const Layer &Perception_Network::getOutputLayer() const {
-            return outputLayer;
+            return this->outputLayer;
         }
 
         void Perception_Network::setOutputLayer(const Layer &outputLayer) {
-            Perception_Network::outputLayer = outputLayer;
+            this->outputLayer = outputLayer;
         }
 
         int Perception_Network::getInnerLayerCount() const {
-            return innerLayerCount;
+            return this->innerLayerCount;
         }
 
         void Perception_Network::setInnerLayerCount(int innerLayerCount) {
-            innerLayerCount = innerLayerCount;
+            this->innerLayerCount = innerLayerCount;
         }
 
         int Perception_Network::getNodeCountPerInnerLayer() const {
-            return nodeCountPerInnerLayer;
+            return this->nodeCountPerInnerLayer;
         }
 
         void Perception_Network::setNodeCountPerInnerLayer(int nodeCountPerLayer) {
-            nodeCountPerInnerLayer = nodeCountPerLayer;
+            this->nodeCountPerInnerLayer = nodeCountPerLayer;
         }
 
         void Perception_Network::startNetwork() {
@@ -67,8 +67,12 @@ namespace Perception {
 
         void Perception_Network::instantiateNetwork(int innerLayerCount, int nodeCountPerLayer) {
 
+            this->setInputLayerNodeCount(3);
+
             this->setInnerLayerCount(innerLayerCount);
             this->setNodeCountPerInnerLayer(nodeCountPerLayer);
+
+            this->setOutputLayerNodeCount(3);
 
             this->setInputLayer();
             this->setInnerLayers();
@@ -87,41 +91,57 @@ namespace Perception {
             }
 
 
-            this->setInnerLayers(  vector< Layer>(this->getInnerLayerCount()));
+            vector< Layer>  innerLayers(this->getInnerLayerCount());
 
             for (int index = 0; index < this->getInnerLayerCount(); index++) {
 
-                this->innerLayers[index] = Layer(this->getNodeCountPerInnerLayer());
+                innerLayers[index] = Layer(this->getNodeCountPerInnerLayer());
 
                 if(index == 0) {
                     // this is the input layer
-                    this->innerLayers[index].setNodeCountPerPreviousLayerGoingPropagatingForwards( 3 );
+                    innerLayers[index].setNodeCountPerPreviousLayerGoingPropagatingForwards( 3 );
                 }
                 else {
-                    this->innerLayers[index].setNodeCountPerPreviousLayerGoingPropagatingForwards(
-                        this->innerLayers[index - 1].getNodeCountPerLayer()
+                    innerLayers[index].setNodeCountPerPreviousLayerGoingPropagatingForwards(
+                            innerLayers[index - 1].getNodeCountPerLayer()
                     );
                 }
 
-//                this->innerLayers[index].initiateAllLocalNodesWithRandomValues();
-//                this->innerLayers[index].initiateAllWeightsWithRandomValues();
-//                this->innerLayers[index].initiateAllBiasesWithRandomValues();
 
 
+                // set local nodes
+                vector<Node> localNodes(this->getOutputLayerNodeCount(), Node());
+
+                innerLayers[index].setLocalNodes(localNodes);
+
+                // set weights
+                vector<vector<Weight> > weights(
+                        // this is the input layer count
+                        innerLayers[index].getNodeCountPerPreviousLayerGoingPropagatingForwards(),
+                        vector<Weight>(this->getNodeCountPerInnerLayer(), Weight()));
+
+                innerLayers[index].setWeights(weights);
+
+                // set biases
+                vector<Bias> biases(innerLayers[index].getNodeCountPerLayer(), Bias());
+
+                innerLayers[index].setBiases(biases);
 
             }
+
+            this->setInnerLayers(innerLayers);
 
         }
 
         void Perception_Network::setInputLayer() {
 
-            if(this->getNodeCountPerInnerLayer() == 0) return;
+            if(this->getInputLayerNodeCount() == 0) return;
 
-            Layer inputLayer(this->getNodeCountPerInnerLayer());
+            Layer inputLayer(this->getInputLayerNodeCount());
 
-            vector<Node> inputs(this->getNodeCountPerInnerLayer());
+            vector<Node> inputs(this->getInputLayerNodeCount());
 
-            for(int nodeCountIndex = 0; nodeCountIndex < this->getNodeCountPerInnerLayer(); nodeCountIndex++) {
+            for(int nodeCountIndex = 0; nodeCountIndex < this->getInputLayerNodeCount(); nodeCountIndex++) {
                 inputs[nodeCountIndex].setValue(nodeCountIndex + 1);
             }
 
@@ -131,29 +151,53 @@ namespace Perception {
         }
 
         void Perception_Network::setOutputLayer() {
-            Layer outputLayer(3);
 
-            vector<Node> localNodes(3);
-            outputLayer.setNodeCountPerPreviousLayerGoingPropagatingForwards(3);
+            Layer lastInnerLayer = this->innerLayers[this->innerLayers.size() - 1] ;
+
+            int inputCount =  lastInnerLayer.getNodeCountPerLayer();
+
+            Layer outputLayer(this->getOutputLayerNodeCount());
+
+            // set local nodes
+            vector<Node> localNodes(this->getOutputLayerNodeCount(), Node());
+
+            outputLayer.setLocalNodes(localNodes);
+
+            // set weights
+            vector<vector<Weight> > weights(
+                    inputCount,
+                    vector<Weight>(this->getOutputLayerNodeCount(), Weight()));
+
+            outputLayer.setWeights(weights);
+
+            // set biases
+            vector<Bias> biases(this->getOutputLayerNodeCount(), Bias());
+
+            outputLayer.setBiases(biases);
+
+            // get the output node count from the last inner layer going forward
+            outputLayer.setNodeCountPerPreviousLayerGoingPropagatingForwards(
+                   inputCount
+            );
 
 
             this->setOutputLayer(outputLayer);
         }
 
         int Perception_Network::getInputLayerNodeCount() const {
-            return inputLayerNodeCount;
+            return this->inputLayerNodeCount;
         }
 
         void Perception_Network::setInputLayerNodeCount(int inputLayerNodeCount) {
-            Perception_Network::inputLayerNodeCount = inputLayerNodeCount;
+            this->inputLayerNodeCount = inputLayerNodeCount;
         }
 
         int Perception_Network::getOutputLayerNodeCount() const {
-            return outputLayerNodeCount;
+            return this->outputLayerNodeCount;
         }
 
         void Perception_Network::setOutputLayerNodeCount(int outputLayerNodeCount) {
-            Perception_Network::outputLayerNodeCount = outputLayerNodeCount;
+            this->outputLayerNodeCount = outputLayerNodeCount;
         }
     } // Perception
 } // Network
