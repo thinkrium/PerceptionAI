@@ -52,8 +52,6 @@ namespace Perception {
 
             void setNodeCountPerInnerLayer(int nodeCountPerLayer);
 
-        private:
-        public:
             int getInputLayerNodeCount() const;
 
             void setInputLayerNodeCount(int inputLayerNodeCount);
@@ -62,6 +60,12 @@ namespace Perception {
 
             void setOutputLayerNodeCount(int outputLayerNodeCount);
 
+            void
+            instantiateLayersWeights(Layer &layer);
+
+            void instantiateLayersLocalNodes(Layer &layer);
+
+            void instantiateLayersBiases(Layer &layer);
         private:
             Layer inputLayer;
             vector <Layer> innerLayers;
