@@ -19,7 +19,7 @@ using namespace Perception::Elements::Nodes;
 using namespace Perception::Elements::Weights;
 using namespace Perception::Elements::Biases;
 
-using namespace Perception::Utilities::Maths;
+using namespace Perception::Network::Utilities::Maths;
 
 namespace Perception {
     namespace Layers {

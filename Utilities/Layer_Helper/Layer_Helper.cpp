@@ -1,4 +1,4 @@
-//
+ //
 // Created by thome on 1/13/2024.
 //
 
@@ -11,8 +11,13 @@ namespace Perception {
         namespace Utilities {
 
 
-            vector<Node> Layer_Helper::Propagate_Forward() {
-                return vector<Node>();
+            /**
+             * Passes the layers outputs forward
+             * @param layer
+             * @return
+             */
+            vector<Node> Layer_Helper::Propagate_Forward(Layer layer) {
+                return layer.getOutputNodes();
             }
 
             vector<Node> Layer_Helper::Propagate_Backward() {
@@ -29,16 +34,16 @@ namespace Perception {
             /// activation with softmax is dependent on an exponential sum
             /// </summary>
             /// <param name="layer"></param>
-            double Layer_Helper::Sum_The_Layers_Nodes_Exponential_Values(Layer layer) {
+            double Layer_Helper::Sum_The_Layers_Nodes_Exponential_Values(Layer &layer) {
                 
-             /*   double layersExponentialSum = 0;
+                double layersExponentialSum = 0;
 
-                for each (Node node in layer.getLocalNodes()) 
+                for (Node node : layer.getLocalNodes())
                 {
                     layersExponentialSum += exp( node.getValue());
                 }
 
-                return layersExponentialSum;*/
+                return layersExponentialSum;
                 return 0.0;
 
             }
@@ -64,6 +69,27 @@ namespace Perception {
             }
 
             void Layer_Helper::Calculate_Cross_Entropy_With_Softmax_Derivative() {
+
+            }
+
+            Layer_Helper::Layer_Helper() {}
+
+            Layer_Helper::~Layer_Helper() {
+
+            }
+
+            void Layer_Helper::Activate_Nodes_With(Perception_Enumerations::activationMethod activationMethod) {
+
+            }
+
+            void Layer_Helper::Prepare_Forward_Propagation(Layer &layer) {
+
+                for (Node localNode : layer.getLocalNodes()) {
+
+                }
+            }
+
+            void Layer_Helper::Prepare_Backward_Propagation(Layer &layer) {
 
             }
         } // Perception

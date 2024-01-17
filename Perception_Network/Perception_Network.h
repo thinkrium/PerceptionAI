@@ -9,6 +9,7 @@
 #include "../Utilities/Layer_Helper/Layer_Helper.h"
 
 using namespace Perception::Layers;
+using namespace Perception::Network::Utilities;
 
 namespace Perception {
     namespace Network {
@@ -67,6 +68,15 @@ namespace Perception {
 
             void instantiateLayersBiases(Layer &layer);
         private:
+
+            Layer_Helper layerHelper;
+        public:
+            const Layer_Helper &getLayerHelper() const;
+
+            void setLayerHelper(const Layer_Helper &layerHelper);
+
+        private:
+
             Layer inputLayer;
             vector <Layer> innerLayers;
             Layer outputLayer;

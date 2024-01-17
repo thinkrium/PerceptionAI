@@ -7,14 +7,17 @@
 namespace Perception {
     namespace Network {
 
-        Perception_Network::Perception_Network() {}
+        Perception_Network::Perception_Network() {
+
+            this->setLayerHelper(Layer_Helper());
+        }
 
         Perception_Network::Perception_Network(int layerCount, int nodesPerLayer) : innerLayerCount(layerCount),
                                                                                     nodeCountPerInnerLayer(nodesPerLayer) {
             this->setInnerLayerCount(layerCount);
             this->setNodeCountPerInnerLayer(nodesPerLayer);
 
-
+            this->setLayerHelper(Layer_Helper());
         }
 
         const Layer &Perception_Network::getInputLayer() const {
@@ -131,9 +134,12 @@ namespace Perception {
 
             for(int nodeCountIndex = 0; nodeCountIndex < this->getInputLayerNodeCount(); nodeCountIndex++) {
                 inputs[nodeCountIndex].setValue(nodeCountIndex + 1);
+
             }
 
-            inputLayer.setLocalNodes(inputs);
+//            inputLayer.setLocalNodes(inputs);
+            inputLayer.setOutputNodes(inputs); // in the input layer there is no preparation to perform
+                                               // the outputs are the inputs
 
             this->setInputLayer(inputLayer);
         }
@@ -218,6 +224,14 @@ namespace Perception {
             layer.setBiases(biases);
 
 
+        }
+
+        const Layer_Helper &Perception_Network::getLayerHelper() const {
+            return layerHelper;
+        }
+
+        void Perception_Network::setLayerHelper(const Layer_Helper &layerHelper) {
+            Perception_Network::layerHelper = layerHelper;
         }
     } // Perception
 } // Network

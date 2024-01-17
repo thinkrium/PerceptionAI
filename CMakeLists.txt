@@ -19,7 +19,8 @@ add_library(PerceptionAI SHARED Perception.cpp
         Utilities/Layer_Helper/Layer_Helper.cpp
         Utilities/Layer_Helper/Layer_Helper.h
         Utilities/Maths/Perception_Maths.cpp
-        Utilities/Maths/Perception_Maths.h)
+        Utilities/Maths/Perception_Maths.h
+        Utilities/Enumerations/Perception_Enumerations.h)
 
 add_executable(Perception_AI  Perception.cpp
         Network_Elements/Perception_Elements/Perception_Element.cpp
@@ -38,4 +39,5 @@ add_executable(Perception_AI  Perception.cpp
         Utilities/Layer_Helper/Layer_Helper.cpp
         Utilities/Layer_Helper/Layer_Helper.h
         Utilities/Maths/Perception_Maths.cpp
-        Utilities/Maths/Perception_Maths.h)
+        Utilities/Maths/Perception_Maths.h
+        Utilities/Enumerations/Perception_Enumerations.h)

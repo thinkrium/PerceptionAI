@@ -8,17 +8,18 @@
 #include "random"
 
 namespace Perception {
-    namespace Utilities {
-        namespace Maths {
+    namespace Network {
+        namespace Utilities {
+            namespace Maths {
 
-            class Perception_Maths {
-            public:
-/**
- * Sets a random value between -1 and 1
- */
-float generateRandomValue();
-            };
-
+                class Perception_Maths {
+                public:
+    /**
+     * Sets a random value between -1 and 1
+     */
+                    float generateRandomValue();
+                };
+            }
         } // Perception
     } // Utilities
 } // Maths
