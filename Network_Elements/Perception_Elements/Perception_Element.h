@@ -6,7 +6,9 @@
 #define PERCEPTIONAI_PERCEPTION_ELEMENT_H
 
 #include "cmath"
+#include "../../Utilities/Enumerations/Perception_Enumerations.h"
 
+using namespace Perception::Network::Utilities::Enumerations;
 using namespace std;
 
 namespace Perception {
@@ -29,6 +31,13 @@ namespace Perception {
 
         private:
             float value;
+
+            Perception_Enumerations::healthStatus healthStatus;
+        public:
+            Perception_Enumerations::healthStatus getHealthStatus() const;
+
+            void setHealthStatus(Perception_Enumerations::healthStatus healthStatus);
+
         };
 
     } // Perception

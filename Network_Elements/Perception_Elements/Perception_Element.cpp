@@ -36,5 +36,13 @@ namespace Perception {
 
         }
 
+        Perception_Enumerations::healthStatus Perception_Element::getHealthStatus() const {
+            return healthStatus;
+        }
+
+        void Perception_Element::setHealthStatus(Perception_Enumerations::healthStatus healthStatus) {
+            Perception_Element::healthStatus = healthStatus;
+        }
+
     } // Perception
 } // Elements

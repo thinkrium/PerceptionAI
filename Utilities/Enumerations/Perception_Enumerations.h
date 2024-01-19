@@ -15,6 +15,7 @@ namespace Perception {
                 public:
                       enum activationMethod {ReLU, Softmax, Sigmoid};
                       enum lossCalculationMethod { CategoricalCrossEntropy };
+                      enum healthStatus { ok, error };
                 };
 
             } // Perception
