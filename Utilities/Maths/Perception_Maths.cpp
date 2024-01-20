@@ -3,8 +3,6 @@
 //
 
 #include "Perception_Maths.h"
-#include "cstdlib"
-#include "ctime"
 
 namespace Perception {
     namespace Network {
@@ -18,36 +16,22 @@ namespace Perception {
 
                 }
 
-                float Perception_Maths::dotProduct(vector<float> leftVector, vector<float> rightVector) {
 
-                    float dotProduct = 0;
-                    try {
-                        if (leftVector.size() != rightVector.size()) {
-                            throw "The vecot";
-                        }
-
-                        for (int dotProductIndex = 0; dotProductIndex < leftVector.size(); dotProductIndex++) {
-                            dotProduct += leftVector[dotProductIndex] * rightVector[dotProductIndex];
-                        }
-                    }
-                    catch (exception e) {
-                        printf(e.what());
-                    }
-                    return dotProduct;
-                }
-
-
-                vector<vector<Perception_Element>>
-                Perception_Maths::dotProduct(vector<vector<Perception_Element>> leftMatrix, vector<vector<Perception_Element>> rightMatrix) {
+                template<typename t> Perception_Element_Matrix<t>
+                Perception_Maths::dotProduct(
+                        Perception_Element_Matrix<t> leftMatrix,
+                        Perception_Element_Matrix<t> rightMatrix) {
 
                     // for testing dot product validity
-                    int leftMatrixColumnSize = leftMatrix[0].size();
-                    int rightMatrixRowSize = rightMatrix.size();
+                    int leftMatrixColumnSize = leftMatrix.getMatrix()[0].size();
+                    int rightMatrixRowSize = rightMatrix.getMatrix().size();
 
-                    int leftMatrixRowSize = leftMatrix.size();
-                    int rightMatrixColumnSize = rightMatrix[0].size();
+                    int leftMatrixRowSize = leftMatrix.getMatrix().size();
+                    int rightMatrixColumnSize = rightMatrix.getMatrix()[0].size();
 
-                    vector<vector<Perception_Element>> dotProductMatrix (leftMatrixRowSize, vector<Perception_Element>(rightMatrixColumnSize));
+                    // you have to add 1 to the index size because for readability they are not zero indexed
+                    // hovering over the function name will reveal the tool tip
+                    Perception_Element_Matrix<t> dotProductMatrix((leftMatrixRowSize + 1), (rightMatrixColumnSize + 1) );
 
                     try {
                         if (leftMatrixColumnSize != rightMatrixRowSize) { throw "nope"; }
@@ -61,18 +45,22 @@ namespace Perception {
                     return dotProductMatrix;
                 }
 
-                vector<vector<Perception_Element>>
-                Perception_Maths::invertMatrix(vector<vector<Perception_Element>> matrixToInvert) {
+                template<typename t> Perception_Element_Matrix<t>
+                Perception_Maths::invertMatrix(Perception_Element_Matrix<t> matrixToInvert) {
 
-                    int rowSize = matrixToInvert.size();
-                    int columnSize = matrixToInvert[0].size();
+                    int rowSize = matrixToInvert.getMatrix().size();
+                    int columnSize = matrixToInvert.getMatrix()[0].size();
 
-                    vector<vector<Perception_Element>> invertedMatrix(rowSize, vector<Perception_Element>(columnSize));
+                    // you have to add 1 to the index size because for readability they are not zero indexed
+                    // hovering over the function name will reveal the tool tip
+                    Perception_Element_Matrix<t> invertedMatrix((rowSize + 1) , (columnSize + 1));
 
                     for(int rowIndex = 0; rowIndex < rowSize; rowIndex++) {
                         for(int columnIndex = 0 ; columnIndex < columnSize; columnIndex++) {
 
-                            invertedMatrix[columnIndex][rowIndex] = matrixToInvert[rowIndex][columnIndex];
+                            invertedMatrix.setIndividualMatrixElementValue(columnIndex,
+                                                                           rowIndex,
+                                                                           matrixToInvert.getMatrix()[rowIndex][columnIndex]);
                         }
                     }
 

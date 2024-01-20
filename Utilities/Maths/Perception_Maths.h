@@ -5,10 +5,17 @@
 #ifndef PERCEPTIONAI_PERCEPTION_MATHS_H
 #define PERCEPTIONAI_PERCEPTION_MATHS_H
 
-#include "random"
-#include "../../Network_Elements/Nodes/Node.h"
+#include "cstdlib"
+#include "ctime"
 
-using namespace Perception::Network::Elements::Nodes;
+#include "random"
+
+#include "../../Network_Elements/Perception_Elements/Individual/Perception_Element.h"
+
+#include "../../Network_Elements/Perception_Elements/Matrices/Perception_Element_Matrix.h"
+
+using namespace Perception::Network::Elements;
+using namespace Perception::Network::Elements::Matrices;
 
 namespace Perception {
     namespace Network {
@@ -18,7 +25,7 @@ namespace Perception {
                 class Perception_Maths {
 
                 private:
-                    vector<vector<Perception_Element>> invertMatrix(vector<vector<Perception_Element>> matrixToInvert);
+                    template<typename t>Perception_Element_Matrix<t> invertMatrix(Perception_Element_Matrix<t> matrixToInvert);
 
                 public:
                     Perception_Maths();
@@ -28,10 +35,11 @@ namespace Perception {
                      */
                     float generateRandomValue();
 
-                    vector<vector<Perception_Element>> dotProduct(vector<vector<Perception_Element>> leftMatrix, vector<vector<Perception_Element>> rightMatrix) ;
-
-
-                    float dotProduct(vector<float> leftVector, vector<float> rightVector);
+                    template<typename t>Perception_Element_Matrix<t>
+                    dotProduct(
+                            Perception_Element_Matrix<t> leftMatrix,
+                            Perception_Element_Matrix<t> rightMatrix
+                            ) ;
                 };
             }
         } // Perception
