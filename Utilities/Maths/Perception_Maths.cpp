@@ -38,7 +38,7 @@ namespace Perception {
 
                         for(int rowIndex = 0; rowIndex < leftMatrixRowSize; rowIndex++) {
                             for(int columnIndex = 0; columnIndex < rightMatrixColumnSize; columnIndex++) {
-                                
+
                             }
                         }
 
