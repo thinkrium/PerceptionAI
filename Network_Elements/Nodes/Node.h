@@ -5,39 +5,41 @@
 #ifndef PERCEPTIONAI_NODE_H
 #define PERCEPTIONAI_NODE_H
 
-#include "../Perception_Elements/Perception_Element.h"
+#include "../Perception_Elements/Individual/Perception_Element.h"
 
-using namespace Perception::Elements;
+using namespace Perception::Network::Elements;
 
 namespace Perception {
-    namespace Elements {
-        namespace Nodes {
+    namespace Network {
+        namespace Elements {
+            namespace Nodes {
 
-            class Node : public Perception_Element {
-            public:
-                float getDerivedValue() const;
+                class Node : public Perception_Element {
+                public:
+                    float getDerivedValue() const;
 
-                void setDerivedValue(float derivedValue);
+                    void setDerivedValue(float derivedValue);
 
-                float getActivatedValue() const;
+                    float getActivatedValue() const;
 
-                void setActivatedValue(float activatedValue);
+                    void setActivatedValue(float activatedValue);
 
-            private:
+                private:
 
-                float derivedValue;
-                float activatedValue;
+                    float derivedValue;
+                    float activatedValue;
 
-            public:
-                Node();
+                public:
+                    Node();
 
-                explicit Node(float value);
+                    explicit Node(float value);
 
-                ~Node() override;
-            };
+                    ~Node() override;
+                };
 
-        } // Perception
-    } // Elements
+            } // Perception
+        } // Elements
+    }
 } // Nodes
 
 #endif //PERCEPTIONAI_NODE_H

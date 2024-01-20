@@ -5,25 +5,26 @@
 #ifndef PERCEPTIONAI_BIAS_H
 #define PERCEPTIONAI_BIAS_H
 
-#include "../Perception_Elements/Perception_Element.h"
+#include "../Perception_Elements/Individual/Perception_Element.h"
 
-using namespace Perception::Elements;
+using namespace Perception::Network::Elements;
 
 namespace Perception {
-    namespace Elements {
-        namespace Biases {
+    namespace Network {
+        namespace Elements {
+            namespace Biases {
 
-            class Bias : public Perception_Element {
-            public:
-                Bias();
+                class Bias : public Perception_Element {
+                public:
+                    Bias();
 
-                explicit Bias(float value);
+                    explicit Bias(float value);
 
-                ~Bias() override
-                ;
-            };
+                    ~Bias() override;
+                };
 
-        } // Perception
+            } // Perception
+        }
     } // Elements
 } // Biases
 

@@ -5,6 +5,7 @@
 #include "Perception_Element.h"
 
 namespace Perception {
+    namespace Network {
     namespace Elements {
 
         /***
@@ -17,7 +18,7 @@ namespace Perception {
          */
         Perception_Element::Perception_Element() {
 
-            float randomValue = (float)rand() / ((float)RAND_MAX + 1) * 2 - 1;
+            float randomValue = (float) rand() / ((float) RAND_MAX + 1) * 2 - 1;
             this->setValue(randomValue);
 
         }
@@ -43,6 +44,6 @@ namespace Perception {
         void Perception_Element::setHealthStatus(Perception_Enumerations::healthStatus healthStatus) {
             Perception_Element::healthStatus = healthStatus;
         }
-
+    }
     } // Perception
 } // Elements

@@ -5,32 +5,34 @@
 #include "Node.h"
 
 namespace Perception {
-    namespace Elements {
-        namespace Nodes {
-            Node::Node() {}
+    namespace Network {
+        namespace Elements {
+            namespace Nodes {
+                Node::Node() {}
 
-            Node::~Node() {
+                Node::~Node() {
 
-            }
+                }
 
-            Node::Node(float value) : Perception_Element(value) {}
+                Node::Node(float value) : Perception_Element(value) {}
 
-            float Node::getDerivedValue() const {
-                return derivedValue;
-            }
+                float Node::getDerivedValue() const {
+                    return derivedValue;
+                }
 
-            void Node::setDerivedValue(float derivedValue) {
-                Node::derivedValue = derivedValue;
-            }
+                void Node::setDerivedValue(float derivedValue) {
+                    Node::derivedValue = derivedValue;
+                }
 
-            float Node::getActivatedValue() const {
-                return activatedValue;
-            }
+                float Node::getActivatedValue() const {
+                    return activatedValue;
+                }
 
-            void Node::setActivatedValue(float activatedValue) {
-                Node::activatedValue = activatedValue;
-            }
+                void Node::setActivatedValue(float activatedValue) {
+                    Node::activatedValue = activatedValue;
+                }
 
-        } // Perception
-    } // Elements
+            } // Perception
+        } // Elements
+    }
 } // Nodes

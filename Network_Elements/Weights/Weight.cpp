@@ -5,14 +5,17 @@
 #include "Weight.h"
 
 namespace Perception {
-    namespace Elements {
-        namespace Weights {
-            Weight::Weight() {}
+    namespace Network {
+        namespace Elements {
+            namespace Weights {
+                Weight::Weight() {}
 
-            Weight::Weight(float value) : Perception_Element(value) {}
-            Weight::~Weight() {
+                Weight::Weight(float value) : Perception_Element(value) {}
 
-            }
-        } // Perception
-    } // Elements
+                Weight::~Weight() {
+
+                }
+            } // Perception
+        } // Elements
+    }
 } // Weights

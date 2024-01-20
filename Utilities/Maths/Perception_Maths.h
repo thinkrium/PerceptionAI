@@ -8,7 +8,7 @@
 #include "random"
 #include "../../Network_Elements/Nodes/Node.h"
 
-using namespace Perception::Elements::Nodes;
+using namespace Perception::Network::Elements::Nodes;
 
 namespace Perception {
     namespace Network {

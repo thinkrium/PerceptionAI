@@ -6,12 +6,13 @@
 #define PERCEPTIONAI_PERCEPTION_ELEMENT_H
 
 #include "cmath"
-#include "../../Utilities/Enumerations/Perception_Enumerations.h"
+#include "../../../Utilities/Enumerations/Perception_Enumerations.h"
 
 using namespace Perception::Network::Utilities::Enumerations;
 using namespace std;
 
 namespace Perception {
+    namespace Network  {
     namespace Elements {
 
         class Perception_Element {
@@ -39,7 +40,7 @@ namespace Perception {
             void setHealthStatus(Perception_Enumerations::healthStatus healthStatus);
 
         };
-
+    }
     } // Perception
 } // Elements
 

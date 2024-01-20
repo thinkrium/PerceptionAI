@@ -15,9 +15,9 @@
 
 using namespace std;
 
-using namespace Perception::Elements::Nodes;
-using namespace Perception::Elements::Weights;
-using namespace Perception::Elements::Biases;
+using namespace Perception::Network::Elements::Nodes;
+using namespace Perception::Network::Elements::Weights;
+using namespace Perception::Network::Elements::Biases;
 
 using namespace Perception::Network::Utilities::Maths;
 

@@ -5,27 +5,29 @@
 #ifndef PERCEPTIONAI_WEIGHT_H
 #define PERCEPTIONAI_WEIGHT_H
 
-#include "../Perception_Elements/Perception_Element.h"
+#include "../Perception_Elements/Individual/Perception_Element.h"
 
-using namespace Perception::Elements;
+using namespace Perception::Network::Elements;
 
 namespace Perception {
-    namespace Elements {
-        namespace Weights {
+    namespace Network {
+        namespace Elements {
+            namespace Weights {
 
-            class Weight : public Perception_Element {
-            public:
-                Weight();
+                class Weight : public Perception_Element {
+                public:
+                    Weight();
 
-                explicit Weight(float value);
+                    explicit Weight(float value);
 
-                ~Weight() override;
+                    ~Weight() override;
 
-            };
+                };
 
 
-        } // Perception
-    } // Elements
+            } // Perception
+        } // Elements
+    }
 } // Weights
 
 #endif //PERCEPTIONAI_WEIGHT_H
