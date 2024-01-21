@@ -17,10 +17,9 @@ namespace Perception {
                 }
 
 
-                template<typename t> Perception_Element_Matrix<t>
-                Perception_Maths::dotProduct(
-                        Perception_Element_Matrix<t> leftMatrix,
-                        Perception_Element_Matrix<t> rightMatrix) {
+                Perception_Element_Matrix  Perception_Maths::dotProduct(
+                        Perception_Element_Matrix leftMatrix,
+                        Perception_Element_Matrix rightMatrix) {
 
                     // for testing dot product validity
                     int leftMatrixColumnSize = leftMatrix.getMatrix()[0].size();
@@ -31,7 +30,7 @@ namespace Perception {
 
                     // you have to add 1 to the index size because for readability they are not zero indexed
                     // hovering over the function name will reveal the tool tip
-                    Perception_Element_Matrix<t> dotProductMatrix((leftMatrixRowSize + 1), (rightMatrixColumnSize + 1) );
+                    Perception_Element_Matrix dotProductMatrix((leftMatrixRowSize + 1), (rightMatrixColumnSize + 1) );
 
                     try {
                         if (leftMatrixColumnSize != rightMatrixRowSize) { throw "nope"; }
@@ -50,20 +49,21 @@ namespace Perception {
                     return dotProductMatrix;
                 }
 
-                template<typename t> Perception_Element_Matrix<t>
-                Perception_Maths::invertMatrix(Perception_Element_Matrix<t> matrixToInvert) {
+
+                Perception_Element_Matrix
+                Perception_Maths::invertMatrix(Perception_Element_Matrix matrixToInvert) {
 
                     int rowSize = matrixToInvert.getMatrix().size();
                     int columnSize = matrixToInvert.getMatrix()[0].size();
 
                     // you have to add 1 to the index size because for readability they are not zero indexed
                     // hovering over the function name will reveal the tool tip
-                    Perception_Element_Matrix<t> invertedMatrix((rowSize + 1) , (columnSize + 1));
+                    Perception_Element_Matrix invertedMatrix((rowSize + 1) , (columnSize + 1));
 
                     for(int rowIndex = 0; rowIndex < rowSize; rowIndex++) {
                         for(int columnIndex = 0 ; columnIndex < columnSize; columnIndex++) {
 
-                            invertedMatrix.setIndividualMatrixElementValue(columnIndex,
+                            invertedMatrix.setIndividualMatrixElement(columnIndex,
                                                                            rowIndex,
                                                                            matrixToInvert.getMatrix()[rowIndex][columnIndex]);
                         }

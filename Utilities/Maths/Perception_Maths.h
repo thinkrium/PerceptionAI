@@ -7,7 +7,9 @@
 
 #include "random"
 #include "../../Network_Elements/Nodes/Node.h"
+#include "../../Network_Elements/Perception_Elements/Matrices/Perception_Element_Matrix.h"
 
+using namespace Perception::Network::Elements::Matrices;
 using namespace Perception::Network::Elements::Nodes;
 
 namespace Perception {
@@ -18,7 +20,7 @@ namespace Perception {
                 class Perception_Maths {
 
                 private:
-                    vector<vector<Perception_Element>> invertMatrix(vector<vector<Perception_Element>> matrixToInvert);
+                    Perception_Element_Matrix invertMatrix(Perception_Element_Matrix matrixToInvert);
 
                 public:
                     Perception_Maths();
@@ -28,10 +30,8 @@ namespace Perception {
                      */
                     float generateRandomValue();
 
-                    vector<vector<Perception_Element>> dotProduct(vector<vector<Perception_Element>> leftMatrix, vector<vector<Perception_Element>> rightMatrix) ;
-
-
-                    float dotProduct(vector<float> leftVector, vector<float> rightVector);
+                    Perception_Element_Matrix
+                    dotProduct(Perception_Element_Matrix leftMatrix, Perception_Element_Matrix rightMatrix) ;
                 };
             }
         } // Perception
