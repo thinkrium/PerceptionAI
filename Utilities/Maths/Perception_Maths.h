@@ -8,8 +8,10 @@
 #include "random"
 #include "../../Network_Elements/Nodes/Node.h"
 #include "../../Network_Elements/Perception_Elements/Matrices/Perception_Element_Matrix.h"
+#include "../../Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.h"
 
 using namespace Perception::Network::Elements::Matrices;
+using namespace Perception::Network::Elements::Vectors;
 using namespace Perception::Network::Elements::Nodes;
 
 namespace Perception {
@@ -27,6 +29,10 @@ namespace Perception {
                      * Sets a random value between -1 and 1
                      */
                     float generateRandomValue();
+
+                    Perception_Element_Vector
+                    dotProduct(Perception_Element_Vector leftVector, Perception_Element_Vector rightVector) ;
+
 
                     Perception_Element_Matrix
                     dotProduct(Perception_Element_Matrix leftMatrix, Perception_Element_Matrix rightMatrix) ;

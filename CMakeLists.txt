@@ -24,7 +24,9 @@ add_library(PerceptionAI SHARED Perception.cpp
         Network_Elements/Perception_Elements/Matrices/Perception_Element_Matrix.cpp
         Network_Elements/Perception_Elements/Matrices/Perception_Element_Matrix.h
         Network_Elements/Statuses/Status.cpp
-        Network_Elements/Statuses/Status.h)
+        Network_Elements/Statuses/Status.h
+        Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.cpp
+        Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.h)
 
 add_executable(Perception_AI  Perception.cpp
         Network_Elements/Perception_Elements/Individual/Perception_Element.cpp
@@ -48,4 +50,6 @@ add_executable(Perception_AI  Perception.cpp
         Network_Elements/Perception_Elements/Matrices/Perception_Element_Matrix.cpp
         Network_Elements/Perception_Elements/Matrices/Perception_Element_Matrix.h
         Network_Elements/Statuses/Status.cpp
-        Network_Elements/Statuses/Status.h)
+        Network_Elements/Statuses/Status.h
+        Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.cpp
+        Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.h)

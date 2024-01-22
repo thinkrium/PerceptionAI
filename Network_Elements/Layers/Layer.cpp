@@ -14,45 +14,7 @@ namespace Perception {
 
         Layer::~Layer() = default;
 
-        const vector<Node> &Layer::getInputNodes() const {
-            return this->inputNodes;
-        }
 
-        void Layer::setInputNodes(const vector<Node> &inputNodes) {
-            this->inputNodes = inputNodes;
-        }
-
-        const vector<Node> &Layer::getLocalNodes() const {
-            return this->localNodes;
-        }
-
-        void Layer::setLocalNodes(const vector<Node> &localNodes) {
-            this->localNodes = localNodes;
-        }
-
-        const vector<Node> &Layer::getOutputNodes() const {
-            return this->outputNodes;
-        }
-
-        void Layer::setOutputNodes(const vector<Node> &outputNodes) {
-            this->outputNodes = outputNodes;
-        }
-
-        const vector<vector<Weight>> &Layer::getWeights() const {
-            return this->weights;
-        }
-
-        void Layer::setWeights(const vector<vector<Weight>> &weights) {
-            this->weights = weights;
-        }
-
-        const vector<Bias> &Layer::getBiases() const {
-            return this->biases;
-        }
-
-        void Layer::setBiases(const vector<Bias> &biases) {
-            this->biases = biases;
-        }
 
         /***
          * sending in this parameter does not set the actual nodes per layer
@@ -80,6 +42,47 @@ namespace Perception {
         void Layer::setNodeCountPerPreviousLayerGoingPropagatingForwards(
                 int nodeCountPerPreviousLayerGoingPropagatingForwards) {
             this->nodeCountPerPreviousLayerGoingPropagatingForwards = nodeCountPerPreviousLayerGoingPropagatingForwards;
+        }
+
+        const Perception_Element_Vector &Layer::getInputNodes() const {
+            return this->inputNodes;
+        }
+
+
+        void Layer::setInputNodes(const Perception_Element_Vector &inputNodes) {
+            Layer::inputNodes = inputNodes;
+        }
+
+        const Perception_Element_Vector &Layer::getLocalNodes() const {
+            return localNodes;
+        }
+
+        void Layer::setLocalNodes(const Perception_Element_Vector &localNodes) {
+            Layer::localNodes = localNodes;
+        }
+
+        const Perception_Element_Vector &Layer::getOutputNodes() const {
+            return outputNodes;
+        }
+
+        void Layer::setOutputNodes(const Perception_Element_Vector &outputNodes) {
+            Layer::outputNodes = outputNodes;
+        }
+
+        const Perception_Element_Vector &Layer::getBiases() const {
+            return biases;
+        }
+
+        void Layer::setBiases(const Perception_Element_Vector &biases) {
+            Layer::biases = biases;
+        }
+
+        const Perception_Element_Matrix &Layer::getWeights() const {
+            return weights;
+        }
+
+        void Layer::setWeights(const Perception_Element_Matrix &weights) {
+            Layer::weights = weights;
         }
 
 

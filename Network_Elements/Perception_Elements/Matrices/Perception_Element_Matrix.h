@@ -21,11 +21,13 @@ namespace Perception {
 
                 class Perception_Element_Matrix : public Status {
                 private:
-                    vector<vector<Perception_Element>> matrix;
+                    vector<vector<Perception_Element>> element_matrix;
 
                     int rowSize;
 
-                    int colSize;
+                    int columnSize;
+
+
                 public:
                     Perception_Element_Matrix();
 
@@ -33,7 +35,7 @@ namespace Perception {
 
                     const vector<vector<Perception_Element>> &getMatrix() const;
 
-                    void setIndividualMatrixElement(int rowSize, int columnSize, Perception_Element element);
+                    void setIndividualElement(int rowIndex, int columnIndex, Perception_Element element);
 
                     Perception_Element_Matrix transpose(Perception_Element_Matrix matrixToTranspose);
 
@@ -43,9 +45,9 @@ namespace Perception {
 
                     void setRowSize(int rowSize);
 
-                    int getColSize() const;
+                    int getColumnSize() const;
 
-                    void setColSize(int colSize);
+                    void setColumnSize(int colSize);
 
                     ~Perception_Element_Matrix() override;
 

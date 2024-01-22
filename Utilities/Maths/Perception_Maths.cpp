@@ -33,7 +33,10 @@ namespace Perception {
                     Perception_Element_Matrix dotProductMatrix((leftMatrixRowSize + 1), (rightMatrixColumnSize + 1) );
 
                     try {
-                        if (leftMatrixColumnSize != rightMatrixRowSize) { throw "nope"; }
+                        if (leftMatrixColumnSize != rightMatrixRowSize) {
+                            dotProductMatrix.setHealthStatus(Perception_Enumerations::healthStatus::error);
+                            throw "nope";
+                        }
 
 
                         for(int resultMatrixColumnIndex = 0; resultMatrixColumnIndex < leftMatrixRowSize; resultMatrixColumnIndex++) {
@@ -47,7 +50,7 @@ namespace Perception {
                                 }
 
                                 Perception_Element element(individualDotProductResult);
-                                dotProductMatrix.setIndividualMatrixElement(
+                                dotProductMatrix.setIndividualElement(
                                         inputMatrixRowIndex,
                                         resultMatrixColumnIndex,
                                         element);
@@ -60,6 +63,35 @@ namespace Perception {
 
                     }
                     return dotProductMatrix;
+                }
+
+                Perception_Element_Vector Perception_Maths::dotProduct(Perception_Element_Vector leftVector,
+                                                                       Perception_Element_Vector rightVector) {
+
+                    /// not zero based need to add 1
+                    Perception_Element_Vector perceptionElementVector(leftVector.getSize() + 1);
+
+                    try {
+                        if (leftVector.getSize() != rightVector.getSize()) {
+                            perceptionElementVector.setHealthStatus(Perception_Enumerations::healthStatus::error);
+                            throw "Nope";
+                        }
+
+                        float dotProductResult = 0;
+
+                        for (int index = 0; index < leftVector.getSize(); index++) {
+                            dotProductResult += leftVector.getElementVector()[index].getValue() * rightVector.getElementVector()[index].getValue();
+                        }
+
+
+                        perceptionElementVector.setElementVector({
+                            Perception_Element(dotProductResult)
+                        });
+                    }
+                    catch (exception e) {
+
+                    }
+                    return Perception_Element_Vector();
                 }
 
             } // Perception

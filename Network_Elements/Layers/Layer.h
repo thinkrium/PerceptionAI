@@ -27,56 +27,46 @@ namespace Perception {
         class Layer {
 
         private:
-            vector<Node> inputNodes;
-            vector<Node> localNodes;
-            vector<Node> outputNodes;
+            Perception_Element_Vector inputNodes;
+            Perception_Element_Vector localNodes;
+            Perception_Element_Vector outputNodes;
+            Perception_Element_Vector biases;
+
+            Perception_Element_Matrix weights;
 
             int nodeCountPerLayer;
             int nodeCountPerPreviousLayerGoingPropagatingForwards;
         public:
+
             int getNodeCountPerPreviousLayerGoingPropagatingForwards() const;
 
             void
             setNodeCountPerPreviousLayerGoingPropagatingForwards(int nodeCountPerPreviousLayerGoingPropagatingForwards);
 
-        public:
-
-            void populatePerceptionElementVectorWithRandomValues(vector<Perception_Element> &element_vector);
-
-            void populatePerceptionElement2dVectorWithRandomValues(vector<vector <Perception_Element>> &element_vector);
-
-
             explicit Layer(int nodesPerLayer);
-
-            const vector <Node> &getInputNodes() const;
-
-            void setInputNodes(const vector <Node> &inputNodes);
-
-            const vector <Node> &getLocalNodes() const;
-
-            void setLocalNodes(const vector <Node> &localNodes);
-
-            const vector <Node> &getOutputNodes() const;
-
-            void setOutputNodes(const vector <Node> &outputNodes);
-
-            const vector<vector<Weight>> &getWeights() const;
-
-            void setWeights(const vector<vector<Weight>> &weights);
-
-            const vector <Bias> &getBiases() const;
-
-            void setBiases(const vector <Bias> &biases);
-
-
-         private:
-            vector<vector<Weight>> weights;
-            vector<Bias> biases;
-
-        public:
             Layer();
 
-              ~Layer();
+            ~Layer();
+
+            const Perception_Element_Vector &getInputNodes() const;
+
+            void setInputNodes(const Perception_Element_Vector &inputNodes);
+
+            const Perception_Element_Vector &getLocalNodes() const;
+
+            void setLocalNodes(const Perception_Element_Vector &localNodes);
+
+            const Perception_Element_Vector &getOutputNodes() const;
+
+            void setOutputNodes(const Perception_Element_Vector &outputNodes);
+
+            const Perception_Element_Vector &getBiases() const;
+
+            void setBiases(const Perception_Element_Vector &biases);
+
+            const Perception_Element_Matrix &getWeights() const;
+
+            void setWeights(const Perception_Element_Matrix &weights);
 
             int getNodeCountPerLayer() const;
 

@@ -16,24 +16,24 @@ namespace Perception {
                  * @param colSize
                  */
                 Perception_Element_Matrix::Perception_Element_Matrix(int rowSize, int colSize) : rowSize(rowSize),
-                                                                                                 colSize(colSize) {
+                                                                                                 columnSize(colSize) {
 
-                    this->setRowSize(rowSize - 1);
-                    this->setColSize(colSize - 1);
+                    this->setRowSize(rowSize);
+                    this->setColumnSize(colSize);
 
 
 
                     this->setMatrix(vector< vector<Perception_Element>>  (
                             this->getRowSize(),
-                            vector<Perception_Element> (this->getColSize())));
+                            vector<Perception_Element> (this->getColumnSize())));
                 }
 
                 const vector<vector<Perception_Element>> &Perception_Element_Matrix::getMatrix() const {
-                    return matrix;
+                    return element_matrix;
                 }
 
                 void Perception_Element_Matrix::setMatrix(const vector<vector<Perception_Element>> &matrix) {
-                    Perception_Element_Matrix::matrix = matrix;
+                    Perception_Element_Matrix::element_matrix = matrix;
                 }
 
                 int Perception_Element_Matrix::getRowSize() const {
@@ -44,22 +44,22 @@ namespace Perception {
                     Perception_Element_Matrix::rowSize = rowSize;
                 }
 
-                int Perception_Element_Matrix::getColSize() const {
-                    return colSize;
+                int Perception_Element_Matrix::getColumnSize() const {
+                    return columnSize;
                 }
 
-                void Perception_Element_Matrix::setColSize(int colSize) {
-                    Perception_Element_Matrix::colSize = colSize;
+                void Perception_Element_Matrix::setColumnSize(int colSize) {
+                    Perception_Element_Matrix::columnSize = colSize;
                 }
 
                 Perception_Element_Matrix::~Perception_Element_Matrix() {
 
                 }
 
-                void Perception_Element_Matrix::setIndividualMatrixElement(int rowSize, int columnSize,
-                                                                           Perception_Element element) {
+                void Perception_Element_Matrix::setIndividualElement(int rowIndex, int columnIndex,
+                                                                     Perception_Element element) {
 
-                    this->matrix[rowSize][columnSize] = element;
+                    this->element_matrix[rowIndex][columnIndex] = element;
 
                 }
 
@@ -78,9 +78,9 @@ namespace Perception {
                     for(int rowIndex = 0; rowIndex < rowSize; rowIndex++) {
                         for(int columnIndex = 0 ; columnIndex < columnSize; columnIndex++) {
 
-                            transposedMatrix.setIndividualMatrixElement(columnIndex,
-                                                                        rowIndex,
-                                                                        matrixToTranspose.getMatrix()[rowIndex][columnIndex]);
+                            transposedMatrix.setIndividualElement(columnIndex,
+                                                                  rowIndex,
+                                                                  matrixToTranspose.getMatrix()[rowIndex][columnIndex]);
                         }
                     }
 
