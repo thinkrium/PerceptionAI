@@ -35,6 +35,8 @@ namespace Perception {
 
                     void setIndividualMatrixElement(int rowSize, int columnSize, Perception_Element element);
 
+                    Perception_Element_Matrix transpose(Perception_Element_Matrix matrixToTranspose);
+
                     void setMatrix(const vector<vector<Perception_Element>> &matrix);
 
                     int getRowSize() const;

@@ -20,8 +20,6 @@ namespace Perception {
                 class Perception_Maths {
 
                 private:
-                    Perception_Element_Matrix invertMatrix(Perception_Element_Matrix matrixToInvert);
-
                 public:
                     Perception_Maths();
                     virtual ~Perception_Maths();

@@ -19,6 +19,12 @@ namespace Perception {
             public:
                 Layer_Helper();
 
+                const Perception_Maths &getPerceptionMaths() const;
+
+                void setPerceptionMaths(const Perception_Maths &perceptionMaths);
+
+                Perception_Maths perceptionMaths;
+
                 virtual ~Layer_Helper();
 
             private:

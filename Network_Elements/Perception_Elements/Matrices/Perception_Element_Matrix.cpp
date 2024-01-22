@@ -62,6 +62,30 @@ namespace Perception {
                     this->matrix[rowSize][columnSize] = element;
 
                 }
+
+
+                Perception_Element_Matrix
+                Perception_Element_Matrix::transpose(
+                        Perception::Network::Elements::Matrices::Perception_Element_Matrix matrixToTranspose) {
+
+                    int rowSize = matrixToTranspose.getMatrix().size();
+                    int columnSize = matrixToTranspose.getMatrix()[0].size();
+
+                    // you have to add 1 to the index size because for readability they are not zero indexed
+                    // hovering over the function name will reveal the tool tip
+                    Perception_Element_Matrix transposedMatrix((rowSize + 1) , (columnSize + 1));
+
+                    for(int rowIndex = 0; rowIndex < rowSize; rowIndex++) {
+                        for(int columnIndex = 0 ; columnIndex < columnSize; columnIndex++) {
+
+                            transposedMatrix.setIndividualMatrixElement(columnIndex,
+                                                                        rowIndex,
+                                                                        matrixToTranspose.getMatrix()[rowIndex][columnIndex]);
+                        }
+                    }
+
+                    return transposedMatrix;
+                }
             } // Perception
         } // Network
     } // Elements

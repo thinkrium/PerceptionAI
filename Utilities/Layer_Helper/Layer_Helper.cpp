@@ -72,7 +72,9 @@ namespace Perception {
 
             }
 
-            Layer_Helper::Layer_Helper() {}
+            Layer_Helper::Layer_Helper() {
+                this->setPerceptionMaths(Perception_Maths());
+            }
 
             Layer_Helper::~Layer_Helper() {
 
@@ -84,13 +86,19 @@ namespace Perception {
 
             void Layer_Helper::Prepare_Forward_Propagation(Layer &layer) {
 
-                for (Node localNode : layer.getLocalNodes()) {
-
-                }
+                this->getPerceptionMaths().dotProduct(layer.getLocalNodes(), layer.getLocalNodes());
             }
 
             void Layer_Helper::Prepare_Backward_Propagation(Layer &layer) {
 
+            }
+
+            const Perception_Maths &Layer_Helper::getPerceptionMaths() const {
+                return perceptionMaths;
+            }
+
+            void Layer_Helper::setPerceptionMaths(const Perception_Maths &perceptionMaths) {
+                Layer_Helper::perceptionMaths = perceptionMaths;
             }
         } // Perception
     } // Network
