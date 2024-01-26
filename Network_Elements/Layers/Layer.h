@@ -32,7 +32,7 @@ namespace Perception {
             Perception_Element_Vector<Node> outputNodes;
             Perception_Element_Vector<Bias> biases;
 
-            Perception_Element_Matrix weights;
+            Perception_Element_Matrix<Weight> weights;
 
             int nodeCountPerLayer;
             int nodeCountPerPreviousLayerGoingPropagatingForwards;
@@ -64,11 +64,11 @@ namespace Perception {
 
             void setBiases(const Perception_Element_Vector<Bias> &biases);
 
-            const Perception_Element_Matrix &getWeights() const;
-
-            void setWeights(const Perception_Element_Matrix &weights);
-
             int getNodeCountPerLayer() const;
+
+            const Perception_Element_Matrix<Weight> &getWeights() const;
+
+            void setWeights(const Perception_Element_Matrix<Weight> &weights);
 
             void setNodeCountPerLayer(int nodesPerLayer);
         };

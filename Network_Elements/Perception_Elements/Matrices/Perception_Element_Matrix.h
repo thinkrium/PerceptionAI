@@ -19,9 +19,10 @@ namespace Perception {
         namespace Elements {
             namespace Matrices {
 
+                template <class objectName>
                 class Perception_Element_Matrix : public Status {
                 private:
-                    vector<vector<Perception_Element>> element_matrix;
+                    vector<vector<objectName>> element_matrix;
 
                     int rowSize;
 
@@ -29,27 +30,62 @@ namespace Perception {
 
 
                 public:
-                    Perception_Element_Matrix();
 
-                    Perception_Element_Matrix(int rowSize, int colSize);
+                    Perception_Element_Matrix() {}
 
-                    const vector<vector<Perception_Element>> &getMatrix() const;
+                    void setIndividualElement(int rowIndex, int columnIndex, objectName element) {}
 
-                    void setIndividualElement(int rowIndex, int columnIndex, Perception_Element element);
+                    ~Perception_Element_Matrix() override {
 
-                    Perception_Element_Matrix transpose(Perception_Element_Matrix matrixToTranspose);
+                    }
 
-                    void setMatrix(const vector<vector<Perception_Element>> &matrix);
+                    Perception_Element_Matrix(int rowSize, int columnSize) : rowSize(rowSize), columnSize(columnSize) {}
 
-                    int getRowSize() const;
+                    Perception_Element_Matrix transpose(Perception_Element_Matrix matrixToTranspose) {
 
-                    void setRowSize(int rowSize);
+                        int rowSize = matrixToTranspose.getMatrix().size();
+                        int columnSize = matrixToTranspose.getMatrix()[0].size();
 
-                    int getColumnSize() const;
+                        // you have to add 1 to the index size because for readability they are not zero indexed
+                        // hovering over the function name will reveal the tool tip
+                        Perception_Element_Matrix transposedMatrix((rowSize + 1) , (columnSize + 1));
 
-                    void setColumnSize(int colSize);
+                        for(int rowIndex = 0; rowIndex < rowSize; rowIndex++) {
+                            for(int columnIndex = 0 ; columnIndex < columnSize; columnIndex++) {
 
-                    ~Perception_Element_Matrix() override;
+                                transposedMatrix.setIndividualElement(columnIndex,
+                                                                      rowIndex,
+                                                                      matrixToTranspose.getMatrix()[rowIndex][columnIndex]);
+                            }
+                        }
+
+                        return transposedMatrix;
+                    }
+
+                    const vector<vector<objectName>> &getElementMatrix() const {
+                        return element_matrix;
+                    }
+
+                    void setElementMatrix(const vector<vector<objectName>> &elementMatrix) {
+                        element_matrix = elementMatrix;
+                    }
+
+                    int getRowSize() const {
+                        return rowSize;
+                    }
+
+                    void setRowSize(int rowSize) {
+                        Perception_Element_Matrix::rowSize = rowSize;
+                    }
+
+                    int getColumnSize() const {
+                        return columnSize;
+                    }
+
+                    void setColumnSize(int columnSize) {
+                        Perception_Element_Matrix::columnSize = columnSize;
+                    }
+
 
                 };
 

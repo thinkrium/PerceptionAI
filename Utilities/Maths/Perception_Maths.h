@@ -34,8 +34,8 @@ namespace Perception {
                     dotProduct(vector<float> leftVector, vector<float> rightVector) ;
 
 
-                    Perception_Element_Matrix
-                    dotProduct(Perception_Element_Matrix leftMatrix, Perception_Element_Matrix rightMatrix) ;
+                    vector<vector<float>>
+                    dotProduct(vector<vector<float>> leftMatrix, vector<vector<float>> rightMatrix) noexcept;
                 };
             }
         } // Perception

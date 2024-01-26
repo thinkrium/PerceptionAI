@@ -77,13 +77,14 @@ namespace Perception {
             Layer::biases = biases;
         }
 
-        const Perception_Element_Matrix &Layer::getWeights() const {
+        const Perception_Element_Matrix<Weight> &Layer::getWeights() const {
             return weights;
         }
 
-        void Layer::setWeights(const Perception_Element_Matrix &weights) {
+        void Layer::setWeights(const Perception_Element_Matrix<Weight> &weights) {
             Layer::weights = weights;
         }
+
 
 
     } // Perception
