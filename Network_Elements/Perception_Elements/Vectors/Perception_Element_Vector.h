@@ -27,24 +27,33 @@ namespace Perception {
 
                     int size;
                 public:
-                    Perception_Element_Vector();
 
-                    explicit Perception_Element_Vector(int size);
+                    Perception_Element_Vector() {
 
-                    void setIndividualElement(int index, objectType &element);
+                    }
+
+                    explicit Perception_Element_Vector(int size) {
+
+                    }
+
+                    void setIndividualElement(int index, objectType &element) {}
 
 
 
-                    ~Perception_Element_Vector() override;
+                    ~Perception_Element_Vector() override {}
 
 
-                    int getSize() const;
+                    int getSize() const {
+                        return this->size;
+                    }
 
-                    void setSize(int size);
+                    void setSize(int size) {}
 
-                    const vector<objectType> &getElementVector() const;
+                    const vector<objectType> &getElementVector() const {
+                        return this->element_vector;
+                    }
 
-                    void setElementVector(const vector<objectType> &elementVector);
+                    void setElementVector(const vector<objectType> &elementVector) {}
                 };
 
             } // Perception
