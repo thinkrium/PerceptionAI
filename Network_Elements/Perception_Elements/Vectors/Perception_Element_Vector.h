@@ -34,9 +34,13 @@ namespace Perception {
 
                     explicit Perception_Element_Vector(int size) {
 
+                        this->setSize(size);
+                        this->element_vector = vector<objectType> (this->getSize());
                     }
 
-                    void setIndividualElement(int index, objectType &element) {}
+                    void setIndividualElement(int index, objectType &element) {
+                        this->element_vector[index] = element;
+                    }
 
 
 
@@ -47,13 +51,17 @@ namespace Perception {
                         return this->size;
                     }
 
-                    void setSize(int size) {}
+                    void setSize(int size) {
+                        this->size = size;
+                    }
 
                     const vector<objectType> &getElementVector() const {
                         return this->element_vector;
                     }
 
-                    void setElementVector(const vector<objectType> &elementVector) {}
+                    void setElementVector(const vector<objectType> &elementVector) {
+                        this->element_vector = elementVector;
+                    }
                 };
 
             } // Perception
