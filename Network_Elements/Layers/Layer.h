@@ -27,10 +27,10 @@ namespace Perception {
         class Layer {
 
         private:
-            Perception_Element_Vector inputNodes;
-            Perception_Element_Vector localNodes;
-            Perception_Element_Vector outputNodes;
-            Perception_Element_Vector biases;
+            Perception_Element_Vector<Node> inputNodes;
+            Perception_Element_Vector<Node> localNodes;
+            Perception_Element_Vector<Node> outputNodes;
+            Perception_Element_Vector<Bias> biases;
 
             Perception_Element_Matrix weights;
 
@@ -48,21 +48,21 @@ namespace Perception {
 
             ~Layer();
 
-            const Perception_Element_Vector &getInputNodes() const;
+            const Perception_Element_Vector<Node> &getInputNodes() const;
 
-            void setInputNodes(const Perception_Element_Vector &inputNodes);
+            void setInputNodes(const Perception_Element_Vector<Node> &inputNodes);
 
-            const Perception_Element_Vector &getLocalNodes() const;
+            const Perception_Element_Vector<Node> &getLocalNodes() const;
 
-            void setLocalNodes(const Perception_Element_Vector &localNodes);
+            void setLocalNodes(const Perception_Element_Vector<Node> &localNodes);
 
-            const Perception_Element_Vector &getOutputNodes() const;
+            const Perception_Element_Vector<Node> &getOutputNodes() const;
 
-            void setOutputNodes(const Perception_Element_Vector &outputNodes);
+            void setOutputNodes(const Perception_Element_Vector<Node> &outputNodes);
 
-            const Perception_Element_Vector &getBiases() const;
+            const Perception_Element_Vector<Bias> &getBiases() const;
 
-            void setBiases(const Perception_Element_Vector &biases);
+            void setBiases(const Perception_Element_Vector<Bias> &biases);
 
             const Perception_Element_Matrix &getWeights() const;
 

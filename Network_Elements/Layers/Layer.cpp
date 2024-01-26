@@ -44,36 +44,36 @@ namespace Perception {
             this->nodeCountPerPreviousLayerGoingPropagatingForwards = nodeCountPerPreviousLayerGoingPropagatingForwards;
         }
 
-        const Perception_Element_Vector &Layer::getInputNodes() const {
+        const Perception_Element_Vector<Node> &Layer::getInputNodes() const {
             return this->inputNodes;
         }
 
 
-        void Layer::setInputNodes(const Perception_Element_Vector &inputNodes) {
+        void Layer::setInputNodes(const Perception_Element_Vector<Node> &inputNodes) {
             Layer::inputNodes = inputNodes;
         }
 
-        const Perception_Element_Vector &Layer::getLocalNodes() const {
+        const Perception_Element_Vector<Node> &Layer::getLocalNodes() const {
             return localNodes;
         }
 
-        void Layer::setLocalNodes(const Perception_Element_Vector &localNodes) {
+        void Layer::setLocalNodes(const Perception_Element_Vector<Node> &localNodes) {
             Layer::localNodes = localNodes;
         }
 
-        const Perception_Element_Vector &Layer::getOutputNodes() const {
+        const Perception_Element_Vector<Node> &Layer::getOutputNodes() const {
             return outputNodes;
         }
 
-        void Layer::setOutputNodes(const Perception_Element_Vector &outputNodes) {
+        void Layer::setOutputNodes(const Perception_Element_Vector<Node> &outputNodes) {
             Layer::outputNodes = outputNodes;
         }
 
-        const Perception_Element_Vector &Layer::getBiases() const {
+        const Perception_Element_Vector<Bias> &Layer::getBiases() const {
             return biases;
         }
 
-        void Layer::setBiases(const Perception_Element_Vector &biases) {
+        void Layer::setBiases(const Perception_Element_Vector<Bias> &biases) {
             Layer::biases = biases;
         }
 

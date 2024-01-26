@@ -65,33 +65,20 @@ namespace Perception {
                     return dotProductMatrix;
                 }
 
-                Perception_Element_Vector Perception_Maths::dotProduct(Perception_Element_Vector leftVector,
-                                                                       Perception_Element_Vector rightVector) {
+                float Perception_Maths::dotProduct(vector<float> leftVector,
+                                                   vector<float> rightVector) {
 
-                    /// not zero based need to add 1
-                    Perception_Element_Vector perceptionElementVector(leftVector.getSize() + 1);
-
-                    try {
-                        if (leftVector.getSize() != rightVector.getSize()) {
-                            perceptionElementVector.setHealthStatus(Perception_Enumerations::healthStatus::error);
-                            throw "Nope";
-                        }
 
                         float dotProductResult = 0;
 
-                        for (int index = 0; index < leftVector.getSize(); index++) {
-                            dotProductResult += leftVector.getElementVector()[index].getValue() * rightVector.getElementVector()[index].getValue();
+                        for (int index = 0; index < leftVector.size(); index++) {
+
+                            dotProductResult += leftVector[index]
+                                             *  rightVector[index];
                         }
 
 
-                        perceptionElementVector.setElementVector({
-                            Perception_Element(dotProductResult)
-                        });
-                    }
-                    catch (exception e) {
-
-                    }
-                    return Perception_Element_Vector();
+                     return dotProductResult;
                 }
 
             } // Perception

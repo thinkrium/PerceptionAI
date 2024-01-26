@@ -10,9 +10,7 @@ namespace Perception {
             namespace Statuses {
                 Status::Status() {}
 
-                Status::~Status() {
-
-                }
+                Status::~Status() = default;
 
                 Perception_Enumerations::healthStatus Status::getHealthStatus() const {
                     return healthStatus;

@@ -30,8 +30,8 @@ namespace Perception {
                      */
                     float generateRandomValue();
 
-                    Perception_Element_Vector
-                    dotProduct(Perception_Element_Vector leftVector, Perception_Element_Vector rightVector) ;
+                    float
+                    dotProduct(vector<float> leftVector, vector<float> rightVector) ;
 
 
                     Perception_Element_Matrix

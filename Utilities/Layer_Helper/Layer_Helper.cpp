@@ -16,12 +16,12 @@ namespace Perception {
              * @param layer
              * @return
              */
-            Perception_Element_Vector Layer_Helper::Propagate_Forward(Layer layer) {
+            Perception_Element_Vector<Node> Layer_Helper::Propagate_Forward(Layer layer) {
                 return layer.getOutputNodes();
             }
 
-            Perception_Element_Vector Layer_Helper::Propagate_Backward() {
-                return Perception_Element_Vector();
+            Perception_Element_Vector<Node> Layer_Helper::Propagate_Backward(Layer layer) {
+                return layer.getOutputNodes();
             }
 
             void Layer_Helper::Activate_Node_With_ReLU(Node &node) {
@@ -38,13 +38,14 @@ namespace Perception {
                 
                 double layersExponentialSum = 0;
 
-                for (Node node : layer.getLocalNodes().getElementVector())
-                {
-                    layersExponentialSum += exp( node.getValue());
-                }
 
+//                for(int nodeIndex = 0; nodeIndex < layer.getLocalNodes().getSize(); nodeIndex++)
+//                {
+////                    layersExponentialSum += exp( layer.getLocalNodes().getElementVector()[nodeIndex].getValue());
+//                }
+//
                 return layersExponentialSum;
-                return 0.0;
+
 
             }
 
@@ -87,7 +88,7 @@ namespace Perception {
             void Layer_Helper::Prepare_Forward_Propagation(Layer &layer) {
 
 
-               Perception_Element_Vector t = this->getPerceptionMaths().dotProduct(layer.getLocalNodes(),layer.getLocalNodes());
+//               Perception_Element_Vector<Node> t = this->getPerceptionMaths().dotProduct(layer.getLocalNodes(),layer.getLocalNodes());
             }
 
             void Layer_Helper::Prepare_Backward_Propagation(Layer &layer) {

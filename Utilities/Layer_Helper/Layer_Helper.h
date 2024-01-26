@@ -30,8 +30,8 @@ namespace Perception {
             private:
                 void Prepare_Forward_Propagation(Layer &layer);
                 void Prepare_Backward_Propagation(Layer &layer);
-                Perception_Element_Vector Propagate_Forward(Layer layer);
-                Perception_Element_Vector Propagate_Backward();
+                Perception_Element_Vector<Node> Propagate_Forward(Layer layer);
+                Perception_Element_Vector<Node> Propagate_Backward(Layer layer);
                 void Activate_Nodes_With(Perception_Enumerations::activationMethod activationMethod);
                 void Activate_Node_With_ReLU(Node &node);
                 double Sum_The_Layers_Nodes_Exponential_Values(Layer &layer);

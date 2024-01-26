@@ -8,45 +8,45 @@ namespace Perception {
     namespace Network {
         namespace Elements {
             namespace Vectors {
-                Perception_Element_Vector::Perception_Element_Vector() {}
-
-                Perception_Element_Vector::~Perception_Element_Vector() {
-
+                template<class objectType>
+                const vector<objectType> &Perception_Element_Vector<objectType>::getElementVector() const {
+                    return element_vector;
                 }
 
-                const vector<Perception_Element> &Perception_Element_Vector::getElementVector() const {
-                return element_vector;
-                }
-
-                void Perception_Element_Vector::setElementVector(const vector<Perception_Element> &elementVector) {
+                template<class objectType>
+                void Perception_Element_Vector<objectType>::setElementVector(const vector<objectType> &elementVector) {
                     element_vector = elementVector;
                 }
 
-                int Perception_Element_Vector::getSize() const {
+                template<class objectType>
+                void Perception_Element_Vector<objectType>::setIndividualElement(int index, objectType &element) {
+
+                }
+
+                template<class objectType>
+                Perception_Element_Vector<objectType>::Perception_Element_Vector(int size):size(size) {
+                    this->setElementVector(vector<objectType>(this->getSize()));
+                }
+
+                template<class objectType>
+                Perception_Element_Vector<objectType>::~Perception_Element_Vector() = default;
+
+
+                template<class objectType>
+                int Perception_Element_Vector<objectType>::getSize() const {
                     return size;
                 }
 
-                /**
-                 * not zero based
-                 * @param size
-                 */
-                void Perception_Element_Vector::setSize(int size) {
+                template<class objectType>
+                void Perception_Element_Vector<objectType>::setSize(int size) {
                     Perception_Element_Vector::size = size;
                 }
 
-                void Perception_Element_Vector::setIndividualElement(int index, Perception_Element element) {
-                       this->element_vector[index] = element;
-                }
+                template<class objectType>
+                Perception_Element_Vector<objectType>::Perception_Element_Vector() {}
 
-                /**
-                 * not zero based
-                 * @param size
-                 */
-                Perception_Element_Vector::Perception_Element_Vector(int size) : size(size) {
-                    this->setSize(size);
 
-                    this->setElementVector(vector<Perception_Element>(this->getSize()));
-                }
+
             } // Perception
         } // Network
     } // Elements
