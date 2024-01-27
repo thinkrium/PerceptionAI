@@ -10,6 +10,8 @@
 
 #include "vector"
 
+#include "iostream"
+
 using namespace std;
 
 using namespace Perception::Network::Elements::Statuses;
@@ -28,12 +30,49 @@ namespace Perception {
 
                     int columnSize;
 
+                    bool rowSizeIsSet;
+                public:
+                    bool isRowSizeIsSet() const {
+                        return rowSizeIsSet;
+                    }
+
+                    void setRowSizeIsSet(bool rowSizeIsSet) {
+                        Perception_Element_Matrix::rowSizeIsSet = rowSizeIsSet;
+                    }
+
+                    bool isColumnSizeIsSet() const {
+                        return columnSizeIsSet;
+                    }
+
+                    void setColumnSizeIsSet(bool columnSizeIsSet) {
+                        Perception_Element_Matrix::columnSizeIsSet = columnSizeIsSet;
+
+                    }
+
+                private:
+                    bool columnSizeIsSet;
 
                 public:
 
-                    Perception_Element_Matrix() {}
+                    Perception_Element_Matrix() {
+                        this->setColumnSizeIsSet(false);
+                        this->setRowSizeIsSet(false);
 
-                    void setIndividualElement(int rowIndex, int columnIndex, objectName element) {}
+                        // i might want to assume poor health ... not sure yet
+                        // for now i will assume health ok
+                        this->setHealthStatus(Perception_Enumerations::healthStatus::ok);
+                    }
+
+                    void setIndividualElement(int rowIndex, int columnIndex, objectName element) {
+                        try {
+                            if( !(this->rowSizeIsSet() && this->columnSizeIsSet())) { throw "nope"; }
+
+                            this->element_matrix[rowIndex][columnIndex] = element;
+                        }
+                        catch (exception e) {
+                            cout << "error: " << e.what() << endl;
+                        }
+                    }
 
                     ~Perception_Element_Matrix() override {
 
@@ -43,20 +82,39 @@ namespace Perception {
 
                     Perception_Element_Matrix transpose(Perception_Element_Matrix matrixToTranspose) {
 
-                        int rowSize = matrixToTranspose.getMatrix().size();
-                        int columnSize = matrixToTranspose.getMatrix()[0].size();
 
-                        // you have to add 1 to the index size because for readability they are not zero indexed
-                        // hovering over the function name will reveal the tool tip
-                        Perception_Element_Matrix transposedMatrix((rowSize + 1) , (columnSize + 1));
+                        Perception_Element_Matrix transposedMatrix;
 
-                        for(int rowIndex = 0; rowIndex < rowSize; rowIndex++) {
-                            for(int columnIndex = 0 ; columnIndex < columnSize; columnIndex++) {
+                        try {
 
-                                transposedMatrix.setIndividualElement(columnIndex,
-                                                                      rowIndex,
-                                                                      matrixToTranspose.getMatrix()[rowIndex][columnIndex]);
+                            if(
+                                !(matrixToTranspose.rowSizeIsSet()
+                                &&
+                                matrixToTranspose.columnSizeIsSet())
+                               ) {
+                                throw "nope";
                             }
+
+                            int rowSize = matrixToTranspose.getMatrix().size();
+                            int columnSize = matrixToTranspose.getMatrix()[0].size();
+
+                            // you have to add 1 to the index size because for readability they are not zero indexed
+                            // hovering over the function name will reveal the tool tip
+                            transposedMatrix.setRowSize(rowSize + 1);
+                            transposedMatrix.setColumnSize(columnSize + 1);
+
+                            for (int rowIndex = 0; rowIndex < rowSize; rowIndex++) {
+                                for (int columnIndex = 0; columnIndex < columnSize; columnIndex++) {
+
+                                    transposedMatrix.setIndividualElement(columnIndex,
+                                                                          rowIndex,
+                                                                          matrixToTranspose.getMatrix()[rowIndex][columnIndex]);
+                                }
+                            }
+                        }
+                        catch (exception e) {
+                            cout << "error: " << e.what();
+                            transposedMatrix.setHealthStatus(Perception_Enumerations::healthStatus::error);
                         }
 
                         return transposedMatrix;
@@ -76,6 +134,7 @@ namespace Perception {
 
                     void setRowSize(int rowSize) {
                         Perception_Element_Matrix::rowSize = rowSize;
+                        this->setRowSizeIsSet(true);
                     }
 
                     int getColumnSize() const {
@@ -84,6 +143,7 @@ namespace Perception {
 
                     void setColumnSize(int columnSize) {
                         Perception_Element_Matrix::columnSize = columnSize;
+                        this->setColumnSizeIsSet(true);
                     }
 
 
