@@ -2,6 +2,7 @@
 // Created by thome on 1/10/2024.
 //
 
+#include <exception>
 #include "Perception_Element.h"
 
 namespace Perception {
@@ -20,18 +21,31 @@ namespace Perception {
 
                 float randomValue = (float) rand() / ((float) RAND_MAX + 1) * 2 - 1;
                 this->setValue(randomValue);
-                this->setValueIsSet(true);
-
+                this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::ok);
             }
 
-            Perception_Element::Perception_Element(float value) : value(value) {}
+            Perception_Element::Perception_Element(float value) : value(value) {
+                this->setValue(value);
+                this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::ok);
+            }
 
-            float Perception_Element::getValue() const {
-                return value;
+
+            float Perception_Element::getValue() {
+                try {
+
+                    if(!this->isValueIsSet()) { throw "nope"; }
+                    return value;
+                }
+                catch (exception e) {
+                    this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
+
+                    return value;
+                }
             }
 
             void Perception_Element::setValue(float value) {
                 Perception_Element::value = value;
+                this->setValueIsSet(true);
             }
 
             Perception_Element::~Perception_Element() {

@@ -24,7 +24,7 @@ namespace Perception {
 
             Perception_Element();
 
-            float getValue() const;
+            float getValue();
 
             void setValue(float value);
 

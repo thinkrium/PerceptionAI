@@ -2,7 +2,10 @@
 // Created by thome on 1/20/2024.
 //
 
+#include "exception"
 #include "Status.h"
+
+using namespace std;
 
 namespace Perception {
     namespace Network {
