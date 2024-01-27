@@ -191,22 +191,26 @@ namespace Perception {
                     layer.getNodeCountPerPreviousLayerGoingPropagatingForwards(),
                     vector<Weight>(this->getNodeCountPerInnerLayer() ));
 
-            for(int previousLayerNodeCountWeightIndex = 0; previousLayerNodeCountWeightIndex < this->getNodeCountPerInnerLayer(); previousLayerNodeCountWeightIndex++) {
-                for (int currentLayerNodeCountWeightIndex = 0; currentLayerNodeCountWeightIndex <
-                                                               this->getNodeCountPerInnerLayer(); currentLayerNodeCountWeightIndex++) {
+            int previousLayerNodeCount = this->getNodeCountPerInnerLayer();
+            int currentLayerNodeCount = this->getNodeCountPerInnerLayer();
+            for(int previousLayerNodeCountWeightIndex = 0; previousLayerNodeCountWeightIndex < previousLayerNodeCount ; previousLayerNodeCountWeightIndex++) {
+                for (int currentLayerNodeCountWeightIndex = 0; currentLayerNodeCountWeightIndex < currentLayerNodeCount ; currentLayerNodeCountWeightIndex++) {
                     weights[previousLayerNodeCountWeightIndex][currentLayerNodeCountWeightIndex] = Weight();
                 }
             }
 
-         //   layer.setWeights(weights);
+            Perception_Element_Matrix<Weight> matrixOfWeights(previousLayerNodeCount, currentLayerNodeCount);
+
+            matrixOfWeights.setElementMatrix(weights);
+            layer.setWeights( matrixOfWeights );
 
         }
 
         void Perception_Network::instantiateLayersLocalNodes(Layer &layer) {
-//            // set local nodes
-//            Perception_Element_Vector<Node> localNodes(this->getNodeCountPerInnerLayer() );
-//
-//             layer.setLocalNodes(localNodes);
+            // set local nodes
+            Perception_Element_Vector<Node> localNodes(this->getNodeCountPerInnerLayer() );
+
+             layer.setLocalNodes(localNodes);
 
         }
 
