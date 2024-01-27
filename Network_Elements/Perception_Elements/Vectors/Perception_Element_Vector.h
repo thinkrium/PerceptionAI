@@ -9,6 +9,7 @@
 #include "../Individual/Perception_Element.h"
 #include "vector"
 #include "memory"
+#include "iostream"
 
 using namespace Perception::Network::Elements;
 using namespace Perception::Network::Elements::Statuses;
@@ -26,20 +27,46 @@ namespace Perception {
                     vector< objectType> element_vector;
 
                     int size;
+
+                    bool sizeIsSet;
+                public:
+                    bool isSizeIsSet() const {
+                        return sizeIsSet;
+                    }
+
+                    void setSizeIsSet(bool sizeIsSet) {
+                        Perception_Element_Vector::sizeIsSet = sizeIsSet;
+                    }
+
                 public:
 
                     Perception_Element_Vector() {
 
+                        this->sizeIsSet(false);
+
+                        // we don't know the size
+                        // we don't have a vector
+                        // health status - error
+                        this->setHealthStatus(Perception_Enumerations::healthStatus::error);
                     }
 
                     explicit Perception_Element_Vector(int size) {
 
                         this->setSize(size);
                         this->element_vector = vector<objectType> (this->getSize());
+                        this->setHealthStatus(Perception_Enumerations::healthStatus::ok);
                     }
 
                     void setIndividualElement(int index, objectType &element) {
-                        this->element_vector[index] = element;
+                        try {
+                            if(!this->isSizeIsSet()) {throw "nope";}
+
+                            this->element_vector[index] = element;
+                        }
+                        catch (exception e) {
+                            cout << "error: " << e.what() << endl;
+                            this->setHealthStatus(Perception_Enumerations::healthStatus::error);
+                        }
                     }
 
 
@@ -53,6 +80,7 @@ namespace Perception {
 
                     void setSize(int size) {
                         this->size = size;
+                        this->isSizeIsSet(true);
                     }
 
                     const vector<objectType> &getElementVector() const {
