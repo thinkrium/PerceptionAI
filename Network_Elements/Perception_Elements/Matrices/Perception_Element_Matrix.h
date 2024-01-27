@@ -71,6 +71,7 @@ namespace Perception {
                         }
                         catch (exception e) {
                             cout << "error: " << e.what() << endl;
+                            this->setHealthStatus(Perception_Enumerations::healthStatus::error);
                         }
                     }
 
@@ -90,9 +91,7 @@ namespace Perception {
                                 vector<objectName>(this->getColumnSize())
                                 ));
 
-                        // we dont know the size, there is no matrix to set
-                        // health status - error
-                        this->setHealthStatus(Perception_Enumerations::healthStatus::error);
+                        this->setHealthStatus(Perception_Enumerations::healthStatus::ok);
                     }
 
                     Perception_Element_Matrix transpose(Perception_Element_Matrix matrixToTranspose) {
