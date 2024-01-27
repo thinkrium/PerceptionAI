@@ -29,6 +29,18 @@ namespace Perception {
                     int size;
 
                     bool sizeIsSet;
+
+                    bool elementVectorIsSet;
+                public:
+
+                    bool isElementVectorIsSet() const {
+                        return elementVectorIsSet;
+                    }
+
+                    void setElementVectorIsSet(bool elementVectorIsSet) {
+                        Perception_Element_Vector::elementVectorIsSet = elementVectorIsSet;
+                    }
+
                 public:
                     bool isSizeIsSet() const {
                         return sizeIsSet;
@@ -43,6 +55,8 @@ namespace Perception {
                     Perception_Element_Vector() {
 
                         this->setSizeIsSet(false);
+
+                        this->setElementVectorIsSet(false);
 
                         // we don't know the size
                         // we don't have a vector
@@ -75,6 +89,16 @@ namespace Perception {
 
 
                     int getSize() const {
+                        try {
+
+                            if(!this->isSizeIsSet()) { throw "nope"; }
+                            return this->size;
+                        }
+                        catch (exception e) {
+                            this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
+
+                        }
+
                         return this->size;
                     }
 
@@ -84,11 +108,21 @@ namespace Perception {
                     }
 
                     const vector<objectType> &getElementVector() const {
+                        try {
+
+                            if(!this->isElementVectorIsSet()) { throw "nope"; }
+                            return this->element_vector;
+                        }
+                        catch (exception e) {
+                            this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
+
+                        }
                         return this->element_vector;
                     }
 
                     void setElementVector(const vector<objectType> &elementVector) {
                         this->element_vector = elementVector;
+                        this->setElementVectorIsSet(true);
                     }
                 };
 
