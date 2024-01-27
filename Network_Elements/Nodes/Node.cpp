@@ -14,7 +14,7 @@ namespace Perception {
                 }
 
                 Node::~Node() {
-
+ 
                 }
 
                 Node::Node(float value) : Perception_Element(value) {
