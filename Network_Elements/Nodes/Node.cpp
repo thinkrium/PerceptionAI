@@ -2,6 +2,7 @@
 // Created by thome on 1/10/2024.
 //
 
+#include <exception>
 #include "Node.h"
 
 namespace Perception {
@@ -11,6 +12,7 @@ namespace Perception {
                 Node::Node() {
                     this->setIsActivatedValueSet(false);
                     this->setIsDerivedValueSet(false);
+                    this->setHealthStatus(Perception_Enumerations::healthStatus::error);
                 }
 
                 Node::~Node() {
@@ -20,9 +22,20 @@ namespace Perception {
                 Node::Node(float value) : Perception_Element(value) {
                     this->setIsActivatedValueSet(false);
                     this->setIsDerivedValueSet(false);
+                    this->setHealthStatus(Perception_Enumerations::healthStatus::error);
                 }
 
-                float Node::getDerivedValue() const {
+                float Node::getDerivedValue() {
+                    try {
+
+                        if(!this->checkIsDerivedValueSet()) { throw "nope"; }
+                        return derivedValue;
+                    }
+                    catch (exception e) {
+                        this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
+
+                    }
+
                     return derivedValue;
                 }
 
@@ -31,7 +44,16 @@ namespace Perception {
                     this->setIsDerivedValueSet(true);
                 }
 
-                float Node::getActivatedValue() const {
+                float Node::getActivatedValue() {
+                    try {
+
+                        if(!this->checkIsActivatedValueSet()) { throw "nope"; }
+                        return activatedValue;
+                    }
+                    catch (exception e) {
+                        this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
+
+                    }
                     return activatedValue;
                 }
 
