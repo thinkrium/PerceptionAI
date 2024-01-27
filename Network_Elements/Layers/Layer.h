@@ -7,6 +7,8 @@
 
 #include "vector"
 
+#include "../Statuses/Status.h"
+
 #include "../Nodes/Node.h"
 #include "../Weights/Weight.h"
 #include "../Biases/Bias.h"
@@ -21,10 +23,12 @@ using namespace Perception::Network::Elements::Biases;
 
 using namespace Perception::Network::Utilities::Maths;
 
+using namespace Perception::Network::Elements::Statuses;
+
 namespace Perception {
     namespace Layers {
 
-        class Layer {
+        class Layer : public Status {
 
         private:
             Perception_Element_Vector<Node> inputNodes;
@@ -36,9 +40,50 @@ namespace Perception {
 
             int nodeCountPerLayer;
             int nodeCountPerPreviousLayerGoingPropagatingForwards;
+
+            bool inputNodesAreSet;
+            bool localNodesAreSet;
+            bool outputNodesAreSet;
+            bool biasesAreSet;
+            bool weightsAreSet;
+
+            bool currentLayersNodeCountIsSet;
+        public:
+            bool isInputNodesAreSet() const;
+
+            void setInputNodesAreSet(bool inputNodesAreSet);
+
+            bool isLocalNodesAreSet() const;
+
+            void setLocalNodesAreSet(bool localNodesAreSet);
+
+            bool isOutputNodesAreSet() const;
+
+            void setOutputNodesAreSet(bool outputNodesAreSet);
+
+            bool isBiasesAreSet() const;
+
+            void setBiasesAreSet(bool biasesAreSet);
+
+            bool isWeightsAreSet() const;
+
+            void setWeightsAreSet(bool weightsAreSet);
+
+            bool isCurrentLayersNodeCountIsSet() const;
+
+            void setCurrentLayersNodeCountIsSet(bool currentLayersNodeCountIsSet);
+
+            bool isPreviousLayersNodeCountIsSet() const;
+
+            void setPreviousLayersNodeCountIsSet(bool previousLayersNodeCountIsSet);
+
+        private:
+            bool previousLayersNodeCountIsSet;
+
+
         public:
 
-            int getNodeCountPerPreviousLayerGoingPropagatingForwards() const;
+            int getNodeCountPerPreviousLayerGoingPropagatingForwards();
 
             void
             setNodeCountPerPreviousLayerGoingPropagatingForwards(int nodeCountPerPreviousLayerGoingPropagatingForwards);
@@ -48,25 +93,25 @@ namespace Perception {
 
             ~Layer();
 
-            const Perception_Element_Vector<Node> &getInputNodes() const;
+            const Perception_Element_Vector<Node> & getInputNodes();
 
             void setInputNodes(const Perception_Element_Vector<Node> &inputNodes);
 
-            const Perception_Element_Vector<Node> &getLocalNodes() const;
+            const Perception_Element_Vector<Node> & getLocalNodes();
 
             void setLocalNodes(const Perception_Element_Vector<Node> &localNodes);
 
-            const Perception_Element_Vector<Node> &getOutputNodes() const;
+            const Perception_Element_Vector<Node> & getOutputNodes();
 
             void setOutputNodes(const Perception_Element_Vector<Node> &outputNodes);
 
-            const Perception_Element_Vector<Bias> &getBiases() const;
+            const Perception_Element_Vector<Bias> & getBiases();
 
             void setBiases(const Perception_Element_Vector<Bias> &biases);
 
-            int getNodeCountPerLayer() const;
+            int getNodeCountPerLayer();
 
-            const Perception_Element_Matrix<Weight> &getWeights() const;
+            const Perception_Element_Matrix<Weight> & getWeights();
 
             void setWeights(const Perception_Element_Matrix<Weight> &weights);
 

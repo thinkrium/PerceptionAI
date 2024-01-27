@@ -21,6 +21,12 @@ namespace Perception {
 
                     virtual ~Status();
 
+                    bool healthStatusIsSet;
+
+                    bool isHealthStatusIsSet() const;
+
+                    void setHealthStatusIsSet(bool healthStatusIsSet);
+
                     Status();
 
                     Perception_Enumerations::healthStatus getHealthStatus() const;

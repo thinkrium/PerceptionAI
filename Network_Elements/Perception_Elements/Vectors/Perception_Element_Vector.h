@@ -42,7 +42,7 @@ namespace Perception {
 
                     Perception_Element_Vector() {
 
-                        this->sizeIsSet(false);
+                        this->setSizeIsSet(false);
 
                         // we don't know the size
                         // we don't have a vector
@@ -80,7 +80,7 @@ namespace Perception {
 
                     void setSize(int size) {
                         this->size = size;
-                        this->isSizeIsSet(true);
+                        this->setSizeIsSet(true);
                     }
 
                     const vector<objectType> &getElementVector() const {
