@@ -31,8 +31,28 @@ namespace Perception {
                     int columnSize;
 
                     bool rowSizeIsSet;
+
+                    bool matrixIsSet;
+                public:
+                    bool isMatrixIsSet() const {
+                        return matrixIsSet;
+                    }
+
+                    void setMatrixIsSet(bool matrixIsSet) {
+                        Perception_Element_Matrix::matrixIsSet = matrixIsSet;
+                    }
+
                 public:
                     bool isRowSizeIsSet() const {
+                        try {
+
+                            if(!this->isRowSizeIsSet()) { throw "nope"; }
+                            return rowSizeIsSet;
+                        }
+                        catch (exception e) {
+                            this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
+
+                        }
                         return rowSizeIsSet;
                     }
 
@@ -58,6 +78,8 @@ namespace Perception {
                         this->setColumnSizeIsSet(false);
                         this->setRowSizeIsSet(false);
 
+                        this->setMatrixIsSet(false);
+
                         // we dont know the size, there is no matrix to set
                         // health status - error
                         this->setHealthStatus(Perception_Enumerations::healthStatus::error);
@@ -65,7 +87,14 @@ namespace Perception {
 
                     void setIndividualElement(int rowIndex, int columnIndex, objectName element) {
                         try {
-                            if( !(this->rowSizeIsSet() && this->columnSizeIsSet())) { throw "nope"; }
+                            if(
+                                !(
+                                    this->rowSizeIsSet()
+                                    &&
+                                    this->columnSizeIsSet()
+                                    &&
+                                    this->isMatrixIsSet()
+                                    )) { throw "nope"; }
 
                             this->element_matrix[rowIndex][columnIndex] = element;
                         }
@@ -90,6 +119,8 @@ namespace Perception {
                                 this->getRowSize(),
                                 vector<objectName>(this->getColumnSize())
                                 ));
+
+                        this->setMatrixIsSet(true);
 
                         this->setHealthStatus(Perception_Enumerations::healthStatus::ok);
                     }
@@ -125,6 +156,9 @@ namespace Perception {
                                                                           matrixToTranspose.getMatrix()[rowIndex][columnIndex]);
                                 }
                             }
+
+                            transposedMatrix.setHealthStatus(Perception_Enumerations::healthStatus::ok);
+
                         }
                         catch (exception e) {
                             cout << "error: " << e.what();
@@ -135,14 +169,35 @@ namespace Perception {
                     }
 
                     const vector<vector<objectName>> &getElementMatrix() const {
+
+                        try {
+
+                            if(!this->isMatrixIsSet()) { throw "nope"; }
+                            return element_matrix;
+                        }
+                        catch (exception e) {
+                            this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
+
+                        }
                         return element_matrix;
                     }
 
                     void setElementMatrix(const vector<vector<objectName>> &elementMatrix) {
                         element_matrix = elementMatrix;
+                        this->setMatrixIsSet(true);
                     }
 
                     int getRowSize() const {
+
+                        try {
+
+                            if(!this->isRowSizeIsSet()) { throw "nope"; }
+                            return rowSize;
+                        }
+                        catch (exception e) {
+                            this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
+
+                        }
                         return rowSize;
                     }
 
@@ -152,6 +207,15 @@ namespace Perception {
                     }
 
                     int getColumnSize() const {
+                        try {
+
+                            if(!this->isColumnSizeIsSet()) { throw "nope"; }
+                            return columnSize;
+                        }
+                        catch (exception e) {
+                            this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
+
+                        }
                         return columnSize;
                     }
 
