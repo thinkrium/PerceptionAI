@@ -20,6 +20,7 @@ namespace Perception {
 
                 float randomValue = (float) rand() / ((float) RAND_MAX + 1) * 2 - 1;
                 this->setValue(randomValue);
+                this->setValueIsSet(true);
 
             }
 
@@ -35,6 +36,14 @@ namespace Perception {
 
             Perception_Element::~Perception_Element() {
 
+            }
+
+            bool Perception_Element::isValueIsSet() const {
+                return valueIsSet;
+            }
+
+            void Perception_Element::setValueIsSet(bool valueIsSet) {
+                Perception_Element::valueIsSet = valueIsSet;
             }
         }
     } // Perception

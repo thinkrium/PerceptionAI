@@ -28,6 +28,18 @@ namespace Perception {
 
                     float derivedValue;
                     float activatedValue;
+                public:
+                    bool checkIsDerivedValueSet() const;
+
+                    void setIsDerivedValueSet(bool isDerivedValueSet);
+
+                    bool checkIsActivatedValueSet() const;
+
+                    void setIsActivatedValueSet(bool isActivatedValueSet);
+
+                private:
+                    bool isDerivedValueSet;
+                    bool isActivatedValueSet;
 
                 public:
                     Node();

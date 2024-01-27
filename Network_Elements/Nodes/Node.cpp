@@ -8,13 +8,19 @@ namespace Perception {
     namespace Network {
         namespace Elements {
             namespace Nodes {
-                Node::Node() {}
+                Node::Node() {
+                    this->setIsActivatedValueSet(false);
+                    this->setIsDerivedValueSet(false);
+                }
 
                 Node::~Node() {
 
                 }
 
-                Node::Node(float value) : Perception_Element(value) {}
+                Node::Node(float value) : Perception_Element(value) {
+                    this->setIsActivatedValueSet(false);
+                    this->setIsDerivedValueSet(false);
+                }
 
                 float Node::getDerivedValue() const {
                     return derivedValue;
@@ -22,6 +28,7 @@ namespace Perception {
 
                 void Node::setDerivedValue(float derivedValue) {
                     Node::derivedValue = derivedValue;
+                    this->setIsDerivedValueSet(true);
                 }
 
                 float Node::getActivatedValue() const {
@@ -30,6 +37,24 @@ namespace Perception {
 
                 void Node::setActivatedValue(float activatedValue) {
                     Node::activatedValue = activatedValue;
+                    this->setIsActivatedValueSet(true);
+
+                }
+
+                bool Node::checkIsDerivedValueSet() const {
+                    return isDerivedValueSet;
+                }
+
+                void Node::setIsDerivedValueSet(bool isDerivedValueSet) {
+                    Node::isDerivedValueSet = isDerivedValueSet;
+                }
+
+                bool Node::checkIsActivatedValueSet() const {
+                    return isActivatedValueSet;
+                }
+
+                void Node::setIsActivatedValueSet(bool isActivatedValueSet) {
+                    Node::isActivatedValueSet = isActivatedValueSet;
                 }
 
             } // Perception

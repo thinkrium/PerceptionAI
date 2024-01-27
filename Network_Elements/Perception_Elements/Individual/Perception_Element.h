@@ -28,11 +28,16 @@ namespace Perception {
 
             void setValue(float value);
 
+            bool isValueIsSet() const;
+
+            void setValueIsSet(bool valueIsSet);
+
 
             virtual ~Perception_Element();
 
         private:
             float value;
+            bool valueIsSet;
 
         };
     }
