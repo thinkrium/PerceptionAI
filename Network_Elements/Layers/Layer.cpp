@@ -58,7 +58,7 @@ namespace Perception {
 
             }
 
-            return this->nodeCountPerLayer;
+            return -1;
         }
 
         void Layer::setNodeCountPerLayer(int nodesPerLayer) {
@@ -80,7 +80,7 @@ namespace Perception {
 
             }
 
-            return this->nodeCountPerPreviousLayerGoingPropagatingForwards;
+            return -1;
         }
 
         void Layer::setNodeCountPerPreviousLayerGoingPropagatingForwards(
