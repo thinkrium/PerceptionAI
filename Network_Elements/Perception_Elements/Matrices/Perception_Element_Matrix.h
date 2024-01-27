@@ -58,9 +58,9 @@ namespace Perception {
                         this->setColumnSizeIsSet(false);
                         this->setRowSizeIsSet(false);
 
-                        // i might want to assume poor health ... not sure yet
-                        // for now i will assume health ok
-                        this->setHealthStatus(Perception_Enumerations::healthStatus::ok);
+                        // we dont know the size, there is no matrix to set
+                        // health status - error
+                        this->setHealthStatus(Perception_Enumerations::healthStatus::error);
                     }
 
                     void setIndividualElement(int rowIndex, int columnIndex, objectName element) {
@@ -78,7 +78,22 @@ namespace Perception {
 
                     }
 
-                    Perception_Element_Matrix(int rowSize, int columnSize) : rowSize(rowSize), columnSize(columnSize) {}
+                    Perception_Element_Matrix(int rowSize, int columnSize) : rowSize(rowSize), columnSize(columnSize) {
+
+
+                        this->setRowSize(rowSize);
+
+                        this->setColumnSize(columnSize);
+
+                        this->setElementMatrix(vector<vector<objectName>>(
+                                this->getRowSize(),
+                                vector<objectName>(this->getColumnSize())
+                                ));
+
+                        // we dont know the size, there is no matrix to set
+                        // health status - error
+                        this->setHealthStatus(Perception_Enumerations::healthStatus::error);
+                    }
 
                     Perception_Element_Matrix transpose(Perception_Element_Matrix matrixToTranspose) {
 
