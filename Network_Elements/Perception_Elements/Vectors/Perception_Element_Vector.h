@@ -68,7 +68,7 @@ namespace Perception {
 
                         this->setSize(size);
                         this->element_vector = vector<objectType> (this->getSize());
-                        //this->setHealthStatus(Perception_Enumerations::healthStatus::ok);
+                        this->setHealthStatus(Perception_Enumerations::healthStatus::ok);
                     }
 
                     void setIndividualElement(int index, objectType &element) {

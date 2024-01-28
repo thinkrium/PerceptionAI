@@ -113,7 +113,7 @@ namespace Perception {
 
                         this->setMatrixIsSet(true);
 
-                        //this->setHealthStatus(Perception_Enumerations::healthStatus::ok);
+                        this->setHealthStatus(Perception_Enumerations::healthStatus::ok);
                     }
 
                     Perception_Element_Matrix transpose(Perception_Element_Matrix matrixToTranspose) {

@@ -12,7 +12,7 @@ namespace Perception {
                 Node::Node() {
                     this->setIsActivatedValueSet(false);
                     this->setIsDerivedValueSet(false);
-//                    //this->setHealthStatus(Perception_Enumerations::healthStatus::error)
+                    this->setHealthStatus(Perception_Enumerations::healthStatus::error);
                 }
 
                 Node::~Node() {
@@ -22,7 +22,7 @@ namespace Perception {
                 Node::Node(float value) : Perception_Element(value) {
                     this->setIsActivatedValueSet(false);
                     this->setIsDerivedValueSet(false);
-//                    //this->setHealthStatus(Perception_Enumerations::healthStatus::error)
+                    this->setHealthStatus(Perception_Enumerations::healthStatus::error);
                 }
 
                 float Node::getDerivedValue() {
@@ -32,7 +32,7 @@ namespace Perception {
                         return derivedValue;
                     }
                     catch (exception e) {
-//                        //this->setHealthStatus(Perception_Enumerations::healthStatus::error)
+                        this->setHealthStatus(Perception_Enumerations::healthStatus::error);
 
                     }
 
