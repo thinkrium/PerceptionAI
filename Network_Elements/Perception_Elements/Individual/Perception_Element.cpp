@@ -37,7 +37,7 @@ namespace Perception {
                     return value;
                 }
                 catch (exception e) {
-//                    //  this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
+//                      //this->setHealthStatus(Perception_Enumerations::healthStatus::error)
 
                     return value;
                 }

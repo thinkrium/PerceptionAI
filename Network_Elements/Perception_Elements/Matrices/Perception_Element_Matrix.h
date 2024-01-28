@@ -44,16 +44,7 @@ namespace Perception {
 
                 public:
                     bool isRowSizeIsSet() const {
-                        try {
-
-                            if(!this->isRowSizeIsSet()) { throw "nope"; }
-                            return rowSizeIsSet;
-                        }
-                        catch (exception e) {
-//                            //  this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
-
-                        }
-                        return rowSizeIsSet;
+                         return rowSizeIsSet;
                     }
 
                     void setRowSizeIsSet(bool rowSizeIsSet) {
@@ -82,7 +73,7 @@ namespace Perception {
 
                         // we dont know the size, there is no matrix to set
                         // health status - error
-                        this->setHealthStatus(Perception_Enumerations::healthStatus::error);
+//                        //this->setHealthStatus(Perception_Enumerations::healthStatus::error)
                     }
 
                     void setIndividualElement(int rowIndex, int columnIndex, objectName element) {
@@ -100,7 +91,7 @@ namespace Perception {
                         }
                         catch (exception e) {
                             cout << "error: " << e.what() << endl;
-                            this->setHealthStatus(Perception_Enumerations::healthStatus::error);
+//                            //this->setHealthStatus(Perception_Enumerations::healthStatus::error)
                         }
                     }
 
@@ -122,7 +113,7 @@ namespace Perception {
 
                         this->setMatrixIsSet(true);
 
-                        this->setHealthStatus(Perception_Enumerations::healthStatus::ok);
+                        //this->setHealthStatus(Perception_Enumerations::healthStatus::ok);
                     }
 
                     Perception_Element_Matrix transpose(Perception_Element_Matrix matrixToTranspose) {
@@ -157,12 +148,12 @@ namespace Perception {
                                 }
                             }
 
-                            transposedMatrix.setHealthStatus(Perception_Enumerations::healthStatus::ok);
+//                            transposedMatrix.setHealthStatus(Perception_Enumerations::healthStatus::ok);
 
                         }
                         catch (exception e) {
                             cout << "error: " << e.what();
-                            transposedMatrix.setHealthStatus(Perception_Enumerations::healthStatus::error);
+//                            transposedMatrix.setHealthStatus(Perception_Enumerations::healthStatus::error);
                         }
 
                         return transposedMatrix;
@@ -176,7 +167,7 @@ namespace Perception {
                             return element_matrix;
                         }
                         catch (exception e) {
-//                            //  this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
+//                           Status::setHealthStatus(Perception_Enumerations::healthStatus::error);
 
                         }
                         return element_matrix;
@@ -195,7 +186,7 @@ namespace Perception {
                             return rowSize;
                         }
                         catch (exception e) {
-//                            //  this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
+//                              //this->setHealthStatus(Perception_Enumerations::healthStatus::error)
 
                         }
                         return rowSize;
@@ -213,7 +204,7 @@ namespace Perception {
                             return columnSize;
                         }
                         catch (exception e) {
-                            //  this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
+//                              //this->setHealthStatus(Perception_Enumerations::healthStatus::error)
 
                         }
                         return columnSize;

@@ -29,9 +29,9 @@ namespace Perception {
 
                 }
 
-                void Status::setHealthStatus(Perception_Enumerations::healthStatus healthStatus) {
-                    Status::healthStatus = healthStatus;
-                    this->setHealthStatusIsSet(true);
+                void Status::setHealthStatus(/*Perception_Enumerations::healthStatus healthStatus*/) {
+//                    Status::healthStatus = healthStatus;
+                    Status::setHealthStatusIsSet(true);
                 }
 
                 bool Status::isHealthStatusIsSet() const {
