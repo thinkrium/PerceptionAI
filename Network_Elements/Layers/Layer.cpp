@@ -54,7 +54,7 @@ namespace Perception {
                 return this->nodeCountPerLayer;
             }
             catch (exception e) {
-                this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
+                //  this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
 
             }
 
@@ -76,7 +76,7 @@ namespace Perception {
                 return this->nodeCountPerPreviousLayerGoingPropagatingForwards;
             }
             catch (exception e) {
-                this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
+                //  this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
 
             }
 
@@ -100,7 +100,7 @@ namespace Perception {
                 return this->inputNodes;
             }
             catch (exception e) {
-                this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
+                 //  this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
 
             }
             return this->inputNodes;
@@ -119,7 +119,7 @@ namespace Perception {
                 return localNodes;
             }
             catch (exception e) {
-                this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
+                 //  this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
 
             }
 
@@ -138,7 +138,7 @@ namespace Perception {
                 return outputNodes;
             }
             catch (exception e) {
-                this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
+                //  this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
 
             }
             return outputNodes;
@@ -156,7 +156,7 @@ namespace Perception {
                 return biases;
             }
             catch (exception e) {
-                this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
+                //  this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
 
             }
             return biases;
@@ -174,7 +174,7 @@ namespace Perception {
                 return weights;
             }
             catch (exception e) {
-                this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
+                //  this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
 
             }
             return weights;

@@ -95,7 +95,7 @@ namespace Perception {
                             return this->size;
                         }
                         catch (exception e) {
-                            this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
+                            //  this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
 
                         }
 
@@ -114,7 +114,7 @@ namespace Perception {
                             return this->element_vector;
                         }
                         catch (exception e) {
-                            this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
+                             //  this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
 
                         }
                         return this->element_vector;

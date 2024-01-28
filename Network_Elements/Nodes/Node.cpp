@@ -32,7 +32,7 @@ namespace Perception {
                         return derivedValue;
                     }
                     catch (exception e) {
-                        this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
+                       // //  this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
 
                     }
 
@@ -51,7 +51,7 @@ namespace Perception {
                         return activatedValue;
                     }
                     catch (exception e) {
-                        this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
+                        //  this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
 
                     }
                     return activatedValue;

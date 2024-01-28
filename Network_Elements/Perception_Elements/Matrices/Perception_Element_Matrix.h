@@ -50,7 +50,7 @@ namespace Perception {
                             return rowSizeIsSet;
                         }
                         catch (exception e) {
-                            this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
+//                            //  this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
 
                         }
                         return rowSizeIsSet;
@@ -176,7 +176,7 @@ namespace Perception {
                             return element_matrix;
                         }
                         catch (exception e) {
-                            this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
+//                            //  this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
 
                         }
                         return element_matrix;
@@ -195,7 +195,7 @@ namespace Perception {
                             return rowSize;
                         }
                         catch (exception e) {
-                            this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
+//                            //  this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
 
                         }
                         return rowSize;
@@ -213,7 +213,7 @@ namespace Perception {
                             return columnSize;
                         }
                         catch (exception e) {
-                            this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
+                            //  this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::error);
 
                         }
                         return columnSize;
