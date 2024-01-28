@@ -51,7 +51,7 @@ namespace Perception {
                         return activatedValue;
                     }
                     catch (exception e) {
-//                        //this->setHealthStatus(Perception_Enumerations::healthStatus::error)
+                        this->setHealthStatus(Perception_Enumerations::healthStatus::error);
 
                     }
                     return activatedValue;

@@ -95,8 +95,8 @@ namespace Perception {
                             return this->size;
                         }
                         catch (exception e) {
-                              //this->setHealthStatus(Perception_Enumerations::healthStatus::error)
-
+//                            Perception_Enumerations::healthStatus d = Utilities::Enumerations::Perception_Enumerations::error;
+//                              this->setHealthStatus(d);
                         }
 
                         return this->size;
