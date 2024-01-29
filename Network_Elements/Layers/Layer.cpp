@@ -54,7 +54,7 @@ namespace Perception {
                 return this->nodeCountPerLayer;
             }
             catch (exception e) {
-                  this->setHealthStatus(Perception_Enumerations::healthStatus::error);
+                setHealthStatus(Perception_Enumerations::healthStatus::error);
 
             }
 

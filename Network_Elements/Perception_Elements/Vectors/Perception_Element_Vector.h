@@ -1,6 +1,6 @@
 //
-// Created by thome on 1/22/2024.
 //
+// Created by thome on 1/22/2024.
 
 #ifndef PERCEPTIONAI_PERCEPTION_ELEMENT_VECTOR_H
 #define PERCEPTIONAI_PERCEPTION_ELEMENT_VECTOR_H
@@ -95,8 +95,9 @@ namespace Perception {
                             return this->size;
                         }
                         catch (exception e) {
-//                            Perception_Enumerations::healthStatus d = Utilities::Enumerations::Perception_Enumerations::error;
-//                              this->setHealthStatus(d);
+
+//                            Status::setHealthStatus(Perception_Enumerations::healthStatus::error);
+
                         }
 
                         return this->size;

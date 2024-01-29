@@ -21,7 +21,7 @@ namespace Perception {
         namespace Elements {
             namespace Matrices {
 
-                template <class objectName>
+                template <typename objectName>
                 class Perception_Element_Matrix : public Status {
                 private:
                     vector<vector<objectName>> element_matrix;
@@ -204,9 +204,10 @@ namespace Perception {
                             return columnSize;
                         }
                         catch (exception e) {
-//                              //this->setHealthStatus(Perception_Enumerations::healthStatus::error)
-
+//                          this->setHealthStatus(Perception_Enumerations::healthStatus::error);
+//
                         }
+
                         return columnSize;
                     }
 

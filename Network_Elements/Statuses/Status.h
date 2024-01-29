@@ -32,6 +32,8 @@ namespace Perception {
                     Perception_Enumerations::healthStatus getHealthStatus() const;
 
                     void setHealthStatus(Perception_Enumerations::healthStatus healthStatus);
+
+                    void  setHealthStatusToError( );
                 };
 
 
