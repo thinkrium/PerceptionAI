@@ -139,6 +139,11 @@ namespace Perception {
                 inputs.setIndividualElement(nodeCountIndex,  node);
             }
 
+            // not calling setElement vector as a whole
+            // so we need to tell the system the
+            // vector is set manually
+            inputs.setElementVectorIsSet(true);
+
             inputLayer.setOutputNodes(inputs); // in the input layer there is no preparation to perform
                                                // the outputs are the inputs
 

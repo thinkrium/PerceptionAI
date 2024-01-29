@@ -21,12 +21,12 @@ namespace Perception {
 
                 float randomValue = (float) rand() / ((float) RAND_MAX + 1) * 2 - 1;
                 this->setValue(randomValue);
-                this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::ok);
+                this->setHealthStatus(Perception_Enumerations::healthStatus::ok);
             }
 
             Perception_Element::Perception_Element(float value) : value(value) {
                 this->setValue(value);
-                this->setHealthStatusIsSet(Perception_Enumerations::healthStatus::ok);
+                this->setHealthStatus(Perception_Enumerations::healthStatus::ok);
             }
 
 

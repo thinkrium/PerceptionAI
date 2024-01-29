@@ -21,7 +21,7 @@ namespace Perception {
                     try {
 
                         if(!this->isHealthStatusIsSet() ) { throw "nope"; }
-                        return healthStatus;
+                        return this->healthStatus;
                     }
                     catch (exception e) {
                         return Perception_Enumerations::healthStatus::error;
@@ -29,20 +29,13 @@ namespace Perception {
 
                 }
 
-                int Status::setHealthStatusToError( ) {
-//                    Status::healthStatus = Perception_Enumerations::healthStatus::error;
-//                    Status::setHealthStatusIsSet(true);
-
-                    return 0;
-                }
-
                 void Status::setHealthStatus(Perception_Enumerations::healthStatus healthStatus) {
-                     healthStatus = healthStatus;
+                     this->healthStatus = healthStatus;
                      setHealthStatusIsSet(true);
                 }
 
                 bool Status::isHealthStatusIsSet() const {
-                    return healthStatusIsSet;
+                    return this->healthStatusIsSet;
                 }
 
                 void Status::setHealthStatusIsSet(bool healthStatusIsSet) {
