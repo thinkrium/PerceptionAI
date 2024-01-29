@@ -19,6 +19,8 @@ namespace Perception {
                     Perception_Enumerations::healthStatus healthStatus;
                 public:
 
+                    int  setHealthStatusToError( );
+
                     virtual ~Status();
 
                     bool healthStatusIsSet;
@@ -33,7 +35,6 @@ namespace Perception {
 
                     void setHealthStatus(Perception_Enumerations::healthStatus healthStatus);
 
-                    void  setHealthStatusToError( );
                 };
 
 

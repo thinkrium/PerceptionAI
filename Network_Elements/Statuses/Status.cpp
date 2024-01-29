@@ -29,15 +29,16 @@ namespace Perception {
 
                 }
 
-                void Status::setHealthStatusToError( ) {
-                    Status::healthStatus = Perception_Enumerations::healthStatus::error;
-                    Status::setHealthStatusIsSet(true);
+                int Status::setHealthStatusToError( ) {
+//                    Status::healthStatus = Perception_Enumerations::healthStatus::error;
+//                    Status::setHealthStatusIsSet(true);
 
+                    return 0;
                 }
 
                 void Status::setHealthStatus(Perception_Enumerations::healthStatus healthStatus) {
-                    Status::healthStatus = healthStatus;
-                    Status::setHealthStatusIsSet(true);
+                     healthStatus = healthStatus;
+                     setHealthStatusIsSet(true);
                 }
 
                 bool Status::isHealthStatusIsSet() const {

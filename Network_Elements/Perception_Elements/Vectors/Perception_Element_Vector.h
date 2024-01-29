@@ -61,7 +61,7 @@ namespace Perception {
                         // we don't know the size
                         // we don't have a vector
                         // health status - error
-                        //this->setHealthStatus(Perception_Enumerations::healthStatus::error)
+                        this->setHealthStatus(Perception_Enumerations::healthStatus::error);
                     }
 
                     explicit Perception_Element_Vector(int size) {
@@ -79,7 +79,7 @@ namespace Perception {
                         }
                         catch (exception e) {
                             cout << "error: " << e.what() << endl;
-                            //this->setHealthStatus(Perception_Enumerations::healthStatus::error)
+                            this->setHealthStatus(Perception_Enumerations::healthStatus::error);
                         }
                     }
 
@@ -88,7 +88,7 @@ namespace Perception {
                     ~Perception_Element_Vector() override {}
 
 
-                    int getSize() const {
+                    int getSize()  {
                         try {
 
                             if(!this->isSizeIsSet()) { throw "nope"; }
@@ -96,7 +96,7 @@ namespace Perception {
                         }
                         catch (exception e) {
 
-//                            Status::setHealthStatus(Perception_Enumerations::healthStatus::error);
+                            Status::setHealthStatus(Perception_Enumerations::healthStatus::error);
 
                         }
 
@@ -108,14 +108,14 @@ namespace Perception {
                         this->setSizeIsSet(true);
                     }
 
-                    const vector<objectType> &getElementVector() const {
+                     vector<objectType> &getElementVector()  {
                         try {
 
                             if(!this->isElementVectorIsSet()) { throw "nope"; }
                             return this->element_vector;
                         }
                         catch (exception e) {
-                               //this->setHealthStatus(Perception_Enumerations::healthStatus::error)
+                               this->setHealthStatus(Perception_Enumerations::healthStatus::error);
 
                         }
                         return this->element_vector;
