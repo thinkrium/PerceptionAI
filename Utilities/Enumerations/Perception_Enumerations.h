@@ -5,6 +5,10 @@
 #ifndef PERCEPTIONAI_PERCEPTION_ENUMERATIONS_H
 #define PERCEPTIONAI_PERCEPTION_ENUMERATIONS_H
 
+#include "map"
+#include "iostream"
+
+using namespace std;
 namespace Perception {
     namespace Network {
         namespace Utilities {
@@ -16,6 +20,9 @@ namespace Perception {
                       enum activationMethod {ReLU, Softmax, Sigmoid};
                       enum lossCalculationMethod { CategoricalCrossEntropy };
                       enum healthStatus { ok, error };
+//                      map<string, string > errorMessages = {
+//                              "General Error", "There is a General error"
+//                      };
                 };
 
             } // Perception

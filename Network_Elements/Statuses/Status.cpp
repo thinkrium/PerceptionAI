@@ -42,6 +42,14 @@ namespace Perception {
                     Status::healthStatusIsSet = healthStatusIsSet;
                 }
 
+                const vector<string> &Status::getErrorMessages() const {
+                    return errorMessages;
+                }
+
+                void Status::setErrorMessages(const vector<string> &errorMessages) {
+                    Status::errorMessages = errorMessages;
+                }
+
             } // Perception
         } // Network
     } // Elements

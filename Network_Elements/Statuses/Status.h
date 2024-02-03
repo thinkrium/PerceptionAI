@@ -6,9 +6,12 @@
 #define PERCEPTIONAI_STATUS_H
 
 #include "../../Utilities/Enumerations/Perception_Enumerations.h"
+#include "vector"
+
+#include "iostream"
 
 using namespace Perception::Network::Utilities::Enumerations;
-
+using namespace std;
 
 namespace Perception {
     namespace Network {
@@ -17,6 +20,13 @@ namespace Perception {
 
                 class Status {
                     Perception_Enumerations::healthStatus healthStatus;
+
+                    vector<string > errorMessages;
+                public:
+                    const vector<string> &getErrorMessages() const;
+
+                    void setErrorMessages(const vector<string> &errorMessages);
+
                 public:
 
                     int  setHealthStatusToError( );
@@ -34,6 +44,7 @@ namespace Perception {
                     Perception_Enumerations::healthStatus getHealthStatus() const;
 
                     void setHealthStatus(Perception_Enumerations::healthStatus healthStatus);
+
 
                 };
 

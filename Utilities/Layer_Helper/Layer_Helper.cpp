@@ -87,30 +87,47 @@ namespace Perception {
 
             void Layer_Helper::Prepare_Forward_Propagation(Layer &previousLayer, Layer &currentLayer) {
 
-                vector<float> floatsFromInputs = this->getFloatsFromPerceptionElementVector(previousLayer.getOutputNodes());
+                try {
 
-                Perception_Element_Matrix<Weight> currentLayersWeights = currentLayer.getWeights();
+                    if(
+                        !(
+                            previousLayer.getOutputNodes().getHealthStatus() == Perception_Enumerations::healthStatus::ok
+                            &&
+                            currentLayer.getWeights().getHealthStatus() == Perception_Enumerations::healthStatus::ok
+                        )
+                    ) {
+                        throw "nope";
+                    }
+                    
+                    vector<float> floatsFromInputs = this->getFloatsFromPerceptionElementVector(
+                            previousLayer.getOutputNodes());
 
-                for(int i = 0; i < currentLayersWeights.getRowSize(); i++) {
-                    vector<float> floatsFromIndividualNodeWeights(
-                            currentLayersWeights.getElementRowAt(i).size()
-                            );
+                    Perception_Element_Matrix<Weight> currentLayersWeights = currentLayer.getWeights();
 
-                    for(int j = 0; j < currentLayersWeights.getElementRowAt(i).size(); j++) {
-                        floatsFromIndividualNodeWeights.push_back(
-                                currentLayersWeights.getElementAt(i, j).getValue()
+                    for (int i = 0; i < currentLayersWeights.getRowSize(); i++) {
+                        vector<float> floatsFromIndividualNodeWeights(
+                                currentLayersWeights.getElementRowAt(i).size()
                         );
 
-                        float currentNodesUnactivatedValue = perceptionMaths.dotProduct(floatsFromInputs,floatsFromIndividualNodeWeights);
+                        for (int j = 0; j < currentLayersWeights.getElementRowAt(i).size(); j++) {
+                            floatsFromIndividualNodeWeights.push_back(
+                                    currentLayersWeights.getElementAt(i, j).getValue()
+                            );
 
-                        Perception_Element_Vector<Node> currentLayersLocalNodes = currentLayer.getLocalNodes();
+                            float currentNodesUnactivatedValue = perceptionMaths.dotProduct(floatsFromInputs,
+                                                                                            floatsFromIndividualNodeWeights);
 
-                        Node unactivatedNode(currentNodesUnactivatedValue);
+                            Perception_Element_Vector<Node> currentLayersLocalNodes = currentLayer.getLocalNodes();
 
-                        currentLayersLocalNodes.setIndividualElement(i, unactivatedNode);
+                            Node unactivatedNode(currentNodesUnactivatedValue);
+
+                            currentLayersLocalNodes.setIndividualElement(i, unactivatedNode);
+                        }
                     }
                 }
-
+                catch (exception e) {
+                    cout << "Error: " << e.what() << endl;
+                }
             }
 
             void Layer_Helper::Prepare_Backward_Propagation(Layer &layer) {
