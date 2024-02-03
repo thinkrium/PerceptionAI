@@ -18,8 +18,7 @@ namespace Perception {
 
         class Perception_Element : public  Status {
 
-        private:
-        public:
+         public:
             explicit Perception_Element(float value);
 
             Perception_Element();

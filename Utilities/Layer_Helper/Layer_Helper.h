@@ -7,15 +7,24 @@
 
 #include "../../Network_Elements/Layers/Layer.h"
 #include "../../Utilities/Enumerations/Perception_Enumerations.h"
+#include "../../Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.h"
+
 
 using namespace Perception::Layers;
 using namespace Perception::Network::Utilities::Enumerations;
+using namespace Perception::Network::Elements::Vectors;
 
 namespace Perception {
     namespace Network {
         namespace Utilities {
 
             class Layer_Helper {
+            private:
+                Perception_Maths perceptionMaths;
+
+                template<typename typeName>
+                vector<float> getFloatsFromPerceptionElementVector(Perception_Element_Vector<typeName> elementType);
+
             public:
                 Layer_Helper();
 
@@ -23,12 +32,10 @@ namespace Perception {
 
                 void setPerceptionMaths(const Perception_Maths &perceptionMaths);
 
-                Perception_Maths perceptionMaths;
 
                 virtual ~Layer_Helper();
 
-            private:
-                void Prepare_Forward_Propagation(Layer &layer);
+                void Prepare_Forward_Propagation(Layer &previousLayer, Layer &currentLayer);
                 void Prepare_Backward_Propagation(Layer &layer);
                 Perception_Element_Vector<Node> Propagate_Forward(Layer layer);
                 Perception_Element_Vector<Node> Propagate_Backward(Layer layer);

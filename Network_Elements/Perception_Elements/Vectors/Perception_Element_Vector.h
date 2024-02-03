@@ -121,6 +121,25 @@ namespace Perception {
                         return this->element_vector;
                     }
 
+                    objectType getElementAt(int index) {
+                        try {
+
+                            if(
+                                !(
+                                    this->isElementVectorIsSet()
+                                     &&
+                                    this->getSize() > index
+                                )
+                             ) { throw "nope"; }
+                            return this->getElementVector().at(index);
+                        }
+                        catch (exception e) {
+                            this->setHealthStatus(Perception_Enumerations::healthStatus::error);
+
+                        }
+
+                        return this->getElementVector().at(index);
+                    }
                     void setElementVector(const vector<objectType> &elementVector) {
                         this->element_vector = elementVector;
                         this->setElementVectorIsSet(true);

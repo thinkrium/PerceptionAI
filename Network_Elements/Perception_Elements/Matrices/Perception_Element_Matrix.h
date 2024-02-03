@@ -24,7 +24,9 @@ namespace Perception {
                 template <typename objectName>
                 class Perception_Element_Matrix : public Status {
                 private:
-                    vector<vector<objectName>> element_matrix;
+                    bool columnSizeIsSet;
+
+                     vector<vector<objectName>> element_matrix;
 
                     int rowSize;
 
@@ -42,7 +44,50 @@ namespace Perception {
                         Perception_Element_Matrix::matrixIsSet = matrixIsSet;
                     }
 
-                public:
+                    vector<objectName> getElementRowAt(int index) {
+                        try {
+
+                            if(
+                                !
+                                    (this->isMatrixIsSet()
+                                    &&
+                                    this->getRowSize() > index
+                                    )
+                            ) { throw "nope"; }
+                            return this->getElementMatrix().at(index);
+                        }
+                        catch (exception e) {
+                            this->setHealthStatus(Perception_Enumerations::healthStatus::error);
+
+                        }
+
+                        return this->getElementMatrix().at(index);
+                    }
+
+                    objectName getElementAt(int rowIndex, int columnIndex) {
+                        try {
+
+                            if(
+                                !
+                                    (this->isMatrixIsSet()
+                                    &&
+                                    this->getRowSize() > rowIndex
+                                    &&
+                                    this->getElementRowAt(rowIndex).size() > columnIndex
+                                    )
+                            ) { throw "nope"; }
+
+                            return this->element_matrix[rowIndex][columnIndex];
+
+                        }
+                        catch (exception e) {
+                            this->setHealthStatus(Perception_Enumerations::healthStatus::error);
+
+                        }
+
+                        return this->element_matrix[rowIndex][columnIndex];
+                    }
+
                     bool isRowSizeIsSet() const {
                          return rowSizeIsSet;
                     }
@@ -60,10 +105,6 @@ namespace Perception {
 
                     }
 
-                private:
-                    bool columnSizeIsSet;
-
-                public:
 
                     Perception_Element_Matrix() {
                         this->setColumnSizeIsSet(false);
@@ -159,7 +200,7 @@ namespace Perception {
                         return transposedMatrix;
                     }
 
-                      vector<vector<objectName>> &getElementMatrix()  {
+                    vector<vector<objectName>> &getElementMatrix()  {
 
                         try {
 

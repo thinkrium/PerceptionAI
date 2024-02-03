@@ -85,10 +85,32 @@ namespace Perception {
 
             }
 
-            void Layer_Helper::Prepare_Forward_Propagation(Layer &layer) {
+            void Layer_Helper::Prepare_Forward_Propagation(Layer &previousLayer, Layer &currentLayer) {
 
+                vector<float> floatsFromInputs = this->getFloatsFromPerceptionElementVector(previousLayer.getOutputNodes());
 
-//               Perception_Element_Vector<Node> t = this->getPerceptionMaths().dotProduct(layer.getLocalNodes(),layer.getLocalNodes());
+                Perception_Element_Matrix<Weight> currentLayersWeights = currentLayer.getWeights();
+
+                for(int i = 0; i < currentLayersWeights.getRowSize(); i++) {
+                    vector<float> floatsFromIndividualNodeWeights(
+                            currentLayersWeights.getElementRowAt(i).size()
+                            );
+
+                    for(int j = 0; j < currentLayersWeights.getElementRowAt(i).size(); j++) {
+                        floatsFromIndividualNodeWeights.push_back(
+                                currentLayersWeights.getElementAt(i, j).getValue()
+                        );
+
+                        float currentNodesUnactivatedValue = perceptionMaths.dotProduct(floatsFromInputs,floatsFromIndividualNodeWeights);
+
+                        Perception_Element_Vector<Node> currentLayersLocalNodes = currentLayer.getLocalNodes();
+
+                        Node unactivatedNode(currentNodesUnactivatedValue);
+
+                        currentLayersLocalNodes.setIndividualElement(i, unactivatedNode);
+                    }
+                }
+
             }
 
             void Layer_Helper::Prepare_Backward_Propagation(Layer &layer) {
@@ -102,6 +124,25 @@ namespace Perception {
             void Layer_Helper::setPerceptionMaths(const Perception_Maths &perceptionMaths) {
                 Layer_Helper::perceptionMaths = perceptionMaths;
             }
+
+            // this function should not happen before the health of the vector is checked
+            // so we can trust this will work
+            // always check the health of the incoming vector first
+            template<typename typeName>
+            vector<float> Layer_Helper::getFloatsFromPerceptionElementVector(Perception_Element_Vector<typeName> elementType) {
+
+
+                vector<float> floats(elementType.getElementVector().size());
+
+                for(int i = 0; i < elementType.getElementVector().size(); i++) {
+                    float value = ((Perception_Element)elementType.getElementAt(i)).getValue();
+                    floats.push_back(value);
+                }
+
+                return floats;
+
+            }
+
         } // Perception
     } // Network
 } // Utilities

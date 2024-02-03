@@ -62,6 +62,8 @@ namespace Perception {
 
         void Perception_Network::startNetwork() {
 
+            this->layerHelper.Prepare_Forward_Propagation(this->inputLayer, this->innerLayers[0]);
+            this->layerHelper.Propagate_Forward(this->innerLayers[0]);
         }
 
         Perception_Network::~Perception_Network() {
