@@ -50,7 +50,7 @@ namespace Perception {
         int Layer::getNodeCountPerLayer() {
             try {
 
-                if(!this->isCurrentLayersNodeCountIsSet()) { throw "nope"; }
+                if(!this->isCurrentLayersNodeCountIsSet()) { throw runtime_error("nope"); }
                 return this->nodeCountPerLayer;
             }
             catch (exception e) {
@@ -72,7 +72,7 @@ namespace Perception {
 
             try {
 
-                if(!this->isPreviousLayersNodeCountIsSet()) { throw "nope"; }
+                if(!this->isPreviousLayersNodeCountIsSet()) { throw runtime_error("nope"); }
                 return this->nodeCountPerPreviousLayerGoingPropagatingForwards;
             }
             catch (exception e) {
@@ -96,7 +96,7 @@ namespace Perception {
 
             try {
 
-                if(!this->isInputNodesAreSet()) { throw "nope"; }
+                if(!this->isInputNodesAreSet()) { throw runtime_error("nope"); }
                 return this->inputNodes;
             }
             catch (exception e) {
@@ -115,7 +115,7 @@ namespace Perception {
         const Perception_Element_Vector<Node> & Layer::getLocalNodes() {
             try {
 
-                if(!this->isLocalNodesAreSet()) { throw "nope"; }
+                if(!this->isLocalNodesAreSet()) { throw runtime_error("nope"); }
                 return localNodes;
             }
             catch (exception e) {
@@ -134,7 +134,7 @@ namespace Perception {
         const Perception_Element_Vector<Node> & Layer::getOutputNodes() {
             try {
 
-                if(!this->isOutputNodesAreSet()) { throw "nope"; }
+                if(!this->isOutputNodesAreSet()) { throw runtime_error("nope"); }
                 return outputNodes;
             }
             catch (exception e) {
@@ -152,7 +152,7 @@ namespace Perception {
         const Perception_Element_Vector<Bias> & Layer::getBiases() {
             try {
 
-                if(!this->isBiasesAreSet()) { throw "nope"; }
+                if(!this->isBiasesAreSet()) { throw runtime_error("nope"); }
                 return biases;
             }
             catch (exception e) {
@@ -170,7 +170,7 @@ namespace Perception {
         const Perception_Element_Matrix<Weight> & Layer::getWeights() {
             try {
 
-                if(!this->isWeightsAreSet()) { throw "nope"; }
+                if(!this->isWeightsAreSet()) { throw runtime_error("nope"); }
                 return weights;
             }
             catch (exception e) {

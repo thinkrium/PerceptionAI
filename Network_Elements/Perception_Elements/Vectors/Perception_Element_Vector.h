@@ -73,7 +73,7 @@ namespace Perception {
 
                     void setIndividualElement(int index, objectType &element) {
                         try {
-                            if(!this->isSizeIsSet()) {throw "nope";}
+                            if(!this->isSizeIsSet()) {throw runtime_error("nope");}
 
                             this->element_vector[index] = element;
                         }
@@ -91,7 +91,7 @@ namespace Perception {
                     int getSize()  {
                         try {
 
-                            if(!this->isSizeIsSet()) { throw "nope"; }
+                            if(!this->isSizeIsSet()) { throw runtime_error("nope"); }
                             return this->size;
                         }
                         catch (exception e) {
@@ -111,7 +111,7 @@ namespace Perception {
                      vector<objectType> &getElementVector()  {
                         try {
 
-                            if(!this->isElementVectorIsSet()) { throw "nope"; }
+                            if(!this->isElementVectorIsSet()) { throw runtime_error("nope"); }
                             return this->element_vector;
                         }
                         catch (exception e) {
@@ -130,7 +130,7 @@ namespace Perception {
                                      &&
                                     this->getSize() > index
                                 )
-                             ) { throw "nope"; }
+                             ) { throw runtime_error("nope"); }
                             return this->getElementVector().at(index);
                         }
                         catch (exception e) {

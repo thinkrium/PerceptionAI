@@ -33,7 +33,7 @@ namespace Perception {
             float Perception_Element::getValue() {
                 try {
 
-                    if(!this->isValueIsSet()) { throw "nope"; }
+                    if(!this->isValueIsSet()) { throw runtime_error("nope"); }
                     return value;
                 }
                 catch (exception e) {

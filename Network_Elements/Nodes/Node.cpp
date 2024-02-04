@@ -28,7 +28,7 @@ namespace Perception {
                 float Node::getDerivedValue() {
                     try {
 
-                        if(!this->checkIsDerivedValueSet()) { throw "nope"; }
+                        if(!this->checkIsDerivedValueSet()) { throw runtime_error("nope"); }
                         return derivedValue;
                     }
                     catch (exception e) {
@@ -47,7 +47,7 @@ namespace Perception {
                 float Node::getActivatedValue() {
                     try {
 
-                        if(!this->checkIsActivatedValueSet()) { throw "nope"; }
+                        if(!this->checkIsActivatedValueSet()) { throw runtime_error("nope"); }
                         return activatedValue;
                     }
                     catch (exception e) {

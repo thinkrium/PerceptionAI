@@ -20,7 +20,7 @@ namespace Perception {
                 Perception_Enumerations::healthStatus Status::getHealthStatus() const {
                     try {
 
-                        if(!this->isHealthStatusIsSet() ) { throw "nope"; }
+                        if(!this->isHealthStatusIsSet() ) { throw runtime_error("nope"); }
                         return this->healthStatus;
                     }
                     catch (exception e) {

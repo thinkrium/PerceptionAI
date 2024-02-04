@@ -12,8 +12,8 @@ int main() {
     Perception_Network perceptionNetwork ;
 
     perceptionNetwork.instantiateNetwork(3, 3);
-//
-//    perceptionNetwork.startNetwork();
+
+    perceptionNetwork.startNetwork();
 
 
     return 0;

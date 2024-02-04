@@ -96,9 +96,9 @@ namespace Perception {
                             currentLayer.getWeights().getHealthStatus() == Perception_Enumerations::healthStatus::ok
                         )
                     ) {
-                        throw "nope";
+                        throw runtime_error("nope");
                     }
-                    
+
                     vector<float> floatsFromInputs = this->getFloatsFromPerceptionElementVector(
                             previousLayer.getOutputNodes());
 

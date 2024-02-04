@@ -53,7 +53,7 @@ namespace Perception {
                                     &&
                                     this->getRowSize() > index
                                     )
-                            ) { throw "nope"; }
+                            ) { throw runtime_error("nope"); }
                             return this->getElementMatrix().at(index);
                         }
                         catch (exception e) {
@@ -75,7 +75,7 @@ namespace Perception {
                                     &&
                                     this->getElementRowAt(rowIndex).size() > columnIndex
                                     )
-                            ) { throw "nope"; }
+                            ) { throw runtime_error("nope"); }
 
                             return this->element_matrix[rowIndex][columnIndex];
 
@@ -126,7 +126,7 @@ namespace Perception {
                                     this->columnSizeIsSet()
                                     &&
                                     this->isMatrixIsSet()
-                                    )) { throw "nope"; }
+                                    )) { throw runtime_error("nope"); }
 
                             this->element_matrix[rowIndex][columnIndex] = element;
                         }
@@ -169,7 +169,7 @@ namespace Perception {
                                 &&
                                 matrixToTranspose.columnSizeIsSet())
                                ) {
-                                throw "nope";
+                                throw runtime_error("nope");
                             }
 
                             int rowSize = matrixToTranspose.getMatrix().size();
@@ -204,7 +204,7 @@ namespace Perception {
 
                         try {
 
-                            if(!this->isMatrixIsSet()) { throw "nope"; }
+                            if(!this->isMatrixIsSet()) { throw runtime_error("nope"); }
                             return element_matrix;
                         }
                         catch (exception e) {
@@ -223,7 +223,7 @@ namespace Perception {
 
                         try {
 
-                            if(!this->isRowSizeIsSet()) { throw "nope"; }
+                            if(!this->isRowSizeIsSet()) { throw runtime_error("nope"); }
                             return rowSize;
                         }
                         catch (exception e) {
@@ -241,7 +241,7 @@ namespace Perception {
                     int getColumnSize()  {
                         try {
 
-                            if(!this->isColumnSizeIsSet()) { throw "nope"; }
+                            if(!this->isColumnSizeIsSet()) { throw runtime_error("nope"); }
                             return columnSize;
                         }
                         catch (exception e) {
