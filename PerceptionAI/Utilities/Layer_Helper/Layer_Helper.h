@@ -6,7 +6,7 @@
 #define PERCEPTIONAI_LAYER_HELPER_H
 
 #include "../../Network_Elements/Layers/Layer.h"
-#include "../../Utilities/Enumerations/Perception_Enumerations.h"
+#include "../Enumerations/Perception_Enumerations.h"
 #include "../../Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.h"
 
 

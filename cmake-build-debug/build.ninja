@@ -56,82 +56,82 @@ build CMakeFiles/PerceptionAI.dir/Perception.cpp.obj: CXX_COMPILER__PerceptionAI
   OBJECT_DIR = CMakeFiles\PerceptionAI.dir
   OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir
 
-build CMakeFiles/PerceptionAI.dir/Network_Elements/Perception_Elements/Individual/Perception_Element.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/Network_Elements/Perception_Elements/Individual/Perception_Element.cpp || cmake_object_order_depends_target_PerceptionAI
+build CMakeFiles/PerceptionAI.dir/PerceptionAI/Network_Elements/Perception_Elements/Individual/Perception_Element.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Perception_Elements/Individual/Perception_Element.cpp || cmake_object_order_depends_target_PerceptionAI
   DEFINES = -DPerceptionAI_EXPORTS
-  DEP_FILE = CMakeFiles\PerceptionAI.dir\Network_Elements\Perception_Elements\Individual\Perception_Element.cpp.obj.d
+  DEP_FILE = CMakeFiles\PerceptionAI.dir\PerceptionAI\Network_Elements\Perception_Elements\Individual\Perception_Element.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\PerceptionAI.dir
-  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\Network_Elements\Perception_Elements\Individual
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\PerceptionAI\Network_Elements\Perception_Elements\Individual
 
-build CMakeFiles/PerceptionAI.dir/Network_Elements/Nodes/Node.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/Network_Elements/Nodes/Node.cpp || cmake_object_order_depends_target_PerceptionAI
+build CMakeFiles/PerceptionAI.dir/PerceptionAI/Network_Elements/Nodes/Node.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Nodes/Node.cpp || cmake_object_order_depends_target_PerceptionAI
   DEFINES = -DPerceptionAI_EXPORTS
-  DEP_FILE = CMakeFiles\PerceptionAI.dir\Network_Elements\Nodes\Node.cpp.obj.d
+  DEP_FILE = CMakeFiles\PerceptionAI.dir\PerceptionAI\Network_Elements\Nodes\Node.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\PerceptionAI.dir
-  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\Network_Elements\Nodes
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\PerceptionAI\Network_Elements\Nodes
 
-build CMakeFiles/PerceptionAI.dir/Network_Elements/Biases/Bias.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/Network_Elements/Biases/Bias.cpp || cmake_object_order_depends_target_PerceptionAI
+build CMakeFiles/PerceptionAI.dir/PerceptionAI/Network_Elements/Biases/Bias.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Biases/Bias.cpp || cmake_object_order_depends_target_PerceptionAI
   DEFINES = -DPerceptionAI_EXPORTS
-  DEP_FILE = CMakeFiles\PerceptionAI.dir\Network_Elements\Biases\Bias.cpp.obj.d
+  DEP_FILE = CMakeFiles\PerceptionAI.dir\PerceptionAI\Network_Elements\Biases\Bias.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\PerceptionAI.dir
-  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\Network_Elements\Biases
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\PerceptionAI\Network_Elements\Biases
 
-build CMakeFiles/PerceptionAI.dir/Network_Elements/Weights/Weight.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/Network_Elements/Weights/Weight.cpp || cmake_object_order_depends_target_PerceptionAI
+build CMakeFiles/PerceptionAI.dir/PerceptionAI/Network_Elements/Weights/Weight.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Weights/Weight.cpp || cmake_object_order_depends_target_PerceptionAI
   DEFINES = -DPerceptionAI_EXPORTS
-  DEP_FILE = CMakeFiles\PerceptionAI.dir\Network_Elements\Weights\Weight.cpp.obj.d
+  DEP_FILE = CMakeFiles\PerceptionAI.dir\PerceptionAI\Network_Elements\Weights\Weight.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\PerceptionAI.dir
-  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\Network_Elements\Weights
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\PerceptionAI\Network_Elements\Weights
 
-build CMakeFiles/PerceptionAI.dir/Network_Elements/Layers/Layer.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/Network_Elements/Layers/Layer.cpp || cmake_object_order_depends_target_PerceptionAI
+build CMakeFiles/PerceptionAI.dir/PerceptionAI/Network_Elements/Layers/Layer.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Layers/Layer.cpp || cmake_object_order_depends_target_PerceptionAI
   DEFINES = -DPerceptionAI_EXPORTS
-  DEP_FILE = CMakeFiles\PerceptionAI.dir\Network_Elements\Layers\Layer.cpp.obj.d
+  DEP_FILE = CMakeFiles\PerceptionAI.dir\PerceptionAI\Network_Elements\Layers\Layer.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\PerceptionAI.dir
-  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\Network_Elements\Layers
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\PerceptionAI\Network_Elements\Layers
 
-build CMakeFiles/PerceptionAI.dir/Perception_Network/Perception_Network.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/Perception_Network/Perception_Network.cpp || cmake_object_order_depends_target_PerceptionAI
+build CMakeFiles/PerceptionAI.dir/PerceptionAI/Perception_Network/Perception_Network.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Perception_Network/Perception_Network.cpp || cmake_object_order_depends_target_PerceptionAI
   DEFINES = -DPerceptionAI_EXPORTS
-  DEP_FILE = CMakeFiles\PerceptionAI.dir\Perception_Network\Perception_Network.cpp.obj.d
+  DEP_FILE = CMakeFiles\PerceptionAI.dir\PerceptionAI\Perception_Network\Perception_Network.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\PerceptionAI.dir
-  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\Perception_Network
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\PerceptionAI\Perception_Network
 
-build CMakeFiles/PerceptionAI.dir/Utilities/Layer_Helper/Layer_Helper.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/Utilities/Layer_Helper/Layer_Helper.cpp || cmake_object_order_depends_target_PerceptionAI
+build CMakeFiles/PerceptionAI.dir/PerceptionAI/Utilities/Layer_Helper/Layer_Helper.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Utilities/Layer_Helper/Layer_Helper.cpp || cmake_object_order_depends_target_PerceptionAI
   DEFINES = -DPerceptionAI_EXPORTS
-  DEP_FILE = CMakeFiles\PerceptionAI.dir\Utilities\Layer_Helper\Layer_Helper.cpp.obj.d
+  DEP_FILE = CMakeFiles\PerceptionAI.dir\PerceptionAI\Utilities\Layer_Helper\Layer_Helper.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\PerceptionAI.dir
-  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\Utilities\Layer_Helper
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\PerceptionAI\Utilities\Layer_Helper
 
-build CMakeFiles/PerceptionAI.dir/Utilities/Maths/Perception_Maths.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/Utilities/Maths/Perception_Maths.cpp || cmake_object_order_depends_target_PerceptionAI
+build CMakeFiles/PerceptionAI.dir/PerceptionAI/Utilities/Maths/Perception_Maths.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Utilities/Maths/Perception_Maths.cpp || cmake_object_order_depends_target_PerceptionAI
   DEFINES = -DPerceptionAI_EXPORTS
-  DEP_FILE = CMakeFiles\PerceptionAI.dir\Utilities\Maths\Perception_Maths.cpp.obj.d
+  DEP_FILE = CMakeFiles\PerceptionAI.dir\PerceptionAI\Utilities\Maths\Perception_Maths.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\PerceptionAI.dir
-  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\Utilities\Maths
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\PerceptionAI\Utilities\Maths
 
-build CMakeFiles/PerceptionAI.dir/Network_Elements/Perception_Elements/Matrices/Perception_Element_Matrix.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/Network_Elements/Perception_Elements/Matrices/Perception_Element_Matrix.cpp || cmake_object_order_depends_target_PerceptionAI
+build CMakeFiles/PerceptionAI.dir/PerceptionAI/Network_Elements/Perception_Elements/Matrices/Perception_Element_Matrix.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Perception_Elements/Matrices/Perception_Element_Matrix.cpp || cmake_object_order_depends_target_PerceptionAI
   DEFINES = -DPerceptionAI_EXPORTS
-  DEP_FILE = CMakeFiles\PerceptionAI.dir\Network_Elements\Perception_Elements\Matrices\Perception_Element_Matrix.cpp.obj.d
+  DEP_FILE = CMakeFiles\PerceptionAI.dir\PerceptionAI\Network_Elements\Perception_Elements\Matrices\Perception_Element_Matrix.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\PerceptionAI.dir
-  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\Network_Elements\Perception_Elements\Matrices
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\PerceptionAI\Network_Elements\Perception_Elements\Matrices
 
-build CMakeFiles/PerceptionAI.dir/Network_Elements/Statuses/Status.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/Network_Elements/Statuses/Status.cpp || cmake_object_order_depends_target_PerceptionAI
+build CMakeFiles/PerceptionAI.dir/PerceptionAI/Network_Elements/Statuses/Status.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Statuses/Status.cpp || cmake_object_order_depends_target_PerceptionAI
   DEFINES = -DPerceptionAI_EXPORTS
-  DEP_FILE = CMakeFiles\PerceptionAI.dir\Network_Elements\Statuses\Status.cpp.obj.d
+  DEP_FILE = CMakeFiles\PerceptionAI.dir\PerceptionAI\Network_Elements\Statuses\Status.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\PerceptionAI.dir
-  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\Network_Elements\Statuses
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\PerceptionAI\Network_Elements\Statuses
 
-build CMakeFiles/PerceptionAI.dir/Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.cpp || cmake_object_order_depends_target_PerceptionAI
+build CMakeFiles/PerceptionAI.dir/PerceptionAI/Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.cpp || cmake_object_order_depends_target_PerceptionAI
   DEFINES = -DPerceptionAI_EXPORTS
-  DEP_FILE = CMakeFiles\PerceptionAI.dir\Network_Elements\Perception_Elements\Vectors\Perception_Element_Vector.cpp.obj.d
+  DEP_FILE = CMakeFiles\PerceptionAI.dir\PerceptionAI\Network_Elements\Perception_Elements\Vectors\Perception_Element_Vector.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\PerceptionAI.dir
-  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\Network_Elements\Perception_Elements\Vectors
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\PerceptionAI\Network_Elements\Perception_Elements\Vectors
 
 
 # =============================================================================
@@ -141,7 +141,7 @@ build CMakeFiles/PerceptionAI.dir/Network_Elements/Perception_Elements/Vectors/P
 #############################################
 # Link the shared library libPerceptionAI.dll
 
-build libPerceptionAI.dll libPerceptionAI.dll.a: CXX_SHARED_LIBRARY_LINKER__PerceptionAI_Debug CMakeFiles/PerceptionAI.dir/Perception.cpp.obj CMakeFiles/PerceptionAI.dir/Network_Elements/Perception_Elements/Individual/Perception_Element.cpp.obj CMakeFiles/PerceptionAI.dir/Network_Elements/Nodes/Node.cpp.obj CMakeFiles/PerceptionAI.dir/Network_Elements/Biases/Bias.cpp.obj CMakeFiles/PerceptionAI.dir/Network_Elements/Weights/Weight.cpp.obj CMakeFiles/PerceptionAI.dir/Network_Elements/Layers/Layer.cpp.obj CMakeFiles/PerceptionAI.dir/Perception_Network/Perception_Network.cpp.obj CMakeFiles/PerceptionAI.dir/Utilities/Layer_Helper/Layer_Helper.cpp.obj CMakeFiles/PerceptionAI.dir/Utilities/Maths/Perception_Maths.cpp.obj CMakeFiles/PerceptionAI.dir/Network_Elements/Perception_Elements/Matrices/Perception_Element_Matrix.cpp.obj CMakeFiles/PerceptionAI.dir/Network_Elements/Statuses/Status.cpp.obj CMakeFiles/PerceptionAI.dir/Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.cpp.obj
+build libPerceptionAI.dll libPerceptionAI.dll.a: CXX_SHARED_LIBRARY_LINKER__PerceptionAI_Debug CMakeFiles/PerceptionAI.dir/Perception.cpp.obj CMakeFiles/PerceptionAI.dir/PerceptionAI/Network_Elements/Perception_Elements/Individual/Perception_Element.cpp.obj CMakeFiles/PerceptionAI.dir/PerceptionAI/Network_Elements/Nodes/Node.cpp.obj CMakeFiles/PerceptionAI.dir/PerceptionAI/Network_Elements/Biases/Bias.cpp.obj CMakeFiles/PerceptionAI.dir/PerceptionAI/Network_Elements/Weights/Weight.cpp.obj CMakeFiles/PerceptionAI.dir/PerceptionAI/Network_Elements/Layers/Layer.cpp.obj CMakeFiles/PerceptionAI.dir/PerceptionAI/Perception_Network/Perception_Network.cpp.obj CMakeFiles/PerceptionAI.dir/PerceptionAI/Utilities/Layer_Helper/Layer_Helper.cpp.obj CMakeFiles/PerceptionAI.dir/PerceptionAI/Utilities/Maths/Perception_Maths.cpp.obj CMakeFiles/PerceptionAI.dir/PerceptionAI/Network_Elements/Perception_Elements/Matrices/Perception_Element_Matrix.cpp.obj CMakeFiles/PerceptionAI.dir/PerceptionAI/Network_Elements/Statuses/Status.cpp.obj CMakeFiles/PerceptionAI.dir/PerceptionAI/Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.cpp.obj
   LANGUAGE_COMPILE_FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\PerceptionAI.dir
@@ -167,29 +167,29 @@ build CMakeFiles/Perception_AI.dir/Perception.cpp.obj: CXX_COMPILER__Perception_
   OBJECT_DIR = CMakeFiles\Perception_AI.dir
   OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir
 
-build CMakeFiles/Perception_AI.dir/Network_Elements/Perception_Elements/Individual/Perception_Element.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/Network_Elements/Perception_Elements/Individual/Perception_Element.cpp || cmake_object_order_depends_target_Perception_AI
-  DEP_FILE = CMakeFiles\Perception_AI.dir\Network_Elements\Perception_Elements\Individual\Perception_Element.cpp.obj.d
+build CMakeFiles/Perception_AI.dir/PerceptionAI/Network_Elements/Perception_Elements/Individual/Perception_Element.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Perception_Elements/Individual/Perception_Element.cpp || cmake_object_order_depends_target_Perception_AI
+  DEP_FILE = CMakeFiles\Perception_AI.dir\PerceptionAI\Network_Elements\Perception_Elements\Individual\Perception_Element.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Perception_AI.dir
-  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\Network_Elements\Perception_Elements\Individual
+  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\PerceptionAI\Network_Elements\Perception_Elements\Individual
 
-build CMakeFiles/Perception_AI.dir/Network_Elements/Nodes/Node.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/Network_Elements/Nodes/Node.cpp || cmake_object_order_depends_target_Perception_AI
-  DEP_FILE = CMakeFiles\Perception_AI.dir\Network_Elements\Nodes\Node.cpp.obj.d
+build CMakeFiles/Perception_AI.dir/PerceptionAI/Network_Elements/Nodes/Node.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Nodes/Node.cpp || cmake_object_order_depends_target_Perception_AI
+  DEP_FILE = CMakeFiles\Perception_AI.dir\PerceptionAI\Network_Elements\Nodes\Node.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Perception_AI.dir
-  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\Network_Elements\Nodes
+  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\PerceptionAI\Network_Elements\Nodes
 
-build CMakeFiles/Perception_AI.dir/Network_Elements/Biases/Bias.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/Network_Elements/Biases/Bias.cpp || cmake_object_order_depends_target_Perception_AI
-  DEP_FILE = CMakeFiles\Perception_AI.dir\Network_Elements\Biases\Bias.cpp.obj.d
+build CMakeFiles/Perception_AI.dir/PerceptionAI/Network_Elements/Biases/Bias.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Biases/Bias.cpp || cmake_object_order_depends_target_Perception_AI
+  DEP_FILE = CMakeFiles\Perception_AI.dir\PerceptionAI\Network_Elements\Biases\Bias.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Perception_AI.dir
-  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\Network_Elements\Biases
+  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\PerceptionAI\Network_Elements\Biases
 
-build CMakeFiles/Perception_AI.dir/Network_Elements/Weights/Weight.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/Network_Elements/Weights/Weight.cpp || cmake_object_order_depends_target_Perception_AI
-  DEP_FILE = CMakeFiles\Perception_AI.dir\Network_Elements\Weights\Weight.cpp.obj.d
+build CMakeFiles/Perception_AI.dir/PerceptionAI/Network_Elements/Weights/Weight.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Weights/Weight.cpp || cmake_object_order_depends_target_Perception_AI
+  DEP_FILE = CMakeFiles\Perception_AI.dir\PerceptionAI\Network_Elements\Weights\Weight.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Perception_AI.dir
-  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\Network_Elements\Weights
+  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\PerceptionAI\Network_Elements\Weights
 
 build CMakeFiles/Perception_AI.dir/main.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/main.cpp || cmake_object_order_depends_target_Perception_AI
   DEP_FILE = CMakeFiles\Perception_AI.dir\main.cpp.obj.d
@@ -197,47 +197,47 @@ build CMakeFiles/Perception_AI.dir/main.cpp.obj: CXX_COMPILER__Perception_AI_uns
   OBJECT_DIR = CMakeFiles\Perception_AI.dir
   OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir
 
-build CMakeFiles/Perception_AI.dir/Network_Elements/Layers/Layer.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/Network_Elements/Layers/Layer.cpp || cmake_object_order_depends_target_Perception_AI
-  DEP_FILE = CMakeFiles\Perception_AI.dir\Network_Elements\Layers\Layer.cpp.obj.d
+build CMakeFiles/Perception_AI.dir/PerceptionAI/Network_Elements/Layers/Layer.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Layers/Layer.cpp || cmake_object_order_depends_target_Perception_AI
+  DEP_FILE = CMakeFiles\Perception_AI.dir\PerceptionAI\Network_Elements\Layers\Layer.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Perception_AI.dir
-  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\Network_Elements\Layers
+  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\PerceptionAI\Network_Elements\Layers
 
-build CMakeFiles/Perception_AI.dir/Perception_Network/Perception_Network.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/Perception_Network/Perception_Network.cpp || cmake_object_order_depends_target_Perception_AI
-  DEP_FILE = CMakeFiles\Perception_AI.dir\Perception_Network\Perception_Network.cpp.obj.d
+build CMakeFiles/Perception_AI.dir/PerceptionAI/Perception_Network/Perception_Network.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Perception_Network/Perception_Network.cpp || cmake_object_order_depends_target_Perception_AI
+  DEP_FILE = CMakeFiles\Perception_AI.dir\PerceptionAI\Perception_Network\Perception_Network.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Perception_AI.dir
-  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\Perception_Network
+  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\PerceptionAI\Perception_Network
 
-build CMakeFiles/Perception_AI.dir/Utilities/Layer_Helper/Layer_Helper.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/Utilities/Layer_Helper/Layer_Helper.cpp || cmake_object_order_depends_target_Perception_AI
-  DEP_FILE = CMakeFiles\Perception_AI.dir\Utilities\Layer_Helper\Layer_Helper.cpp.obj.d
+build CMakeFiles/Perception_AI.dir/PerceptionAI/Utilities/Layer_Helper/Layer_Helper.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Utilities/Layer_Helper/Layer_Helper.cpp || cmake_object_order_depends_target_Perception_AI
+  DEP_FILE = CMakeFiles\Perception_AI.dir\PerceptionAI\Utilities\Layer_Helper\Layer_Helper.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Perception_AI.dir
-  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\Utilities\Layer_Helper
+  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\PerceptionAI\Utilities\Layer_Helper
 
-build CMakeFiles/Perception_AI.dir/Utilities/Maths/Perception_Maths.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/Utilities/Maths/Perception_Maths.cpp || cmake_object_order_depends_target_Perception_AI
-  DEP_FILE = CMakeFiles\Perception_AI.dir\Utilities\Maths\Perception_Maths.cpp.obj.d
+build CMakeFiles/Perception_AI.dir/PerceptionAI/Utilities/Maths/Perception_Maths.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Utilities/Maths/Perception_Maths.cpp || cmake_object_order_depends_target_Perception_AI
+  DEP_FILE = CMakeFiles\Perception_AI.dir\PerceptionAI\Utilities\Maths\Perception_Maths.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Perception_AI.dir
-  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\Utilities\Maths
+  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\PerceptionAI\Utilities\Maths
 
-build CMakeFiles/Perception_AI.dir/Network_Elements/Perception_Elements/Matrices/Perception_Element_Matrix.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/Network_Elements/Perception_Elements/Matrices/Perception_Element_Matrix.cpp || cmake_object_order_depends_target_Perception_AI
-  DEP_FILE = CMakeFiles\Perception_AI.dir\Network_Elements\Perception_Elements\Matrices\Perception_Element_Matrix.cpp.obj.d
+build CMakeFiles/Perception_AI.dir/PerceptionAI/Network_Elements/Perception_Elements/Matrices/Perception_Element_Matrix.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Perception_Elements/Matrices/Perception_Element_Matrix.cpp || cmake_object_order_depends_target_Perception_AI
+  DEP_FILE = CMakeFiles\Perception_AI.dir\PerceptionAI\Network_Elements\Perception_Elements\Matrices\Perception_Element_Matrix.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Perception_AI.dir
-  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\Network_Elements\Perception_Elements\Matrices
+  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\PerceptionAI\Network_Elements\Perception_Elements\Matrices
 
-build CMakeFiles/Perception_AI.dir/Network_Elements/Statuses/Status.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/Network_Elements/Statuses/Status.cpp || cmake_object_order_depends_target_Perception_AI
-  DEP_FILE = CMakeFiles\Perception_AI.dir\Network_Elements\Statuses\Status.cpp.obj.d
+build CMakeFiles/Perception_AI.dir/PerceptionAI/Network_Elements/Statuses/Status.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Statuses/Status.cpp || cmake_object_order_depends_target_Perception_AI
+  DEP_FILE = CMakeFiles\Perception_AI.dir\PerceptionAI\Network_Elements\Statuses\Status.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Perception_AI.dir
-  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\Network_Elements\Statuses
+  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\PerceptionAI\Network_Elements\Statuses
 
-build CMakeFiles/Perception_AI.dir/Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.cpp || cmake_object_order_depends_target_Perception_AI
-  DEP_FILE = CMakeFiles\Perception_AI.dir\Network_Elements\Perception_Elements\Vectors\Perception_Element_Vector.cpp.obj.d
+build CMakeFiles/Perception_AI.dir/PerceptionAI/Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.cpp || cmake_object_order_depends_target_Perception_AI
+  DEP_FILE = CMakeFiles\Perception_AI.dir\PerceptionAI\Network_Elements\Perception_Elements\Vectors\Perception_Element_Vector.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Perception_AI.dir
-  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\Network_Elements\Perception_Elements\Vectors
+  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\PerceptionAI\Network_Elements\Perception_Elements\Vectors
 
 
 # =============================================================================
@@ -247,7 +247,7 @@ build CMakeFiles/Perception_AI.dir/Network_Elements/Perception_Elements/Vectors/
 #############################################
 # Link the executable Perception_AI.exe
 
-build Perception_AI.exe: CXX_EXECUTABLE_LINKER__Perception_AI_Debug CMakeFiles/Perception_AI.dir/Perception.cpp.obj CMakeFiles/Perception_AI.dir/Network_Elements/Perception_Elements/Individual/Perception_Element.cpp.obj CMakeFiles/Perception_AI.dir/Network_Elements/Nodes/Node.cpp.obj CMakeFiles/Perception_AI.dir/Network_Elements/Biases/Bias.cpp.obj CMakeFiles/Perception_AI.dir/Network_Elements/Weights/Weight.cpp.obj CMakeFiles/Perception_AI.dir/main.cpp.obj CMakeFiles/Perception_AI.dir/Network_Elements/Layers/Layer.cpp.obj CMakeFiles/Perception_AI.dir/Perception_Network/Perception_Network.cpp.obj CMakeFiles/Perception_AI.dir/Utilities/Layer_Helper/Layer_Helper.cpp.obj CMakeFiles/Perception_AI.dir/Utilities/Maths/Perception_Maths.cpp.obj CMakeFiles/Perception_AI.dir/Network_Elements/Perception_Elements/Matrices/Perception_Element_Matrix.cpp.obj CMakeFiles/Perception_AI.dir/Network_Elements/Statuses/Status.cpp.obj CMakeFiles/Perception_AI.dir/Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.cpp.obj
+build Perception_AI.exe: CXX_EXECUTABLE_LINKER__Perception_AI_Debug CMakeFiles/Perception_AI.dir/Perception.cpp.obj CMakeFiles/Perception_AI.dir/PerceptionAI/Network_Elements/Perception_Elements/Individual/Perception_Element.cpp.obj CMakeFiles/Perception_AI.dir/PerceptionAI/Network_Elements/Nodes/Node.cpp.obj CMakeFiles/Perception_AI.dir/PerceptionAI/Network_Elements/Biases/Bias.cpp.obj CMakeFiles/Perception_AI.dir/PerceptionAI/Network_Elements/Weights/Weight.cpp.obj CMakeFiles/Perception_AI.dir/main.cpp.obj CMakeFiles/Perception_AI.dir/PerceptionAI/Network_Elements/Layers/Layer.cpp.obj CMakeFiles/Perception_AI.dir/PerceptionAI/Perception_Network/Perception_Network.cpp.obj CMakeFiles/Perception_AI.dir/PerceptionAI/Utilities/Layer_Helper/Layer_Helper.cpp.obj CMakeFiles/Perception_AI.dir/PerceptionAI/Utilities/Maths/Perception_Maths.cpp.obj CMakeFiles/Perception_AI.dir/PerceptionAI/Network_Elements/Perception_Elements/Matrices/Perception_Element_Matrix.cpp.obj CMakeFiles/Perception_AI.dir/PerceptionAI/Network_Elements/Statuses/Status.cpp.obj CMakeFiles/Perception_AI.dir/PerceptionAI/Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Perception_AI.dir
