@@ -20,9 +20,9 @@ namespace Perception {
                       enum activationMethod {ReLU, Softmax, Sigmoid};
                       enum lossCalculationMethod { CategoricalCrossEntropy };
                       enum healthStatus { ok, error };
-//                      map<string, string > errorMessages = {
-//                              "General Error", "There is a General error"
-//                      };
+                      struct errorMessages {
+                          inline static string General_Error = "There is a General error";
+                      };
                 };
 
             } // Perception
