@@ -41,221 +41,221 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = C$:/Development/Robotics/Source$ Code/PerceptionAI/cmake-build-debug/
 # =============================================================================
-# Object build statements for SHARED_LIBRARY target PerceptionAI
+# Object build statements for SHARED_LIBRARY target PerceptionAI_Library
 
 
 #############################################
-# Order-only phony target for PerceptionAI
+# Order-only phony target for PerceptionAI_Library
 
-build cmake_object_order_depends_target_PerceptionAI: phony || CMakeFiles/PerceptionAI.dir
+build cmake_object_order_depends_target_PerceptionAI_Library: phony || CMakeFiles/PerceptionAI_Library.dir
 
-build CMakeFiles/PerceptionAI.dir/Perception.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/Perception.cpp || cmake_object_order_depends_target_PerceptionAI
-  DEFINES = -DPerceptionAI_EXPORTS
-  DEP_FILE = CMakeFiles\PerceptionAI.dir\Perception.cpp.obj.d
+build CMakeFiles/PerceptionAI_Library.dir/Perception.cpp.obj: CXX_COMPILER__PerceptionAI_Library_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/Perception.cpp || cmake_object_order_depends_target_PerceptionAI_Library
+  DEFINES = -DPerceptionAI_Library_EXPORTS
+  DEP_FILE = CMakeFiles\PerceptionAI_Library.dir\Perception.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\PerceptionAI.dir
-  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir
+  OBJECT_DIR = CMakeFiles\PerceptionAI_Library.dir
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI_Library.dir
 
-build CMakeFiles/PerceptionAI.dir/PerceptionAI/Network_Elements/Perception_Elements/Individual/Perception_Element.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Perception_Elements/Individual/Perception_Element.cpp || cmake_object_order_depends_target_PerceptionAI
-  DEFINES = -DPerceptionAI_EXPORTS
-  DEP_FILE = CMakeFiles\PerceptionAI.dir\PerceptionAI\Network_Elements\Perception_Elements\Individual\Perception_Element.cpp.obj.d
+build CMakeFiles/PerceptionAI_Library.dir/PerceptionAI/Network_Elements/Perception_Elements/Individual/Perception_Element.cpp.obj: CXX_COMPILER__PerceptionAI_Library_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Perception_Elements/Individual/Perception_Element.cpp || cmake_object_order_depends_target_PerceptionAI_Library
+  DEFINES = -DPerceptionAI_Library_EXPORTS
+  DEP_FILE = CMakeFiles\PerceptionAI_Library.dir\PerceptionAI\Network_Elements\Perception_Elements\Individual\Perception_Element.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\PerceptionAI.dir
-  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\PerceptionAI\Network_Elements\Perception_Elements\Individual
+  OBJECT_DIR = CMakeFiles\PerceptionAI_Library.dir
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI_Library.dir\PerceptionAI\Network_Elements\Perception_Elements\Individual
 
-build CMakeFiles/PerceptionAI.dir/PerceptionAI/Network_Elements/Nodes/Node.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Nodes/Node.cpp || cmake_object_order_depends_target_PerceptionAI
-  DEFINES = -DPerceptionAI_EXPORTS
-  DEP_FILE = CMakeFiles\PerceptionAI.dir\PerceptionAI\Network_Elements\Nodes\Node.cpp.obj.d
+build CMakeFiles/PerceptionAI_Library.dir/PerceptionAI/Network_Elements/Nodes/Node.cpp.obj: CXX_COMPILER__PerceptionAI_Library_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Nodes/Node.cpp || cmake_object_order_depends_target_PerceptionAI_Library
+  DEFINES = -DPerceptionAI_Library_EXPORTS
+  DEP_FILE = CMakeFiles\PerceptionAI_Library.dir\PerceptionAI\Network_Elements\Nodes\Node.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\PerceptionAI.dir
-  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\PerceptionAI\Network_Elements\Nodes
+  OBJECT_DIR = CMakeFiles\PerceptionAI_Library.dir
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI_Library.dir\PerceptionAI\Network_Elements\Nodes
 
-build CMakeFiles/PerceptionAI.dir/PerceptionAI/Network_Elements/Biases/Bias.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Biases/Bias.cpp || cmake_object_order_depends_target_PerceptionAI
-  DEFINES = -DPerceptionAI_EXPORTS
-  DEP_FILE = CMakeFiles\PerceptionAI.dir\PerceptionAI\Network_Elements\Biases\Bias.cpp.obj.d
+build CMakeFiles/PerceptionAI_Library.dir/PerceptionAI/Network_Elements/Biases/Bias.cpp.obj: CXX_COMPILER__PerceptionAI_Library_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Biases/Bias.cpp || cmake_object_order_depends_target_PerceptionAI_Library
+  DEFINES = -DPerceptionAI_Library_EXPORTS
+  DEP_FILE = CMakeFiles\PerceptionAI_Library.dir\PerceptionAI\Network_Elements\Biases\Bias.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\PerceptionAI.dir
-  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\PerceptionAI\Network_Elements\Biases
+  OBJECT_DIR = CMakeFiles\PerceptionAI_Library.dir
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI_Library.dir\PerceptionAI\Network_Elements\Biases
 
-build CMakeFiles/PerceptionAI.dir/PerceptionAI/Network_Elements/Weights/Weight.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Weights/Weight.cpp || cmake_object_order_depends_target_PerceptionAI
-  DEFINES = -DPerceptionAI_EXPORTS
-  DEP_FILE = CMakeFiles\PerceptionAI.dir\PerceptionAI\Network_Elements\Weights\Weight.cpp.obj.d
+build CMakeFiles/PerceptionAI_Library.dir/PerceptionAI/Network_Elements/Weights/Weight.cpp.obj: CXX_COMPILER__PerceptionAI_Library_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Weights/Weight.cpp || cmake_object_order_depends_target_PerceptionAI_Library
+  DEFINES = -DPerceptionAI_Library_EXPORTS
+  DEP_FILE = CMakeFiles\PerceptionAI_Library.dir\PerceptionAI\Network_Elements\Weights\Weight.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\PerceptionAI.dir
-  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\PerceptionAI\Network_Elements\Weights
+  OBJECT_DIR = CMakeFiles\PerceptionAI_Library.dir
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI_Library.dir\PerceptionAI\Network_Elements\Weights
 
-build CMakeFiles/PerceptionAI.dir/PerceptionAI/Network_Elements/Layers/Layer.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Layers/Layer.cpp || cmake_object_order_depends_target_PerceptionAI
-  DEFINES = -DPerceptionAI_EXPORTS
-  DEP_FILE = CMakeFiles\PerceptionAI.dir\PerceptionAI\Network_Elements\Layers\Layer.cpp.obj.d
+build CMakeFiles/PerceptionAI_Library.dir/PerceptionAI/Network_Elements/Layers/Layer.cpp.obj: CXX_COMPILER__PerceptionAI_Library_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Layers/Layer.cpp || cmake_object_order_depends_target_PerceptionAI_Library
+  DEFINES = -DPerceptionAI_Library_EXPORTS
+  DEP_FILE = CMakeFiles\PerceptionAI_Library.dir\PerceptionAI\Network_Elements\Layers\Layer.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\PerceptionAI.dir
-  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\PerceptionAI\Network_Elements\Layers
+  OBJECT_DIR = CMakeFiles\PerceptionAI_Library.dir
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI_Library.dir\PerceptionAI\Network_Elements\Layers
 
-build CMakeFiles/PerceptionAI.dir/PerceptionAI/Perception_Network/Perception_Network.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Perception_Network/Perception_Network.cpp || cmake_object_order_depends_target_PerceptionAI
-  DEFINES = -DPerceptionAI_EXPORTS
-  DEP_FILE = CMakeFiles\PerceptionAI.dir\PerceptionAI\Perception_Network\Perception_Network.cpp.obj.d
+build CMakeFiles/PerceptionAI_Library.dir/PerceptionAI/Perception_Network/Perception_Network.cpp.obj: CXX_COMPILER__PerceptionAI_Library_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Perception_Network/Perception_Network.cpp || cmake_object_order_depends_target_PerceptionAI_Library
+  DEFINES = -DPerceptionAI_Library_EXPORTS
+  DEP_FILE = CMakeFiles\PerceptionAI_Library.dir\PerceptionAI\Perception_Network\Perception_Network.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\PerceptionAI.dir
-  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\PerceptionAI\Perception_Network
+  OBJECT_DIR = CMakeFiles\PerceptionAI_Library.dir
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI_Library.dir\PerceptionAI\Perception_Network
 
-build CMakeFiles/PerceptionAI.dir/PerceptionAI/Utilities/Layer_Helper/Layer_Helper.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Utilities/Layer_Helper/Layer_Helper.cpp || cmake_object_order_depends_target_PerceptionAI
-  DEFINES = -DPerceptionAI_EXPORTS
-  DEP_FILE = CMakeFiles\PerceptionAI.dir\PerceptionAI\Utilities\Layer_Helper\Layer_Helper.cpp.obj.d
+build CMakeFiles/PerceptionAI_Library.dir/PerceptionAI/Utilities/Layer_Helper/Layer_Helper.cpp.obj: CXX_COMPILER__PerceptionAI_Library_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Utilities/Layer_Helper/Layer_Helper.cpp || cmake_object_order_depends_target_PerceptionAI_Library
+  DEFINES = -DPerceptionAI_Library_EXPORTS
+  DEP_FILE = CMakeFiles\PerceptionAI_Library.dir\PerceptionAI\Utilities\Layer_Helper\Layer_Helper.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\PerceptionAI.dir
-  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\PerceptionAI\Utilities\Layer_Helper
+  OBJECT_DIR = CMakeFiles\PerceptionAI_Library.dir
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI_Library.dir\PerceptionAI\Utilities\Layer_Helper
 
-build CMakeFiles/PerceptionAI.dir/PerceptionAI/Utilities/Maths/Perception_Maths.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Utilities/Maths/Perception_Maths.cpp || cmake_object_order_depends_target_PerceptionAI
-  DEFINES = -DPerceptionAI_EXPORTS
-  DEP_FILE = CMakeFiles\PerceptionAI.dir\PerceptionAI\Utilities\Maths\Perception_Maths.cpp.obj.d
+build CMakeFiles/PerceptionAI_Library.dir/PerceptionAI/Utilities/Maths/Perception_Maths.cpp.obj: CXX_COMPILER__PerceptionAI_Library_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Utilities/Maths/Perception_Maths.cpp || cmake_object_order_depends_target_PerceptionAI_Library
+  DEFINES = -DPerceptionAI_Library_EXPORTS
+  DEP_FILE = CMakeFiles\PerceptionAI_Library.dir\PerceptionAI\Utilities\Maths\Perception_Maths.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\PerceptionAI.dir
-  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\PerceptionAI\Utilities\Maths
+  OBJECT_DIR = CMakeFiles\PerceptionAI_Library.dir
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI_Library.dir\PerceptionAI\Utilities\Maths
 
-build CMakeFiles/PerceptionAI.dir/PerceptionAI/Network_Elements/Perception_Elements/Matrices/Perception_Element_Matrix.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Perception_Elements/Matrices/Perception_Element_Matrix.cpp || cmake_object_order_depends_target_PerceptionAI
-  DEFINES = -DPerceptionAI_EXPORTS
-  DEP_FILE = CMakeFiles\PerceptionAI.dir\PerceptionAI\Network_Elements\Perception_Elements\Matrices\Perception_Element_Matrix.cpp.obj.d
+build CMakeFiles/PerceptionAI_Library.dir/PerceptionAI/Network_Elements/Perception_Elements/Matrices/Perception_Element_Matrix.cpp.obj: CXX_COMPILER__PerceptionAI_Library_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Perception_Elements/Matrices/Perception_Element_Matrix.cpp || cmake_object_order_depends_target_PerceptionAI_Library
+  DEFINES = -DPerceptionAI_Library_EXPORTS
+  DEP_FILE = CMakeFiles\PerceptionAI_Library.dir\PerceptionAI\Network_Elements\Perception_Elements\Matrices\Perception_Element_Matrix.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\PerceptionAI.dir
-  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\PerceptionAI\Network_Elements\Perception_Elements\Matrices
+  OBJECT_DIR = CMakeFiles\PerceptionAI_Library.dir
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI_Library.dir\PerceptionAI\Network_Elements\Perception_Elements\Matrices
 
-build CMakeFiles/PerceptionAI.dir/PerceptionAI/Network_Elements/Statuses/Status.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Statuses/Status.cpp || cmake_object_order_depends_target_PerceptionAI
-  DEFINES = -DPerceptionAI_EXPORTS
-  DEP_FILE = CMakeFiles\PerceptionAI.dir\PerceptionAI\Network_Elements\Statuses\Status.cpp.obj.d
+build CMakeFiles/PerceptionAI_Library.dir/PerceptionAI/Network_Elements/Statuses/Status.cpp.obj: CXX_COMPILER__PerceptionAI_Library_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Statuses/Status.cpp || cmake_object_order_depends_target_PerceptionAI_Library
+  DEFINES = -DPerceptionAI_Library_EXPORTS
+  DEP_FILE = CMakeFiles\PerceptionAI_Library.dir\PerceptionAI\Network_Elements\Statuses\Status.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\PerceptionAI.dir
-  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\PerceptionAI\Network_Elements\Statuses
+  OBJECT_DIR = CMakeFiles\PerceptionAI_Library.dir
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI_Library.dir\PerceptionAI\Network_Elements\Statuses
 
-build CMakeFiles/PerceptionAI.dir/PerceptionAI/Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.cpp.obj: CXX_COMPILER__PerceptionAI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.cpp || cmake_object_order_depends_target_PerceptionAI
-  DEFINES = -DPerceptionAI_EXPORTS
-  DEP_FILE = CMakeFiles\PerceptionAI.dir\PerceptionAI\Network_Elements\Perception_Elements\Vectors\Perception_Element_Vector.cpp.obj.d
+build CMakeFiles/PerceptionAI_Library.dir/PerceptionAI/Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.cpp.obj: CXX_COMPILER__PerceptionAI_Library_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.cpp || cmake_object_order_depends_target_PerceptionAI_Library
+  DEFINES = -DPerceptionAI_Library_EXPORTS
+  DEP_FILE = CMakeFiles\PerceptionAI_Library.dir\PerceptionAI\Network_Elements\Perception_Elements\Vectors\Perception_Element_Vector.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\PerceptionAI.dir
-  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI.dir\PerceptionAI\Network_Elements\Perception_Elements\Vectors
+  OBJECT_DIR = CMakeFiles\PerceptionAI_Library.dir
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI_Library.dir\PerceptionAI\Network_Elements\Perception_Elements\Vectors
 
 
 # =============================================================================
-# Link build statements for SHARED_LIBRARY target PerceptionAI
+# Link build statements for SHARED_LIBRARY target PerceptionAI_Library
 
 
 #############################################
-# Link the shared library libPerceptionAI.dll
+# Link the shared library libPerceptionAI_Library.dll
 
-build libPerceptionAI.dll libPerceptionAI.dll.a: CXX_SHARED_LIBRARY_LINKER__PerceptionAI_Debug CMakeFiles/PerceptionAI.dir/Perception.cpp.obj CMakeFiles/PerceptionAI.dir/PerceptionAI/Network_Elements/Perception_Elements/Individual/Perception_Element.cpp.obj CMakeFiles/PerceptionAI.dir/PerceptionAI/Network_Elements/Nodes/Node.cpp.obj CMakeFiles/PerceptionAI.dir/PerceptionAI/Network_Elements/Biases/Bias.cpp.obj CMakeFiles/PerceptionAI.dir/PerceptionAI/Network_Elements/Weights/Weight.cpp.obj CMakeFiles/PerceptionAI.dir/PerceptionAI/Network_Elements/Layers/Layer.cpp.obj CMakeFiles/PerceptionAI.dir/PerceptionAI/Perception_Network/Perception_Network.cpp.obj CMakeFiles/PerceptionAI.dir/PerceptionAI/Utilities/Layer_Helper/Layer_Helper.cpp.obj CMakeFiles/PerceptionAI.dir/PerceptionAI/Utilities/Maths/Perception_Maths.cpp.obj CMakeFiles/PerceptionAI.dir/PerceptionAI/Network_Elements/Perception_Elements/Matrices/Perception_Element_Matrix.cpp.obj CMakeFiles/PerceptionAI.dir/PerceptionAI/Network_Elements/Statuses/Status.cpp.obj CMakeFiles/PerceptionAI.dir/PerceptionAI/Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.cpp.obj
+build libPerceptionAI_Library.dll libPerceptionAI_Library.dll.a: CXX_SHARED_LIBRARY_LINKER__PerceptionAI_Library_Debug CMakeFiles/PerceptionAI_Library.dir/Perception.cpp.obj CMakeFiles/PerceptionAI_Library.dir/PerceptionAI/Network_Elements/Perception_Elements/Individual/Perception_Element.cpp.obj CMakeFiles/PerceptionAI_Library.dir/PerceptionAI/Network_Elements/Nodes/Node.cpp.obj CMakeFiles/PerceptionAI_Library.dir/PerceptionAI/Network_Elements/Biases/Bias.cpp.obj CMakeFiles/PerceptionAI_Library.dir/PerceptionAI/Network_Elements/Weights/Weight.cpp.obj CMakeFiles/PerceptionAI_Library.dir/PerceptionAI/Network_Elements/Layers/Layer.cpp.obj CMakeFiles/PerceptionAI_Library.dir/PerceptionAI/Perception_Network/Perception_Network.cpp.obj CMakeFiles/PerceptionAI_Library.dir/PerceptionAI/Utilities/Layer_Helper/Layer_Helper.cpp.obj CMakeFiles/PerceptionAI_Library.dir/PerceptionAI/Utilities/Maths/Perception_Maths.cpp.obj CMakeFiles/PerceptionAI_Library.dir/PerceptionAI/Network_Elements/Perception_Elements/Matrices/Perception_Element_Matrix.cpp.obj CMakeFiles/PerceptionAI_Library.dir/PerceptionAI/Network_Elements/Statuses/Status.cpp.obj CMakeFiles/PerceptionAI_Library.dir/PerceptionAI/Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.cpp.obj
   LANGUAGE_COMPILE_FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\PerceptionAI.dir
+  OBJECT_DIR = CMakeFiles\PerceptionAI_Library.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
   RESTAT = 1
-  TARGET_FILE = libPerceptionAI.dll
-  TARGET_IMPLIB = libPerceptionAI.dll.a
-  TARGET_PDB = PerceptionAI.dll.dbg
+  TARGET_FILE = libPerceptionAI_Library.dll
+  TARGET_IMPLIB = libPerceptionAI_Library.dll.a
+  TARGET_PDB = PerceptionAI_Library.dll.dbg
 
 # =============================================================================
-# Object build statements for EXECUTABLE target Perception_AI
+# Object build statements for EXECUTABLE target PerceptionAI_EXE
 
 
 #############################################
-# Order-only phony target for Perception_AI
+# Order-only phony target for PerceptionAI_EXE
 
-build cmake_object_order_depends_target_Perception_AI: phony || CMakeFiles/Perception_AI.dir
+build cmake_object_order_depends_target_PerceptionAI_EXE: phony || CMakeFiles/PerceptionAI_EXE.dir
 
-build CMakeFiles/Perception_AI.dir/Perception.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/Perception.cpp || cmake_object_order_depends_target_Perception_AI
-  DEP_FILE = CMakeFiles\Perception_AI.dir\Perception.cpp.obj.d
+build CMakeFiles/PerceptionAI_EXE.dir/Perception.cpp.obj: CXX_COMPILER__PerceptionAI_EXE_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/Perception.cpp || cmake_object_order_depends_target_PerceptionAI_EXE
+  DEP_FILE = CMakeFiles\PerceptionAI_EXE.dir\Perception.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\Perception_AI.dir
-  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir
+  OBJECT_DIR = CMakeFiles\PerceptionAI_EXE.dir
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI_EXE.dir
 
-build CMakeFiles/Perception_AI.dir/PerceptionAI/Network_Elements/Perception_Elements/Individual/Perception_Element.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Perception_Elements/Individual/Perception_Element.cpp || cmake_object_order_depends_target_Perception_AI
-  DEP_FILE = CMakeFiles\Perception_AI.dir\PerceptionAI\Network_Elements\Perception_Elements\Individual\Perception_Element.cpp.obj.d
+build CMakeFiles/PerceptionAI_EXE.dir/PerceptionAI/Network_Elements/Perception_Elements/Individual/Perception_Element.cpp.obj: CXX_COMPILER__PerceptionAI_EXE_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Perception_Elements/Individual/Perception_Element.cpp || cmake_object_order_depends_target_PerceptionAI_EXE
+  DEP_FILE = CMakeFiles\PerceptionAI_EXE.dir\PerceptionAI\Network_Elements\Perception_Elements\Individual\Perception_Element.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\Perception_AI.dir
-  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\PerceptionAI\Network_Elements\Perception_Elements\Individual
+  OBJECT_DIR = CMakeFiles\PerceptionAI_EXE.dir
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI_EXE.dir\PerceptionAI\Network_Elements\Perception_Elements\Individual
 
-build CMakeFiles/Perception_AI.dir/PerceptionAI/Network_Elements/Nodes/Node.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Nodes/Node.cpp || cmake_object_order_depends_target_Perception_AI
-  DEP_FILE = CMakeFiles\Perception_AI.dir\PerceptionAI\Network_Elements\Nodes\Node.cpp.obj.d
+build CMakeFiles/PerceptionAI_EXE.dir/PerceptionAI/Network_Elements/Nodes/Node.cpp.obj: CXX_COMPILER__PerceptionAI_EXE_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Nodes/Node.cpp || cmake_object_order_depends_target_PerceptionAI_EXE
+  DEP_FILE = CMakeFiles\PerceptionAI_EXE.dir\PerceptionAI\Network_Elements\Nodes\Node.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\Perception_AI.dir
-  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\PerceptionAI\Network_Elements\Nodes
+  OBJECT_DIR = CMakeFiles\PerceptionAI_EXE.dir
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI_EXE.dir\PerceptionAI\Network_Elements\Nodes
 
-build CMakeFiles/Perception_AI.dir/PerceptionAI/Network_Elements/Biases/Bias.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Biases/Bias.cpp || cmake_object_order_depends_target_Perception_AI
-  DEP_FILE = CMakeFiles\Perception_AI.dir\PerceptionAI\Network_Elements\Biases\Bias.cpp.obj.d
+build CMakeFiles/PerceptionAI_EXE.dir/PerceptionAI/Network_Elements/Biases/Bias.cpp.obj: CXX_COMPILER__PerceptionAI_EXE_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Biases/Bias.cpp || cmake_object_order_depends_target_PerceptionAI_EXE
+  DEP_FILE = CMakeFiles\PerceptionAI_EXE.dir\PerceptionAI\Network_Elements\Biases\Bias.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\Perception_AI.dir
-  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\PerceptionAI\Network_Elements\Biases
+  OBJECT_DIR = CMakeFiles\PerceptionAI_EXE.dir
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI_EXE.dir\PerceptionAI\Network_Elements\Biases
 
-build CMakeFiles/Perception_AI.dir/PerceptionAI/Network_Elements/Weights/Weight.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Weights/Weight.cpp || cmake_object_order_depends_target_Perception_AI
-  DEP_FILE = CMakeFiles\Perception_AI.dir\PerceptionAI\Network_Elements\Weights\Weight.cpp.obj.d
+build CMakeFiles/PerceptionAI_EXE.dir/PerceptionAI/Network_Elements/Weights/Weight.cpp.obj: CXX_COMPILER__PerceptionAI_EXE_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Weights/Weight.cpp || cmake_object_order_depends_target_PerceptionAI_EXE
+  DEP_FILE = CMakeFiles\PerceptionAI_EXE.dir\PerceptionAI\Network_Elements\Weights\Weight.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\Perception_AI.dir
-  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\PerceptionAI\Network_Elements\Weights
+  OBJECT_DIR = CMakeFiles\PerceptionAI_EXE.dir
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI_EXE.dir\PerceptionAI\Network_Elements\Weights
 
-build CMakeFiles/Perception_AI.dir/main.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/main.cpp || cmake_object_order_depends_target_Perception_AI
-  DEP_FILE = CMakeFiles\Perception_AI.dir\main.cpp.obj.d
+build CMakeFiles/PerceptionAI_EXE.dir/main.cpp.obj: CXX_COMPILER__PerceptionAI_EXE_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/main.cpp || cmake_object_order_depends_target_PerceptionAI_EXE
+  DEP_FILE = CMakeFiles\PerceptionAI_EXE.dir\main.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\Perception_AI.dir
-  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir
+  OBJECT_DIR = CMakeFiles\PerceptionAI_EXE.dir
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI_EXE.dir
 
-build CMakeFiles/Perception_AI.dir/PerceptionAI/Network_Elements/Layers/Layer.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Layers/Layer.cpp || cmake_object_order_depends_target_Perception_AI
-  DEP_FILE = CMakeFiles\Perception_AI.dir\PerceptionAI\Network_Elements\Layers\Layer.cpp.obj.d
+build CMakeFiles/PerceptionAI_EXE.dir/PerceptionAI/Network_Elements/Layers/Layer.cpp.obj: CXX_COMPILER__PerceptionAI_EXE_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Layers/Layer.cpp || cmake_object_order_depends_target_PerceptionAI_EXE
+  DEP_FILE = CMakeFiles\PerceptionAI_EXE.dir\PerceptionAI\Network_Elements\Layers\Layer.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\Perception_AI.dir
-  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\PerceptionAI\Network_Elements\Layers
+  OBJECT_DIR = CMakeFiles\PerceptionAI_EXE.dir
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI_EXE.dir\PerceptionAI\Network_Elements\Layers
 
-build CMakeFiles/Perception_AI.dir/PerceptionAI/Perception_Network/Perception_Network.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Perception_Network/Perception_Network.cpp || cmake_object_order_depends_target_Perception_AI
-  DEP_FILE = CMakeFiles\Perception_AI.dir\PerceptionAI\Perception_Network\Perception_Network.cpp.obj.d
+build CMakeFiles/PerceptionAI_EXE.dir/PerceptionAI/Perception_Network/Perception_Network.cpp.obj: CXX_COMPILER__PerceptionAI_EXE_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Perception_Network/Perception_Network.cpp || cmake_object_order_depends_target_PerceptionAI_EXE
+  DEP_FILE = CMakeFiles\PerceptionAI_EXE.dir\PerceptionAI\Perception_Network\Perception_Network.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\Perception_AI.dir
-  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\PerceptionAI\Perception_Network
+  OBJECT_DIR = CMakeFiles\PerceptionAI_EXE.dir
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI_EXE.dir\PerceptionAI\Perception_Network
 
-build CMakeFiles/Perception_AI.dir/PerceptionAI/Utilities/Layer_Helper/Layer_Helper.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Utilities/Layer_Helper/Layer_Helper.cpp || cmake_object_order_depends_target_Perception_AI
-  DEP_FILE = CMakeFiles\Perception_AI.dir\PerceptionAI\Utilities\Layer_Helper\Layer_Helper.cpp.obj.d
+build CMakeFiles/PerceptionAI_EXE.dir/PerceptionAI/Utilities/Layer_Helper/Layer_Helper.cpp.obj: CXX_COMPILER__PerceptionAI_EXE_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Utilities/Layer_Helper/Layer_Helper.cpp || cmake_object_order_depends_target_PerceptionAI_EXE
+  DEP_FILE = CMakeFiles\PerceptionAI_EXE.dir\PerceptionAI\Utilities\Layer_Helper\Layer_Helper.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\Perception_AI.dir
-  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\PerceptionAI\Utilities\Layer_Helper
+  OBJECT_DIR = CMakeFiles\PerceptionAI_EXE.dir
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI_EXE.dir\PerceptionAI\Utilities\Layer_Helper
 
-build CMakeFiles/Perception_AI.dir/PerceptionAI/Utilities/Maths/Perception_Maths.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Utilities/Maths/Perception_Maths.cpp || cmake_object_order_depends_target_Perception_AI
-  DEP_FILE = CMakeFiles\Perception_AI.dir\PerceptionAI\Utilities\Maths\Perception_Maths.cpp.obj.d
+build CMakeFiles/PerceptionAI_EXE.dir/PerceptionAI/Utilities/Maths/Perception_Maths.cpp.obj: CXX_COMPILER__PerceptionAI_EXE_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Utilities/Maths/Perception_Maths.cpp || cmake_object_order_depends_target_PerceptionAI_EXE
+  DEP_FILE = CMakeFiles\PerceptionAI_EXE.dir\PerceptionAI\Utilities\Maths\Perception_Maths.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\Perception_AI.dir
-  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\PerceptionAI\Utilities\Maths
+  OBJECT_DIR = CMakeFiles\PerceptionAI_EXE.dir
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI_EXE.dir\PerceptionAI\Utilities\Maths
 
-build CMakeFiles/Perception_AI.dir/PerceptionAI/Network_Elements/Perception_Elements/Matrices/Perception_Element_Matrix.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Perception_Elements/Matrices/Perception_Element_Matrix.cpp || cmake_object_order_depends_target_Perception_AI
-  DEP_FILE = CMakeFiles\Perception_AI.dir\PerceptionAI\Network_Elements\Perception_Elements\Matrices\Perception_Element_Matrix.cpp.obj.d
+build CMakeFiles/PerceptionAI_EXE.dir/PerceptionAI/Network_Elements/Perception_Elements/Matrices/Perception_Element_Matrix.cpp.obj: CXX_COMPILER__PerceptionAI_EXE_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Perception_Elements/Matrices/Perception_Element_Matrix.cpp || cmake_object_order_depends_target_PerceptionAI_EXE
+  DEP_FILE = CMakeFiles\PerceptionAI_EXE.dir\PerceptionAI\Network_Elements\Perception_Elements\Matrices\Perception_Element_Matrix.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\Perception_AI.dir
-  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\PerceptionAI\Network_Elements\Perception_Elements\Matrices
+  OBJECT_DIR = CMakeFiles\PerceptionAI_EXE.dir
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI_EXE.dir\PerceptionAI\Network_Elements\Perception_Elements\Matrices
 
-build CMakeFiles/Perception_AI.dir/PerceptionAI/Network_Elements/Statuses/Status.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Statuses/Status.cpp || cmake_object_order_depends_target_Perception_AI
-  DEP_FILE = CMakeFiles\Perception_AI.dir\PerceptionAI\Network_Elements\Statuses\Status.cpp.obj.d
+build CMakeFiles/PerceptionAI_EXE.dir/PerceptionAI/Network_Elements/Statuses/Status.cpp.obj: CXX_COMPILER__PerceptionAI_EXE_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Statuses/Status.cpp || cmake_object_order_depends_target_PerceptionAI_EXE
+  DEP_FILE = CMakeFiles\PerceptionAI_EXE.dir\PerceptionAI\Network_Elements\Statuses\Status.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\Perception_AI.dir
-  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\PerceptionAI\Network_Elements\Statuses
+  OBJECT_DIR = CMakeFiles\PerceptionAI_EXE.dir
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI_EXE.dir\PerceptionAI\Network_Elements\Statuses
 
-build CMakeFiles/Perception_AI.dir/PerceptionAI/Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.cpp.obj: CXX_COMPILER__Perception_AI_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.cpp || cmake_object_order_depends_target_Perception_AI
-  DEP_FILE = CMakeFiles\Perception_AI.dir\PerceptionAI\Network_Elements\Perception_Elements\Vectors\Perception_Element_Vector.cpp.obj.d
+build CMakeFiles/PerceptionAI_EXE.dir/PerceptionAI/Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.cpp.obj: CXX_COMPILER__PerceptionAI_EXE_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.cpp || cmake_object_order_depends_target_PerceptionAI_EXE
+  DEP_FILE = CMakeFiles\PerceptionAI_EXE.dir\PerceptionAI\Network_Elements\Perception_Elements\Vectors\Perception_Element_Vector.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\Perception_AI.dir
-  OBJECT_FILE_DIR = CMakeFiles\Perception_AI.dir\PerceptionAI\Network_Elements\Perception_Elements\Vectors
+  OBJECT_DIR = CMakeFiles\PerceptionAI_EXE.dir
+  OBJECT_FILE_DIR = CMakeFiles\PerceptionAI_EXE.dir\PerceptionAI\Network_Elements\Perception_Elements\Vectors
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target Perception_AI
+# Link build statements for EXECUTABLE target PerceptionAI_EXE
 
 
 #############################################
-# Link the executable Perception_AI.exe
+# Link the executable PerceptionAI_EXE.exe
 
-build Perception_AI.exe: CXX_EXECUTABLE_LINKER__Perception_AI_Debug CMakeFiles/Perception_AI.dir/Perception.cpp.obj CMakeFiles/Perception_AI.dir/PerceptionAI/Network_Elements/Perception_Elements/Individual/Perception_Element.cpp.obj CMakeFiles/Perception_AI.dir/PerceptionAI/Network_Elements/Nodes/Node.cpp.obj CMakeFiles/Perception_AI.dir/PerceptionAI/Network_Elements/Biases/Bias.cpp.obj CMakeFiles/Perception_AI.dir/PerceptionAI/Network_Elements/Weights/Weight.cpp.obj CMakeFiles/Perception_AI.dir/main.cpp.obj CMakeFiles/Perception_AI.dir/PerceptionAI/Network_Elements/Layers/Layer.cpp.obj CMakeFiles/Perception_AI.dir/PerceptionAI/Perception_Network/Perception_Network.cpp.obj CMakeFiles/Perception_AI.dir/PerceptionAI/Utilities/Layer_Helper/Layer_Helper.cpp.obj CMakeFiles/Perception_AI.dir/PerceptionAI/Utilities/Maths/Perception_Maths.cpp.obj CMakeFiles/Perception_AI.dir/PerceptionAI/Network_Elements/Perception_Elements/Matrices/Perception_Element_Matrix.cpp.obj CMakeFiles/Perception_AI.dir/PerceptionAI/Network_Elements/Statuses/Status.cpp.obj CMakeFiles/Perception_AI.dir/PerceptionAI/Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.cpp.obj
+build PerceptionAI_EXE.exe: CXX_EXECUTABLE_LINKER__PerceptionAI_EXE_Debug CMakeFiles/PerceptionAI_EXE.dir/Perception.cpp.obj CMakeFiles/PerceptionAI_EXE.dir/PerceptionAI/Network_Elements/Perception_Elements/Individual/Perception_Element.cpp.obj CMakeFiles/PerceptionAI_EXE.dir/PerceptionAI/Network_Elements/Nodes/Node.cpp.obj CMakeFiles/PerceptionAI_EXE.dir/PerceptionAI/Network_Elements/Biases/Bias.cpp.obj CMakeFiles/PerceptionAI_EXE.dir/PerceptionAI/Network_Elements/Weights/Weight.cpp.obj CMakeFiles/PerceptionAI_EXE.dir/main.cpp.obj CMakeFiles/PerceptionAI_EXE.dir/PerceptionAI/Network_Elements/Layers/Layer.cpp.obj CMakeFiles/PerceptionAI_EXE.dir/PerceptionAI/Perception_Network/Perception_Network.cpp.obj CMakeFiles/PerceptionAI_EXE.dir/PerceptionAI/Utilities/Layer_Helper/Layer_Helper.cpp.obj CMakeFiles/PerceptionAI_EXE.dir/PerceptionAI/Utilities/Maths/Perception_Maths.cpp.obj CMakeFiles/PerceptionAI_EXE.dir/PerceptionAI/Network_Elements/Perception_Elements/Matrices/Perception_Element_Matrix.cpp.obj CMakeFiles/PerceptionAI_EXE.dir/PerceptionAI/Network_Elements/Statuses/Status.cpp.obj CMakeFiles/PerceptionAI_EXE.dir/PerceptionAI/Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\Perception_AI.dir
+  OBJECT_DIR = CMakeFiles\PerceptionAI_EXE.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = Perception_AI.exe
-  TARGET_IMPLIB = libPerception_AI.dll.a
-  TARGET_PDB = Perception_AI.exe.dbg
+  TARGET_FILE = PerceptionAI_EXE.exe
+  TARGET_IMPLIB = libPerceptionAI_EXE.dll.a
+  TARGET_PDB = PerceptionAI_EXE.exe.dbg
 
 
 #############################################
@@ -331,70 +331,140 @@ build install/strip: phony CMakeFiles/install/strip.util
 #############################################
 # Utility command for edit_cache
 
-build _deps/googletest-build/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\_deps\googletest-build" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+build PerceptionAI_Tests/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\PerceptionAI_Tests" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
-build _deps/googletest-build/edit_cache: phony _deps/googletest-build/CMakeFiles/edit_cache.util
+build PerceptionAI_Tests/edit_cache: phony PerceptionAI_Tests/CMakeFiles/edit_cache.util
 
 
 #############################################
 # Utility command for rebuild_cache
 
-build _deps/googletest-build/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\_deps\googletest-build" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -S"C:\Development\Robotics\Source Code\PerceptionAI" -B"C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug""
+build PerceptionAI_Tests/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\PerceptionAI_Tests" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -S"C:\Development\Robotics\Source Code\PerceptionAI" -B"C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
-build _deps/googletest-build/rebuild_cache: phony _deps/googletest-build/CMakeFiles/rebuild_cache.util
+build PerceptionAI_Tests/rebuild_cache: phony PerceptionAI_Tests/CMakeFiles/rebuild_cache.util
 
 
 #############################################
 # Utility command for list_install_components
 
-build _deps/googletest-build/list_install_components: phony
+build PerceptionAI_Tests/list_install_components: phony
 
 
 #############################################
 # Utility command for install
 
-build _deps/googletest-build/CMakeFiles/install.util: CUSTOM_COMMAND _deps/googletest-build/all
-  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\_deps\googletest-build" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -P cmake_install.cmake"
+build PerceptionAI_Tests/CMakeFiles/install.util: CUSTOM_COMMAND PerceptionAI_Tests/all
+  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\PerceptionAI_Tests" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
 
-build _deps/googletest-build/install: phony _deps/googletest-build/CMakeFiles/install.util
+build PerceptionAI_Tests/install: phony PerceptionAI_Tests/CMakeFiles/install.util
 
 
 #############################################
 # Utility command for install/local
 
-build _deps/googletest-build/CMakeFiles/install/local.util: CUSTOM_COMMAND _deps/googletest-build/all
-  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\_deps\googletest-build" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+build PerceptionAI_Tests/CMakeFiles/install/local.util: CUSTOM_COMMAND PerceptionAI_Tests/all
+  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\PerceptionAI_Tests" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
 
-build _deps/googletest-build/install/local: phony _deps/googletest-build/CMakeFiles/install/local.util
+build PerceptionAI_Tests/install/local: phony PerceptionAI_Tests/CMakeFiles/install/local.util
 
 
 #############################################
 # Utility command for install/strip
 
-build _deps/googletest-build/CMakeFiles/install/strip.util: CUSTOM_COMMAND _deps/googletest-build/all
-  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\_deps\googletest-build" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+build PerceptionAI_Tests/CMakeFiles/install/strip.util: CUSTOM_COMMAND PerceptionAI_Tests/all
+  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\PerceptionAI_Tests" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
   DESC = Installing the project stripped...
   pool = console
   restat = 1
 
-build _deps/googletest-build/install/strip: phony _deps/googletest-build/CMakeFiles/install/strip.util
+build PerceptionAI_Tests/install/strip: phony PerceptionAI_Tests/CMakeFiles/install/strip.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# C:/Development/Robotics/Source Code/PerceptionAI/cmake-build-debug/_deps/googletest-src/CMakeLists.txt
+# C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build PerceptionAI_Tests/Libraries/googletest-main/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\PerceptionAI_Tests\Libraries\googletest-main" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build PerceptionAI_Tests/Libraries/googletest-main/edit_cache: phony PerceptionAI_Tests/Libraries/googletest-main/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build PerceptionAI_Tests/Libraries/googletest-main/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\PerceptionAI_Tests\Libraries\googletest-main" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -S"C:\Development\Robotics\Source Code\PerceptionAI" -B"C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug""
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build PerceptionAI_Tests/Libraries/googletest-main/rebuild_cache: phony PerceptionAI_Tests/Libraries/googletest-main/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build PerceptionAI_Tests/Libraries/googletest-main/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build PerceptionAI_Tests/Libraries/googletest-main/CMakeFiles/install.util: CUSTOM_COMMAND PerceptionAI_Tests/Libraries/googletest-main/all
+  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\PerceptionAI_Tests\Libraries\googletest-main" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build PerceptionAI_Tests/Libraries/googletest-main/install: phony PerceptionAI_Tests/Libraries/googletest-main/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build PerceptionAI_Tests/Libraries/googletest-main/CMakeFiles/install/local.util: CUSTOM_COMMAND PerceptionAI_Tests/Libraries/googletest-main/all
+  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\PerceptionAI_Tests\Libraries\googletest-main" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build PerceptionAI_Tests/Libraries/googletest-main/install/local: phony PerceptionAI_Tests/Libraries/googletest-main/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build PerceptionAI_Tests/Libraries/googletest-main/CMakeFiles/install/strip.util: CUSTOM_COMMAND PerceptionAI_Tests/Libraries/googletest-main/all
+  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\PerceptionAI_Tests\Libraries\googletest-main" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build PerceptionAI_Tests/Libraries/googletest-main/install/strip: phony PerceptionAI_Tests/Libraries/googletest-main/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -406,12 +476,12 @@ build _deps/googletest-build/install/strip: phony _deps/googletest-build/CMakeFi
 
 build cmake_object_order_depends_target_gmock: phony || cmake_object_order_depends_target_gtest
 
-build _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj: CXX_COMPILER__gmock_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/cmake-build-debug/_deps/googletest-src/googlemock/src/gmock-all.cc || cmake_object_order_depends_target_gmock
-  DEP_FILE = _deps\googletest-build\googlemock\CMakeFiles\gmock.dir\src\gmock-all.cc.obj.d
-  FLAGS = -g -std=c++17 -fdiagnostics-color=always -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
-  INCLUDES = -I"C:/Development/Robotics/Source Code/PerceptionAI/cmake-build-debug/_deps/googletest-src/googlemock/include" -I"C:/Development/Robotics/Source Code/PerceptionAI/cmake-build-debug/_deps/googletest-src/googlemock" -isystem "C:/Development/Robotics/Source Code/PerceptionAI/cmake-build-debug/_deps/googletest-src/googletest/include" -isystem "C:/Development/Robotics/Source Code/PerceptionAI/cmake-build-debug/_deps/googletest-src/googletest"
-  OBJECT_DIR = _deps\googletest-build\googlemock\CMakeFiles\gmock.dir
-  OBJECT_FILE_DIR = _deps\googletest-build\googlemock\CMakeFiles\gmock.dir\src
+build PerceptionAI_Tests/Libraries/googletest-main/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj: CXX_COMPILER__gmock_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googlemock/src/gmock-all.cc || cmake_object_order_depends_target_gmock
+  DEP_FILE = PerceptionAI_Tests\Libraries\googletest-main\googlemock\CMakeFiles\gmock.dir\src\gmock-all.cc.obj.d
+  FLAGS = -g -std=c++17 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -I"C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googlemock/include" -I"C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googlemock" -isystem "C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest/include" -isystem "C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest"
+  OBJECT_DIR = PerceptionAI_Tests\Libraries\googletest-main\googlemock\CMakeFiles\gmock.dir
+  OBJECT_FILE_DIR = PerceptionAI_Tests\Libraries\googletest-main\googlemock\CMakeFiles\gmock.dir\src
 
 
 # =============================================================================
@@ -421,9 +491,9 @@ build _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.ob
 #############################################
 # Link the static library lib\libgmock.a
 
-build lib/libgmock.a: CXX_STATIC_LIBRARY_LINKER__gmock_Debug _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj || lib/libgtest.a
+build lib/libgmock.a: CXX_STATIC_LIBRARY_LINKER__gmock_Debug PerceptionAI_Tests/Libraries/googletest-main/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj || lib/libgtest.a
   LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = _deps\googletest-build\googlemock\CMakeFiles\gmock.dir
+  OBJECT_DIR = PerceptionAI_Tests\Libraries\googletest-main\googlemock\CMakeFiles\gmock.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
   TARGET_FILE = lib\libgmock.a
@@ -438,12 +508,12 @@ build lib/libgmock.a: CXX_STATIC_LIBRARY_LINKER__gmock_Debug _deps/googletest-bu
 
 build cmake_object_order_depends_target_gmock_main: phony || cmake_object_order_depends_target_gmock cmake_object_order_depends_target_gtest
 
-build _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj: CXX_COMPILER__gmock_main_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/cmake-build-debug/_deps/googletest-src/googlemock/src/gmock_main.cc || cmake_object_order_depends_target_gmock_main
-  DEP_FILE = _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir\src\gmock_main.cc.obj.d
-  FLAGS = -g -std=c++17 -fdiagnostics-color=always -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
-  INCLUDES = -isystem "C:/Development/Robotics/Source Code/PerceptionAI/cmake-build-debug/_deps/googletest-src/googlemock/include" -isystem "C:/Development/Robotics/Source Code/PerceptionAI/cmake-build-debug/_deps/googletest-src/googlemock" -isystem "C:/Development/Robotics/Source Code/PerceptionAI/cmake-build-debug/_deps/googletest-src/googletest/include" -isystem "C:/Development/Robotics/Source Code/PerceptionAI/cmake-build-debug/_deps/googletest-src/googletest"
-  OBJECT_DIR = _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir
-  OBJECT_FILE_DIR = _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir\src
+build PerceptionAI_Tests/Libraries/googletest-main/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj: CXX_COMPILER__gmock_main_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googlemock/src/gmock_main.cc || cmake_object_order_depends_target_gmock_main
+  DEP_FILE = PerceptionAI_Tests\Libraries\googletest-main\googlemock\CMakeFiles\gmock_main.dir\src\gmock_main.cc.obj.d
+  FLAGS = -g -std=c++17 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -isystem "C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googlemock/include" -isystem "C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googlemock" -isystem "C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest/include" -isystem "C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest"
+  OBJECT_DIR = PerceptionAI_Tests\Libraries\googletest-main\googlemock\CMakeFiles\gmock_main.dir
+  OBJECT_FILE_DIR = PerceptionAI_Tests\Libraries\googletest-main\googlemock\CMakeFiles\gmock_main.dir\src
 
 
 # =============================================================================
@@ -453,9 +523,9 @@ build _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main
 #############################################
 # Link the static library lib\libgmock_main.a
 
-build lib/libgmock_main.a: CXX_STATIC_LIBRARY_LINKER__gmock_main_Debug _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj || lib/libgmock.a lib/libgtest.a
+build lib/libgmock_main.a: CXX_STATIC_LIBRARY_LINKER__gmock_main_Debug PerceptionAI_Tests/Libraries/googletest-main/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj || lib/libgmock.a lib/libgtest.a
   LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir
+  OBJECT_DIR = PerceptionAI_Tests\Libraries\googletest-main\googlemock\CMakeFiles\gmock_main.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
   TARGET_FILE = lib\libgmock_main.a
@@ -465,70 +535,70 @@ build lib/libgmock_main.a: CXX_STATIC_LIBRARY_LINKER__gmock_main_Debug _deps/goo
 #############################################
 # Utility command for edit_cache
 
-build _deps/googletest-build/googlemock/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\_deps\googletest-build\googlemock" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+build PerceptionAI_Tests/Libraries/googletest-main/googlemock/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\PerceptionAI_Tests\Libraries\googletest-main\googlemock" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
-build _deps/googletest-build/googlemock/edit_cache: phony _deps/googletest-build/googlemock/CMakeFiles/edit_cache.util
+build PerceptionAI_Tests/Libraries/googletest-main/googlemock/edit_cache: phony PerceptionAI_Tests/Libraries/googletest-main/googlemock/CMakeFiles/edit_cache.util
 
 
 #############################################
 # Utility command for rebuild_cache
 
-build _deps/googletest-build/googlemock/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\_deps\googletest-build\googlemock" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -S"C:\Development\Robotics\Source Code\PerceptionAI" -B"C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug""
+build PerceptionAI_Tests/Libraries/googletest-main/googlemock/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\PerceptionAI_Tests\Libraries\googletest-main\googlemock" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -S"C:\Development\Robotics\Source Code\PerceptionAI" -B"C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
-build _deps/googletest-build/googlemock/rebuild_cache: phony _deps/googletest-build/googlemock/CMakeFiles/rebuild_cache.util
+build PerceptionAI_Tests/Libraries/googletest-main/googlemock/rebuild_cache: phony PerceptionAI_Tests/Libraries/googletest-main/googlemock/CMakeFiles/rebuild_cache.util
 
 
 #############################################
 # Utility command for list_install_components
 
-build _deps/googletest-build/googlemock/list_install_components: phony
+build PerceptionAI_Tests/Libraries/googletest-main/googlemock/list_install_components: phony
 
 
 #############################################
 # Utility command for install
 
-build _deps/googletest-build/googlemock/CMakeFiles/install.util: CUSTOM_COMMAND _deps/googletest-build/googlemock/all
-  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\_deps\googletest-build\googlemock" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -P cmake_install.cmake"
+build PerceptionAI_Tests/Libraries/googletest-main/googlemock/CMakeFiles/install.util: CUSTOM_COMMAND PerceptionAI_Tests/Libraries/googletest-main/googlemock/all
+  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\PerceptionAI_Tests\Libraries\googletest-main\googlemock" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
 
-build _deps/googletest-build/googlemock/install: phony _deps/googletest-build/googlemock/CMakeFiles/install.util
+build PerceptionAI_Tests/Libraries/googletest-main/googlemock/install: phony PerceptionAI_Tests/Libraries/googletest-main/googlemock/CMakeFiles/install.util
 
 
 #############################################
 # Utility command for install/local
 
-build _deps/googletest-build/googlemock/CMakeFiles/install/local.util: CUSTOM_COMMAND _deps/googletest-build/googlemock/all
-  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\_deps\googletest-build\googlemock" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+build PerceptionAI_Tests/Libraries/googletest-main/googlemock/CMakeFiles/install/local.util: CUSTOM_COMMAND PerceptionAI_Tests/Libraries/googletest-main/googlemock/all
+  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\PerceptionAI_Tests\Libraries\googletest-main\googlemock" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
 
-build _deps/googletest-build/googlemock/install/local: phony _deps/googletest-build/googlemock/CMakeFiles/install/local.util
+build PerceptionAI_Tests/Libraries/googletest-main/googlemock/install/local: phony PerceptionAI_Tests/Libraries/googletest-main/googlemock/CMakeFiles/install/local.util
 
 
 #############################################
 # Utility command for install/strip
 
-build _deps/googletest-build/googlemock/CMakeFiles/install/strip.util: CUSTOM_COMMAND _deps/googletest-build/googlemock/all
-  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\_deps\googletest-build\googlemock" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+build PerceptionAI_Tests/Libraries/googletest-main/googlemock/CMakeFiles/install/strip.util: CUSTOM_COMMAND PerceptionAI_Tests/Libraries/googletest-main/googlemock/all
+  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\PerceptionAI_Tests\Libraries\googletest-main\googlemock" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
   DESC = Installing the project stripped...
   pool = console
   restat = 1
 
-build _deps/googletest-build/googlemock/install/strip: phony _deps/googletest-build/googlemock/CMakeFiles/install/strip.util
+build PerceptionAI_Tests/Libraries/googletest-main/googlemock/install/strip: phony PerceptionAI_Tests/Libraries/googletest-main/googlemock/CMakeFiles/install/strip.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# C:/Development/Robotics/Source Code/PerceptionAI/cmake-build-debug/_deps/googletest-src/googlemock/CMakeLists.txt
+# C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googlemock/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -538,14 +608,14 @@ build _deps/googletest-build/googlemock/install/strip: phony _deps/googletest-bu
 #############################################
 # Order-only phony target for gtest
 
-build cmake_object_order_depends_target_gtest: phony || _deps/googletest-build/googletest/CMakeFiles/gtest.dir
+build cmake_object_order_depends_target_gtest: phony || PerceptionAI_Tests/Libraries/googletest-main/googletest/CMakeFiles/gtest.dir
 
-build _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj: CXX_COMPILER__gtest_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/cmake-build-debug/_deps/googletest-src/googletest/src/gtest-all.cc || cmake_object_order_depends_target_gtest
-  DEP_FILE = _deps\googletest-build\googletest\CMakeFiles\gtest.dir\src\gtest-all.cc.obj.d
-  FLAGS = -g -std=c++17 -fdiagnostics-color=always -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
-  INCLUDES = -I"C:/Development/Robotics/Source Code/PerceptionAI/cmake-build-debug/_deps/googletest-src/googletest/include" -I"C:/Development/Robotics/Source Code/PerceptionAI/cmake-build-debug/_deps/googletest-src/googletest"
-  OBJECT_DIR = _deps\googletest-build\googletest\CMakeFiles\gtest.dir
-  OBJECT_FILE_DIR = _deps\googletest-build\googletest\CMakeFiles\gtest.dir\src
+build PerceptionAI_Tests/Libraries/googletest-main/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj: CXX_COMPILER__gtest_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest/src/gtest-all.cc || cmake_object_order_depends_target_gtest
+  DEP_FILE = PerceptionAI_Tests\Libraries\googletest-main\googletest\CMakeFiles\gtest.dir\src\gtest-all.cc.obj.d
+  FLAGS = -g -std=c++17 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -I"C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest/include" -I"C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest"
+  OBJECT_DIR = PerceptionAI_Tests\Libraries\googletest-main\googletest\CMakeFiles\gtest.dir
+  OBJECT_FILE_DIR = PerceptionAI_Tests\Libraries\googletest-main\googletest\CMakeFiles\gtest.dir\src
 
 
 # =============================================================================
@@ -555,9 +625,9 @@ build _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.ob
 #############################################
 # Link the static library lib\libgtest.a
 
-build lib/libgtest.a: CXX_STATIC_LIBRARY_LINKER__gtest_Debug _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj
+build lib/libgtest.a: CXX_STATIC_LIBRARY_LINKER__gtest_Debug PerceptionAI_Tests/Libraries/googletest-main/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj
   LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = _deps\googletest-build\googletest\CMakeFiles\gtest.dir
+  OBJECT_DIR = PerceptionAI_Tests\Libraries\googletest-main\googletest\CMakeFiles\gtest.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
   TARGET_FILE = lib\libgtest.a
@@ -572,12 +642,12 @@ build lib/libgtest.a: CXX_STATIC_LIBRARY_LINKER__gtest_Debug _deps/googletest-bu
 
 build cmake_object_order_depends_target_gtest_main: phony || cmake_object_order_depends_target_gtest
 
-build _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj: CXX_COMPILER__gtest_main_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/cmake-build-debug/_deps/googletest-src/googletest/src/gtest_main.cc || cmake_object_order_depends_target_gtest_main
-  DEP_FILE = _deps\googletest-build\googletest\CMakeFiles\gtest_main.dir\src\gtest_main.cc.obj.d
-  FLAGS = -g -std=c++17 -fdiagnostics-color=always -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
-  INCLUDES = -isystem "C:/Development/Robotics/Source Code/PerceptionAI/cmake-build-debug/_deps/googletest-src/googletest/include" -isystem "C:/Development/Robotics/Source Code/PerceptionAI/cmake-build-debug/_deps/googletest-src/googletest"
-  OBJECT_DIR = _deps\googletest-build\googletest\CMakeFiles\gtest_main.dir
-  OBJECT_FILE_DIR = _deps\googletest-build\googletest\CMakeFiles\gtest_main.dir\src
+build PerceptionAI_Tests/Libraries/googletest-main/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj: CXX_COMPILER__gtest_main_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest/src/gtest_main.cc || cmake_object_order_depends_target_gtest_main
+  DEP_FILE = PerceptionAI_Tests\Libraries\googletest-main\googletest\CMakeFiles\gtest_main.dir\src\gtest_main.cc.obj.d
+  FLAGS = -g -std=c++17 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -isystem "C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest/include" -isystem "C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest"
+  OBJECT_DIR = PerceptionAI_Tests\Libraries\googletest-main\googletest\CMakeFiles\gtest_main.dir
+  OBJECT_FILE_DIR = PerceptionAI_Tests\Libraries\googletest-main\googletest\CMakeFiles\gtest_main.dir\src
 
 
 # =============================================================================
@@ -587,9 +657,9 @@ build _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main
 #############################################
 # Link the static library lib\libgtest_main.a
 
-build lib/libgtest_main.a: CXX_STATIC_LIBRARY_LINKER__gtest_main_Debug _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj || lib/libgtest.a
+build lib/libgtest_main.a: CXX_STATIC_LIBRARY_LINKER__gtest_main_Debug PerceptionAI_Tests/Libraries/googletest-main/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj || lib/libgtest.a
   LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = _deps\googletest-build\googletest\CMakeFiles\gtest_main.dir
+  OBJECT_DIR = PerceptionAI_Tests\Libraries\googletest-main\googletest\CMakeFiles\gtest_main.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
   TARGET_FILE = lib\libgtest_main.a
@@ -599,73 +669,265 @@ build lib/libgtest_main.a: CXX_STATIC_LIBRARY_LINKER__gtest_main_Debug _deps/goo
 #############################################
 # Utility command for edit_cache
 
-build _deps/googletest-build/googletest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\_deps\googletest-build\googletest" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+build PerceptionAI_Tests/Libraries/googletest-main/googletest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\PerceptionAI_Tests\Libraries\googletest-main\googletest" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
-build _deps/googletest-build/googletest/edit_cache: phony _deps/googletest-build/googletest/CMakeFiles/edit_cache.util
+build PerceptionAI_Tests/Libraries/googletest-main/googletest/edit_cache: phony PerceptionAI_Tests/Libraries/googletest-main/googletest/CMakeFiles/edit_cache.util
 
 
 #############################################
 # Utility command for rebuild_cache
 
-build _deps/googletest-build/googletest/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\_deps\googletest-build\googletest" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -S"C:\Development\Robotics\Source Code\PerceptionAI" -B"C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug""
+build PerceptionAI_Tests/Libraries/googletest-main/googletest/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\PerceptionAI_Tests\Libraries\googletest-main\googletest" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -S"C:\Development\Robotics\Source Code\PerceptionAI" -B"C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
-build _deps/googletest-build/googletest/rebuild_cache: phony _deps/googletest-build/googletest/CMakeFiles/rebuild_cache.util
+build PerceptionAI_Tests/Libraries/googletest-main/googletest/rebuild_cache: phony PerceptionAI_Tests/Libraries/googletest-main/googletest/CMakeFiles/rebuild_cache.util
 
 
 #############################################
 # Utility command for list_install_components
 
-build _deps/googletest-build/googletest/list_install_components: phony
+build PerceptionAI_Tests/Libraries/googletest-main/googletest/list_install_components: phony
 
 
 #############################################
 # Utility command for install
 
-build _deps/googletest-build/googletest/CMakeFiles/install.util: CUSTOM_COMMAND _deps/googletest-build/googletest/all
-  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\_deps\googletest-build\googletest" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -P cmake_install.cmake"
+build PerceptionAI_Tests/Libraries/googletest-main/googletest/CMakeFiles/install.util: CUSTOM_COMMAND PerceptionAI_Tests/Libraries/googletest-main/googletest/all
+  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\PerceptionAI_Tests\Libraries\googletest-main\googletest" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
 
-build _deps/googletest-build/googletest/install: phony _deps/googletest-build/googletest/CMakeFiles/install.util
+build PerceptionAI_Tests/Libraries/googletest-main/googletest/install: phony PerceptionAI_Tests/Libraries/googletest-main/googletest/CMakeFiles/install.util
 
 
 #############################################
 # Utility command for install/local
 
-build _deps/googletest-build/googletest/CMakeFiles/install/local.util: CUSTOM_COMMAND _deps/googletest-build/googletest/all
-  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\_deps\googletest-build\googletest" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+build PerceptionAI_Tests/Libraries/googletest-main/googletest/CMakeFiles/install/local.util: CUSTOM_COMMAND PerceptionAI_Tests/Libraries/googletest-main/googletest/all
+  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\PerceptionAI_Tests\Libraries\googletest-main\googletest" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
 
-build _deps/googletest-build/googletest/install/local: phony _deps/googletest-build/googletest/CMakeFiles/install/local.util
+build PerceptionAI_Tests/Libraries/googletest-main/googletest/install/local: phony PerceptionAI_Tests/Libraries/googletest-main/googletest/CMakeFiles/install/local.util
 
 
 #############################################
 # Utility command for install/strip
 
-build _deps/googletest-build/googletest/CMakeFiles/install/strip.util: CUSTOM_COMMAND _deps/googletest-build/googletest/all
-  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\_deps\googletest-build\googletest" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+build PerceptionAI_Tests/Libraries/googletest-main/googletest/CMakeFiles/install/strip.util: CUSTOM_COMMAND PerceptionAI_Tests/Libraries/googletest-main/googletest/all
+  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\PerceptionAI_Tests\Libraries\googletest-main\googletest" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
   DESC = Installing the project stripped...
   pool = console
   restat = 1
 
-build _deps/googletest-build/googletest/install/strip: phony _deps/googletest-build/googletest/CMakeFiles/install/strip.util
+build PerceptionAI_Tests/Libraries/googletest-main/googletest/install/strip: phony PerceptionAI_Tests/Libraries/googletest-main/googletest/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target PerceptionAI_Tests
+
+
+#############################################
+# Order-only phony target for PerceptionAI_Tests
+
+build cmake_object_order_depends_target_PerceptionAI_Tests: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main
+
+build PerceptionAI_Tests/Tests/CMakeFiles/PerceptionAI_Tests.dir/__/__/Perception.cpp.obj: CXX_COMPILER__PerceptionAI_Tests_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/Perception.cpp || cmake_object_order_depends_target_PerceptionAI_Tests
+  DEP_FILE = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir\__\__\Perception.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -isystem "C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest/include" -isystem "C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest"
+  OBJECT_DIR = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir
+  OBJECT_FILE_DIR = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir\__\__
+
+build PerceptionAI_Tests/Tests/CMakeFiles/PerceptionAI_Tests.dir/__/__/PerceptionAI/Network_Elements/Perception_Elements/Individual/Perception_Element.cpp.obj: CXX_COMPILER__PerceptionAI_Tests_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Perception_Elements/Individual/Perception_Element.cpp || cmake_object_order_depends_target_PerceptionAI_Tests
+  DEP_FILE = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir\__\__\PerceptionAI\Network_Elements\Perception_Elements\Individual\Perception_Element.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -isystem "C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest/include" -isystem "C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest"
+  OBJECT_DIR = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir
+  OBJECT_FILE_DIR = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir\__\__\PerceptionAI\Network_Elements\Perception_Elements\Individual
+
+build PerceptionAI_Tests/Tests/CMakeFiles/PerceptionAI_Tests.dir/__/__/PerceptionAI/Network_Elements/Nodes/Node.cpp.obj: CXX_COMPILER__PerceptionAI_Tests_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Nodes/Node.cpp || cmake_object_order_depends_target_PerceptionAI_Tests
+  DEP_FILE = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir\__\__\PerceptionAI\Network_Elements\Nodes\Node.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -isystem "C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest/include" -isystem "C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest"
+  OBJECT_DIR = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir
+  OBJECT_FILE_DIR = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir\__\__\PerceptionAI\Network_Elements\Nodes
+
+build PerceptionAI_Tests/Tests/CMakeFiles/PerceptionAI_Tests.dir/__/__/PerceptionAI/Network_Elements/Biases/Bias.cpp.obj: CXX_COMPILER__PerceptionAI_Tests_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Biases/Bias.cpp || cmake_object_order_depends_target_PerceptionAI_Tests
+  DEP_FILE = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir\__\__\PerceptionAI\Network_Elements\Biases\Bias.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -isystem "C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest/include" -isystem "C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest"
+  OBJECT_DIR = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir
+  OBJECT_FILE_DIR = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir\__\__\PerceptionAI\Network_Elements\Biases
+
+build PerceptionAI_Tests/Tests/CMakeFiles/PerceptionAI_Tests.dir/__/__/PerceptionAI/Network_Elements/Weights/Weight.cpp.obj: CXX_COMPILER__PerceptionAI_Tests_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Weights/Weight.cpp || cmake_object_order_depends_target_PerceptionAI_Tests
+  DEP_FILE = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir\__\__\PerceptionAI\Network_Elements\Weights\Weight.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -isystem "C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest/include" -isystem "C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest"
+  OBJECT_DIR = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir
+  OBJECT_FILE_DIR = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir\__\__\PerceptionAI\Network_Elements\Weights
+
+build PerceptionAI_Tests/Tests/CMakeFiles/PerceptionAI_Tests.dir/__/__/PerceptionAI/Network_Elements/Layers/Layer.cpp.obj: CXX_COMPILER__PerceptionAI_Tests_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Layers/Layer.cpp || cmake_object_order_depends_target_PerceptionAI_Tests
+  DEP_FILE = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir\__\__\PerceptionAI\Network_Elements\Layers\Layer.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -isystem "C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest/include" -isystem "C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest"
+  OBJECT_DIR = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir
+  OBJECT_FILE_DIR = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir\__\__\PerceptionAI\Network_Elements\Layers
+
+build PerceptionAI_Tests/Tests/CMakeFiles/PerceptionAI_Tests.dir/__/__/PerceptionAI/Perception_Network/Perception_Network.cpp.obj: CXX_COMPILER__PerceptionAI_Tests_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Perception_Network/Perception_Network.cpp || cmake_object_order_depends_target_PerceptionAI_Tests
+  DEP_FILE = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir\__\__\PerceptionAI\Perception_Network\Perception_Network.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -isystem "C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest/include" -isystem "C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest"
+  OBJECT_DIR = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir
+  OBJECT_FILE_DIR = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir\__\__\PerceptionAI\Perception_Network
+
+build PerceptionAI_Tests/Tests/CMakeFiles/PerceptionAI_Tests.dir/__/__/PerceptionAI/Utilities/Layer_Helper/Layer_Helper.cpp.obj: CXX_COMPILER__PerceptionAI_Tests_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Utilities/Layer_Helper/Layer_Helper.cpp || cmake_object_order_depends_target_PerceptionAI_Tests
+  DEP_FILE = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir\__\__\PerceptionAI\Utilities\Layer_Helper\Layer_Helper.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -isystem "C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest/include" -isystem "C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest"
+  OBJECT_DIR = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir
+  OBJECT_FILE_DIR = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir\__\__\PerceptionAI\Utilities\Layer_Helper
+
+build PerceptionAI_Tests/Tests/CMakeFiles/PerceptionAI_Tests.dir/__/__/PerceptionAI/Utilities/Maths/Perception_Maths.cpp.obj: CXX_COMPILER__PerceptionAI_Tests_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Utilities/Maths/Perception_Maths.cpp || cmake_object_order_depends_target_PerceptionAI_Tests
+  DEP_FILE = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir\__\__\PerceptionAI\Utilities\Maths\Perception_Maths.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -isystem "C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest/include" -isystem "C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest"
+  OBJECT_DIR = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir
+  OBJECT_FILE_DIR = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir\__\__\PerceptionAI\Utilities\Maths
+
+build PerceptionAI_Tests/Tests/CMakeFiles/PerceptionAI_Tests.dir/__/__/PerceptionAI/Network_Elements/Perception_Elements/Matrices/Perception_Element_Matrix.cpp.obj: CXX_COMPILER__PerceptionAI_Tests_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Perception_Elements/Matrices/Perception_Element_Matrix.cpp || cmake_object_order_depends_target_PerceptionAI_Tests
+  DEP_FILE = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir\__\__\PerceptionAI\Network_Elements\Perception_Elements\Matrices\Perception_Element_Matrix.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -isystem "C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest/include" -isystem "C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest"
+  OBJECT_DIR = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir
+  OBJECT_FILE_DIR = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir\__\__\PerceptionAI\Network_Elements\Perception_Elements\Matrices
+
+build PerceptionAI_Tests/Tests/CMakeFiles/PerceptionAI_Tests.dir/__/__/PerceptionAI/Network_Elements/Statuses/Status.cpp.obj: CXX_COMPILER__PerceptionAI_Tests_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Statuses/Status.cpp || cmake_object_order_depends_target_PerceptionAI_Tests
+  DEP_FILE = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir\__\__\PerceptionAI\Network_Elements\Statuses\Status.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -isystem "C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest/include" -isystem "C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest"
+  OBJECT_DIR = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir
+  OBJECT_FILE_DIR = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir\__\__\PerceptionAI\Network_Elements\Statuses
+
+build PerceptionAI_Tests/Tests/CMakeFiles/PerceptionAI_Tests.dir/__/__/PerceptionAI/Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.cpp.obj: CXX_COMPILER__PerceptionAI_Tests_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI/Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.cpp || cmake_object_order_depends_target_PerceptionAI_Tests
+  DEP_FILE = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir\__\__\PerceptionAI\Network_Elements\Perception_Elements\Vectors\Perception_Element_Vector.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -isystem "C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest/include" -isystem "C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest"
+  OBJECT_DIR = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir
+  OBJECT_FILE_DIR = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir\__\__\PerceptionAI\Network_Elements\Perception_Elements\Vectors
+
+build PerceptionAI_Tests/Tests/CMakeFiles/PerceptionAI_Tests.dir/Layer_Helper_Test.cpp.obj: CXX_COMPILER__PerceptionAI_Tests_unscanned_Debug C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI_Tests/Tests/Layer_Helper_Test.cpp || cmake_object_order_depends_target_PerceptionAI_Tests
+  DEP_FILE = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir\Layer_Helper_Test.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -isystem "C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest/include" -isystem "C:/Development/Robotics/Source Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest"
+  OBJECT_DIR = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir
+  OBJECT_FILE_DIR = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target PerceptionAI_Tests
+
+
+#############################################
+# Link the executable PerceptionAI_Tests\Tests\PerceptionAI_Tests.exe
+
+build PerceptionAI_Tests/Tests/PerceptionAI_Tests.exe: CXX_EXECUTABLE_LINKER__PerceptionAI_Tests_Debug PerceptionAI_Tests/Tests/CMakeFiles/PerceptionAI_Tests.dir/__/__/Perception.cpp.obj PerceptionAI_Tests/Tests/CMakeFiles/PerceptionAI_Tests.dir/__/__/PerceptionAI/Network_Elements/Perception_Elements/Individual/Perception_Element.cpp.obj PerceptionAI_Tests/Tests/CMakeFiles/PerceptionAI_Tests.dir/__/__/PerceptionAI/Network_Elements/Nodes/Node.cpp.obj PerceptionAI_Tests/Tests/CMakeFiles/PerceptionAI_Tests.dir/__/__/PerceptionAI/Network_Elements/Biases/Bias.cpp.obj PerceptionAI_Tests/Tests/CMakeFiles/PerceptionAI_Tests.dir/__/__/PerceptionAI/Network_Elements/Weights/Weight.cpp.obj PerceptionAI_Tests/Tests/CMakeFiles/PerceptionAI_Tests.dir/__/__/PerceptionAI/Network_Elements/Layers/Layer.cpp.obj PerceptionAI_Tests/Tests/CMakeFiles/PerceptionAI_Tests.dir/__/__/PerceptionAI/Perception_Network/Perception_Network.cpp.obj PerceptionAI_Tests/Tests/CMakeFiles/PerceptionAI_Tests.dir/__/__/PerceptionAI/Utilities/Layer_Helper/Layer_Helper.cpp.obj PerceptionAI_Tests/Tests/CMakeFiles/PerceptionAI_Tests.dir/__/__/PerceptionAI/Utilities/Maths/Perception_Maths.cpp.obj PerceptionAI_Tests/Tests/CMakeFiles/PerceptionAI_Tests.dir/__/__/PerceptionAI/Network_Elements/Perception_Elements/Matrices/Perception_Element_Matrix.cpp.obj PerceptionAI_Tests/Tests/CMakeFiles/PerceptionAI_Tests.dir/__/__/PerceptionAI/Network_Elements/Statuses/Status.cpp.obj PerceptionAI_Tests/Tests/CMakeFiles/PerceptionAI_Tests.dir/__/__/PerceptionAI/Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.cpp.obj PerceptionAI_Tests/Tests/CMakeFiles/PerceptionAI_Tests.dir/Layer_Helper_Test.cpp.obj | lib/libgtest.a lib/libgtest_main.a lib/libgtest.a || lib/libgtest.a lib/libgtest_main.a
+  FLAGS = -g
+  LINK_LIBRARIES = lib/libgtest.a  lib/libgtest_main.a  lib/libgtest.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = PerceptionAI_Tests\Tests\CMakeFiles\PerceptionAI_Tests.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = PerceptionAI_Tests\Tests\PerceptionAI_Tests.exe
+  TARGET_IMPLIB = PerceptionAI_Tests\Tests\libPerceptionAI_Tests.dll.a
+  TARGET_PDB = PerceptionAI_Tests.exe.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build PerceptionAI_Tests/Tests/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\PerceptionAI_Tests\Tests" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build PerceptionAI_Tests/Tests/edit_cache: phony PerceptionAI_Tests/Tests/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build PerceptionAI_Tests/Tests/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\PerceptionAI_Tests\Tests" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -S"C:\Development\Robotics\Source Code\PerceptionAI" -B"C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug""
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build PerceptionAI_Tests/Tests/rebuild_cache: phony PerceptionAI_Tests/Tests/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build PerceptionAI_Tests/Tests/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build PerceptionAI_Tests/Tests/CMakeFiles/install.util: CUSTOM_COMMAND PerceptionAI_Tests/Tests/all
+  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\PerceptionAI_Tests\Tests" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build PerceptionAI_Tests/Tests/install: phony PerceptionAI_Tests/Tests/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build PerceptionAI_Tests/Tests/CMakeFiles/install/local.util: CUSTOM_COMMAND PerceptionAI_Tests/Tests/all
+  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\PerceptionAI_Tests\Tests" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build PerceptionAI_Tests/Tests/install/local: phony PerceptionAI_Tests/Tests/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build PerceptionAI_Tests/Tests/CMakeFiles/install/strip.util: CUSTOM_COMMAND PerceptionAI_Tests/Tests/all
+  COMMAND = cmd.exe /C "cd /D "C:\Development\Robotics\Source Code\PerceptionAI\cmake-build-debug\PerceptionAI_Tests\Tests" && C:\Users\thome\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build PerceptionAI_Tests/Tests/install/strip: phony PerceptionAI_Tests/Tests/CMakeFiles/install/strip.util
 
 # =============================================================================
 # Target aliases.
 
-build PerceptionAI: phony libPerceptionAI.dll
+build PerceptionAI_EXE: phony PerceptionAI_EXE.exe
 
-build Perception_AI: phony Perception_AI.exe
+build PerceptionAI_Library: phony libPerceptionAI_Library.dll
+
+build PerceptionAI_Tests: phony PerceptionAI_Tests/Tests/PerceptionAI_Tests.exe
+
+build PerceptionAI_Tests.exe: phony PerceptionAI_Tests/Tests/PerceptionAI_Tests.exe
 
 build gmock: phony lib/libgmock.a
 
@@ -691,33 +953,42 @@ build libgtest_main.a: phony lib/libgtest_main.a
 #############################################
 # Folder: C:/Development/Robotics/Source Code/PerceptionAI/cmake-build-debug
 
-build all: phony libPerceptionAI.dll Perception_AI.exe _deps/googletest-build/all
+build all: phony libPerceptionAI_Library.dll PerceptionAI_EXE.exe PerceptionAI_Tests/all
 
 # =============================================================================
 
 #############################################
-# Folder: C:/Development/Robotics/Source Code/PerceptionAI/cmake-build-debug/_deps/googletest-build
+# Folder: C:/Development/Robotics/Source Code/PerceptionAI/cmake-build-debug/PerceptionAI_Tests
 
-build _deps/googletest-build/all: phony _deps/googletest-build/googlemock/all
-
-# =============================================================================
-
-#############################################
-# Folder: C:/Development/Robotics/Source Code/PerceptionAI/cmake-build-debug/_deps/googletest-build/googlemock
-
-build _deps/googletest-build/googlemock/all: phony lib/libgmock.a lib/libgmock_main.a _deps/googletest-build/googletest/all
+build PerceptionAI_Tests/all: phony PerceptionAI_Tests/Libraries/googletest-main/all PerceptionAI_Tests/Tests/all
 
 # =============================================================================
 
 #############################################
-# Folder: C:/Development/Robotics/Source Code/PerceptionAI/cmake-build-debug/_deps/googletest-build/googletest
+# Folder: C:/Development/Robotics/Source Code/PerceptionAI/cmake-build-debug/PerceptionAI_Tests/Libraries/googletest-main
 
-build _deps/googletest-build/googletest/all: phony lib/libgtest.a lib/libgtest_main.a
+build PerceptionAI_Tests/Libraries/googletest-main/all: phony PerceptionAI_Tests/Libraries/googletest-main/googlemock/all
 
 # =============================================================================
-# Unknown Build Time Dependencies.
-# Tell Ninja that they may appear as side effects of build rules
-# otherwise ordered by order-only dependencies.
+
+#############################################
+# Folder: C:/Development/Robotics/Source Code/PerceptionAI/cmake-build-debug/PerceptionAI_Tests/Libraries/googletest-main/googlemock
+
+build PerceptionAI_Tests/Libraries/googletest-main/googlemock/all: phony lib/libgmock.a lib/libgmock_main.a PerceptionAI_Tests/Libraries/googletest-main/googletest/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Development/Robotics/Source Code/PerceptionAI/cmake-build-debug/PerceptionAI_Tests/Libraries/googletest-main/googletest
+
+build PerceptionAI_Tests/Libraries/googletest-main/googletest/all: phony lib/libgtest.a lib/libgtest_main.a
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Development/Robotics/Source Code/PerceptionAI/cmake-build-debug/PerceptionAI_Tests/Tests
+
+build PerceptionAI_Tests/Tests/all: phony PerceptionAI_Tests/Tests/PerceptionAI_Tests.exe
 
 # =============================================================================
 # Built-in targets
@@ -726,14 +997,14 @@ build _deps/googletest-build/googletest/all: phony lib/libgtest.a lib/libgtest_m
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Development/Robotics/Source$ Code/PerceptionAI/CMakeLists.txt C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDependentOption.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakePackageConfigHelpers.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeRCInformation.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FetchContent.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FetchContent/CMakeLists.cmake.in C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageMessage.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPython.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPython/Support.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/GNUInstallDirs.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-windres.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/WindowsPaths.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeRCCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake _deps/googletest-src/CMakeLists.txt _deps/googletest-src/googlemock/CMakeLists.txt _deps/googletest-src/googlemock/cmake/gmock.pc.in _deps/googletest-src/googlemock/cmake/gmock_main.pc.in _deps/googletest-src/googletest/CMakeLists.txt _deps/googletest-src/googletest/cmake/Config.cmake.in _deps/googletest-src/googletest/cmake/gtest.pc.in _deps/googletest-src/googletest/cmake/gtest_main.pc.in _deps/googletest-src/googletest/cmake/internal_utils.cmake
+build build.ninja: RERUN_CMAKE | C$:/Development/Robotics/Source$ Code/PerceptionAI/CMakeLists.txt C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI_Tests/CMakeLists.txt C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/CMakeLists.txt C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googlemock/CMakeLists.txt C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googlemock/cmake/gmock.pc.in C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googlemock/cmake/gmock_main.pc.in C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest/CMakeLists.txt C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest/cmake/Config.cmake.in C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest/cmake/gtest.pc.in C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest/cmake/gtest_main.pc.in C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest/cmake/internal_utils.cmake C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI_Tests/Tests/CMakeLists.txt C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDependentOption.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakePackageConfigHelpers.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeRCInformation.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/GNUInstallDirs.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-windres.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/WindowsPaths.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeRCCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Development/Robotics/Source$ Code/PerceptionAI/CMakeLists.txt C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDependentOption.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakePackageConfigHelpers.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeRCInformation.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FetchContent.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FetchContent/CMakeLists.cmake.in C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageMessage.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPython.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPython/Support.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/GNUInstallDirs.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-windres.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/WindowsPaths.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeRCCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake _deps/googletest-src/CMakeLists.txt _deps/googletest-src/googlemock/CMakeLists.txt _deps/googletest-src/googlemock/cmake/gmock.pc.in _deps/googletest-src/googlemock/cmake/gmock_main.pc.in _deps/googletest-src/googletest/CMakeLists.txt _deps/googletest-src/googletest/cmake/Config.cmake.in _deps/googletest-src/googletest/cmake/gtest.pc.in _deps/googletest-src/googletest/cmake/gtest_main.pc.in _deps/googletest-src/googletest/cmake/internal_utils.cmake: phony
+build C$:/Development/Robotics/Source$ Code/PerceptionAI/CMakeLists.txt C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI_Tests/CMakeLists.txt C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/CMakeLists.txt C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googlemock/CMakeLists.txt C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googlemock/cmake/gmock.pc.in C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googlemock/cmake/gmock_main.pc.in C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest/CMakeLists.txt C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest/cmake/Config.cmake.in C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest/cmake/gtest.pc.in C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest/cmake/gtest_main.pc.in C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI_Tests/Libraries/googletest-main/googletest/cmake/internal_utils.cmake C$:/Development/Robotics/Source$ Code/PerceptionAI/PerceptionAI_Tests/Tests/CMakeLists.txt C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDependentOption.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakePackageConfigHelpers.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeRCInformation.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/GNUInstallDirs.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-windres.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/WindowsPaths.cmake C$:/Users/thome/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeRCCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake: phony
 
 
 #############################################
