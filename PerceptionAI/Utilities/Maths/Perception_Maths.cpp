@@ -28,24 +28,52 @@ namespace Perception {
                     int leftMatrixRowSize = leftMatrix.size();
                     int rightMatrixColumnSize = rightMatrix[0].size();
 
-                    // you have to add 1 to the index size because for readability they are not zero indexed
-                    // hovering over the function name will reveal the tool tip
+                    vector<vector<float>> dotProductMatrix((leftMatrixRowSize), vector<float> (rightMatrixColumnSize) );
+/*
+ *                let left_side_row_count = left_side.length;
+               let left_side_column_count = left_side[0].length;
+               let result_matrix_column_count = right_side[0].length;
 
-                     vector<vector<float>> dotProductMatrix((leftMatrixRowSize + 1), vector<float> (rightMatrixColumnSize + 1) );
-                     for(int resultMatrixColumnIndex = 0; resultMatrixColumnIndex < leftMatrixRowSize; resultMatrixColumnIndex++) {
+               for (var row_index = 0; row_index < left_side_row_count; row_index++) {
 
-                         float individualDotProductResult = 0 ;
-                         vector<float> dotProductResultVector (rightMatrixColumnSize,   0);
+                 dot_product_result_matrix.push([]);
+
+                  for (var matrix_column_index = 0; matrix_column_index < result_matrix_column_count; matrix_column_index++) {
+
+                    dot_product_result_matrix[row_index][matrix_column_index] = 0;
+
+                    for (var column_index = 0; column_index < left_side_column_count; column_index++) {
+
+                       let left_number = left_side[row_index][column_index];
+                       let right_number = right_side[column_index][matrix_column_index];
+                       dot_product += left_number * right_number;
+                       dot_product_result_matrix[row_index][matrix_column_index] = dot_product;
+                    }
+
+                    if(!convolution) {
+                        dot_product = 0;
+                    }
+                 }
+               }
+
+ */
+                    for(int resultMatrixColumnIndex = 0; resultMatrixColumnIndex < leftMatrixRowSize; resultMatrixColumnIndex++) {
+
+                        vector<float> dotProductResultVector (rightMatrixColumnSize,   0);
 
                         for ( int inputMatrixRowIndex = 0; inputMatrixRowIndex < leftMatrixRowSize; inputMatrixRowIndex++) {
+
+
+                            float individualDotProductResult = 0 ;
+
                             for (int inputMatrixColumnIndex = 0; inputMatrixColumnIndex < rightMatrixColumnSize; inputMatrixColumnIndex++ ) {
-                                  individualDotProductResult += leftMatrix[inputMatrixRowIndex][inputMatrixColumnIndex]
-                                                              * rightMatrix[inputMatrixRowIndex][inputMatrixColumnIndex];
+                                  individualDotProductResult += leftMatrix[inputMatrixRowIndex][inputMatrixRowIndex]
+                                                              * rightMatrix[inputMatrixColumnIndex][inputMatrixColumnIndex];
                             }
 
-                            dotProductResultVector.push_back(individualDotProductResult);
-                        }
-                        dotProductMatrix.push_back(dotProductResultVector);
+                            dotProductResultVector[inputMatrixRowIndex] =  individualDotProductResult ;
+                    }
+                        dotProductMatrix[resultMatrixColumnIndex] = dotProductResultVector;
                     }
 
                      return dotProductMatrix;

@@ -29,4 +29,38 @@ TEST(Layer_Helper_Test, VectorDotProductTest) {
 
 }
 
+TEST(Layer_Helper_Test, MatrixDotProductTest) {
+
+    // prepare
+
+    Perception_Maths perceptionMaths;
+
+    vector<vector<float>> left {
+                                 {1,2,3}
+                                ,{1,2,3}
+                                ,{1,2,3}
+                               };
+
+    vector<vector<float>> right {
+                                 {1,2,3}
+                                ,{1,2,3}
+                                ,{1,2,3}
+                                };
+
+    vector<vector<float>> expected_result {
+                                 {6,12,18}
+                                ,{6,12,18}
+                                ,{6,12,18}
+                                };
+
+    // assert
+
+    vector<vector<float>> actual_result = perceptionMaths.dotProduct(left,right);
+    // test
+
+    EXPECT_EQ(expected_result, actual_result);
+
+
+
+}
 
