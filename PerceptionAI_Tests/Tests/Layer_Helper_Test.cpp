@@ -29,29 +29,67 @@ TEST(Layer_Helper_Test, VectorDotProductTest) {
 
 }
 
-TEST(Layer_Helper_Test, MatrixDotProductTest) {
+TEST(Layer_Helper_Test, MatrixDotProductTest3x3) {
 
     // prepare
 
     Perception_Maths perceptionMaths;
 
     vector<vector<float>> left {
-                                 {1,2,3}
-                                ,{1,2,3}
-                                ,{1,2,3}
-                               };
+             {1,2,3}
+            ,{1,2,3}
+            ,{1,2,3}
+    };
 
     vector<vector<float>> right {
-                                 {1,2,3}
-                                ,{1,2,3}
-                                ,{1,2,3}
-                                };
+             {1,2,3}
+            ,{1,2,3}
+            ,{1,2,3}
+    };
 
     vector<vector<float>> expected_result {
-                                 {6,12,18}
-                                ,{6,12,18}
-                                ,{6,12,18}
-                                };
+             {6,12,18}
+            ,{6,12,18}
+            ,{6,12,18}
+    };
+
+    // assert
+
+    vector<vector<float>> actual_result = perceptionMaths.dotProduct(left,right);
+    // test
+
+    EXPECT_EQ(expected_result, actual_result);
+
+
+
+}
+
+TEST(Layer_Helper_Test, MatrixDotProductTest4x4) {
+
+    // prepare
+
+    Perception_Maths perceptionMaths;
+
+    vector<vector<float>> left {
+             {2,  2,  4, 4}
+            ,{3, -3, 13, 1}
+            ,{4,  2,  3, 8}
+            ,{5, -2,  3, 7}
+    };
+
+    vector<vector<float>> right {
+             {2,  2,  4, 4}
+            ,{3, -3, 13, 1}
+            ,{4,  2,  3, 8}
+            ,{5, -2,  3, 7}
+    };
+
+    vector<vector<float>> expected_result {
+             {46	,-2,	58,	70}
+            ,{54,	39	,15,	120}
+            ,{66,	-8,	75,	98}
+            ,{51,	8	,24,	91}
+    };
 
     // assert
 

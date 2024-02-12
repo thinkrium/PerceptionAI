@@ -29,51 +29,20 @@ namespace Perception {
                     int rightMatrixColumnSize = rightMatrix[0].size();
 
                     vector<vector<float>> dotProductMatrix((leftMatrixRowSize), vector<float> (rightMatrixColumnSize) );
-/*
- *                let left_side_row_count = left_side.length;
-               let left_side_column_count = left_side[0].length;
-               let result_matrix_column_count = right_side[0].length;
 
-               for (var row_index = 0; row_index < left_side_row_count; row_index++) {
-
-                 dot_product_result_matrix.push([]);
-
-                  for (var matrix_column_index = 0; matrix_column_index < result_matrix_column_count; matrix_column_index++) {
-
-                    dot_product_result_matrix[row_index][matrix_column_index] = 0;
-
-                    for (var column_index = 0; column_index < left_side_column_count; column_index++) {
-
-                       let left_number = left_side[row_index][column_index];
-                       let right_number = right_side[column_index][matrix_column_index];
-                       dot_product += left_number * right_number;
-                       dot_product_result_matrix[row_index][matrix_column_index] = dot_product;
-                    }
-
-                    if(!convolution) {
-                        dot_product = 0;
-                    }
-                 }
-               }
-
- */
-                    for(int resultMatrixColumnIndex = 0; resultMatrixColumnIndex < leftMatrixRowSize; resultMatrixColumnIndex++) {
+                    for(int leftMatrixRowIndex = 0; leftMatrixRowIndex < leftMatrixRowSize; leftMatrixRowIndex++) {
 
                         vector<float> dotProductResultVector (rightMatrixColumnSize,   0);
-
-                        for ( int inputMatrixRowIndex = 0; inputMatrixRowIndex < leftMatrixRowSize; inputMatrixRowIndex++) {
-
-
+                        for (int rightMatrixColumnIndex = 0; rightMatrixColumnIndex < rightMatrixColumnSize; rightMatrixColumnIndex++) {
                             float individualDotProductResult = 0 ;
-
-                            for (int inputMatrixColumnIndex = 0; inputMatrixColumnIndex < rightMatrixColumnSize; inputMatrixColumnIndex++ ) {
-                                  individualDotProductResult += leftMatrix[inputMatrixRowIndex][inputMatrixRowIndex]
-                                                              * rightMatrix[inputMatrixColumnIndex][inputMatrixColumnIndex];
+                            for (int leftMatrixColumnIndex = 0; leftMatrixColumnIndex < leftMatrixColumnSize; leftMatrixColumnIndex++ ) {
+                                  individualDotProductResult += leftMatrix[leftMatrixRowIndex][leftMatrixColumnIndex]
+                                                              * rightMatrix[leftMatrixColumnIndex][rightMatrixColumnIndex];
                             }
 
-                            dotProductResultVector[inputMatrixRowIndex] =  individualDotProductResult ;
+                            dotProductResultVector[rightMatrixColumnIndex] =  individualDotProductResult ;
                     }
-                        dotProductMatrix[resultMatrixColumnIndex] = dotProductResultVector;
+                        dotProductMatrix[leftMatrixRowIndex] = dotProductResultVector;
                     }
 
                      return dotProductMatrix;
