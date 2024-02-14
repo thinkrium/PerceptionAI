@@ -2,103 +2,65 @@
 // Created by thome on 2/4/2024.
 //
 
-#include "../../PerceptionAI/Utilities/Maths/Perception_Maths.h"
+#include "../../PerceptionAI/Utilities/Layer_Helper/Layer_Helper.h"
 #include "gtest/gtest.h"
 
-using namespace Perception::Network::Utilities::Maths;
+using namespace Perception::Network::Utilities;
 // Demonstrate some basic assertions.
-TEST(Layer_Helper_Test, VectorDotProductTest) {
+TEST(Layer_Helper_Test, Prepare_Forward_Propagation_Test) {
 
     // prepare
 
-    Perception_Maths perceptionMaths;
+    Layer_Helper layerHelper;
 
-    vector<float> left {1,2,3};
-    vector<float> right  {3,4,5};
+    Layer previousLayer, currentLayer;
 
-    float expected_result = 26;
+    int previousLayerNodeCount = 3;
+    int currentLayersNodeCount = 3;
 
-    // assert
+    Perception_Element_Vector<Node> previousOutputsNodeVector;
 
-    float actual_result = perceptionMaths.dotProduct(left,right);
-    // test
+    Perception_Element_Matrix<Weight> currentLayersWeightsMatrix;
 
-    EXPECT_EQ(expected_result, actual_result);
+    vector<Node> previousOutputNodes (previousLayerNodeCount);
 
+    vector<vector<Weight>> currentLayersWeights(previousLayerNodeCount, vector<Weight>(currentLayersNodeCount));
 
+    // set output nodes
+    for(int i = 0; i < previousLayerNodeCount; i++) {
+        Node node;
+        node.setValue((float)(i + 1));
 
-}
+        previousOutputNodes.at(i) = node;
+    }
 
-TEST(Layer_Helper_Test, MatrixDotProductTest3x3) {
+    // set weights
+    for(int i = 0; i < currentLayersNodeCount; i++) {
+        for(int j = 0; j < currentLayersNodeCount; j++) {
+            Weight weight;
 
-    // prepare
+            weight.setValue((float)(j + 1));
 
-    Perception_Maths perceptionMaths;
+            currentLayersWeights[i][j] = weight;
+        }
+    }
 
-    vector<vector<float>> left {
-             {1,2,3}
-            ,{1,2,3}
-            ,{1,2,3}
-    };
+    previousOutputsNodeVector.setElementVector(previousOutputNodes);
 
-    vector<vector<float>> right {
-             {1,2,3}
-            ,{1,2,3}
-            ,{1,2,3}
-    };
+    currentLayersWeightsMatrix.setElementMatrix(currentLayersWeights);
 
-    vector<vector<float>> expected_result {
-             {6,12,18}
-            ,{6,12,18}
-            ,{6,12,18}
-    };
+    previousOutputsNodeVector.setHealthStatus(Enumerations::Perception_Enumerations::healthStatus::ok);
 
-    // assert
+    currentLayersWeightsMatrix.setHealthStatus(Enumerations::Perception_Enumerations::healthStatus::ok);
 
-    vector<vector<float>> actual_result = perceptionMaths.dotProduct(left,right);
-    // test
+    previousLayer.setOutputNodes(previousOutputsNodeVector);
 
-    EXPECT_EQ(expected_result, actual_result);
-
-
-
-}
-
-TEST(Layer_Helper_Test, MatrixDotProductTest4x4) {
-
-    // prepare
-
-    Perception_Maths perceptionMaths;
-
-    vector<vector<float>> left {
-             {2,  2,  4, 4}
-            ,{3, -3, 13, 1}
-            ,{4,  2,  3, 8}
-            ,{5, -2,  3, 7}
-    };
-
-    vector<vector<float>> right {
-             {2,  2,  4, 4}
-            ,{3, -3, 13, 1}
-            ,{4,  2,  3, 8}
-            ,{5, -2,  3, 7}
-    };
-
-    vector<vector<float>> expected_result {
-             {46	,-2,	58,	70}
-            ,{54,	39	,15,	120}
-            ,{66,	-8,	75,	98}
-            ,{51,	8	,24,	91}
-    };
+    currentLayer.setWeights(currentLayersWeightsMatrix);
 
     // assert
 
-    vector<vector<float>> actual_result = perceptionMaths.dotProduct(left,right);
     // test
 
-    EXPECT_EQ(expected_result, actual_result);
-
-
+    layerHelper.Prepare_Forward_Propagation_Without_Activating(previousLayer, currentLayer);
 
 }
-

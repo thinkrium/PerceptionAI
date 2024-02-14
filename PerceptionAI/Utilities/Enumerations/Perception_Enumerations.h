@@ -22,6 +22,7 @@ namespace Perception {
                       enum healthStatus { ok, error };
                       struct errorMessages {
                           inline static string General_Error = "There is a General error";
+                          inline static string Object_Exists_But_No_Value_Set = "The object exists but no value is set";
                       };
                 };
 

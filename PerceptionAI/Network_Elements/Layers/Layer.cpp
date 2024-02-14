@@ -10,7 +10,7 @@ namespace Perception {
         Layer::Layer() {
 
             this->setNodeCountPerLayer(0);
-            this->setCurrentLayersNodeCountIsSet(true);
+//            this->setCurrentLayersNodeCountIsSet(true);
             this->setPreviousLayersNodeCountIsSet(false);
 
             this->setInputNodesAreSet(false);
@@ -32,13 +32,18 @@ namespace Perception {
          * only the parameter nodeCountPerLayer for use later
          * @param nodesPerLayer
          */
-        Layer::Layer(int nodesPerLayer) : nodeCountPerLayer(nodesPerLayer) {
+        Layer::Layer(int nodesPerLayer , bool autoGenerateLocalNodes ) : nodeCountPerLayer(nodesPerLayer) {
             this->setNodeCountPerLayer(nodesPerLayer);
-            this->setCurrentLayersNodeCountIsSet(true);
+
+            if(autoGenerateLocalNodes) {
+                   this->setLocalNodes(Perception_Element_Vector<Node>(this->getNodeCountPerLayer()));
+            }
+
+       //     this->setCurrentLayersNodeCountIsSet(true);
             this->setPreviousLayersNodeCountIsSet(false);
 
             this->setInputNodesAreSet(false);
-            this->setLocalNodesAreSet(false);
+            this->setLocalNodesAreSet(autoGenerateLocalNodes);
             this->setOutputNodesAreSet(false);
             this->setBiasesAreSet(false);
             this->setWeightsAreSet(false);
@@ -182,7 +187,7 @@ namespace Perception {
 
         void Layer::setWeights(const Perception_Element_Matrix<Weight> &weights) {
             Layer::weights = weights;
-            this->setWeightsAreSet(false);
+            this->setWeightsAreSet(true);
         }
 
         bool Layer::isInputNodesAreSet() const {

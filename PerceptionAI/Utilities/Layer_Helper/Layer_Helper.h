@@ -35,7 +35,7 @@ namespace Perception {
 
                 virtual ~Layer_Helper();
 
-                void Prepare_Forward_Propagation(Layer &previousLayer, Layer &currentLayer);
+                void Prepare_Forward_Propagation_Without_Activating(Layer &previousLayer, Layer &currentLayer);
                 void Prepare_Backward_Propagation(Layer &layer);
                 Perception_Element_Vector<Node> Propagate_Forward(Layer layer);
                 Perception_Element_Vector<Node> Propagate_Backward(Layer layer);

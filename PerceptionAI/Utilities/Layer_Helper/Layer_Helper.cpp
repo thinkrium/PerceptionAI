@@ -85,7 +85,7 @@ namespace Perception {
 
             }
 
-            void Layer_Helper::Prepare_Forward_Propagation(Layer &previousLayer, Layer &currentLayer) {
+            void Layer_Helper::Prepare_Forward_Propagation_Without_Activating(Layer &previousLayer, Layer &currentLayer) {
 
                 try {
 
@@ -102,17 +102,18 @@ namespace Perception {
                     vector<float> floatsFromInputs = this->getFloatsFromPerceptionElementVector(
                             previousLayer.getOutputNodes());
 
-                    Perception_Element_Matrix<Weight> currentLayersWeights = currentLayer.getWeights();
+                    Perception_Element_Matrix<Weight> currentLayersWeightsMatrix = currentLayer.getWeights();
 
-                    for (int i = 0; i < currentLayersWeights.getRowSize(); i++) {
+                    for (int i = 0; i < currentLayersWeightsMatrix.getRowSize(); i++) {
+
                         vector<float> floatsFromIndividualNodeWeights(
-                                currentLayersWeights.getElementRowAt(i).size()
+                                currentLayersWeightsMatrix.getElementRowAt(i).size()
                         );
 
-                        for (int j = 0; j < currentLayersWeights.getElementRowAt(i).size(); j++) {
-                            floatsFromIndividualNodeWeights.push_back(
-                                    currentLayersWeights.getElementAt(i, j).getValue()
-                            );
+                        for (int j = 0; j < currentLayersWeightsMatrix.getElementRowAt(i).size(); j++) {
+
+                            floatsFromIndividualNodeWeights.at(j) =
+                                    currentLayersWeightsMatrix.getElementAt(i, j).getValue();
 
                             float currentNodesUnactivatedValue = perceptionMaths.dotProduct(floatsFromInputs,
                                                                                             floatsFromIndividualNodeWeights);

@@ -88,7 +88,8 @@ namespace Perception {
             void
             setNodeCountPerPreviousLayerGoingPropagatingForwards(int nodeCountPerPreviousLayerGoingPropagatingForwards);
 
-            explicit Layer(int nodesPerLayer);
+            explicit Layer(int nodesPerLayer, bool autoGenerateLocalNodes = true );
+
             Layer();
 
             ~Layer();

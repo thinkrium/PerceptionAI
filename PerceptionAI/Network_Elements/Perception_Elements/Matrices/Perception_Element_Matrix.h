@@ -115,6 +115,7 @@ namespace Perception {
                         // we dont know the size, there is no matrix to set
                         // health status - error
                         this->setHealthStatus(Perception_Enumerations::healthStatus::error);
+                        this->addErrorMessage(Perception_Enumerations::errorMessages::Object_Exists_But_No_Value_Set);
                     }
 
                     void setIndividualElement(int rowIndex, int columnIndex, objectName element) {
@@ -217,6 +218,14 @@ namespace Perception {
                     void setElementMatrix(const vector<vector<objectName>> &elementMatrix) {
                         element_matrix = elementMatrix;
                         this->setMatrixIsSet(true);
+
+
+                        this->setRowSize(elementMatrix.size());
+
+                        // TODO:
+                        // this assumes a square or a rectangle shape
+                        // check if that has to be true
+                        this->setColumnSize(elementMatrix[0].size());
                     }
 
                     int getRowSize() {

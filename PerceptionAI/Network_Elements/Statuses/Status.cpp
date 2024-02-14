@@ -50,6 +50,11 @@ namespace Perception {
                     Status::errorMessages = errorMessages;
                 }
 
+                void Status::addErrorMessage(string errorMessage) {
+                      this->errorMessages.push_back(errorMessage);
+                }
+
+
             } // Perception
         } // Network
     } // Elements

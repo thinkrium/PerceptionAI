@@ -29,7 +29,7 @@ namespace Perception {
 
                 public:
 
-                    int  setHealthStatusToError( );
+                    void addErrorMessage(string errorMessage);
 
                     virtual ~Status();
 

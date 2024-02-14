@@ -62,7 +62,7 @@ namespace Perception {
 
         void Perception_Network::startNetwork() {
 
-            this->layerHelper.Prepare_Forward_Propagation(this->inputLayer, this->innerLayers[0]);
+            this->layerHelper.Prepare_Forward_Propagation_Without_Activating(this->inputLayer, this->innerLayers[0]);
             this->layerHelper.Propagate_Forward(this->innerLayers[0]);
 
         }
@@ -102,7 +102,7 @@ namespace Perception {
 
             for (int index = 0; index < this->getInnerLayerCount(); index++) {
 
-                innerLayers[index] = Layer(this->getNodeCountPerInnerLayer());
+                innerLayers[index] = Layer(this->getNodeCountPerInnerLayer() );
 
                 if(index == 0) {
                     // this is the input layer
@@ -131,7 +131,7 @@ namespace Perception {
 
             if(this->getInputLayerNodeCount() == 0) return;
 
-            Layer inputLayer(this->getInputLayerNodeCount());
+            Layer inputLayer(this->getInputLayerNodeCount() );
 
             Perception_Element_Vector<Node> inputs(this->getInputLayerNodeCount());
 
@@ -159,7 +159,7 @@ namespace Perception {
 
             int inputCount =  lastInnerLayer.getNodeCountPerLayer();
 
-            Layer outputLayer(this->getOutputLayerNodeCount());
+            Layer outputLayer(this->getOutputLayerNodeCount(), false);
 
             // get the output node count from the last inner layer going forward
             outputLayer.setNodeCountPerPreviousLayerGoingPropagatingForwards(

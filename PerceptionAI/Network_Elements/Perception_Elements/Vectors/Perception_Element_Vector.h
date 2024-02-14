@@ -62,13 +62,15 @@ namespace Perception {
                         // we don't have a vector
                         // health status - error
                         this->setHealthStatus(Perception_Enumerations::healthStatus::error);
+                        this->addErrorMessage(Perception_Enumerations::errorMessages::Object_Exists_But_No_Value_Set);
                     }
 
                     explicit Perception_Element_Vector(int size) {
 
                         this->setSize(size);
-                        this->element_vector = vector<objectType> (this->getSize());
+                        this->setElementVector(  vector<objectType> (this->getSize()));
                         this->setHealthStatus(Perception_Enumerations::healthStatus::ok);
+
                     }
 
                     void setIndividualElement(int index, objectType &element) {
@@ -143,6 +145,8 @@ namespace Perception {
                     void setElementVector(const vector<objectType> &elementVector) {
                         this->element_vector = elementVector;
                         this->setElementVectorIsSet(true);
+
+                        this->setSize(elementVector.size());
                     }
                 };
 
