@@ -154,7 +154,7 @@ namespace Perception {
 
                 for(int i = 0; i < elementType.getElementVector().size(); i++) {
                     float value = ((Perception_Element)elementType.getElementAt(i)).getValue();
-                    floats.push_back(value);
+                    floats.at(i) =  value ;
                 }
 
                 return floats;
