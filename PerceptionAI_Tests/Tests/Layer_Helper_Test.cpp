@@ -9,14 +9,17 @@ using namespace Perception::Network::Utilities;
 // Demonstrate some basic assertions.
 TEST(Layer_Helper_Test, Prepare_Forward_Propagation_Test) {
 
-    // prepare
+
+
+///////////////////////////////////////////////////////////////////
 
     Layer_Helper layerHelper;
 
-    Layer previousLayer, currentLayer;
 
     int previousLayerNodeCount = 3;
     int currentLayersNodeCount = 3;
+
+    Layer previousLayer(previousLayerNodeCount), currentLayer(currentLayersNodeCount);
 
     Perception_Element_Vector<Node> previousOutputsNodeVector;
 
@@ -62,5 +65,8 @@ TEST(Layer_Helper_Test, Prepare_Forward_Propagation_Test) {
     // test
 
     layerHelper.Prepare_Forward_Propagation_Without_Activating(previousLayer, currentLayer);
+
+    EXPECT_EQ(1,1);
+///////////////////////////////////////////////////////////////////
 
 }

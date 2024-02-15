@@ -25,6 +25,9 @@ namespace Perception {
                 template<typename typeName>
                 vector<float> getFloatsFromPerceptionElementVector(Perception_Element_Vector<typeName> elementType);
 
+                template<typename typeName>
+                vector<float> getFloatsFromPerceptionElementVector(vector<typeName> elementType);
+
             public:
                 Layer_Helper();
 

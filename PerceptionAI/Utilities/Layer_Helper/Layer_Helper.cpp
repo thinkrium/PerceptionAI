@@ -104,27 +104,35 @@ namespace Perception {
 
                     Perception_Element_Matrix<Weight> currentLayersWeightsMatrix = currentLayer.getWeights();
 
+                    Perception_Element_Vector<Node> currentLayersLocalNodes = currentLayer.getLocalNodes();
+
                     for (int i = 0; i < currentLayersWeightsMatrix.getRowSize(); i++) {
 
                         vector<float> floatsFromIndividualNodeWeights(
                                 currentLayersWeightsMatrix.getElementRowAt(i).size()
                         );
 
-                        for (int j = 0; j < currentLayersWeightsMatrix.getElementRowAt(i).size(); j++) {
+                        vector<Weight> test = currentLayersWeightsMatrix.getElementRowAt(i);
 
-                            floatsFromIndividualNodeWeights.at(j) =
-                                    currentLayersWeightsMatrix.getElementAt(i, j).getValue();
+                        floatsFromIndividualNodeWeights = this->getFloatsFromPerceptionElementVector(test);
 
-                            float currentNodesUnactivatedValue = perceptionMaths.dotProduct(floatsFromInputs,
+
+                        //for (int j = 0; j < currentLayersWeightsMatrix.getElementRowAt(i).size(); j++) {
+
+
+
+                        float currentNodesUnactivatedValue = perceptionMaths.dotProduct(floatsFromInputs,
                                                                                             floatsFromIndividualNodeWeights);
 
-                            Perception_Element_Vector<Node> currentLayersLocalNodes = currentLayer.getLocalNodes();
 
-                            Node unactivatedNode(currentNodesUnactivatedValue);
+                        Node unactivatedNode(currentNodesUnactivatedValue);
 
-                            currentLayersLocalNodes.setIndividualElement(i, unactivatedNode);
-                        }
+                        currentLayersLocalNodes.setIndividualElement(i, unactivatedNode);
+                        //}
                     }
+
+                    currentLayer.setLocalNodes(currentLayersLocalNodes);
+
                 }
                 catch (exception e) {
                     cout << "Error: " << e.what() << endl;
@@ -154,6 +162,24 @@ namespace Perception {
 
                 for(int i = 0; i < elementType.getElementVector().size(); i++) {
                     float value = ((Perception_Element)elementType.getElementAt(i)).getValue();
+                    floats.at(i) =  value ;
+                }
+
+                return floats;
+
+            }
+
+            // this function should not happen before the health of the vector is checked
+            // so we can trust this will work
+            // always check the health of the incoming vector first
+            template<typename typeName>
+            vector<float> Layer_Helper::getFloatsFromPerceptionElementVector(vector<typeName> elementType) {
+
+
+                vector<float> floats(elementType.size());
+
+                for(int i = 0; i < elementType.size(); i++) {
+                    float value = ((Perception_Element)elementType.at(i)).getValue();
                     floats.at(i) =  value ;
                 }
 
