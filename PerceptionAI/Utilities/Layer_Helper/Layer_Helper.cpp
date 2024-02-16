@@ -112,12 +112,9 @@ namespace Perception {
                                 currentLayersWeightsMatrix.getElementRowAt(i).size()
                         );
 
-                        vector<Weight> test = currentLayersWeightsMatrix.getElementRowAt(i);
-
-                        floatsFromIndividualNodeWeights = this->getFloatsFromPerceptionElementVector(test);
-
-
-                        //for (int j = 0; j < currentLayersWeightsMatrix.getElementRowAt(i).size(); j++) {
+                        floatsFromIndividualNodeWeights = this->getFloatsFromPerceptionElementVector(
+                                currentLayersWeightsMatrix.getElementRowAt(i)
+                                );
 
 
 
@@ -128,8 +125,7 @@ namespace Perception {
                         Node unactivatedNode(currentNodesUnactivatedValue);
 
                         currentLayersLocalNodes.setIndividualElement(i, unactivatedNode);
-                        //}
-                    }
+                     }
 
                     currentLayer.setLocalNodes(currentLayersLocalNodes);
 
