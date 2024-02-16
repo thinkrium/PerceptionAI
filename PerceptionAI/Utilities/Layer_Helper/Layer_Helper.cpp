@@ -11,7 +11,7 @@ namespace Perception {
         namespace Utilities {
 
 
-            /**
+            /**l
              * Passes the layers outputs forward
              * @param layer
              * @return
@@ -25,9 +25,17 @@ namespace Perception {
             }
 
             void Layer_Helper::Activate_Node_With_ReLU(Node &node) {
-                if (node.getValue() <= 0) {
-                    node.setValue(0);
+                try {
+                    if(!node.isValueIsSet()) {throw runtime_error(Perception_Enumerations::errorMessages::Object_Exists_But_No_Value_Set);}
+                    if (node.getValue() <= 0) {
+                        node.setValue(0);
+                    }
                 }
+                catch (exception e) {
+                    node.setHealthStatus(Perception_Enumerations::healthStatus::error);
+                    node.addErrorMessage(e.what());
+                }
+
             }
 
             /// <summary>
@@ -35,21 +43,46 @@ namespace Perception {
             /// </summary>
             /// <param name="layer"></param>
             double Layer_Helper::Sum_The_Layers_Nodes_Exponential_Values(Layer &layer) {
-                
+
+
                 double layersExponentialSum = 0;
 
+                try {
+                    if(
+                            layer.getHealthStatus() == Perception_Enumerations::healthStatus::error
+                            ||
+                            layer.getLocalNodes().getHealthStatus() == Perception_Enumerations::healthStatus::error
+                            ) {
+                        layer.addErrorMessage(Perception_Enumerations::errorMessages::Layer_Helper_Attempted_Activation_But_Failed);
+                    }
+                    Perception_Element_Vector<Node> localNodes = layer.getLocalNodes();
 
-//                for(int nodeIndex = 0; nodeIndex < layer.getLocalNodes().getSize(); nodeIndex++)
-//                {
-////                    layersExponentialSum += exp( layer.getLocalNodes().getElementVector()[nodeIndex].getValue());
-//                }
-//
+                    for (int nodeIndex = 0; nodeIndex < layer.getNodeCountPerLayer(); nodeIndex++) {
+                        layersExponentialSum += exp(localNodes.getElementAt(nodeIndex).getValue());
+                    }
+
+                }
+                catch (exception e) {
+                    layer.setHealthStatus(Perception_Enumerations::healthStatus::error);
+                    layer.addErrorMessage(e.what());
+                }
+
                 return layersExponentialSum;
 
 
             }
 
             void Layer_Helper::Activate_Node_With_Softmax(Node& node, double layersExponentialSum) {
+                try {
+                    if(!node.isValueIsSet()) {throw runtime_error(Perception_Enumerations::errorMessages::Object_Exists_But_No_Value_Set);}
+                    node.setActivatedValue(
+                            exp(node.getValue()) / layersExponentialSum
+                    );
+                }
+                catch (exception e) {
+                    node.setHealthStatus(Perception_Enumerations::healthStatus::error);
+                    node.addErrorMessage(e.what());
+                }
 
             }
 
@@ -81,8 +114,30 @@ namespace Perception {
 
             }
 
-            void Layer_Helper::Activate_Nodes_With(Perception_Enumerations::activationMethod activationMethod) {
+            void Layer_Helper::Activate_Nodes_With(Layer &layer,
+                                                   Perception_Enumerations::activationMethod activationMethod) {
 
+                try {
+                    if(layer.getHealthStatus() == Perception_Enumerations::healthStatus::error) {
+                        throw runtime_error(Perception_Enumerations::errorMessages::General_Error);
+                    }
+
+                    switch (activationMethod) {
+                        case Perception_Enumerations::activationMethod::ReLU :
+                            this->Activate_Nodes_With_ReLU(layer);
+                            break;
+                        case Perception_Enumerations::activationMethod::Softmax :
+                            this->Activate_Nodes_With_Softmax(layer);
+                            break;
+                        default :
+                            throw runtime_error(
+                                    Perception_Enumerations::errorMessages::Layer_Helper_Attempted_Activation_But_Failed);
+                    }
+                }
+                catch (exception e) {
+                    layer.setHealthStatus(Perception_Enumerations::healthStatus::error);
+                    layer.addErrorMessage(e.what());
+                }
             }
 
             void Layer_Helper::Prepare_Forward_Propagation_Without_Activating(Layer &previousLayer, Layer &currentLayer) {
@@ -145,6 +200,17 @@ namespace Perception {
 
             void Layer_Helper::setPerceptionMaths(const Perception_Maths &perceptionMaths) {
                 Layer_Helper::perceptionMaths = perceptionMaths;
+            }
+
+            void Layer_Helper::Activate_Nodes_With_Softmax(Layer &layer) {
+
+            }
+
+            void Layer_Helper::Activate_Nodes_With_ReLU(Layer &layer) {
+                for(int i; i < layer.getNodeCountPerLayer(); i++) {
+//                    this->Activate_Node_With_ReLU( );
+                }
+
             }
 
             // this function should not happen before the health of the vector is checked

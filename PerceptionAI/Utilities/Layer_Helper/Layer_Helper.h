@@ -42,9 +42,11 @@ namespace Perception {
                 void Prepare_Backward_Propagation(Layer &layer);
                 Perception_Element_Vector<Node> Propagate_Forward(Layer layer);
                 Perception_Element_Vector<Node> Propagate_Backward(Layer layer);
-                void Activate_Nodes_With(Perception_Enumerations::activationMethod activationMethod);
+                void Activate_Nodes_With(Layer &layer, Perception_Enumerations::activationMethod activationMethod);
+                void Activate_Nodes_With_ReLU(Layer &layer);
                 void Activate_Node_With_ReLU(Node &node);
                 double Sum_The_Layers_Nodes_Exponential_Values(Layer &layer);
+                void Activate_Nodes_With_Softmax(Layer &layer);
                 void Activate_Node_With_Softmax(Node& node, double layersExponentialSum);
                 void Calculate_Loss_With_Categorical_Cross_Entropy();
                 void Calculate_Derivative_Of_ReLu();
