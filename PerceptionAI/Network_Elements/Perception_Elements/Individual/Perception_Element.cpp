@@ -59,6 +59,17 @@ namespace Perception {
             void Perception_Element::setValueIsSet(bool valueIsSet) {
                 Perception_Element::valueIsSet = valueIsSet;
             }
+
+            bool Perception_Element::operator == (const Perception_Element& incomingPerceptionElement) const
+            {
+                if (
+                        valueIsSet == incomingPerceptionElement.valueIsSet
+                        &&
+                        value == incomingPerceptionElement.value
+                    )
+                    return true;
+                return false;
+            }
         }
     } // Perception
 } // Elements

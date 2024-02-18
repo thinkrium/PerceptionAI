@@ -31,7 +31,8 @@ namespace Perception {
 
             void setValueIsSet(bool valueIsSet);
 
-
+            bool operator==(const Perception_Element& incomingPerceptionElement) const;
+            
             virtual ~Perception_Element();
 
         private:

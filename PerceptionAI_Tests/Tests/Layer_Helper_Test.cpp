@@ -168,3 +168,64 @@ TEST(Layer_Helper_Test, Prepare_Forward_Propagation_Test_4_Nodes) {
 
     EXPECT_TRUE(valuesAreEqual);
 }
+
+TEST(Layer_Helper_Test, Activate_Nodes_With_Relu_Positive_Numbers) {
+
+
+    Layer_Helper layerHelper;
+
+    Layer layer(3);
+
+    int nodeCount = 3;
+    Perception_Element_Vector<Node> nodeVector(nodeCount);
+
+    vector <Node> expectedNodes = {Node(3), Node(3), Node(3) };
+
+    nodeVector.setElementVector(expectedNodes);
+
+    layer.setLocalNodes(nodeVector);
+
+    layerHelper.Activate_Nodes_With_ReLU(layer);
+
+    float expectedValue = 3;
+
+    Perception_Element_Vector<Node> actualValueVector = layer.getLocalNodes();
+
+    vector<Node> actualNodes = actualValueVector.getElementVector();
+
+
+    ///////////////////////////////////////////////////////////////////
+
+    EXPECT_EQ(expectedNodes, actualNodes);
+
+}
+
+TEST(Layer_Helper_Test, Activate_Nodes_With_Relu_Negative_Numbers) {
+
+    Layer_Helper layerHelper;
+
+    Layer layer(3);
+
+    int nodeCount = 3;
+    Perception_Element_Vector<Node> nodeVector(nodeCount);
+
+    vector <Node> expectedNodes = {Node(-3), Node(-3), Node(-3) };
+
+    nodeVector.setElementVector(expectedNodes);
+
+    layer.setLocalNodes(nodeVector);
+
+    layerHelper.Activate_Nodes_With_ReLU(layer);
+
+    float expectedValue = 0;
+
+     Perception_Element_Vector<Node> actualValueVector = layer.getLocalNodes();
+
+    vector<Node> actualNodes = actualValueVector.getElementVector();
+
+
+    ///////////////////////////////////////////////////////////////////
+
+    EXPECT_EQ(expectedNodes, actualNodes);
+
+}

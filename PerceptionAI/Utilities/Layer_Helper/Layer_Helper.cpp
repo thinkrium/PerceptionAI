@@ -24,11 +24,14 @@ namespace Perception {
                 return layer.getOutputNodes();
             }
 
-            void Layer_Helper::Activate_Node_With_ReLU(Node &node) {
+            Node Layer_Helper::Activate_Node_With_ReLU(Node node) {
                 try {
                     if(!node.isValueIsSet()) {throw runtime_error(Perception_Enumerations::errorMessages::Object_Exists_But_No_Value_Set);}
                     if (node.getValue() <= 0) {
-                        node.setValue(0);
+                        node.setActivatedValue(0);
+                    }
+                    else {
+                        node.setActivatedValue(node.getValue());
                     }
                 }
                 catch (exception e) {
@@ -36,6 +39,7 @@ namespace Perception {
                     node.addErrorMessage(e.what());
                 }
 
+                return node;
             }
 
             /// <summary>
@@ -72,7 +76,7 @@ namespace Perception {
 
             }
 
-            void Layer_Helper::Activate_Node_With_Softmax(Node& node, double layersExponentialSum) {
+            Node Layer_Helper::Activate_Node_With_Softmax(Node node, double layersExponentialSum) {
                 try {
                     if(!node.isValueIsSet()) {throw runtime_error(Perception_Enumerations::errorMessages::Object_Exists_But_No_Value_Set);}
                     node.setActivatedValue(
@@ -84,6 +88,7 @@ namespace Perception {
                     node.addErrorMessage(e.what());
                 }
 
+                return node;
             }
 
             void Layer_Helper::Calculate_Loss_With_Categorical_Cross_Entropy() {
@@ -127,7 +132,7 @@ namespace Perception {
                             this->Activate_Nodes_With_ReLU(layer);
                             break;
                         case Perception_Enumerations::activationMethod::Softmax :
-                            this->Activate_Nodes_With_Softmax(layer);
+                            this->Activate_Nodes_With_Softmax(layer );
                             break;
                         default :
                             throw runtime_error(
@@ -202,15 +207,33 @@ namespace Perception {
                 Layer_Helper::perceptionMaths = perceptionMaths;
             }
 
-            void Layer_Helper::Activate_Nodes_With_Softmax(Layer &layer) {
+            void Layer_Helper::Activate_Nodes_With_Softmax(Layer &layer ) {
+
+                Perception_Element_Vector<Node> nodes = layer.getLocalNodes();
+
+                double layersExponentialSum = this->Sum_The_Layers_Nodes_Exponential_Values(layer);
+
+                for(int i; i < layer.getNodeCountPerLayer(); i++) {
+                    Node currentNode = this->Activate_Node_With_Softmax(
+                            nodes.getElementAt(i), layersExponentialSum);
+                    nodes.setIndividualElement( i, currentNode);
+                }
+
+                layer.setLocalNodes(nodes);
 
             }
 
             void Layer_Helper::Activate_Nodes_With_ReLU(Layer &layer) {
+
+  
+                Perception_Element_Vector<Node> nodes = layer.getLocalNodes();
+
                 for(int i; i < layer.getNodeCountPerLayer(); i++) {
-//                    this->Activate_Node_With_ReLU( );
+                    Node currentNode = this->Activate_Node_With_ReLU( nodes.getElementAt(i));
+                    nodes.setIndividualElement( i, currentNode);
                 }
 
+                layer.setLocalNodes(nodes);
             }
 
             // this function should not happen before the health of the vector is checked
