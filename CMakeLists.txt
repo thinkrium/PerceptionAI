@@ -26,7 +26,10 @@ add_library(PerceptionAI_Library SHARED Perception.cpp
         PerceptionAI/Network_Elements/Statuses/Status.cpp
         PerceptionAI/Network_Elements/Statuses/Status.h
         PerceptionAI/Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.cpp
-        PerceptionAI/Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.h)
+        PerceptionAI/Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.h
+        PerceptionAI/Network_Elements/Results/Results.cpp
+        PerceptionAI/Network_Elements/Results/Results.h
+        PerceptionAI/Utilities/GUID/GUID.h)
 
 add_executable(PerceptionAI_EXE  Perception.cpp
         PerceptionAI/Network_Elements/Perception_Elements/Individual/Perception_Element.cpp
@@ -52,7 +55,10 @@ add_executable(PerceptionAI_EXE  Perception.cpp
         PerceptionAI/Network_Elements/Statuses/Status.cpp
         PerceptionAI/Network_Elements/Statuses/Status.h
         PerceptionAI/Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.cpp
-        PerceptionAI/Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.h)
+        PerceptionAI/Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.h
+        PerceptionAI/Network_Elements/Results/Results.cpp
+        PerceptionAI/Network_Elements/Results/Results.h
+        PerceptionAI/Utilities/GUID/GUID.h)
 
 
 add_subdirectory(PerceptionAI_Tests)

@@ -49,10 +49,10 @@ namespace Perception {
                 void Activate_Nodes_With_Softmax(Layer &layer);
                 Node Activate_Node_With_Softmax(Node node, double layersExponentialSum);
                 void Calculate_Loss_With_Categorical_Cross_Entropy();
-                void Calculate_Derivative_Of_ReLu();
+                Node Calculate_Nodes_Derivative_Of_ReLu(Node node);
                 void  Calculate_Derivative_Of_Softmax();
-                void Calculate_Categorical_Cross_Entropy_Derivative();
-                void  Calculate_Cross_Entropy_With_Softmax_Derivative();
+                Node Calculate_Categorical_Cross_Entropy_Derivative_of_Node(Node node);
+                Node Calculate_Cross_Entropy_With_Softmax_Derivative_Of_Node(Node node);
 
             };
 

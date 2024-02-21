@@ -38,7 +38,17 @@ namespace Perception {
         private:
             float value;
             bool valueIsSet;
+            string UUID;
+            bool UUID_is_set;
+        public:
+            bool isUuidIsSet() const;
 
+            void setUuidIsSet(bool uuidIsSet);
+
+        public:
+            const string &getUuid() const;
+
+            void setUuid(const string &uuid);
         };
     }
     } // Perception

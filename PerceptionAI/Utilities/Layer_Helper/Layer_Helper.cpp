@@ -95,19 +95,57 @@ namespace Perception {
 
             }
 
-            void Layer_Helper::Calculate_Derivative_Of_ReLu() {
+            Node Layer_Helper::Calculate_Nodes_Derivative_Of_ReLu(Node node) {
 
+                try {
+                    if (!node.checkIsActivatedValueSet() ) throw runtime_error(Perception_Enumerations::errorMessages::Object_Exists_But_No_Derived_Value_Set);
+                    node.setDerivedValue(  (node.getActivatedValue() > 0) ? 1 : 0 );
+                }
+                catch (exception e) {
+                    node.setHealthStatus(Perception_Enumerations::healthStatus::error);
+                    node.addErrorMessage(e.what());
+                }
+
+                return node;
             }
 
+            //TODO: figure out what you want to do here
             void Layer_Helper::Calculate_Derivative_Of_Softmax() {
 
+//                float derived_activation = 0;
+//                float numerator_summation = 0;
+//                float denominator_summation = 0;
+//
+//                let target_index = results.Get_Index_Of_One_Hot_Encoded_Target_Set_To_True();
+//
+//                // node output target * (for all node output except target sumed) / all node outputs summed
+//                layer.Get_Entire_Node_List().forEach((node, node_index) => {
+//                        if(node_index != target_index) {
+//                            numerator_summation += node.Get_Value();
+//                        }
+//                        denominator_summation += node.Get_Value();
+//                });
+//
+//                derived_activation = node.Get_Value() * numerator_summation / denominator_summation;
+//
+//                node.Set_Derived_Activation_Value(derived_activation);
+
             }
 
-            void Layer_Helper::Calculate_Categorical_Cross_Entropy_Derivative() {
+            //TODO: figure out what you want to do here
+            Node Layer_Helper::Calculate_Categorical_Cross_Entropy_Derivative_of_Node(Node node) {
 
+//                float activated_value = node.getActivatedValue();
+//                float loss_derivative =  1 / activated_value;
+//                results.Add_Loss_Derivative_To_Loss_Derivatives(loss_derivative);
             }
 
-            void Layer_Helper::Calculate_Cross_Entropy_With_Softmax_Derivative() {
+            Node Layer_Helper::Calculate_Cross_Entropy_With_Softmax_Derivative_Of_Node(Node node) {
+//                let correct_target_index = results.Get_Index_Of_One_Hot_Encoded_Target_Set_To_True();
+//                // does this need to be based off of activatived value or dot product
+//                let derived_activation_value = (node_index == correct_target_index) ? node.Get_Activated_Value() - 1 : node.Get_Activated_Value();
+//                node.Set_Derived_Activation_Value(derived_activation_value);
+
 
             }
 

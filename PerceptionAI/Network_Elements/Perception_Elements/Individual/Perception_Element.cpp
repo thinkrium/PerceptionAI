@@ -4,6 +4,9 @@
 
 #include <exception>
 #include "Perception_Element.h"
+#include "../../../Utilities/GUID/GUID.h"
+
+using namespace Perception::Network::Utilities::GUID;
 
 namespace Perception {
     namespace Network {
@@ -19,6 +22,7 @@ namespace Perception {
              */
             Perception_Element::Perception_Element() {
 
+                this->setUuid(GUID::generate_GUID());
                 float randomValue = (float) rand() / ((float) RAND_MAX + 1) * 2 - 1;
                 this->setValue(randomValue);
                 this->setHealthStatus(Perception_Enumerations::healthStatus::ok);
@@ -69,6 +73,23 @@ namespace Perception {
                     )
                     return true;
                 return false;
+            }
+
+            const string &Perception_Element::getUuid() const {
+                return UUID;
+            }
+
+            void Perception_Element::setUuid(const string &uuid) {
+                UUID = uuid;
+                this->setUuidIsSet(true);
+            }
+
+            bool Perception_Element::isUuidIsSet() const {
+                return UUID_is_set;
+            }
+
+            void Perception_Element::setUuidIsSet(bool uuidIsSet) {
+                UUID_is_set = uuidIsSet;
             }
         }
     } // Perception

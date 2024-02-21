@@ -23,6 +23,9 @@ namespace Perception {
                       struct errorMessages {
                           inline static string General_Error = "There is a General error";
                           inline static string Object_Exists_But_No_Value_Set = "The object exists but no value is set";
+                          inline static string Object_Exists_But_No_Activated_Value_Set = "The object exists but no activated value is set";
+                          inline static string Object_Exists_But_No_Derived_Value_Set = "The object exists but no derived value is set";
+                          inline static string Object_Exists_But_No_Loss_Value_Set = "The object exists but no loss value is set";
                           inline static string Layer_Helper_Attempted_Activation_But_Failed = "Layer Helper Attempted Activation But Failed";
                       };
                 };
