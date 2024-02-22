@@ -2,7 +2,7 @@
 // Created by thome on 2/21/2024.
 //
 
-#include "Results.h"
+#include "Result.h"
 
 namespace Perception {
     namespace Network {
@@ -64,6 +64,10 @@ namespace Perception {
 
                 void Result::setConfidenceInPrediction(float confidenceInPrediction) {
                     Confidence_In_Prediction = confidenceInPrediction;
+                }
+
+                int Result::getIndexOfOneHotEncodedTargetSetToTrue() {
+                    return 0;
                 }
             } // Perception
 

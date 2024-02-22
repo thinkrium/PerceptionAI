@@ -57,6 +57,8 @@ namespace Perception {
                    void
                    setOneHotEncodedTargets(const Perception_Element_Vector <Perception_Element> &oneHotEncodedTargets);
 
+                   int getIndexOfOneHotEncodedTargetSetToTrue();
+
                    int getOneHotEncodedTargetsCount() const;
 
                    void setOneHotEncodedTargetsCount(int oneHotEncodedTargetsCount);

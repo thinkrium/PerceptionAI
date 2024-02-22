@@ -110,26 +110,33 @@ namespace Perception {
             }
 
             //TODO: figure out what you want to do here
-            void Layer_Helper::Calculate_Derivative_Of_Softmax() {
+            Node Layer_Helper::Calculate_Derivative_Of_Softmax(Node node, Layer layer, Result result) {
 
-//                float derived_activation = 0;
-//                float numerator_summation = 0;
-//                float denominator_summation = 0;
-//
-//                let target_index = results.Get_Index_Of_One_Hot_Encoded_Target_Set_To_True();
-//
-//                // node output target * (for all node output except target sumed) / all node outputs summed
-//                layer.Get_Entire_Node_List().forEach((node, node_index) => {
-//                        if(node_index != target_index) {
-//                            numerator_summation += node.Get_Value();
-//                        }
-//                        denominator_summation += node.Get_Value();
-//                });
-//
-//                derived_activation = node.Get_Value() * numerator_summation / denominator_summation;
-//
-//                node.Set_Derived_Activation_Value(derived_activation);
+                float derived_activation = 0;
+                float numerator_summation = 0;
+                float denominator_summation = 0;
 
+                int target_index = result.getIndexOfOneHotEncodedTargetSetToTrue();
+
+                // node output target * (for all node output except target sumed) / all node outputs summed
+
+                Perception_Element_Vector<Node> elementVector = layer.getLocalNodes();
+
+                int nodeIndex = 0;
+
+                for (const auto &item: elementVector.getElementVector()) {
+                    if (nodeIndex != target_index) {
+
+                        numerator_summation += ((Node) item).getValue();
+                    }
+                    denominator_summation += ((Node) item).getValue();
+                }
+
+                derived_activation = node.getValue() * numerator_summation / denominator_summation;
+
+                node.setDerivedValue(derived_activation);
+
+                return node;
             }
 
             //TODO: figure out what you want to do here

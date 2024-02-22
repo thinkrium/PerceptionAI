@@ -8,11 +8,13 @@
 #include "../../Network_Elements/Layers/Layer.h"
 #include "../Enumerations/Perception_Enumerations.h"
 #include "../../Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.h"
+#include "../../Network_Elements/Results/Result.h"
 
 
 using namespace Perception::Layers;
 using namespace Perception::Network::Utilities::Enumerations;
 using namespace Perception::Network::Elements::Vectors;
+using namespace Perception::Network::Elements::Results;
 
 namespace Perception {
     namespace Network {
@@ -50,7 +52,7 @@ namespace Perception {
                 Node Activate_Node_With_Softmax(Node node, double layersExponentialSum);
                 void Calculate_Loss_With_Categorical_Cross_Entropy();
                 Node Calculate_Nodes_Derivative_Of_ReLu(Node node);
-                void  Calculate_Derivative_Of_Softmax();
+                Node Calculate_Derivative_Of_Softmax(Node node, Layer layer, Result result);
                 Node Calculate_Categorical_Cross_Entropy_Derivative_of_Node(Node node);
                 Node Calculate_Cross_Entropy_With_Softmax_Derivative_Of_Node(Node node);
 

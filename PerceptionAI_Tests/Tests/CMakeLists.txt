@@ -34,8 +34,8 @@ add_executable(PerceptionAI_Tests
         #############################
         Perception_Maths_Test.cpp
         Layer_Helper_Test.cpp
-        ../../PerceptionAI/Network_Elements/Results/Results.cpp
-        ../../PerceptionAI/Network_Elements/Results/Results.h
+        ../../PerceptionAI/Network_Elements/Results/Result.cpp
+        ../../PerceptionAI/Network_Elements/Results/Result.h
         ../../PerceptionAI/Utilities/GUID/GUID.h)
 
 #target_link_libraries(PerceptionAI_Tests PerceptionAI_EXE)
