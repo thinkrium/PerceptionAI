@@ -31,8 +31,7 @@ namespace Perception {
 
             void setValueIsSet(bool valueIsSet);
 
-            bool operator==(const Perception_Element& incomingPerceptionElement) const;
-            
+
             virtual ~Perception_Element();
 
         private:
@@ -49,6 +48,10 @@ namespace Perception {
             const string &getUuid() const;
 
             void setUuid(const string &uuid);
+
+            bool operator==(const Perception_Element &rhs) const;
+
+            bool operator!=(const Perception_Element &rhs) const;
         };
     }
     } // Perception

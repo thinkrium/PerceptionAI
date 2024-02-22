@@ -50,6 +50,16 @@ namespace Perception {
                     Status::errorMessages = errorMessages;
                 }
 
+                bool Status::operator==(const Status &rhs) const {
+                    return healthStatus == rhs.healthStatus &&
+                           errorMessages == rhs.errorMessages &&
+                           healthStatusIsSet == rhs.healthStatusIsSet;
+                }
+
+                bool Status::operator!=(const Status &rhs) const {
+                    return !(rhs == *this);
+                }
+
                 void Status::addErrorMessage(string errorMessage) {
                       this->errorMessages.push_back(errorMessage);
                 }

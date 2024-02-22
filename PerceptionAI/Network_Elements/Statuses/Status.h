@@ -45,6 +45,10 @@ namespace Perception {
 
                     void setHealthStatus(Perception_Enumerations::healthStatus healthStatus);
 
+                    bool operator==(const Status &rhs) const;
+
+                    bool operator!=(const Status &rhs) const;
+
 
                 };
 

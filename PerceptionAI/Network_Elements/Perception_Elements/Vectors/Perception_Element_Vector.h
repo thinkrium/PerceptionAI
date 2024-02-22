@@ -148,6 +148,18 @@ namespace Perception {
 
                         this->setSize(elementVector.size());
                     }
+
+                    bool operator==(const Perception_Element_Vector &rhs) const {
+                        return static_cast<const Status &>(*this) == static_cast<const Status &>(rhs) &&
+                               element_vector == rhs.element_vector &&
+                               size == rhs.size &&
+                               sizeIsSet == rhs.sizeIsSet &&
+                               elementVectorIsSet == rhs.elementVectorIsSet;
+                    }
+
+                    bool operator!=(const Perception_Element_Vector &rhs) const {
+                        return !(rhs == *this);
+                    }
                 };
 
             } // Perception

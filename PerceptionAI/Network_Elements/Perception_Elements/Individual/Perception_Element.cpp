@@ -64,15 +64,16 @@ namespace Perception {
                 Perception_Element::valueIsSet = valueIsSet;
             }
 
-            bool Perception_Element::operator == (const Perception_Element& incomingPerceptionElement) const
-            {
-                if (
-                        valueIsSet == incomingPerceptionElement.valueIsSet
-                        &&
-                        value == incomingPerceptionElement.value
-                    )
-                    return true;
-                return false;
+            bool Perception_Element::operator==(const Perception_Element &rhs) const {
+                return static_cast<const Status &>(*this) == static_cast<const Status &>(rhs) &&
+                       value == rhs.value &&
+                       valueIsSet == rhs.valueIsSet &&
+                       UUID == rhs.UUID &&
+                       UUID_is_set == rhs.UUID_is_set;
+            }
+
+            bool Perception_Element::operator!=(const Perception_Element &rhs) const {
+                return !(rhs == *this);
             }
 
             const string &Perception_Element::getUuid() const {

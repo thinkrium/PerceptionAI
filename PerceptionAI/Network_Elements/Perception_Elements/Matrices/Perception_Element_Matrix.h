@@ -44,6 +44,20 @@ namespace Perception {
                         Perception_Element_Matrix::matrixIsSet = matrixIsSet;
                     }
 
+                    bool operator==(const Perception_Element_Matrix &rhs) const {
+                        return static_cast<const Status &>(*this) == static_cast<const Status &>(rhs) &&
+                               columnSizeIsSet == rhs.columnSizeIsSet &&
+                               element_matrix == rhs.element_matrix &&
+                               rowSize == rhs.rowSize &&
+                               columnSize == rhs.columnSize &&
+                               rowSizeIsSet == rhs.rowSizeIsSet &&
+                               matrixIsSet == rhs.matrixIsSet;
+                    }
+
+                    bool operator!=(const Perception_Element_Matrix &rhs) const {
+                        return !(rhs == *this);
+                    }
+
                     vector<objectName> getElementRowAt(int index) {
                         try {
 
