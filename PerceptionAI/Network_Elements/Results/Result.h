@@ -48,6 +48,7 @@ namespace Perception {
                     * list of loss derivatives
                     * @type {number[]}
                     */
+                   Perception_Element_Vector <Perception_Element> Loss_Derivatives;
 
                public:
                    ~Result() override;
@@ -56,6 +57,12 @@ namespace Perception {
 
                    void
                    setOneHotEncodedTargets(const Perception_Element_Vector <Perception_Element> &oneHotEncodedTargets);
+
+                   void addLossDerivativeToLossDerivatives(Perception_Element lossDerivative) ;
+
+                   const Perception_Element_Vector <Perception_Element> &getLossDerivatives() const;
+
+                   void setLossDerivatives(const Perception_Element_Vector <Perception_Element> &lossDerivatives);
 
                    int getIndexOfOneHotEncodedTargetSetToTrue();
 

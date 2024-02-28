@@ -140,20 +140,22 @@ namespace Perception {
             }
 
             //TODO: figure out what you want to do here
-            Node Layer_Helper::Calculate_Categorical_Cross_Entropy_Derivative_of_Node(Node node) {
+            Node Layer_Helper::Calculate_Categorical_Cross_Entropy_Derivative_of_Node(Node node, Result result) {
 
-//                float activated_value = node.getActivatedValue();
-//                float loss_derivative =  1 / activated_value;
-//                results.Add_Loss_Derivative_To_Loss_Derivatives(loss_derivative);
+                float activated_value = node.getActivatedValue();
+                float loss_derivative_value =  1 / activated_value;
+                Perception_Element lossDerivative(loss_derivative_value);
+                result.addLossDerivativeToLossDerivatives(lossDerivative);
             }
 
-            Node Layer_Helper::Calculate_Cross_Entropy_With_Softmax_Derivative_Of_Node(Node node) {
-//                let correct_target_index = results.Get_Index_Of_One_Hot_Encoded_Target_Set_To_True();
-//                // does this need to be based off of activatived value or dot product
-//                let derived_activation_value = (node_index == correct_target_index) ? node.Get_Activated_Value() - 1 : node.Get_Activated_Value();
-//                node.Set_Derived_Activation_Value(derived_activation_value);
+            Node Layer_Helper::Calculate_Cross_Entropy_With_Softmax_Derivative_Of_Node(Node node, int nodeIndex,
+                                                                                       Result result) {
+                int correct_target_index = result.getIndexOfOneHotEncodedTargetSetToTrue();
+                // does this need to be based off of activatived value or dot product
+                float derived_activation_value = (nodeIndex == correct_target_index) ? node.getActivatedValue() - 1 : node.getActivatedValue();
+                node.setDerivedValue(derived_activation_value);
 
-
+                return node;
             }
 
             Layer_Helper::Layer_Helper() {

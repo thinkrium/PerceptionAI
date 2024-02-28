@@ -69,6 +69,19 @@ namespace Perception {
                 int Result::getIndexOfOneHotEncodedTargetSetToTrue() {
                     return 0;
                 }
+
+                const Perception_Element_Vector<Perception_Element> &Result::getLossDerivatives() const {
+                    return Loss_Derivatives;
+                }
+
+                void Result::setLossDerivatives(const Perception_Element_Vector<Perception_Element> &lossDerivatives) {
+                    Loss_Derivatives = lossDerivatives;
+                }
+
+                void Result::addLossDerivativeToLossDerivatives(Perception_Element lossDerivative) {
+                    this->Loss_Derivatives.getElementVector().push_back(lossDerivative);
+
+                }
             } // Perception
 
         } // Network
