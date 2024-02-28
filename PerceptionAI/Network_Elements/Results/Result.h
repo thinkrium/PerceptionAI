@@ -26,17 +26,44 @@ namespace Perception {
                     */
                    Perception_Element_Vector <Perception_Element> One_Hot_Encoded_Targets;
 
+                   bool oneHotEncodedTargetsAreSet;
+
                    /**
                     * The size of the one hot encoded targets array
                     * @type {number }
                     */
                    int One_Hot_Encoded_Targets_Count;
 
+                   bool oneHotEncodedTargetsCountIsSet;
+
                    /**
                     * all the lasses on the output added up
                     * @type {number }
                     */
                    float Total_Loss;
+               public:
+                   bool isOneHotEncodedTargetsAreSet() const;
+
+                   void setOneHotEncodedTargetsAreSet(bool oneHotEncodedTargetsAreSet);
+
+                   bool isOneHotEncodedTargetsCountIsSet() const;
+
+                   void setOneHotEncodedTargetsCountIsSet(bool oneHotEncodedTargetsCountIsSet);
+
+                   bool isTotalLossesAreSet() const;
+
+                   void setTotalLossesAreSet(bool totalLossesAreSet);
+
+                   bool isLossesAreSet() const;
+
+                   void setLossesAreSet(bool lossesAreSet);
+
+                   bool isLosseDerivativesAreSet() const;
+
+                   void setLosseDerivativesAreSet(bool losseDerivativesAreSet);
+
+               private:
+                   bool totalLossesAreSet;
 
                    /**
                     * losses per node as array
@@ -44,11 +71,15 @@ namespace Perception {
                     */
                    Perception_Element_Vector <Perception_Element> Losses;
 
+                   bool lossesAreSet;
+
                    /**
                     * list of loss derivatives
                     * @type {number[]}
                     */
                    Perception_Element_Vector <Perception_Element> Loss_Derivatives;
+
+                   bool losseDerivativesAreSet;
 
                public:
                    ~Result() override;

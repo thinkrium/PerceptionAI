@@ -82,6 +82,46 @@ namespace Perception {
                     this->Loss_Derivatives.getElementVector().push_back(lossDerivative);
 
                 }
+
+                bool Result::isOneHotEncodedTargetsAreSet() const {
+                    return oneHotEncodedTargetsAreSet;
+                }
+
+                void Result::setOneHotEncodedTargetsAreSet(bool oneHotEncodedTargetsAreSet) {
+                    Result::oneHotEncodedTargetsAreSet = oneHotEncodedTargetsAreSet;
+                }
+
+                bool Result::isOneHotEncodedTargetsCountIsSet() const {
+                    return oneHotEncodedTargetsCountIsSet;
+                }
+
+                void Result::setOneHotEncodedTargetsCountIsSet(bool oneHotEncodedTargetsCountIsSet) {
+                    Result::oneHotEncodedTargetsCountIsSet = oneHotEncodedTargetsCountIsSet;
+                }
+
+                bool Result::isTotalLossesAreSet() const {
+                    return totalLossesAreSet;
+                }
+
+                void Result::setTotalLossesAreSet(bool totalLossesAreSet) {
+                    Result::totalLossesAreSet = totalLossesAreSet;
+                }
+
+                bool Result::isLossesAreSet() const {
+                    return lossesAreSet;
+                }
+
+                void Result::setLossesAreSet(bool lossesAreSet) {
+                    Result::lossesAreSet = lossesAreSet;
+                }
+
+                bool Result::isLosseDerivativesAreSet() const {
+                    return losseDerivativesAreSet;
+                }
+
+                void Result::setLosseDerivativesAreSet(bool losseDerivativesAreSet) {
+                    Result::losseDerivativesAreSet = losseDerivativesAreSet;
+                }
             } // Perception
 
         } // Network
