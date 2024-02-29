@@ -25,49 +25,129 @@ namespace Perception {
                     return !(rhs == *this);
                 }
 
-                const Perception_Element_Vector<Perception_Element> &Result::getOneHotEncodedTargets() const {
+                Perception_Element_Vector<Perception_Element> & Result::getOneHotEncodedTargets() {
+
+                    try {
+
+                        if(!this->isOneHotEncodedTargetsAreSet()) { throw runtime_error(Perception_Enumerations::errorMessages::Object_Exists_But_No_Derived_Value_Set); }
+                        return One_Hot_Encoded_Targets;
+                    }
+                    catch (exception e) {
+                        this->setHealthStatus(Perception_Enumerations::healthStatus::error);
+                    }
+
                     return One_Hot_Encoded_Targets;
                 }
 
                 void Result::setOneHotEncodedTargets(
                         const Perception_Element_Vector<Perception_Element> &oneHotEncodedTargets) {
                     One_Hot_Encoded_Targets = oneHotEncodedTargets;
+
+                    this->setOneHotEncodedTargetsAreSet(true);
+
                 }
 
-                int Result::getOneHotEncodedTargetsCount() const {
+                int Result::getOneHotEncodedTargetsCount() {
+                    try {
+
+                        if(!this->isOneHotEncodedTargetsCountIsSet()) { throw runtime_error(Perception_Enumerations::errorMessages::Object_Exists_But_No_Derived_Value_Set); }
+                        return One_Hot_Encoded_Targets_Count;
+                    }
+                    catch (exception e) {
+                        this->setHealthStatus(Perception_Enumerations::healthStatus::error);
+                    }
+
+
                     return One_Hot_Encoded_Targets_Count;
                 }
 
                 void Result::setOneHotEncodedTargetsCount(int oneHotEncodedTargetsCount) {
                     One_Hot_Encoded_Targets_Count = oneHotEncodedTargetsCount;
+                    this->setOneHotEncodedTargetsCountIsSet(true);
                 }
 
-                float Result::getTotalLoss() const {
+                float Result::getTotalLoss() {
+
+                    try {
+
+                        if(!this->isTotalLossesAreSet()) { throw runtime_error(Perception_Enumerations::errorMessages::Object_Exists_But_No_Derived_Value_Set); }
+                        return Total_Loss;
+                    }
+                    catch (exception e) {
+                        this->setHealthStatus(Perception_Enumerations::healthStatus::error);
+                    }
+
+
                     return Total_Loss;
                 }
 
                 void Result::setTotalLoss(float totalLoss) {
+
                     Total_Loss = totalLoss;
+                    this->setTotalLossesAreSet(true);
                 }
 
-                const Perception_Element_Vector<Perception_Element> &Result::getLosses() const {
+                const Perception_Element_Vector<Perception_Element> &Result::getLosses() {
+                    try {
+
+                        if(!this->isLossesAreSet()) { throw runtime_error(Perception_Enumerations::errorMessages::Object_Exists_But_No_Derived_Value_Set); }
+                        return Losses;
+                    }
+                    catch (exception e) {
+                        this->setHealthStatus(Perception_Enumerations::healthStatus::error);
+                    }
+
+
                     return Losses;
                 }
 
                 void Result::setLosses(const Perception_Element_Vector<Perception_Element> &losses) {
                     Losses = losses;
+                    this->setLossesAreSet(true);
                 }
 
-                float Result::getConfidenceInPrediction() const {
+                float Result::getConfidenceInPrediction() {
+                    try {
+
+                        if(!this->confidenceInPredictionIsSet()) { throw runtime_error(Perception_Enumerations::errorMessages::Object_Exists_But_No_Derived_Value_Set); }
+                        return Confidence_In_Prediction;
+                    }
+                    catch (exception e) {
+                        this->setHealthStatus(Perception_Enumerations::healthStatus::error);
+                    }
+
+
                     return Confidence_In_Prediction;
                 }
 
                 void Result::setConfidenceInPrediction(float confidenceInPrediction) {
                     Confidence_In_Prediction = confidenceInPrediction;
+                    this->setConfidenceInPredictionIsSet(true);
                 }
 
                 int Result::getIndexOfOneHotEncodedTargetSetToTrue() {
-                    return 0;
+                    try {
+
+                        if(!this->isOneHotEncodedTargetsAreSet()) { throw runtime_error(Perception_Enumerations::errorMessages::Object_Exists_But_No_Derived_Value_Set); }
+
+                        int correctIndex = 0;
+
+                        int iteratingIndex = 0;
+
+                        for(Perception_Element element : this->getOneHotEncodedTargets().getElementVector()) {
+                            if(element.getValue() == 1);
+                            correctIndex = iteratingIndex;
+                            iteratingIndex++;
+                        }
+
+                        return correctIndex;
+                    }
+                    catch (exception e) {
+                        this->setHealthStatus(Perception_Enumerations::healthStatus::error);
+                    }
+
+
+                    return -1;
                 }
 
                 const Perception_Element_Vector<Perception_Element> &Result::getLossDerivatives() const {
@@ -121,6 +201,16 @@ namespace Perception {
 
                 void Result::setLosseDerivativesAreSet(bool losseDerivativesAreSet) {
                     Result::losseDerivativesAreSet = losseDerivativesAreSet;
+                }
+
+                Result::Result() {}
+
+                bool Result::isConfidenceInPredictionIsSet() const {
+                    return confidenceInPredictionIsSet;
+                }
+
+                void Result::setConfidenceInPredictionIsSet(bool confidenceInPredictionIsSet) {
+                    Result::confidenceInPredictionIsSet = confidenceInPredictionIsSet;
                 }
             } // Perception
 

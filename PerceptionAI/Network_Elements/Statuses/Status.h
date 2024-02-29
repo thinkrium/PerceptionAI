@@ -27,7 +27,6 @@ namespace Perception {
 
                     void setErrorMessages(const vector<string> &errorMessages);
 
-                public:
 
                     void addErrorMessage(string errorMessage);
 

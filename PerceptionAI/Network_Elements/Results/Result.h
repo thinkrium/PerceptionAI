@@ -42,6 +42,8 @@ namespace Perception {
                     */
                    float Total_Loss;
                public:
+                   Result();
+
                    bool isOneHotEncodedTargetsAreSet() const;
 
                    void setOneHotEncodedTargetsAreSet(bool oneHotEncodedTargetsAreSet);
@@ -84,7 +86,7 @@ namespace Perception {
                public:
                    ~Result() override;
 
-                   const Perception_Element_Vector <Perception_Element> &getOneHotEncodedTargets() const;
+                   Perception_Element_Vector<Perception_Element> & getOneHotEncodedTargets();
 
                    void
                    setOneHotEncodedTargets(const Perception_Element_Vector <Perception_Element> &oneHotEncodedTargets);
@@ -97,19 +99,19 @@ namespace Perception {
 
                    int getIndexOfOneHotEncodedTargetSetToTrue();
 
-                   int getOneHotEncodedTargetsCount() const;
+                   int getOneHotEncodedTargetsCount();
 
                    void setOneHotEncodedTargetsCount(int oneHotEncodedTargetsCount);
 
-                   float getTotalLoss() const;
+                   float getTotalLoss();
 
                    void setTotalLoss(float totalLoss);
 
-                   const Perception_Element_Vector <Perception_Element> &getLosses() const;
+                   const Perception_Element_Vector <Perception_Element> &getLosses();
 
                    void setLosses(const Perception_Element_Vector <Perception_Element> &losses);
 
-                   float getConfidenceInPrediction() const;
+                   float getConfidenceInPrediction();
 
                    void setConfidenceInPrediction(float confidenceInPrediction);
 
@@ -123,6 +125,14 @@ namespace Perception {
                     * as it relates to the expected result
                     */
                    float Confidence_In_Prediction;
+               public:
+                   bool isConfidenceInPredictionIsSet() const;
+
+                   void setConfidenceInPredictionIsSet(bool confidenceInPredictionIsSet);
+
+               private:
+
+                   bool confidenceInPredictionIsSet;
                };
            }
         } // Perception
