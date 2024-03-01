@@ -93,7 +93,7 @@ namespace Perception {
 
                    void addLossDerivativeToLossDerivatives(Perception_Element lossDerivative) ;
 
-                   const Perception_Element_Vector <Perception_Element> &getLossDerivatives() const;
+                   const Perception_Element_Vector <Perception_Element> &getLossDerivatives();
 
                    void setLossDerivatives(const Perception_Element_Vector <Perception_Element> &lossDerivatives);
 

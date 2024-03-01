@@ -109,7 +109,7 @@ namespace Perception {
                 float Result::getConfidenceInPrediction() {
                     try {
 
-                        if(!this->confidenceInPredictionIsSet()) { throw runtime_error(Perception_Enumerations::errorMessages::Object_Exists_But_No_Derived_Value_Set); }
+                        if(!this->isConfidenceInPredictionIsSet()) { throw runtime_error(Perception_Enumerations::errorMessages::Object_Exists_But_No_Derived_Value_Set); }
                         return Confidence_In_Prediction;
                     }
                     catch (exception e) {
@@ -150,16 +150,34 @@ namespace Perception {
                     return -1;
                 }
 
-                const Perception_Element_Vector<Perception_Element> &Result::getLossDerivatives() const {
+                const Perception_Element_Vector<Perception_Element> &Result::getLossDerivatives() {
+                    try {
+
+                        if(!this->isLosseDerivativesAreSet()) { throw runtime_error(Perception_Enumerations::errorMessages::Object_Exists_But_No_Derived_Value_Set); }
+                        return Loss_Derivatives;
+                    }
+                    catch (exception e) {
+                        this->setHealthStatus(Perception_Enumerations::healthStatus::error);
+                    }
+
+
                     return Loss_Derivatives;
                 }
 
                 void Result::setLossDerivatives(const Perception_Element_Vector<Perception_Element> &lossDerivatives) {
                     Loss_Derivatives = lossDerivatives;
+                    this->setLosseDerivativesAreSet(true);
                 }
 
                 void Result::addLossDerivativeToLossDerivatives(Perception_Element lossDerivative) {
-                    this->Loss_Derivatives.getElementVector().push_back(lossDerivative);
+                    try {
+
+                        if(!this->isLosseDerivativesAreSet()) { throw runtime_error(Perception_Enumerations::errorMessages::Object_Exists_But_No_Derived_Value_Set); }
+                        this->Loss_Derivatives.getElementVector().push_back(lossDerivative);
+                    }
+                    catch (exception e) {
+                        this->setHealthStatus(Perception_Enumerations::healthStatus::error);
+                    }
 
                 }
 
