@@ -117,7 +117,7 @@ namespace Perception {
             this->setInputNodesAreSet(true);
         }
 
-        const Perception_Element_Vector<Node> & Layer::getLocalNodes() {
+        Perception_Element_Vector<Node> & Layer::getLocalNodes() {
             try {
 
                 if(!this->isLocalNodesAreSet()) { throw runtime_error("nope"); }

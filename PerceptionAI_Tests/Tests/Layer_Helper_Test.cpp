@@ -229,3 +229,72 @@ TEST(Layer_Helper_Test, Activate_Nodes_With_Relu_Negative_Numbers) {
     EXPECT_EQ(expectedNodes, actualNodes);
 
 }
+
+TEST(Layer_Helper_Test, Sum_The_Layers_Nodes_Exponential_Values) {
+
+    Layer layer(3);
+    Perception_Element_Vector<Node> localNodes(3);
+
+    Node one(1);
+    localNodes.setIndividualElement(0, one);
+    Node two(2);
+    localNodes.setIndividualElement(1, two);
+    Node three(3);
+    localNodes.setIndividualElement(2, three);
+
+
+
+    layer.setLocalNodes(localNodes);
+
+
+    Layer_Helper layerHelper;
+
+    // this answer differed in my calculator by 0.00000xxxxxxx
+    // which i think was a floating point precision problem
+    // so copied the right side of the decimal from the calculator
+    // and pasted it here in the expected_exponential_sum
+    // my calculator said `30.1928742232`
+
+    double  expected_exponential_sum = 30.192874908447266;
+
+    double  actual_exponential_sum = layerHelper.Sum_The_Layers_Nodes_Exponential_Values(layer);
+
+    EXPECT_EQ(expected_exponential_sum,actual_exponential_sum);
+}
+
+TEST(Layer_Helper_Test, Activate_Node_With_Softmax_Positive_Numbers) {
+
+    Node node(2);
+
+    double exponential_sum = 40;
+
+    Layer_Helper layerHelper;
+
+    float expectedActivationValue = 0.184726402473;
+
+    Node actualNode = layerHelper.Activate_Node_With_Softmax(node, exponential_sum);
+    EXPECT_EQ(expectedActivationValue, actualNode.getActivatedValue());
+
+}
+
+TEST(Layer_Helper_Test, Activate_Node_With_Softmax_Negative_Numbers) {
+
+    Node node(-3.2);
+
+    double exponential_sum = 40;
+
+    Layer_Helper layerHelper;
+
+    // this answer differed in my calculator by 0.00000xxxxxxx
+    // which i think was a floating point precision problem
+    // so copied the right side of the decimal from the calculator
+    // and pasted it here in the expectedActivationValue
+    // my calculator said `0.00101905514`
+
+
+    float expectedActivationValue = 0.00101905502;
+
+    Node actualNode = layerHelper.Activate_Node_With_Softmax(node, exponential_sum);
+    EXPECT_EQ(expectedActivationValue, actualNode.getActivatedValue());
+
+}

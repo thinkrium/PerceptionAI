@@ -91,8 +91,40 @@ namespace Perception {
                 return node;
             }
 
-            void Layer_Helper::Calculate_Loss_With_Categorical_Cross_Entropy() {
+            void Layer_Helper::Calculate_Loss_With_Categorical_Cross_Entropy(Layer &layer, Result result) {
+                try {
 
+
+                    Perception_Element_Vector<Perception_Element> losses;
+
+                    int target_index = result.getIndexOfOneHotEncodedTargetSetToTrue();
+
+                    float confidence_in_prediction = layer.getLocalNodes().getElementVector().at(target_index).getActivatedValue();
+
+                    int iteratingIndex = 0;
+
+                    for(Perception_Element element : layer.getLocalNodes().getElementVector()) {                      //`//forEach((node, index ) => {
+                            if (iteratingIndex == target_index) {
+
+                                //TODO : need to add clipping to math library
+                                float loss = 0;// Math.log(Maths.Clip_Value(confidence_in_prediction)) * -1;
+                                losses.add_element_to_end_of_vector(Perception_Element (loss));
+                                result.setTotalLoss(  loss );
+                            }
+                            else {
+                                losses.add_element_to_end_of_vector(Perception_Element(0));
+                            }
+                    };
+
+
+                    result.setConfidenceInPrediction(confidence_in_prediction);
+                    result.setLosses(losses);
+
+                }
+                catch (exception e) {
+                    layer.setHealthStatus(Perception_Enumerations::healthStatus::error);
+                    result.setHealthStatus(Perception_Enumerations::healthStatus::error);
+                }
             }
 
             Node Layer_Helper::Calculate_Nodes_Derivative_Of_ReLu(Node node) {

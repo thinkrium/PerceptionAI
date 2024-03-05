@@ -89,6 +89,9 @@ namespace Perception {
 
                     ~Perception_Element_Vector() override {}
 
+                    void add_element_to_end_of_vector(objectType element) {
+                         this->getElementVector().push_back(element);
+                    }
 
                     int getSize()  {
                         try {

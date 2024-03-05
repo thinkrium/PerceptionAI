@@ -98,7 +98,7 @@ namespace Perception {
 
             void setInputNodes(const Perception_Element_Vector<Node> &inputNodes);
 
-            const Perception_Element_Vector<Node> & getLocalNodes();
+            Perception_Element_Vector<Node> & getLocalNodes();
 
             void setLocalNodes(const Perception_Element_Vector<Node> &localNodes);
 
