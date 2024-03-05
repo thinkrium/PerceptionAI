@@ -15,6 +15,28 @@ namespace Perception {
                 Perception_Maths::~Perception_Maths() {
 
                 }
+                /**
+                 * the parameter is sent in and if
+                 *
+                 * it is larger than 1 - 1e-7 than it = 1 - 1e-7
+                 * or if it is smaller than 1e-7 then it equals 1e-7
+                 * ::
+                 * 1e-7 = .0000001;
+                 * 1-1e-7 = .9999999
+                 * @param value
+                 * @returns {number}
+                 * @constructor
+                 */
+                float Perception_Maths::Clip_Value(float value) {
+                    if (value <= 0) {
+                        value = 0.0000001;
+                    }
+                    else if (value >= 1) {
+                        value = .9999999;
+                    }
+
+                    return value;
+                }
 
 
                 vector<vector<float>> Perception_Maths::dotProduct(
@@ -64,6 +86,7 @@ namespace Perception {
 
                      return dotProductResult;
                 }
+
 
             } // Perception
         }

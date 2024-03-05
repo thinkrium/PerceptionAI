@@ -106,8 +106,8 @@ namespace Perception {
                     for(Perception_Element element : layer.getLocalNodes().getElementVector()) {                      //`//forEach((node, index ) => {
                             if (iteratingIndex == target_index) {
 
-                                //TODO : need to add clipping to math library
-                                float loss = 0;// Math.log(Maths.Clip_Value(confidence_in_prediction)) * -1;
+
+                                float loss = log(perceptionMaths.Clip_Value(confidence_in_prediction)) * -1;
                                 losses.add_element_to_end_of_vector(Perception_Element (loss));
                                 result.setTotalLoss(  loss );
                             }

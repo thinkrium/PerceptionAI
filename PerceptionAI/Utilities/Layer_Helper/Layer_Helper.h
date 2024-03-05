@@ -10,6 +10,9 @@
 #include "../../Network_Elements/Perception_Elements/Vectors/Perception_Element_Vector.h"
 #include "../../Network_Elements/Results/Result.h"
 
+#include "cmath"
+
+using namespace std;
 
 using namespace Perception::Layers;
 using namespace Perception::Network::Utilities::Enumerations;

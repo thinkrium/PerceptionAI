@@ -36,6 +36,10 @@ namespace Perception {
 
                     vector<vector<float>>
                     dotProduct(vector<vector<float>> leftMatrix, vector<vector<float>> rightMatrix) noexcept;
+
+
+                    float Clip_Value(float value);
+
                 };
             }
         } // Perception
