@@ -115,6 +115,7 @@ namespace Perception {
 
                    void setConfidenceInPrediction(float confidenceInPrediction);
 
+
                    bool operator==(const Result &rhs) const;
 
                    bool operator!=(const Result &rhs) const;

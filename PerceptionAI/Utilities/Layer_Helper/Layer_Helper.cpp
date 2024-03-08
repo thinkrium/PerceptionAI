@@ -91,28 +91,30 @@ namespace Perception {
                 return node;
             }
 
-            void Layer_Helper::Calculate_Loss_With_Categorical_Cross_Entropy(Layer &layer, Result result) {
+            void Layer_Helper::Calculate_Loss_With_Categorical_Cross_Entropy(Layer &outputLayer, Result &result) {
                 try {
 
 
-                    Perception_Element_Vector<Perception_Element> losses;
+                    Perception_Element_Vector<Perception_Element> losses(outputLayer.getNodeCountPerLayer());
 
                     int target_index = result.getIndexOfOneHotEncodedTargetSetToTrue();
 
-                    float confidence_in_prediction = layer.getLocalNodes().getElementVector().at(target_index).getActivatedValue();
+                    float confidence_in_prediction = outputLayer.getLocalNodes().getElementVector().at(target_index).getActivatedValue();
 
                     int iteratingIndex = 0;
 
-                    for(Perception_Element element : layer.getLocalNodes().getElementVector()) {                      //`//forEach((node, index ) => {
+                    for(Perception_Element element : outputLayer.getLocalNodes().getElementVector()) {                      //`//forEach((node, index ) => {
                             if (iteratingIndex == target_index) {
 
 
                                 float loss = log(perceptionMaths.Clip_Value(confidence_in_prediction)) * -1;
-                                losses.add_element_to_end_of_vector(Perception_Element (loss));
+                                Perception_Element lossElement(loss);
+                                losses.setIndividualElement(iteratingIndex, lossElement);
                                 result.setTotalLoss(  loss );
                             }
                             else {
-                                losses.add_element_to_end_of_vector(Perception_Element(0));
+                                Perception_Element lossElement(0);
+                                losses.setIndividualElement(iteratingIndex, lossElement);
                             }
                     };
 
@@ -122,7 +124,7 @@ namespace Perception {
 
                 }
                 catch (exception e) {
-                    layer.setHealthStatus(Perception_Enumerations::healthStatus::error);
+                    outputLayer.setHealthStatus(Perception_Enumerations::healthStatus::error);
                     result.setHealthStatus(Perception_Enumerations::healthStatus::error);
                 }
             }

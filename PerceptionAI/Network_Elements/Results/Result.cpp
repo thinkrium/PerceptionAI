@@ -34,6 +34,7 @@ namespace Perception {
                     }
                     catch (exception e) {
                         this->setHealthStatus(Perception_Enumerations::healthStatus::error);
+                        this->addErrorMessage(e.what());
                     }
 
                     return One_Hot_Encoded_Targets;
@@ -55,6 +56,7 @@ namespace Perception {
                     }
                     catch (exception e) {
                         this->setHealthStatus(Perception_Enumerations::healthStatus::error);
+                        this->addErrorMessage(e.what());
                     }
 
 
@@ -75,6 +77,7 @@ namespace Perception {
                     }
                     catch (exception e) {
                         this->setHealthStatus(Perception_Enumerations::healthStatus::error);
+                        this->addErrorMessage(e.what());
                     }
 
 
@@ -95,6 +98,7 @@ namespace Perception {
                     }
                     catch (exception e) {
                         this->setHealthStatus(Perception_Enumerations::healthStatus::error);
+                        this->addErrorMessage(e.what());
                     }
 
 
@@ -114,6 +118,7 @@ namespace Perception {
                     }
                     catch (exception e) {
                         this->setHealthStatus(Perception_Enumerations::healthStatus::error);
+                        this->addErrorMessage(e.what());
                     }
 
 
@@ -144,6 +149,7 @@ namespace Perception {
                     }
                     catch (exception e) {
                         this->setHealthStatus(Perception_Enumerations::healthStatus::error);
+                        this->addErrorMessage(e.what());
                     }
 
 
@@ -158,6 +164,7 @@ namespace Perception {
                     }
                     catch (exception e) {
                         this->setHealthStatus(Perception_Enumerations::healthStatus::error);
+                        this->addErrorMessage(e.what());
                     }
 
 
@@ -177,6 +184,7 @@ namespace Perception {
                     }
                     catch (exception e) {
                         this->setHealthStatus(Perception_Enumerations::healthStatus::error);
+                        this->addErrorMessage(e.what());
                     }
 
                 }

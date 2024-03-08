@@ -30,6 +30,7 @@ namespace Perception {
 
             Perception_Element::Perception_Element(float value) : value(value) {
                 this->setValue(value);
+                this->setUuid(GUID::generate_GUID());
                 this->setHealthStatus(Perception_Enumerations::healthStatus::ok);
             }
 
