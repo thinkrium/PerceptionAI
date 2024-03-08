@@ -137,14 +137,26 @@ namespace Perception {
 
                         int correctIndex = 0;
 
+                        int oneHotEncodedTargetsFound = 0;
+
                         int iteratingIndex = 0;
 
                         for(Perception_Element element : this->getOneHotEncodedTargets().getElementVector()) {
-                            if(element.getValue() == 1);
-                            correctIndex = iteratingIndex;
+                            if(element.getValue() == 1) {
+                                correctIndex = iteratingIndex;
+                                oneHotEncodedTargetsFound++;
+                            }
+
                             iteratingIndex++;
+
                         }
 
+                        if(oneHotEncodedTargetsFound == 0) {
+                            throw runtime_error(Perception_Enumerations::errorMessages::Result_Could_Not_Find_One_Hot_Encoded_Target);
+                        }
+                        else if(oneHotEncodedTargetsFound > 1) {
+                            throw runtime_error(Perception_Enumerations::errorMessages::Result_Found_Too_Many_One_Hot_Encoded_Targets);
+                        }
                         return correctIndex;
                     }
                     catch (exception e) {

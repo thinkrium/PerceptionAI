@@ -26,7 +26,9 @@ namespace Perception {
                           inline static string Object_Exists_But_No_Activated_Value_Set = "The object exists but no activated value is set";
                           inline static string Object_Exists_But_No_Derived_Value_Set = "The object exists but no derived value is set";
                           inline static string Object_Exists_But_No_Loss_Value_Set = "The object exists but no loss value is set";
-                          inline static string Layer_Helper_Attempted_Activation_But_Failed = "Layer Helper Attempted Activation But Failed";
+                          inline static string Layer_Helper_Attempted_Activation_But_Failed = "Layer Helper Attempted activation But Failed";
+                          inline static string Result_Could_Not_Find_One_Hot_Encoded_Target = "Results layer attempted to find the one hot encoded target but found none";
+                          inline static string Result_Found_Too_Many_One_Hot_Encoded_Targets = "Results layer attempted to find the one hot encoded target but found more than 1";
                       };
                 };
 
