@@ -308,9 +308,17 @@ TEST(Layer_Helper_Test, Calculate_Loss_With_Categorical_Cross_Entropy_Normal) {
 
     Perception_Element_Vector<Node> activatedOutputVector(3);
     vector<Node> activatedOutputAsRawVector = {Node(.3), Node(.4), Node(.5)};
-    activatedOutputVector.setElementVector(activatedOutputAsRawVector);
 
-    layer.setOutputNodes(activatedOutputVector);
+    int iteratorIndex = 0;
+
+    for (Node activatedValue : activatedOutputAsRawVector) {
+        activatedValue.setActivatedValue(activatedValue.getValue());
+        activatedOutputVector.setIndividualElement(iteratorIndex, activatedValue);
+
+        iteratorIndex++;
+    }
+
+    layer.setLocalNodes(activatedOutputVector);
 
 
     Perception_Element_Vector<Perception_Element> oneHotEncodedTargets(3);
@@ -321,7 +329,79 @@ TEST(Layer_Helper_Test, Calculate_Loss_With_Categorical_Cross_Entropy_Normal) {
 
     layerHelper.Calculate_Loss_With_Categorical_Cross_Entropy(layer, result);
 
-    float expected_loss = 0.52287874528033756270497209674488;
+    float expected_loss = 1.20397282;
+    float actual_loss = result.getTotalLoss();
+
+    EXPECT_EQ(expected_loss, actual_loss);
+}
+
+TEST(Layer_Helper_Test, Calculate_Loss_With_Categorical_Cross_Entropy_Clipped_0) {
+
+    Layer_Helper layerHelper;
+
+    Layer layer(3);
+    Result result;
+
+    Perception_Element_Vector<Node> activatedOutputVector(3);
+    vector<Node> activatedOutputAsRawVector = {Node(-.3), Node(-.4), Node(-.5)};
+
+    int iteratorIndex = 0;
+
+    for (Node activatedValue : activatedOutputAsRawVector) {
+        activatedValue.setActivatedValue(activatedValue.getValue());
+        activatedOutputVector.setIndividualElement(iteratorIndex, activatedValue);
+
+        iteratorIndex++;
+    }
+
+    layer.setLocalNodes(activatedOutputVector);
+
+
+    Perception_Element_Vector<Perception_Element> oneHotEncodedTargets(3);
+    vector<Perception_Element> targetsAsRawVector = {Perception_Element(1), Perception_Element(0), Perception_Element(0)};
+    oneHotEncodedTargets.setElementVector(targetsAsRawVector);
+
+    result.setOneHotEncodedTargets( oneHotEncodedTargets);
+
+    layerHelper.Calculate_Loss_With_Categorical_Cross_Entropy(layer, result);
+
+    float expected_loss = 1.20397282;
+    float actual_loss = result.getTotalLoss();
+
+    EXPECT_EQ(expected_loss, actual_loss);
+}
+
+TEST(Layer_Helper_Test, Calculate_Loss_With_Categorical_Cross_Entropy_Clipped_1) {
+
+    Layer_Helper layerHelper;
+
+    Layer layer(3);
+    Result result;
+
+    Perception_Element_Vector<Node> activatedOutputVector(3);
+    vector<Node> activatedOutputAsRawVector = {Node( 3), Node( 4), Node( 5)};
+
+    int iteratorIndex = 0;
+
+    for (Node activatedValue : activatedOutputAsRawVector) {
+        activatedValue.setActivatedValue(activatedValue.getValue());
+        activatedOutputVector.setIndividualElement(iteratorIndex, activatedValue);
+
+        iteratorIndex++;
+    }
+
+    layer.setLocalNodes(activatedOutputVector);
+
+
+    Perception_Element_Vector<Perception_Element> oneHotEncodedTargets(3);
+    vector<Perception_Element> targetsAsRawVector = {Perception_Element(1), Perception_Element(0), Perception_Element(0)};
+    oneHotEncodedTargets.setElementVector(targetsAsRawVector);
+
+    result.setOneHotEncodedTargets( oneHotEncodedTargets);
+
+    layerHelper.Calculate_Loss_With_Categorical_Cross_Entropy(layer, result);
+
+    float expected_loss = 1.20397282;
     float actual_loss = result.getTotalLoss();
 
     EXPECT_EQ(expected_loss, actual_loss);
