@@ -105,8 +105,6 @@ namespace Perception {
 
                     for(Perception_Element element : outputLayer.getLocalNodes().getElementVector()) {                      //`//forEach((node, index ) => {
                             if (iteratingIndex == target_index) {
-
-
                                 float loss = log(perceptionMaths.Clip_Value(confidence_in_prediction)) * -1;
                                 Perception_Element lossElement(loss);
                                 losses.setIndividualElement(iteratingIndex, lossElement);
