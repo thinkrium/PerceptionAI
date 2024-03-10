@@ -365,7 +365,7 @@ TEST(Layer_Helper_Test, Calculate_Loss_With_Categorical_Cross_Entropy_Clipped_0)
 
     layerHelper.Calculate_Loss_With_Categorical_Cross_Entropy(layer, result);
 
-    float expected_loss = 1.20397282;
+    float expected_loss = 16.118096;
     float actual_loss = result.getTotalLoss();
 
     EXPECT_EQ(expected_loss, actual_loss);
@@ -401,7 +401,7 @@ TEST(Layer_Helper_Test, Calculate_Loss_With_Categorical_Cross_Entropy_Clipped_1)
 
     layerHelper.Calculate_Loss_With_Categorical_Cross_Entropy(layer, result);
 
-    float expected_loss = 1.20397282;
+    float expected_loss = 0.0f;
     float actual_loss = result.getTotalLoss();
 
     EXPECT_EQ(expected_loss, actual_loss);
