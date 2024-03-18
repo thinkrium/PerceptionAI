@@ -127,11 +127,12 @@ namespace Perception {
                 }
             }
 
-            Node Layer_Helper::Calculate_Nodes_Derivative_Of_ReLu(Node node) {
+            Node Layer_Helper::Calculate_Derivative_Of_ReLu(Node node) {
 
                 try {
                     if (!node.checkIsActivatedValueSet() ) throw runtime_error(Perception_Enumerations::errorMessages::Object_Exists_But_No_Derived_Value_Set);
-                    node.setDerivedValue(  (node.getActivatedValue() > 0) ? 1 : 0 );
+                    float derivedValue =  (node.getActivatedValue() > 0) ? 1 : 0;
+                    node.setDerivedValues({derivedValue});
                 }
                 catch (exception e) {
                     node.setHealthStatus(Perception_Enumerations::healthStatus::error);
@@ -142,31 +143,50 @@ namespace Perception {
             }
 
             //TODO: figure out what you want to do here
-            Node Layer_Helper::Calculate_Derivative_Of_Softmax(Node node, Layer layer, Result result) {
+            Node Layer_Helper::Calculate_Derivative_Of_Softmax(Node node, int currentNodeIndex, Layer currentLayer,
+                                                               Layer nextLayerGoingBackward) {
 
-                float derived_activation = 0;
-                float numerator_summation = 0;
-                float denominator_summation = 0;
+                float derived_value = 0;
+                float leftSoftMaxScalar = 0;
+                float rightSoftMaxScalar = 0;
 
-                int target_index = result.getIndexOfOneHotEncodedTargetSetToTrue();
+                int kronekersDelta ;
 
-                // node output target * (for all node output except target sumed) / all node outputs summed
+                int iteratingIndex = 0;
 
-                Perception_Element_Vector<Node> elementVector = layer.getLocalNodes();
+                vector<float> derivedValues;
 
-                int nodeIndex = 0;
+                for(Node node : nextLayerGoingBackward.getLocalNodes().getElementVector()) {
 
-                for (const auto &item: elementVector.getElementVector()) {
-                    if (nodeIndex != target_index) {
+                    if(iteratingIndex == currentNodeIndex) {
 
-                        numerator_summation += ((Node) item).getValue();
+                         leftSoftMaxScalar = currentLayer
+                                            .getLocalNodes()
+                                            .getElementAt(iteratingIndex)
+                                            .getActivatedValue();
+
+
+                         kronekersDelta = 1;
                     }
-                    denominator_summation += ((Node) item).getValue();
-                }
+                    else {
 
-                derived_activation = node.getValue() * numerator_summation / denominator_summation;
+                        rightSoftMaxScalar = currentLayer
+                                .getLocalNodes()
+                                .getElementAt(iteratingIndex)
+                                .getActivatedValue();
 
-                node.setDerivedValue(derived_activation);
+
+                        kronekersDelta = 0;
+                    }
+
+                    derived_value = leftSoftMaxScalar * (kronekersDelta - rightSoftMaxScalar);
+
+                    derivedValues.push_back(derived_value);
+
+                    node.setDerivedValues(derivedValues);
+
+                    iteratingIndex++;
+                 }
 
                 return node;
             }
@@ -185,7 +205,7 @@ namespace Perception {
                 int correct_target_index = result.getIndexOfOneHotEncodedTargetSetToTrue();
                 // does this need to be based off of activatived value or dot product
                 float derived_activation_value = (nodeIndex == correct_target_index) ? node.getActivatedValue() - 1 : node.getActivatedValue();
-                node.setDerivedValue(derived_activation_value);
+                node.setDerivedValues({derived_activation_value});
 
                 return node;
             }

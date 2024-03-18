@@ -406,3 +406,7 @@ TEST(Layer_Helper_Test, Calculate_Loss_With_Categorical_Cross_Entropy_Clipped_1)
 
     EXPECT_EQ(expected_loss, actual_loss);
 }
+
+TEST(Layer_Helper_Test, Calculate_Derivative_Of_Softmax) {
+
+}

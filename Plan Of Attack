@@ -63,7 +63,7 @@ DETAILS
         Activate_Node_With_ReLU()
         Activate_Node_With_Softmax()
         Calculate_Loss_With_Categorical_Cross_Entropy()
-        Calculate_Nodes_Derivative_Of_ReLu()
+        Calculate_Derivative_Of_ReLu()
         Calculate_Derivative_Of_Softmax()
         Calculate_Categorical_Cross_Entropy_Derivative_of_Node()
         Calculate_Cross_Entropy_With_Softmax_Derivative_Of_Node()
