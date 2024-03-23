@@ -16,9 +16,9 @@ namespace Perception {
 
                 class Node : public Perception_Element {
                 public:
-                    vector<float> getDerivedValues();
+                    float getDerivedValue();
 
-                    void setDerivedValues(vector<float> derivedValue);
+                    void setDerivedValue(float derivedValue);
 
                     float getActivatedValue();
 
@@ -26,7 +26,7 @@ namespace Perception {
 
                 private:
 
-                    vector<float> derivedValues;
+                    float derivedValue;
 
                     float activatedValue;
                 public:

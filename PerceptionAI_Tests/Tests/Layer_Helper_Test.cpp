@@ -407,6 +407,68 @@ TEST(Layer_Helper_Test, Calculate_Loss_With_Categorical_Cross_Entropy_Clipped_1)
     EXPECT_EQ(expected_loss, actual_loss);
 }
 
+TEST(Layer_Helper_Test, Calculate_Derivative_Of_Relu_Positive) {
+   Node node;
+
+   node.setActivatedValue(3);
+
+   float expectedDerivedValue = 1;
+   Layer_Helper layerHelper;
+
+   Node actualNode = layerHelper.Calculate_Derivative_Of_ReLu(node);
+    EXPECT_EQ(expectedDerivedValue, actualNode.getDerivedValue() );
+}
+
+TEST(Layer_Helper_Test, Calculate_Derivative_Of_Relu_Negative) {
+    Node node;
+
+    node.setActivatedValue(-3);
+
+    float expectedDerivedValue = 0;
+    Layer_Helper layerHelper;
+
+    Node actualNode = layerHelper.Calculate_Derivative_Of_ReLu(node);
+    EXPECT_EQ(expectedDerivedValue, actualNode.getDerivedValue() );
+
+}
+
 TEST(Layer_Helper_Test, Calculate_Derivative_Of_Softmax) {
+    Node node;
+
+
+    Layer_Helper layerHelper;
+
+    Layer currentLayer(3);
+    float activatedValue = .2f;
+    vector<Node> actualNodesAsVectorRaw;
+
+
+    int iterate = 0;
+
+    for(Node node  : currentLayer.getLocalNodes().getElementVector()) {
+        iterate++;
+        node.setActivatedValue(iterate * activatedValue);
+        actualNodesAsVectorRaw.push_back(node);
+    }
+
+    currentLayer.getLocalNodes().setElementVector(actualNodesAsVectorRaw);
+
+    float expectedActivatedValue1 = 0.2;
+    float expectedActivatedValue2 = 0.4;
+    float expectedActivatedValue3 = 0.6;
+
+    float expectedDerivative1 = expectedActivatedValue1 * (1 - expectedActivatedValue1);
+    float expectedDerivative2 = expectedActivatedValue1 * (0 - expectedActivatedValue2);
+    float expectedDerivative3 = expectedActivatedValue1 * (0 - expectedActivatedValue3);
+
+    float expectedDerivative  = (expectedDerivative1 * expectedActivatedValue1)
+                              + (expectedDerivative2 * expectedActivatedValue2)
+                              + (expectedDerivative3 * expectedActivatedValue3);
+
+    Node actualNode = layerHelper.Calculate_Derivative_Of_Softmax(
+            node, 0,
+            currentLayer);
+
+    EXPECT_EQ(expectedDerivative, actualNode.getDerivedValue() );
 
 }

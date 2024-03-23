@@ -67,10 +67,7 @@ namespace Perception {
 
             bool Perception_Element::operator==(const Perception_Element &rhs) const {
                 return static_cast<const Status &>(*this) == static_cast<const Status &>(rhs) &&
-                       value == rhs.value &&
-                       valueIsSet == rhs.valueIsSet &&
-                       UUID == rhs.UUID &&
-                       UUID_is_set == rhs.UUID_is_set;
+                       UUID == rhs.UUID;
             }
 
             bool Perception_Element::operator!=(const Perception_Element &rhs) const {

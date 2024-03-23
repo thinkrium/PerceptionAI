@@ -132,7 +132,7 @@ namespace Perception {
                 try {
                     if (!node.checkIsActivatedValueSet() ) throw runtime_error(Perception_Enumerations::errorMessages::Object_Exists_But_No_Derived_Value_Set);
                     float derivedValue =  (node.getActivatedValue() > 0) ? 1 : 0;
-                    node.setDerivedValues({derivedValue});
+                    node.setDerivedValue(derivedValue);
                 }
                 catch (exception e) {
                     node.setHealthStatus(Perception_Enumerations::healthStatus::error);
@@ -142,51 +142,80 @@ namespace Perception {
                 return node;
             }
 
-            //TODO: figure out what you want to do here
-            Node Layer_Helper::Calculate_Derivative_Of_Softmax(Node node, int currentNodeIndex, Layer currentLayer,
-                                                               Layer nextLayerGoingBackward) {
+            /**
+             * as i understand it right now the back propagation needs sa scalar value
+             * from the derivative of the activation
+             *
+             * as such im doing the derivative of the softmax which returns a vector
+             * of partial derivatives and the second step is the directional derivative
+             * ( i think ) which is the gradient * the vector itself
+             *
+             * subject to change
+             * @param node
+             * @param currentNodeIndex
+             * @param currentLayer
+             * @return
+             */
+            //TODO: figure out if the directional derivative is both correctly computed and appropriate here
+            Node Layer_Helper::Calculate_Derivative_Of_Softmax(Node node, int targetNodeIndex, Layer currentLayer) {
 
                 float derived_value = 0;
+                float directionalDerivative = 0;
                 float leftSoftMaxScalar = 0;
                 float rightSoftMaxScalar = 0;
 
                 int kronekersDelta ;
 
-                int iteratingIndex = 0;
+                vector<float> gradientOfPartialDerivatives ;
 
-                vector<float> derivedValues;
+                int nodeToChangeIndex = 0;
+//                int nodeToViewIndex = 0;
 
-                for(Node node : nextLayerGoingBackward.getLocalNodes().getElementVector()) {
-
-                    if(iteratingIndex == currentNodeIndex) {
-
-                         leftSoftMaxScalar = currentLayer
-                                            .getLocalNodes()
-                                            .getElementAt(iteratingIndex)
-                                            .getActivatedValue();
+                for (Node nodeToChange : currentLayer.getLocalNodes().getElementVector()) {
+                        for (Node nodeToView: currentLayer.getLocalNodes().getElementVector()) {
+                            if (nodeToChangeIndex == targetNodeIndex) {
 
 
-                         kronekersDelta = 1;
+                            if (nodeToChange == nodeToView) {
+                                leftSoftMaxScalar = nodeToView.getActivatedValue();
+
+
+                                rightSoftMaxScalar = leftSoftMaxScalar;
+
+                                kronekersDelta = 1;
+
+                            } else {
+
+                                rightSoftMaxScalar = nodeToView.getActivatedValue();
+
+                                kronekersDelta = 0;
+                            }
+
+                            derived_value = leftSoftMaxScalar * (kronekersDelta - rightSoftMaxScalar);
+
+                            gradientOfPartialDerivatives.push_back(derived_value);
+
+                     //       nodeToViewIndex++;
+                        }
                     }
-                    else {
+                    nodeToChangeIndex++;
+                }
 
-                        rightSoftMaxScalar = currentLayer
+                int directionalDerivativeIndex = 0;
+
+                for (float gradientElement : gradientOfPartialDerivatives) {
+
+                        float nodeVectorElement = currentLayer
                                 .getLocalNodes()
-                                .getElementAt(iteratingIndex)
+                                .getElementAt(directionalDerivativeIndex)
                                 .getActivatedValue();
 
+                        directionalDerivative += gradientElement * nodeVectorElement;
 
-                        kronekersDelta = 0;
-                    }
-
-                    derived_value = leftSoftMaxScalar * (kronekersDelta - rightSoftMaxScalar);
-
-                    derivedValues.push_back(derived_value);
-
-                    node.setDerivedValues(derivedValues);
-
-                    iteratingIndex++;
+                        directionalDerivativeIndex++;
                  }
+
+                node.setDerivedValue(directionalDerivative);
 
                 return node;
             }
@@ -205,7 +234,7 @@ namespace Perception {
                 int correct_target_index = result.getIndexOfOneHotEncodedTargetSetToTrue();
                 // does this need to be based off of activatived value or dot product
                 float derived_activation_value = (nodeIndex == correct_target_index) ? node.getActivatedValue() - 1 : node.getActivatedValue();
-                node.setDerivedValues({derived_activation_value});
+                node.setDerivedValue({derived_activation_value});
 
                 return node;
             }

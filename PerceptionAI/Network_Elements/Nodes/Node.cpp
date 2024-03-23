@@ -26,22 +26,22 @@ namespace Perception {
                     this->setHealthStatus(Perception_Enumerations::healthStatus::ok);
                 }
 
-                vector<float> Node::getDerivedValues() {
+                float Node::getDerivedValue() {
                     try {
 
                         if(!this->checkIsDerivedValueSet()) { throw runtime_error("nope"); }
-                        return derivedValues;
+                        return derivedValue;
                     }
                     catch (exception e) {
                         this->setHealthStatus(Perception_Enumerations::healthStatus::error);
 
                     }
 
-                    return derivedValues;
+                    return derivedValue;
                 }
 
-                void Node::setDerivedValues(vector<float> derivedValue) {
-                    this->derivedValues = derivedValue;
+                void Node::setDerivedValue(float derivedValue) {
+                    this->derivedValue = derivedValue;
                     this->setIsDerivedValueSet(true);
                 }
 
