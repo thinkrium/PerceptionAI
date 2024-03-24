@@ -538,10 +538,11 @@ TEST(Layer_Helper_Test, Calculate_Derivative_Of_Categorical_Cross_Entropy) {
     EXPECT_EQ(expectedResult, actualResult);
 }
 
-TEST(Layer_Helper_Test, Calculate_Cross_Entropy_With_Softmax_Derivative_Of_Node){
+TEST(Layer_Helper_Test, Calculate_Cross_Entropy_With_Softmax_Derivative_Of_Node_Targets_Match){
 
     Layer_Helper layerHelper;
     Node node;
+    node.setActivatedValue(2);
     Result result;
 
     Perception_Element_Vector<Perception_Element> oneHotEncodedTargets;
@@ -549,5 +550,30 @@ TEST(Layer_Helper_Test, Calculate_Cross_Entropy_With_Softmax_Derivative_Of_Node)
     result.setOneHotEncodedTargets(oneHotEncodedTargets);
     int nodeIndexTarget = 0;
 
-    layerHelper.Calculate_Cross_Entropy_With_Softmax_Derivative_Of_Node(&node, 0, &result);
+    layerHelper.Calculate_Cross_Entropy_With_Softmax_Derivative_Of_Node(&node, nodeIndexTarget, &result);
+
+    float expectedValue = 1;
+    float actualValue = node.getDerivedValue();
+
+    EXPECT_EQ(expectedValue, actualValue);
+}
+
+TEST(Layer_Helper_Test, Calculate_Cross_Entropy_With_Softmax_Derivative_Of_Node_Targets_Dont_Match){
+
+    Layer_Helper layerHelper;
+    Node node;
+    node.setActivatedValue(3);
+    Result result;
+
+    Perception_Element_Vector<Perception_Element> oneHotEncodedTargets;
+    oneHotEncodedTargets.setElementVector({Perception_Element(1), Perception_Element(0), Perception_Element(0)  });
+    result.setOneHotEncodedTargets(oneHotEncodedTargets);
+    int nodeIndexTarget = 2;
+
+    layerHelper.Calculate_Cross_Entropy_With_Softmax_Derivative_Of_Node(&node, nodeIndexTarget, &result);
+
+    float expectedValue = 3;
+    float actualValue = node.getDerivedValue();
+
+    EXPECT_EQ(expectedValue, actualValue);
 }
