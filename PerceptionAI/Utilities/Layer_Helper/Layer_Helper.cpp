@@ -169,37 +169,29 @@ namespace Perception {
                 vector<float> gradientOfPartialDerivatives ;
 
                 int nodeToChangeIndex = 0;
-//                int nodeToViewIndex = 0;
+                leftSoftMaxScalar = currentLayer.getLocalNodes().getElementAt(targetNodeIndex).getActivatedValue();
 
-                for (Node nodeToChange : currentLayer.getLocalNodes().getElementVector()) {
-                        for (Node nodeToView: currentLayer.getLocalNodes().getElementVector()) {
-                            if (nodeToChangeIndex == targetNodeIndex) {
+                for (Node nodeToView: currentLayer.getLocalNodes().getElementVector()) {
 
-
-                            if (nodeToChange == nodeToView) {
-                                leftSoftMaxScalar = nodeToView.getActivatedValue();
+                    if (nodeToChangeIndex == targetNodeIndex) {
 
 
-                                rightSoftMaxScalar = leftSoftMaxScalar;
+                        kronekersDelta = 1;
 
-                                kronekersDelta = 1;
+                    } else {
 
-                            } else {
 
-                                rightSoftMaxScalar = nodeToView.getActivatedValue();
-
-                                kronekersDelta = 0;
-                            }
-
-                            derived_value = leftSoftMaxScalar * (kronekersDelta - rightSoftMaxScalar);
-
-                            gradientOfPartialDerivatives.push_back(derived_value);
-
-                     //       nodeToViewIndex++;
-                        }
+                        kronekersDelta = 0;
                     }
+                    rightSoftMaxScalar = nodeToView.getActivatedValue();
+
+                    derived_value = leftSoftMaxScalar * (kronekersDelta - rightSoftMaxScalar);
+
+                    gradientOfPartialDerivatives.push_back(derived_value);
                     nodeToChangeIndex++;
-                }
+                 }
+
+
 
                 int directionalDerivativeIndex = 0;
 

@@ -432,7 +432,7 @@ TEST(Layer_Helper_Test, Calculate_Derivative_Of_Relu_Negative) {
 
 }
 
-TEST(Layer_Helper_Test, Calculate_Derivative_Of_Softmax) {
+TEST(Layer_Helper_Test, Calculate_Derivative_Of_Softmax_3_Nodes) {
     Node node;
 
 
@@ -467,6 +467,53 @@ TEST(Layer_Helper_Test, Calculate_Derivative_Of_Softmax) {
 
     Node actualNode = layerHelper.Calculate_Derivative_Of_Softmax(
             node, 0,
+            currentLayer);
+
+    EXPECT_EQ(expectedDerivative, actualNode.getDerivedValue() );
+
+}
+
+TEST(Layer_Helper_Test, Calculate_Derivative_Of_Softmax_5_Nodes) {
+    Node node;
+
+
+    Layer_Helper layerHelper;
+
+    Layer currentLayer(5);
+    float activatedValue = .3f;
+    vector<Node> actualNodesAsVectorRaw;
+
+
+    int iterate = 0;
+
+    for(Node node  : currentLayer.getLocalNodes().getElementVector()) {
+        iterate++;
+        node.setActivatedValue(iterate * activatedValue);
+        actualNodesAsVectorRaw.push_back(node);
+    }
+
+    currentLayer.getLocalNodes().setElementVector(actualNodesAsVectorRaw);
+
+    float expectedActivatedValue1 = activatedValue * 1;
+    float expectedActivatedValue2 =  activatedValue * 2;
+    float expectedActivatedValue3 =  activatedValue * 3;
+    float expectedActivatedValue4 =  activatedValue * 4;
+    float expectedActivatedValue5 =  activatedValue * 5;
+
+    float expectedDerivative1 = expectedActivatedValue3 * (0 - expectedActivatedValue1);
+    float expectedDerivative2 = expectedActivatedValue3 * (0 - expectedActivatedValue2);
+    float expectedDerivative3 = expectedActivatedValue3 * (1 - expectedActivatedValue3);
+    float expectedDerivative4 = expectedActivatedValue3 * (0 - expectedActivatedValue4);
+    float expectedDerivative5 = expectedActivatedValue3 * (0 - expectedActivatedValue5);
+
+    float expectedDerivative  = (expectedDerivative1 * expectedActivatedValue1)
+                                + (expectedDerivative2 * expectedActivatedValue2)
+                                  + (expectedDerivative3 * expectedActivatedValue3)
+                                    + (expectedDerivative4 * expectedActivatedValue4)
+                                + (expectedDerivative5 * expectedActivatedValue5);
+
+    Node actualNode = layerHelper.Calculate_Derivative_Of_Softmax(
+            node, 2,
             currentLayer);
 
     EXPECT_EQ(expectedDerivative, actualNode.getDerivedValue() );
