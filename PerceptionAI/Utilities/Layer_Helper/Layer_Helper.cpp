@@ -213,16 +213,17 @@ namespace Perception {
             }
 
             //TODO: figure out what you want to do here
-            Node Layer_Helper::Calculate_Categorical_Cross_Entropy_Derivative_of_Node(Node node, Result result) {
+            void Layer_Helper::Calculate_Categorical_Cross_Entropy_Derivative_of_Node(Node *node, Result *result) {
 
-                float activated_value = node.getActivatedValue();
-                float loss_derivative_value =  1 / activated_value;
+                float activated_value = node->getActivatedValue();
+                float loss_derivative_value =  -1 / activated_value;
                 Perception_Element lossDerivative(loss_derivative_value);
-                result.addLossDerivativeToLossDerivatives(lossDerivative);
+                result->addLossDerivativeToLossDerivatives(lossDerivative);
             }
 
             Node Layer_Helper::Calculate_Cross_Entropy_With_Softmax_Derivative_Of_Node(Node node, int nodeIndex,
                                                                                        Result result) {
+
                 int correct_target_index = result.getIndexOfOneHotEncodedTargetSetToTrue();
                 // does this need to be based off of activatived value or dot product
                 float derived_activation_value = (nodeIndex == correct_target_index) ? node.getActivatedValue() - 1 : node.getActivatedValue();

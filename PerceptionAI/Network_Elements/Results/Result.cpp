@@ -168,7 +168,7 @@ namespace Perception {
                     return -1;
                 }
 
-                const Perception_Element_Vector<Perception_Element> &Result::getLossDerivatives() {
+                Perception_Element_Vector<Perception_Element> & Result::getLossDerivatives() {
                     try {
 
                         if(!this->isLosseDerivativesAreSet()) { throw runtime_error(Perception_Enumerations::errorMessages::Object_Exists_But_No_Derived_Value_Set); }
@@ -192,7 +192,8 @@ namespace Perception {
                     try {
 
                         if(!this->isLosseDerivativesAreSet()) { throw runtime_error(Perception_Enumerations::errorMessages::Object_Exists_But_No_Derived_Value_Set); }
-                        this->Loss_Derivatives.getElementVector().push_back(lossDerivative);
+                        this->Loss_Derivatives.add_element_to_end_of_vector(lossDerivative);
+
                     }
                     catch (exception e) {
                         this->setHealthStatus(Perception_Enumerations::healthStatus::error);
@@ -241,7 +242,15 @@ namespace Perception {
                     Result::losseDerivativesAreSet = losseDerivativesAreSet;
                 }
 
-                Result::Result() {}
+                Result::Result() {
+                    this->setLosses(Perception_Element_Vector<Perception_Element>(0));
+                    this->setLossDerivatives( Perception_Element_Vector<Perception_Element>(0) );
+                    this->setOneHotEncodedTargetsCountIsSet(false );
+                    this->setOneHotEncodedTargetsAreSet(false );
+                    this->setTotalLossesAreSet(false );
+                    this->setConfidenceInPredictionIsSet(false );
+                    this->setHealthStatus(Perception_Enumerations::healthStatus::ok);
+                }
 
                 bool Result::isConfidenceInPredictionIsSet() const {
                     return confidenceInPredictionIsSet;

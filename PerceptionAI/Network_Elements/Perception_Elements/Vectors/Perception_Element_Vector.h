@@ -68,8 +68,20 @@ namespace Perception {
                     explicit Perception_Element_Vector(int size) {
 
                         this->setSize(size);
-                        this->setElementVector(  vector<objectType> (this->getSize()));
                         this->setHealthStatus(Perception_Enumerations::healthStatus::ok);
+
+                        if(this->getSize() == 0) {
+                            this->setElementVector(  vector<objectType> ());
+
+                        }
+                        else if(this->getSize() > 0) {
+                            this->setElementVector(  vector<objectType> (this->getSize()));
+
+                        }
+                        else {
+                            this->setHealthStatus(Perception_Enumerations::healthStatus::error);
+                            this->addErrorMessage(Perception_Enumerations::errorMessages::Perception_Failed_To_Set_A_Value);
+                        }
 
                     }
 
@@ -91,6 +103,7 @@ namespace Perception {
 
                     void add_element_to_end_of_vector(objectType element) {
                          this->getElementVector().push_back(element);
+                         this->updateSize();
                     }
 
                     int getSize()  {
@@ -113,6 +126,9 @@ namespace Perception {
                         this->setSizeIsSet(true);
                     }
 
+                    void updateSize() {
+                        this->setSize(this->element_vector.size());
+                    }
                      vector<objectType> &getElementVector()  {
                         try {
 

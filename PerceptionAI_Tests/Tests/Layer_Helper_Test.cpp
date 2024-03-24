@@ -519,3 +519,21 @@ TEST(Layer_Helper_Test, Calculate_Derivative_Of_Softmax_5_Nodes) {
     EXPECT_EQ(expectedDerivative, actualNode.getDerivedValue() );
 
 }
+
+TEST(Layer_Helper_Test, Calculate_Derivative_Of_Categorical_Cross_Entropy) {
+
+    Layer_Helper layerHelper;
+    Node node;
+
+    node.setActivatedValue(.5f);
+
+    Result result;
+
+    layerHelper.Calculate_Categorical_Cross_Entropy_Derivative_of_Node(&node, &result);
+
+    float expectedResult = -1 / .5f;
+
+    float actualResult = result.getLossDerivatives().getElementAt(0).getValue();
+
+    EXPECT_EQ(expectedResult, actualResult);
+}
