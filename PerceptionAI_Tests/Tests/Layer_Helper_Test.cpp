@@ -272,8 +272,8 @@ TEST(Layer_Helper_Test, Activate_Node_With_Softmax_Positive_Numbers) {
 
     float expectedActivationValue = 0.184726402473;
 
-    Node actualNode = layerHelper.Activate_Node_With_Softmax(node, exponential_sum);
-    EXPECT_EQ(expectedActivationValue, actualNode.getActivatedValue());
+     layerHelper.Activate_Node_With_Softmax(&node, exponential_sum );
+    EXPECT_EQ(expectedActivationValue, node.getActivatedValue());
 
 }
 
@@ -294,8 +294,8 @@ TEST(Layer_Helper_Test, Activate_Node_With_Softmax_Negative_Numbers) {
 
     float expectedActivationValue = 0.00101905502;
 
-    Node actualNode = layerHelper.Activate_Node_With_Softmax(node, exponential_sum);
-    EXPECT_EQ(expectedActivationValue, actualNode.getActivatedValue());
+    layerHelper.Activate_Node_With_Softmax(&node, exponential_sum );
+    EXPECT_EQ(expectedActivationValue, node.getActivatedValue());
 
 }
 
@@ -415,8 +415,8 @@ TEST(Layer_Helper_Test, Calculate_Derivative_Of_Relu_Positive) {
    float expectedDerivedValue = 1;
    Layer_Helper layerHelper;
 
-   Node actualNode = layerHelper.Calculate_Derivative_Of_ReLu(node);
-    EXPECT_EQ(expectedDerivedValue, actualNode.getDerivedValue() );
+    layerHelper.Calculate_Derivative_Of_ReLu(&node);
+    EXPECT_EQ(expectedDerivedValue, node.getDerivedValue() );
 }
 
 TEST(Layer_Helper_Test, Calculate_Derivative_Of_Relu_Negative) {
@@ -427,8 +427,8 @@ TEST(Layer_Helper_Test, Calculate_Derivative_Of_Relu_Negative) {
     float expectedDerivedValue = 0;
     Layer_Helper layerHelper;
 
-    Node actualNode = layerHelper.Calculate_Derivative_Of_ReLu(node);
-    EXPECT_EQ(expectedDerivedValue, actualNode.getDerivedValue() );
+    layerHelper.Calculate_Derivative_Of_ReLu(&node);
+    EXPECT_EQ(expectedDerivedValue, node.getDerivedValue() );
 
 }
 
@@ -465,11 +465,11 @@ TEST(Layer_Helper_Test, Calculate_Derivative_Of_Softmax_3_Nodes) {
                               + (expectedDerivative2 * expectedActivatedValue2)
                               + (expectedDerivative3 * expectedActivatedValue3);
 
-    Node actualNode = layerHelper.Calculate_Derivative_Of_Softmax(
-            node, 0,
+    layerHelper.Calculate_Derivative_Of_Softmax(
+            &node, 0,
             currentLayer);
 
-    EXPECT_EQ(expectedDerivative, actualNode.getDerivedValue() );
+    EXPECT_EQ(expectedDerivative, node.getDerivedValue() );
 
 }
 
@@ -512,11 +512,11 @@ TEST(Layer_Helper_Test, Calculate_Derivative_Of_Softmax_5_Nodes) {
                                     + (expectedDerivative4 * expectedActivatedValue4)
                                 + (expectedDerivative5 * expectedActivatedValue5);
 
-    Node actualNode = layerHelper.Calculate_Derivative_Of_Softmax(
-            node, 2,
+    layerHelper.Calculate_Derivative_Of_Softmax(
+            &node, 2,
             currentLayer);
 
-    EXPECT_EQ(expectedDerivative, actualNode.getDerivedValue() );
+    EXPECT_EQ(expectedDerivative, node.getDerivedValue() );
 
 }
 
@@ -536,4 +536,18 @@ TEST(Layer_Helper_Test, Calculate_Derivative_Of_Categorical_Cross_Entropy) {
     float actualResult = result.getLossDerivatives().getElementAt(0).getValue();
 
     EXPECT_EQ(expectedResult, actualResult);
+}
+
+TEST(Layer_Helper_Test, Calculate_Cross_Entropy_With_Softmax_Derivative_Of_Node){
+
+    Layer_Helper layerHelper;
+    Node node;
+    Result result;
+
+    Perception_Element_Vector<Perception_Element> oneHotEncodedTargets;
+    oneHotEncodedTargets.setElementVector({Perception_Element(1), Perception_Element(0), Perception_Element(0)  });
+    result.setOneHotEncodedTargets(oneHotEncodedTargets);
+    int nodeIndexTarget = 0;
+
+    layerHelper.Calculate_Cross_Entropy_With_Softmax_Derivative_Of_Node(&node, 0, &result);
 }

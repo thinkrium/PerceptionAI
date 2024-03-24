@@ -24,22 +24,22 @@ namespace Perception {
                 return layer.getOutputNodes();
             }
 
-            Node Layer_Helper::Activate_Node_With_ReLU(Node node) {
+            void Layer_Helper::Activate_Node_With_ReLU(Node *node) {
                 try {
-                    if(!node.isValueIsSet()) {throw runtime_error(Perception_Enumerations::errorMessages::Object_Exists_But_No_Value_Set);}
-                    if (node.getValue() <= 0) {
-                        node.setActivatedValue(0);
+                    if(!node->isValueIsSet()) {throw runtime_error(Perception_Enumerations::errorMessages::Object_Exists_But_No_Value_Set);}
+                    if (node->getValue() <= 0) {
+                        node->setActivatedValue(0);
                     }
                     else {
-                        node.setActivatedValue(node.getValue());
+                        node->setActivatedValue(node->getValue());
                     }
                 }
                 catch (exception e) {
-                    node.setHealthStatus(Perception_Enumerations::healthStatus::error);
-                    node.addErrorMessage(e.what());
+                    node->setHealthStatus(Perception_Enumerations::healthStatus::error);
+                    node->addErrorMessage(e.what());
                 }
 
-                return node;
+
             }
 
             /// <summary>
@@ -76,19 +76,18 @@ namespace Perception {
 
             }
 
-            Node Layer_Helper::Activate_Node_With_Softmax(Node node, double layersExponentialSum) {
+            void Layer_Helper::Activate_Node_With_Softmax(Node *node, double layersExponentialSum) {
                 try {
-                    if(!node.isValueIsSet()) {throw runtime_error(Perception_Enumerations::errorMessages::Object_Exists_But_No_Value_Set);}
-                    node.setActivatedValue(
-                            exp(node.getValue()) / layersExponentialSum
+                    if(!node->isValueIsSet()) {throw runtime_error(Perception_Enumerations::errorMessages::Object_Exists_But_No_Value_Set);}
+                    node->setActivatedValue(
+                            exp(node->getValue()) / layersExponentialSum
                     );
                 }
                 catch (exception e) {
-                    node.setHealthStatus(Perception_Enumerations::healthStatus::error);
-                    node.addErrorMessage(e.what());
+                    node->setHealthStatus(Perception_Enumerations::healthStatus::error);
+                    node->addErrorMessage(e.what());
                 }
 
-                return node;
             }
 
             void Layer_Helper::Calculate_Loss_With_Categorical_Cross_Entropy(Layer &outputLayer, Result &result) {
@@ -127,19 +126,19 @@ namespace Perception {
                 }
             }
 
-            Node Layer_Helper::Calculate_Derivative_Of_ReLu(Node node) {
+            void Layer_Helper::Calculate_Derivative_Of_ReLu(Node *node) {
 
                 try {
-                    if (!node.checkIsActivatedValueSet() ) throw runtime_error(Perception_Enumerations::errorMessages::Object_Exists_But_No_Derived_Value_Set);
-                    float derivedValue =  (node.getActivatedValue() > 0) ? 1 : 0;
-                    node.setDerivedValue(derivedValue);
+                    if (!node->checkIsActivatedValueSet() ) throw runtime_error(Perception_Enumerations::errorMessages::Object_Exists_But_No_Derived_Value_Set);
+                    float derivedValue =  (node->getActivatedValue() > 0) ? 1 : 0;
+                    node->setDerivedValue(derivedValue);
                 }
                 catch (exception e) {
-                    node.setHealthStatus(Perception_Enumerations::healthStatus::error);
-                    node.addErrorMessage(e.what());
+                    node->setHealthStatus(Perception_Enumerations::healthStatus::error);
+                    node->addErrorMessage(e.what());
                 }
 
-                return node;
+
             }
 
             /**
@@ -157,7 +156,7 @@ namespace Perception {
              * @return
              */
             //TODO: figure out if the directional derivative is both correctly computed and appropriate here
-            Node Layer_Helper::Calculate_Derivative_Of_Softmax(Node node, int targetNodeIndex, Layer currentLayer) {
+            void Layer_Helper::Calculate_Derivative_Of_Softmax(Node *node, int targetNodeIndex, Layer currentLayer) {
 
                 float derived_value = 0;
                 float directionalDerivative = 0;
@@ -207,9 +206,7 @@ namespace Perception {
                         directionalDerivativeIndex++;
                  }
 
-                node.setDerivedValue(directionalDerivative);
-
-                return node;
+                node->setDerivedValue(directionalDerivative);
             }
 
             //TODO: figure out what you want to do here
@@ -221,15 +218,14 @@ namespace Perception {
                 result->addLossDerivativeToLossDerivatives(lossDerivative);
             }
 
-            Node Layer_Helper::Calculate_Cross_Entropy_With_Softmax_Derivative_Of_Node(Node node, int nodeIndex,
-                                                                                       Result result) {
+            void Layer_Helper::Calculate_Cross_Entropy_With_Softmax_Derivative_Of_Node(Node *node, int nodeIndex,
+                                                                                       Result *result) {
 
-                int correct_target_index = result.getIndexOfOneHotEncodedTargetSetToTrue();
+                int correct_target_index = result->getIndexOfOneHotEncodedTargetSetToTrue();
                 // does this need to be based off of activatived value or dot product
-                float derived_activation_value = (nodeIndex == correct_target_index) ? node.getActivatedValue() - 1 : node.getActivatedValue();
-                node.setDerivedValue({derived_activation_value});
+                float derived_activation_value = (nodeIndex == correct_target_index) ? node->getActivatedValue() - 1 : node->getActivatedValue();
+                node->setDerivedValue({derived_activation_value});
 
-                return node;
             }
 
             Layer_Helper::Layer_Helper() {
@@ -335,9 +331,11 @@ namespace Perception {
                 double layersExponentialSum = this->Sum_The_Layers_Nodes_Exponential_Values(layer);
 
                 for(int i; i < layer.getNodeCountPerLayer(); i++) {
-                    Node currentNode = this->Activate_Node_With_Softmax(
-                            nodes.getElementAt(i), layersExponentialSum);
-                    nodes.setIndividualElement( i, currentNode);
+
+                    Node currentNode = nodes.getElementAt(i);
+                     this->Activate_Node_With_Softmax(
+                            &currentNode, layersExponentialSum );
+                    nodes.setIndividualElement( i,  currentNode);
                 }
 
                 layer.setLocalNodes(nodes);
@@ -350,7 +348,8 @@ namespace Perception {
                 Perception_Element_Vector<Node> nodes = layer.getLocalNodes();
 
                 for(int i; i < layer.getNodeCountPerLayer(); i++) {
-                    Node currentNode = this->Activate_Node_With_ReLU( nodes.getElementAt(i));
+                    Node currentNode = nodes.getElementAt(i);
+                    this->Activate_Node_With_ReLU(&currentNode );
                     nodes.setIndividualElement( i, currentNode);
                 }
 

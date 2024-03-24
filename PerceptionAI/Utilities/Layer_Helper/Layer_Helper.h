@@ -49,15 +49,15 @@ namespace Perception {
                 Perception_Element_Vector<Node> Propagate_Backward(Layer layer);
                 void Activate_Nodes_With(Layer &layer, Perception_Enumerations::activationMethod activationMethod);
                 void Activate_Nodes_With_ReLU(Layer &layer);
-                Node Activate_Node_With_ReLU(Node node);
+                void Activate_Node_With_ReLU(Node *node);
                 double Sum_The_Layers_Nodes_Exponential_Values(Layer &layer);
                 void Activate_Nodes_With_Softmax(Layer &layer);
-                Node Activate_Node_With_Softmax(Node node, double layersExponentialSum);
+                void Activate_Node_With_Softmax(Node *node, double layersExponentialSum);
                 void Calculate_Loss_With_Categorical_Cross_Entropy(Layer &outputLayer, Result &result);
-                Node Calculate_Derivative_Of_ReLu(Node node);
-                Node Calculate_Derivative_Of_Softmax(Node node, int targetNodeIndex, Layer currentLayer);
+                void Calculate_Derivative_Of_ReLu(Node *node);
+                void Calculate_Derivative_Of_Softmax(Node *node, int targetNodeIndex, Layer currentLayer);
                 void Calculate_Categorical_Cross_Entropy_Derivative_of_Node(Node *node, Result *result);
-                Node Calculate_Cross_Entropy_With_Softmax_Derivative_Of_Node(Node node, int nodeIndex, Result result);
+                void Calculate_Cross_Entropy_With_Softmax_Derivative_Of_Node(Node *node, int nodeIndex, Result *result);
 
             };
 
